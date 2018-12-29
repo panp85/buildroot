@@ -1,0 +1,5 @@
+/media/panpan/tools/buildroot-2018.02.8/package/boost/0001-fix-ambiguous-format-call-on-64bit-builds.patch
+/media/panpan/tools/buildroot-2018.02.8/package/boost/0002-fix-uclibc-eventfd.patch
+/media/panpan/tools/buildroot-2018.02.8/package/boost/0003-fenv.patch
+/media/panpan/tools/buildroot-2018.02.8/package/boost/0004-workaround-musl-bug.patch
+/media/panpan/tools/buildroot-2018.02.8/package/boost/0005-fix-build-with-g-5.patch

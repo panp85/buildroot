@@ -1,0 +1,3 @@
+[D-BUS Service]
+Name=org.freedesktop.DBus.TestSuiteEchoService
+Exec=/media/panpan/tools/buildroot-2018.02.8/output/build/host-dbus-1.12.2/test/test-service

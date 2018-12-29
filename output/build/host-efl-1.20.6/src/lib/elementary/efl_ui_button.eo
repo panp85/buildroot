@@ -1,0 +1,32 @@
+class Efl.Ui.Button (Elm.Layout, Efl.Ui.Clickable, Efl.Ui.Autorepeat, Efl.Text,
+                  Elm.Interface.Atspi_Widget_Action)
+{
+   [[Push-button widget
+
+   Press it and run some function. It can contain a simple label and icon object
+   and it also has an autorepeat feature.
+   ]]
+   legacy_prefix: elm_button;
+   methods {
+   }
+   implements {
+      class.constructor;
+      Efl.Object.constructor;
+      Efl.Ui.Autorepeat.autorepeat_initial_timeout { set; get; }
+      Efl.Ui.Autorepeat.autorepeat_gap_timeout { set; get; }
+      Efl.Ui.Autorepeat.autorepeat_enabled { set; get; }
+      Efl.Ui.Autorepeat.autorepeat_supported { get;}
+      Elm.Widget.activate;
+      Elm.Widget.focus_next_manager_is;
+      Elm.Widget.focus_direction_manager_is;
+      Elm.Widget.theme_apply;
+      Elm.Widget.sub_object_del;
+      Elm.Widget.widget_event;
+      Elm.Layout.text_aliases { get; }
+      Elm.Layout.content_aliases { get; }
+      Elm.Layout.sizing_eval;
+      Elm.Interface.Atspi_Widget_Action.elm_actions { get; }
+      Efl.Part.part;
+      Efl.Text.text { get; set; }
+   }
+}

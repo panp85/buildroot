@@ -1,0 +1,38 @@
+interface Elm.Interface.Atspi.Value ()
+{
+   [[Elementary AT-SPI value interface]]
+   eo_prefix: elm_interface_atspi_value;
+   methods {
+      @property value_and_text @protected {
+      	 [[Value and text property]]
+         get {
+            [[Gets value displayed by a accessible widget.]]
+         }
+         set {
+            return: bool; [[$true if setting widgets value has succeed, $false otherwise.]]
+         }
+         values {
+            value: double; [[Value of widget casted to floating point number.]]
+            text: string; [[string describing value in given context eg. small, enough]]
+         }
+      }
+      @property range @protected {
+         get {
+            [[Gets a range of all possible values and its description]]
+         }
+         values {
+            lower_limit: double; [[Lower limit of the range]]
+            upper_limit: double; [[Upper limit of the range]]
+            description: string; [[Description of the range]]
+         }
+      }
+      @property increment @protected {
+         get {
+            [[Gets an minimal incrementation value]]
+         }
+         values {
+            increment: double; [[Minimal incrementation value]]
+         }
+      }
+   }
+}

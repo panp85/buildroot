@@ -1,0 +1,63 @@
+/* FIXME: Move to Eina when we decide they are handled properly. */
+struct @extern Eina.Rectangle {
+    [[Eina Rectangle]]
+    x: int; [[X coordinate of the rectangle]]
+    y: int; [[Y coordinate of the rectangle]]
+    w: int; [[Width of the rectangle]]
+    h: int; [[Height of the rectangle]]
+}
+
+struct @extern Eina.File; [[Eina file data structure]]
+
+struct @extern Eina.Matrix3 {
+   [[Eina 3x3 Matrix]]
+   xx: double; [[XX matrix value]]
+   xy: double; [[XY matrix value]]
+   xz: double; [[XZ matrix value]]
+
+   yx: double; [[YX matrix value]]
+   yy: double; [[YY matrix value]]
+   yz: double; [[YZ matrix value]]
+
+   zx: double; [[ZX matrix value]]
+   zy: double; [[ZY matrix value]]
+   zz: double; [[ZZ matrix value]]
+}
+
+struct @extern Eina.Inarray; [[Eina inarray data structure]]
+
+type @extern Eina.Unicode: uint32; [[Eina unicode type]]
+
+struct @extern Eina.File.Direct.Info; [[Eina file direct information data structure]]
+/*{
+   path_lenght:    size_t;              [[Size of the whole path]]
+   name_length:    size_t;              [[Size of the filename/basename component]]
+   name_start:     size_t;              [[Start position of the filename/basename component]]
+   type:           Eina_File_Type;      [[File type]]
+   path:           char[EINA_PATH_MAX]; [[The path]]
+};*/
+
+enum @extern Eina.Xattr.Flags {
+  [[Eina file extended attributes flags]]
+  insert, [[This is the default behaviour, it will either create or replace the extended attribute]]
+  replace, [[This will only succeed if the extended attribute previously existed]]
+  created [[This will only succeed if the extended attribute wasn't previously set]]
+}
+
+type @extern Eina.Error: int; [[Eina error type]]
+
+struct @extern @free(eina_binbuf_free) Eina.Binbuf; [[Eina binbuf data structure]]
+
+struct @extern Eina.Slice {
+    [[A linear, read-only, memory segment]]
+    len: size; [[Length of the memory segment]]
+    mem: const(void_ptr); [[Pointer to memory segment]]
+}
+
+struct @extern Eina.Rw_Slice {
+    [[A linear, read-write, memory segment]]
+    len: size; [[Length of the memory segment]]
+    mem: void_ptr; [[Pointer to memory segment]]
+}
+
+struct @extern Eina.Value.Type; [[Eina value type]]

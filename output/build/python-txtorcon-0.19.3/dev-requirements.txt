@@ -1,0 +1,15 @@
+tox
+coverage
+cuvner
+setuptools>=0.8.0
+Sphinx
+repoze.sphinx.autointerface>=0.4
+coveralls
+codecov
+wheel
+twine
+pyflakes
+pep8
+mock
+ipaddress>=1.0.16
+geoip

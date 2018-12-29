@@ -1,0 +1,14 @@
+prefix=/usr
+exec_prefix=/usr
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+datarootdir=${prefix}/share
+datadir=${datarootdir}
+want_js=none
+
+Name: Eina JavaScript
+Description: JavaScript C++ helpers for data structures
+Version: 1.20.6
+Requires.private:  
+Libs.private:  -lm -ldl -ldl  -lrt    
+Cflags: -I${includedir}/efl-1 -I${includedir}/eina-1 -I${includedir}/eina-js-1

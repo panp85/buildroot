@@ -1,0 +1,561 @@
+# French translation for Efl.
+# Copyright (C) 2012, 2013 Enlightenment development team
+# This file is put in the public domain.
+# batden <batden@orange.fr>, 2009.
+# dazibao <dazibao@sfr.fr>, 2011.
+# Jerome Pinot <ngc891@gmail.com>, 2012.
+# Chidambar Zinnoury <illogict@online.fr>, 2013.
+#
+#: src/lib/elementary/elm_config.c:3748
+msgid ""
+msgstr ""
+"Project-Id-Version: Elementary\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2017-11-22 13:24+0100\n"
+"PO-Revision-Date: 2014-05-25 20:18+0000\n"
+"Last-Translator: Eliovir <Unknown>\n"
+"Language-Team: French <sansgourou@gmail.com>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2014-05-26 05:37+0000\n"
+"X-Generator: Launchpad (build 17017)\n"
+"X-Poedit-Country: FRANCE\n"
+"X-Poedit-Language: French\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+#: src/lib/ecore/ecore_getopt.c:89
+msgid "Version:"
+msgstr "Version :"
+
+#: src/lib/ecore/ecore_getopt.c:98
+msgid "Usage:"
+msgstr "Usage :"
+
+#: src/lib/ecore/ecore_getopt.c:105
+#, c-format
+msgid "%s [options]"
+msgstr "%s [options]"
+
+#: src/lib/ecore/ecore_getopt.c:305
+msgid "Copyright:"
+msgstr "Copyright :"
+
+#: src/lib/ecore/ecore_getopt.c:317
+msgid "License:"
+msgstr "Licence :"
+
+#: src/lib/ecore/ecore_getopt.c:503
+msgid "Type: "
+msgstr "Type : "
+
+#: src/lib/ecore/ecore_getopt.c:579
+msgid "Default: "
+msgstr "Par défaut : "
+
+#: src/lib/ecore/ecore_getopt.c:606
+msgid "Choices: "
+msgstr "Choix : "
+
+#: src/lib/ecore/ecore_getopt.c:644 src/lib/ecore/ecore_getopt.c:645
+msgid "No categories available."
+msgstr "Pas de catégorie disponible."
+
+#: src/lib/ecore/ecore_getopt.c:649
+msgid "Categories: "
+msgstr "Catégories : "
+
+#: src/lib/ecore/ecore_getopt.c:771
+msgid "Options:\n"
+msgstr "Options :\n"
+
+#: src/lib/ecore/ecore_getopt.c:780
+msgid "Positional arguments:\n"
+msgstr ""
+
+#: src/lib/ecore/ecore_getopt.c:847
+#, c-format
+msgid "ERROR: unknown category '%s'.\n"
+msgstr "ERREUR : catégorie inconnue « %s ».\n"
+
+#: src/lib/ecore/ecore_getopt.c:951
+#, c-format
+msgid "ERROR: unknown option --%s.\n"
+msgstr "ERREUR : option inconnue --%s.\n"
+
+#: src/lib/ecore/ecore_getopt.c:953
+#, c-format
+msgid "ERROR: unknown option -%c.\n"
+msgstr "ERREUR : option inconnue -%c.\n"
+
+#: src/lib/ecore/ecore_getopt.c:1016
+msgid "ERROR: "
+msgstr "ERREUR : "
+
+#: src/lib/ecore/ecore_getopt.c:1112 src/lib/ecore/ecore_getopt.c:1249
+#: src/lib/ecore/ecore_getopt.c:1265 src/lib/ecore/ecore_getopt.c:1280
+#: src/lib/ecore/ecore_getopt.c:1300 src/lib/ecore/ecore_getopt.c:1347
+#: src/lib/ecore/ecore_getopt.c:1467 src/lib/ecore/ecore_getopt.c:1508
+msgid "value has no pointer set.\n"
+msgstr "la valeur n’a aucun pointeur défini.\n"
+
+#: src/lib/ecore/ecore_getopt.c:1144 src/lib/ecore/ecore_getopt.c:1367
+#, c-format
+msgid "unknown boolean value %s.\n"
+msgstr "valeur booléenne inconnue %s.\n"
+
+#: src/lib/ecore/ecore_getopt.c:1195 src/lib/ecore/ecore_getopt.c:1455
+#, c-format
+msgid "invalid number format %s\n"
+msgstr "format du nombre non valide %s\n"
+
+#: src/lib/ecore/ecore_getopt.c:1313
+#, c-format
+msgid "invalid choice \"%s\". Valid values are: "
+msgstr "choix non valide « %s ». Les valeurs valides sont : "
+
+#: src/lib/ecore/ecore_getopt.c:1341
+msgid "missing parameter to append.\n"
+msgstr "paramètre manquant à ajouter.\n"
+
+#: src/lib/ecore/ecore_getopt.c:1445
+msgid "could not parse value.\n"
+msgstr "analyse de la valeur impossible.\n"
+
+#: src/lib/ecore/ecore_getopt.c:1502
+msgid "missing parameter.\n"
+msgstr "paramètre manquant.\n"
+
+#: src/lib/ecore/ecore_getopt.c:1515
+msgid "missing callback function!\n"
+msgstr "fonction de rappel manquante !\n"
+
+#: src/lib/ecore/ecore_getopt.c:1546
+msgid "no version was defined.\n"
+msgstr "aucune version n’est définie.\n"
+
+#: src/lib/ecore/ecore_getopt.c:1563
+msgid "no copyright was defined.\n"
+msgstr "aucun copyright n’est défini.\n"
+
+#: src/lib/ecore/ecore_getopt.c:1580
+msgid "no license was defined.\n"
+msgstr "aucune licence n’est définie.\n"
+
+#: src/lib/ecore/ecore_getopt.c:1670
+#, c-format
+msgid "ERROR: unknown option --%s, ignored.\n"
+msgstr "ERREUR : option inconnue --%s, non prise en compte.\n"
+
+#: src/lib/ecore/ecore_getopt.c:1710
+#, c-format
+msgid "ERROR: option --%s requires an argument!\n"
+msgstr "ERREUR : l’option --%s requiert un argument !\n"
+
+#: src/lib/ecore/ecore_getopt.c:1752
+#, c-format
+msgid "ERROR: unknown option -%c, ignored.\n"
+msgstr "ERREUR : option inconnue -%c, non prise en compte.\n"
+
+#: src/lib/ecore/ecore_getopt.c:1797
+#, c-format
+msgid "ERROR: option -%c requires an argument!\n"
+msgstr "ERREUR : l’option -%c requiert un argument !\n"
+
+#: src/lib/ecore/ecore_getopt.c:1892
+#, c-format
+msgid "ERROR: missing required positional argument %s.\n"
+msgstr ""
+
+#: src/lib/ecore/ecore_getopt.c:1924
+#, c-format
+msgid "ERROR: unsupported action type %d for positional argument %s\n"
+msgstr ""
+
+#: src/lib/ecore/ecore_getopt.c:2045 src/lib/ecore/ecore_getopt.c:2111
+msgid "ERROR: no parser provided.\n"
+msgstr "ERREUR : aucun analyseur n’est fourni.\n"
+
+#: src/lib/ecore/ecore_getopt.c:2050 src/lib/ecore/ecore_getopt.c:2116
+msgid "ERROR: no values provided.\n"
+msgstr "ERREUR : aucune valeur n’est fournie.\n"
+
+#: src/lib/ecore/ecore_getopt.c:2059 src/lib/ecore/ecore_getopt.c:2125
+msgid "ERROR: no arguments provided.\n"
+msgstr "ERREUR : aucun argument n’est fourni.\n"
+
+#: src/lib/ecore/ecore_getopt.c:2085
+msgid "ERROR: invalid options found."
+msgstr "ERREUR : options non valides détectées."
+
+#: src/lib/ecore/ecore_getopt.c:2091 src/lib/ecore/ecore_getopt.c:2157
+#, c-format
+msgid " See --%s.\n"
+msgstr " Voir --%s.\n"
+
+#: src/lib/ecore/ecore_getopt.c:2093 src/lib/ecore/ecore_getopt.c:2159
+#, c-format
+msgid " See -%c.\n"
+msgstr " Voir -%c.\n"
+
+#: src/lib/ecore/ecore_getopt.c:2151
+msgid "ERROR: invalid positional arguments found."
+msgstr ""
+
+#: src/lib/ecore/ecore_getopt.c:2186
+#, c-format
+msgid "ERROR: incorrect geometry value '%s'\n"
+msgstr "ERREUR : valeur géométrique incorrecte « %s »\n"
+
+#: src/lib/ecore/ecore_getopt.c:2204
+#, c-format
+msgid "ERROR: incorrect size value '%s'\n"
+msgstr "ERREUR : valeur de taille incorrecte « %s »\n"
+
+#: src/lib/efreet/efreet_base.c:126
+msgid "Desktop"
+msgstr "Bureau"
+
+#: src/lib/efreet/efreet_base.c:134
+msgid "Downloads"
+msgstr "Téléchargements"
+
+#: src/lib/efreet/efreet_base.c:143
+msgid "Templates"
+msgstr "Modèles"
+
+#: src/lib/efreet/efreet_base.c:152
+msgid "Public"
+msgstr "Public"
+
+#: src/lib/efreet/efreet_base.c:161
+msgid "Documents"
+msgstr "Documents"
+
+#: src/lib/efreet/efreet_base.c:169
+msgid "Music"
+msgstr "Musique"
+
+#: src/lib/efreet/efreet_base.c:177
+msgid "Pictures"
+msgstr "Images"
+
+#: src/lib/efreet/efreet_base.c:185
+msgid "Videos"
+msgstr "Vidéos"
+
+#: src/lib/elementary/elc_fileselector.c:1919
+msgid "Up"
+msgstr "Monter"
+
+#: src/lib/elementary/elc_fileselector.c:1933
+msgid "Home"
+msgstr "Home"
+
+#: src/lib/elementary/elc_fileselector.c:1952
+msgid "Search"
+msgstr ""
+
+#: src/lib/elementary/elc_fileselector.c:2246
+msgid "OK"
+msgstr "OK"
+
+#: src/lib/elementary/elc_fileselector.c:2256
+#: src/lib/elementary/elm_entry.c:1732 src/lib/elementary/elm_entry.c:1757
+msgid "Cancel"
+msgstr "Annuler"
+
+#: src/lib/elementary/elc_hoversel.c:438 src/lib/elementary/efl_ui_button.c:278
+#: src/lib/elementary/efl_ui_check.c:212 src/lib/elementary/elm_gengrid.c:1470
+#: src/lib/elementary/elm_genlist.c:1735 src/lib/elementary/elm_list.c:2176
+#: src/lib/elementary/efl_ui_radio.c:214
+#: src/lib/elementary/elm_segment_control.c:529
+#: src/lib/elementary/elm_spinner.c:1020 src/lib/elementary/elm_toolbar.c:2347
+msgid "State: Disabled"
+msgstr "État : désactivé"
+
+#: src/lib/elementary/elc_hoversel.c:640
+msgid "Hoversel"
+msgstr ""
+
+#: src/lib/elementary/elc_multibuttonentry.c:711
+msgid "multi button entry label"
+msgstr ""
+
+#: src/lib/elementary/elc_multibuttonentry.c:733
+msgid "multi button entry item"
+msgstr ""
+
+#: src/lib/elementary/elc_multibuttonentry.c:1624
+msgid "multi button entry"
+msgstr ""
+
+#: src/lib/elementary/elc_naviframe.c:442
+msgid "Title"
+msgstr "Titre"
+
+#: src/lib/elementary/elc_naviframe.c:993
+#: src/lib/elementary/elc_naviframe.c:1211
+msgid "Back"
+msgstr "Retour"
+
+#: src/lib/elementary/elc_naviframe.c:1309
+msgid "Next"
+msgstr "Suivant"
+
+#: src/lib/elementary/elc_popup.c:310 src/lib/elementary/elc_popup.c:975
+msgid "Popup Title"
+msgstr "Titre du Popup"
+
+#: src/lib/elementary/elc_popup.c:320 src/lib/elementary/elc_popup.c:1051
+msgid "Popup Body Text"
+msgstr "Corps du texte du Popup"
+
+#: src/lib/elementary/elm_bubble.c:199
+msgid "Bubble"
+msgstr "Bulle"
+
+#: src/lib/elementary/efl_ui_button.c:69
+msgid "Clicked"
+msgstr "Cliqué"
+
+#: src/lib/elementary/efl_ui_button.c:303
+msgid "Button"
+msgstr "Bouton"
+
+#: src/lib/elementary/elm_calendar.c:272
+msgid "%B %Y"
+msgstr "%B %Y"
+
+#: src/lib/elementary/elm_calendar.c:278
+msgid "%B"
+msgstr "%B"
+
+#: src/lib/elementary/elm_calendar.c:284
+msgid "%Y"
+msgstr "%Y"
+
+#: src/lib/elementary/elm_calendar.c:409
+msgid "calendar item"
+msgstr "élément du calendrier"
+
+#: src/lib/elementary/elm_calendar.c:436
+msgid "calendar decrement month button"
+msgstr "bouton du mois précédent"
+
+#: src/lib/elementary/elm_calendar.c:442
+msgid "calendar decrement year button"
+msgstr "bouton de l'année précédente"
+
+#: src/lib/elementary/elm_calendar.c:448
+msgid "calendar increment month button"
+msgstr "bouton du mois suivant"
+
+#: src/lib/elementary/elm_calendar.c:454
+msgid "calendar increment year button"
+msgstr "bouton de l'année suivante"
+
+#: src/lib/elementary/elm_calendar.c:459
+msgid "calendar month"
+msgstr "Mois du calendrier"
+
+#: src/lib/elementary/elm_calendar.c:464
+msgid "calendar year"
+msgstr "Année du calendrier"
+
+#: src/lib/elementary/efl_ui_check.c:64 src/lib/elementary/efl_ui_check.c:225
+#: src/lib/elementary/efl_ui_radio.c:118 src/lib/elementary/efl_ui_radio.c:215
+msgid "State: On"
+msgstr "État : activé"
+
+#: src/lib/elementary/efl_ui_check.c:75 src/lib/elementary/efl_ui_check.c:237
+#: src/lib/elementary/efl_ui_radio.c:217
+msgid "State: Off"
+msgstr "État : désactivé"
+
+#: src/lib/elementary/efl_ui_check.c:221 src/lib/elementary/efl_ui_check.c:234
+msgid "State"
+msgstr "État"
+
+#: src/lib/elementary/efl_ui_check.c:315
+msgid "Check"
+msgstr "À cocher"
+
+#: src/lib/elementary/elm_clock.c:303
+msgid "clock increment button for am,pm"
+msgstr "Bouton d'incrémentation pour matin, après-midi"
+
+#: src/lib/elementary/elm_clock.c:311
+msgid "clock decrement button for am,pm"
+msgstr "Bouton de décrémentation pour matin, après-midi"
+
+#: src/lib/elementary/elm_clock.c:647
+msgid "State: Editable"
+msgstr "État :  éditable"
+
+#: src/lib/elementary/elm_clock.c:682
+msgid "Clock"
+msgstr "Horloge"
+
+#: src/lib/elementary/elm_colorselector.c:914
+msgid "Pick a color"
+msgstr ""
+
+#: src/lib/elementary/elm_colorselector.c:952
+msgid "R:"
+msgstr ""
+
+#: src/lib/elementary/elm_colorselector.c:954
+msgid "G:"
+msgstr ""
+
+#: src/lib/elementary/elm_colorselector.c:956
+msgid "B:"
+msgstr ""
+
+#: src/lib/elementary/elm_colorselector.c:958
+msgid "A:"
+msgstr ""
+
+#: src/lib/elementary/elm_colorselector.c:1681
+msgid "color selector palette item"
+msgstr "élément de palette de choix de couleur"
+
+#: src/lib/elementary/elm_config.c:3765
+msgid "default:LTR"
+msgstr "LTR par défaut"
+
+#: src/lib/elementary/elm_dayselector.c:403
+msgid "day selector item"
+msgstr "élement de choix de date"
+
+#: src/lib/elementary/elm_diskselector.c:702
+msgid "diskselector item"
+msgstr "élément de choix de disque"
+
+#: src/lib/elementary/elm_entry.c:1722
+msgid "Cut"
+msgstr "Couper"
+
+#: src/lib/elementary/elm_entry.c:1725
+msgid "Copy"
+msgstr "Copier"
+
+#: src/lib/elementary/elm_entry.c:1729 src/lib/elementary/elm_entry.c:1751
+msgid "Paste"
+msgstr "Coller"
+
+#: src/lib/elementary/elm_entry.c:1744
+msgid "Select"
+msgstr "Sélectionner"
+
+#: src/lib/elementary/elm_entry.c:3833
+msgid "Entry"
+msgstr "Entrée"
+
+#: src/lib/elementary/elm_gengrid.c:1500
+msgid "Gengrid Item"
+msgstr ""
+
+#: src/lib/elementary/elm_index.c:102
+msgid "Index"
+msgstr "Index"
+
+#: src/lib/elementary/elm_index.c:130
+msgid "Index Item"
+msgstr ""
+
+#: src/lib/elementary/elm_label.c:405
+msgid "Label"
+msgstr "Étiquette"
+
+#: src/lib/elementary/elm_panel.c:85
+msgid "state: opened"
+msgstr "état : ouvert"
+
+#: src/lib/elementary/elm_panel.c:86
+msgid "state: closed"
+msgstr "état : fermé"
+
+#: src/lib/elementary/elm_panel.c:126
+msgid "A panel is open"
+msgstr ""
+
+#: src/lib/elementary/elm_panel.c:128
+msgid "Double tap to close panel menu"
+msgstr ""
+
+#: src/lib/elementary/elm_panel.c:180
+msgid "panel button"
+msgstr "bouton de panneau"
+
+#: src/lib/elementary/efl_ui_progressbar.c:313
+msgid "progressbar"
+msgstr "barre de progression"
+
+#: src/lib/elementary/efl_ui_radio.c:243
+msgid "Radio"
+msgstr "Radio"
+
+#: src/lib/elementary/elm_segment_control.c:532
+#: src/lib/elementary/elm_toolbar.c:2349
+msgid "State: Selected"
+msgstr "État : sélectionné"
+
+#: src/lib/elementary/elm_segment_control.c:534
+msgid "State: Unselected"
+msgstr "État : désélectionné"
+
+#: src/lib/elementary/elm_segment_control.c:548
+msgid "Segment Control Item"
+msgstr "Élément de contrôle de segment"
+
+#: src/lib/elementary/efl_ui_slider.c:1198
+msgid "slider"
+msgstr "curseur"
+
+#: src/lib/elementary/elm_spinner.c:1050
+msgid "incremented"
+msgstr ""
+
+#: src/lib/elementary/elm_spinner.c:1056
+msgid "decremented"
+msgstr ""
+
+#: src/lib/elementary/elm_spinner.c:1089 src/lib/elementary/elm_spinner.c:1156
+msgid "spinner"
+msgstr "bouton fléché"
+
+#: src/lib/elementary/elm_spinner.c:1098 src/lib/elementary/elm_spinner.c:1139
+msgid "spinner increment button"
+msgstr "bouton fléché d'incrémentation"
+
+#: src/lib/elementary/elm_spinner.c:1101 src/lib/elementary/elm_spinner.c:1148
+msgid "spinner decrement button"
+msgstr "bouton fléché de décrémentation"
+
+#: src/lib/elementary/elm_spinner.c:1103
+#, fuzzy
+msgid "spinner text"
+msgstr "bouton fléché"
+
+#: src/lib/elementary/elm_toolbar.c:1804 src/lib/elementary/elm_toolbar.c:2411
+msgid "Selected"
+msgstr "Sélectionné"
+
+#: src/lib/elementary/elm_toolbar.c:2345
+msgid "Separator"
+msgstr "Séparateur"
+
+#: src/lib/elementary/elm_toolbar.c:2351
+msgid "Has menu"
+msgstr "Possède un menu"
+
+#: src/lib/elementary/elm_toolbar.c:2406
+msgid "Unselected"
+msgstr "Désélectionné"
+
+#: src/lib/elementary/elm_toolbar.c:2423
+msgid "Toolbar Item"
+msgstr "Élément de barre d'outils"

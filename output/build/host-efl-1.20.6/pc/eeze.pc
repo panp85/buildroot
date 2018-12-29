@@ -1,0 +1,11 @@
+prefix=/media/panpan/tools/buildroot-2018.02.8/output/host
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: eeze
+Description: device convenience library for efl
+Requires.private: 
+Version: 1.20.6
+Libs: -L${libdir} -leeze
+Cflags: -I${includedir}/efl-1 -I${includedir}/eeze-1

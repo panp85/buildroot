@@ -1,0 +1,97 @@
+import eina_types;
+
+struct Eio.Data
+{
+  [[A structure to handle arbitrary data to be sent over Promises.]]
+  data: void_ptr; [[Private data pointer]]
+  size: uint; [[Size of private data]]
+}
+
+class Efl.Io.Manager (Efl.Loop_User)
+{
+  [[Class representing an asynchronous file operation.]]
+
+  methods {
+    ls {
+      [[Lists entries in a given path.]]
+      params {
+        @in path: string; [[Path we want to list entries for]]
+      }
+      return: future<uint64, const(array<string>)>; [[List of entries in path]]
+    }
+
+    direct_ls {
+      [[Lists entries in a given path with more information.]]
+      params {
+        @in path: string;[[Path we want to list entries for]]
+        @in recursive: bool; [[If $true, list entries recursively, $false otherwise]]
+      }
+      return: future<uint64, const(array<Eina.File.Direct.Info>)>; [[List of entries in path]]
+    }
+
+    stat_ls {
+      [[Lists entries in a given path with stat information.]]
+      params {
+        @in path: string;[[Path we want to list entries for]]
+        @in recursive: bool; [[If $true, list entries recursively, $false otherwise]]
+      }
+      return: future<uint64, const(array<Eina.File.Direct.Info>)>; [[List of entries in path]]
+    }
+
+    // Extended attributes
+    xattr_ls {
+      [[Lists all extended attributes asynchronously.]]
+      params {
+         @in path: string; [[Path we want to list entries for]]
+      }
+      return: future<uint64, const(array<string>)>; [[Extended attributes]]
+    }
+
+    stat {
+      [[Get stat info on a given file/directory.]]
+      params {
+        @in path: string; [[Path we want to get stat information for]]
+      }
+      return: future<Eina.Stat>; [[Stat information]]
+    }
+
+    // FIXME: Add helper for Eina.Value to Xattr
+    @property xattr {
+      [[Retrieves or sets information of a given extended attribute.]]
+      set {
+         values {
+            data: ptr(Eina.Binbuf); [[Data to set as information]]
+            flags: Eina.Xattr.Flags; [[Extended attributes flags]]
+         }
+         return: future<uint64>; [[Future for asynchronous set operation]]
+      }
+      get {
+         return: future<Eina.Binbuf>; [[Information]]
+      }
+      keys {
+         path: string; [[File path]]
+         attribute: string; [[Attribute name]]
+      }
+    }
+
+    // helper api
+    open {
+      [[Opens a file.
+
+      The fulfilled value in the promise will be the Eina.File*.]]
+      params {
+        @in path: string; [[Path to file]]
+        @in shared: bool; [[$true if the file can be accessed by others, $false otherwise]]
+      }
+      return: future<Eina.File>; [[Eina file handle]]
+    }
+    close {
+      [[Closes an open Eina.File.]]
+      params {
+        @in file: ptr(Eina.File); [[Eina file handle]]
+        // Here we're just interested whether the promise was fullfilled or not. No value needed.
+      }
+      return: future<int>; [[Close return code]]
+    }
+  }
+}

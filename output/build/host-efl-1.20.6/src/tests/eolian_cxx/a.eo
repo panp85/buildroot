@@ -1,0 +1,7 @@
+class A (Efl.Object)
+{
+   data: A_Data;
+   implements {
+      Efl.Object.constructor;
+   }
+}

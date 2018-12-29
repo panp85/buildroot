@@ -1,0 +1,39 @@
+class Efl.Ui.Nstate(Efl.Ui.Button)
+{
+   [[Efl UI nstate class]]
+   methods {
+      activate @protected {
+         [[Activate widget]]
+      }
+      @property count {
+      	 [[Maximum number of states]]
+         set {
+         }
+         get {
+         }
+         values {
+            nstate: int; [[The number of states.]]
+         }
+      }
+      @property value {
+         set {
+            [[Set the particular state given in (0...nstate}.]]
+         }
+         get {
+            [[Get the state value.]]
+         }
+         values {
+            state: int; [[The state.]]
+         }
+      }
+   }
+   implements {
+      class.constructor;
+      Efl.Object.constructor;
+      Elm.Widget.theme_apply;
+      Elm.Widget.widget_event;
+   }
+   events {
+      state,changed; [[Called when nstate widget changed]]
+   }
+}

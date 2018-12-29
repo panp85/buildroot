@@ -1,0 +1,7 @@
+/media/panpan/tools/buildroot-2018.02.8/package/mplayer/0001-disable-install-strip.patch
+/media/panpan/tools/buildroot-2018.02.8/package/mplayer/0002-mpdemux-live555-async-interface.patch
+/media/panpan/tools/buildroot-2018.02.8/package/mplayer/0003-configure-armv8.patch
+/media/panpan/tools/buildroot-2018.02.8/package/mplayer/0004-configure-zlib.patch
+/media/panpan/tools/buildroot-2018.02.8/package/mplayer/0005-tremor-ogg.patch
+/media/panpan/tools/buildroot-2018.02.8/package/mplayer/0006-musl-ldt.patch
+/media/panpan/tools/buildroot-2018.02.8/package/mplayer/0007-fixmmx.patch

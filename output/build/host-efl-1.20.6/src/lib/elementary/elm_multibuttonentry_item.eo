@@ -1,0 +1,37 @@
+class Elm.Multibuttonentry.Item(Elm.Widget.Item,
+                                Elm.Interface.Atspi_Widget_Action)
+{
+   [[Elementary multibuttonentry class]]
+   legacy_prefix: elm_multibuttonentry_item;
+   eo_prefix: elm_obj_multibuttonentry_item;
+   methods {
+        @property selected {
+             [[Control the selected state of an item]]
+             get {
+             }
+             set {
+             }
+             values {
+                 selected: bool; [[$true if selected $false otherwise]]
+             }
+        }
+        prev_get @const {
+             [[Get the previous item in the multibuttonentry]]
+             return: Elm.Widget.Item; [[The item before the item]]
+        }
+        next_get @const {
+             [[Get the next item in the multibuttonentry]]
+             return: Elm.Widget.Item; [[The item after the item]]
+        }
+   }
+   implements {
+        Efl.Object.constructor;
+        Efl.Object.destructor;
+        Elm.Widget.Item.signal_emit;
+        Elm.Widget.Item.part_text { get; set; }
+        Elm.Widget.Item.disable;
+        Elm.Interface.Atspi_Accessible.name { get; }
+        Elm.Interface.Atspi_Accessible.state_set { get; }
+        Elm.Interface.Atspi_Widget_Action.elm_actions { get; }
+   }
+}

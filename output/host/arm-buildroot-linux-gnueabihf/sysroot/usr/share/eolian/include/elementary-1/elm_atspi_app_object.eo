@@ -1,0 +1,13 @@
+class Elm.Atspi.App.Object (Efl.Object, Elm.Interface.Atspi_Accessible)
+{
+   [[AT-SPI application object class]]
+   legacy_prefix: elm_atspi_app_object;
+   data: Elm_Atspi_App_Object_Data;
+   implements {
+      Efl.Object.destructor;
+      Elm.Interface.Atspi_Accessible.name { get; }
+      Elm.Interface.Atspi_Accessible.description { get; set; }
+      Elm.Interface.Atspi_Accessible.role { get; }
+      Elm.Interface.Atspi_Accessible.children { get; }
+   }
+}

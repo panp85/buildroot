@@ -1,0 +1,2 @@
+/media/panpan/tools/buildroot-2018.02.8/package/kmod/0001-fix-O_CLOEXEC.patch
+/media/panpan/tools/buildroot-2018.02.8/package/kmod/0002-shared-util.c-assert_cc-can-only-be-used-inside-func.patch

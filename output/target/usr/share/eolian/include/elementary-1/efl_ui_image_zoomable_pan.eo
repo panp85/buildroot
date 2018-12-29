@@ -1,0 +1,28 @@
+class Efl.Ui.Image.Zoomable.Pan (Elm.Pan)
+{
+   [[Elementary photocom pan class]]
+   legacy_prefix: elm_photocam_pan;
+   //eo_prefix: elm_obj_photocam_pan;
+   //event_prefix: elm_photocam_pan;
+   implements {
+      class.constructor;
+      Efl.Object.destructor;
+      Efl.Gfx.position { set; }
+      Efl.Gfx.size { set; }
+      Efl.Canvas.Group.group_calculate;
+      Elm.Pan.content_size { get; }
+      Elm.Pan.pos { get; set; }
+      Elm.Pan.pos_min { get; }
+      Elm.Pan.pos_max { get; }
+   }
+   events {
+      load; [[Called when load started]]
+      loaded; [[Called when load finished]]
+      load,detail; [[Called when load details started]]
+      loaded,detail; [[Called when load details finished]]
+      download,start; [[Called when download started]]
+      download,progress; [[Called with download progress updates]]
+      download,done; [[Called when download finished]]
+      download,error; [[Called when download failed with an error]]
+   }
+}

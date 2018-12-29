@@ -1,0 +1,22 @@
+class Elm.Thumb (Elm.Layout, Efl.File, Efl.Ui.Clickable,
+                 Efl.Ui.Draggable)
+{
+   [[Elementary thumbnail class]]
+   legacy_prefix: elm_thumb;
+   eo_prefix: elm_obj_thumb;
+   event_prefix: elm_thumb;
+   implements {
+      class.constructor;
+      Efl.Object.constructor;
+      Efl.File.file { get; set; }
+      Efl.Gfx.visible { set; }
+      Efl.Ui.Draggable.drag_target { get; set; }
+   }
+   events {
+      generate,error; [[Called when an error occurred during thumbnail generation]]
+      generate,start; [[Called when thumbnail generation started]]
+      generate,stop; [[Called when thumbnail generation stopped]]
+      load,error; [[Called when an error occurred during loading]]
+      press; [[Called when pressed]]
+   }
+}

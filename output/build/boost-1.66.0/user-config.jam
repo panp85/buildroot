@@ -1,0 +1,2 @@
+using gcc : 7.2.1 : /media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-g++ : <cxxflags>"-D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64  -Os  -I/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot/usr/include/python3.6m" <linkflags>"" ;
+

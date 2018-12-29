@@ -1,0 +1,66 @@
+class Efl.Ui.Frame (Elm.Layout, Efl.Ui.Clickable)
+{
+   [[Frame widget
+
+   The Frame widget allows for collapsing and expanding the content widget
+   by clicking on the frame label.
+   the label and content can be set using text_set and content_set api.
+   ]]
+   legacy_prefix: elm_frame;
+   methods {
+      @property collapse {
+         set {
+            [[Manually collapse a frame without animations
+              Use this to toggle the collapsed state of a frame, bypassing animations.
+            ]]
+         }
+         get {
+            [[Determine the collapse state of a frame
+              Use this to determine the collapse state of a frame.
+            ]]
+         }
+         values {
+            collapse: bool; [[$true to collapse, $false to expand.]]
+         }
+      }
+      @property autocollapse {
+         set {
+            [[Toggle autocollapsing of a frame
+              When $enable is $true, clicking a frame's label will collapse the frame
+              vertically, shrinking it to the height of the label.
+              By default, this is DISABLED.
+            ]]
+         }
+         get {
+            [[Determine autocollapsing of a frame
+
+              When this returns $true, clicking a frame's label will collapse the frame
+              vertically, shrinking it to the height of the label.
+              By default, this is DISABLED.
+            ]]
+         }
+         values {
+            autocollapse: bool; [[Whether to enable autocollapse.]]
+         }
+      }
+      collapse_go {
+         [[Manually collapse a frame with animations
+           Use this to toggle the collapsed state of a frame, triggering animations.
+         ]]
+         params {
+            @in collapse: bool; [[$true to collapse, $false to expand.]]
+         }
+      }
+   }
+   implements {
+      Efl.Object.constructor;
+      class.constructor;
+      Efl.Canvas.Group.group_calculate;
+      Elm.Widget.focus_direction;
+      Elm.Widget.focus_next_manager_is;
+      Elm.Widget.focus_next;
+      Elm.Widget.focus_direction_manager_is;
+      Elm.Layout.text_aliases { get; }
+      Elm.Layout.content_aliases { get; }
+   }
+}

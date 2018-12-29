@@ -1,0 +1,94 @@
+EWAPI const Efl_Event_Description _ELM_MAP_PAN_EVENT_LOADED =
+   EFL_EVENT_DESCRIPTION("loaded");
+EWAPI const Efl_Event_Description _ELM_MAP_PAN_EVENT_TILE_LOAD =
+   EFL_EVENT_DESCRIPTION("tile,load");
+EWAPI const Efl_Event_Description _ELM_MAP_PAN_EVENT_TILE_LOADED =
+   EFL_EVENT_DESCRIPTION("tile,loaded");
+EWAPI const Efl_Event_Description _ELM_MAP_PAN_EVENT_TILE_LOADED_FAIL =
+   EFL_EVENT_DESCRIPTION("tile,loaded,fail");
+EWAPI const Efl_Event_Description _ELM_MAP_PAN_EVENT_ROUTE_LOAD =
+   EFL_EVENT_DESCRIPTION("route,load");
+EWAPI const Efl_Event_Description _ELM_MAP_PAN_EVENT_ROUTE_LOADED =
+   EFL_EVENT_DESCRIPTION("route,loaded");
+EWAPI const Efl_Event_Description _ELM_MAP_PAN_EVENT_ROUTE_LOADED_FAIL =
+   EFL_EVENT_DESCRIPTION("route,loaded,fail");
+EWAPI const Efl_Event_Description _ELM_MAP_PAN_EVENT_NAME_LOAD =
+   EFL_EVENT_DESCRIPTION("name,load");
+EWAPI const Efl_Event_Description _ELM_MAP_PAN_EVENT_NAME_LOADED =
+   EFL_EVENT_DESCRIPTION("name,loaded");
+EWAPI const Efl_Event_Description _ELM_MAP_PAN_EVENT_NAME_LOADED_FAIL =
+   EFL_EVENT_DESCRIPTION("name,loaded,fail");
+EWAPI const Efl_Event_Description _ELM_MAP_PAN_EVENT_OVERLAY_CLICKED =
+   EFL_EVENT_DESCRIPTION("overlay,clicked");
+EWAPI const Efl_Event_Description _ELM_MAP_PAN_EVENT_OVERLAY_DEL =
+   EFL_EVENT_DESCRIPTION("overlay,del");
+
+void _elm_map_pan_efl_object_destructor(Eo *obj, Elm_Map_Pan_Data *pd);
+
+
+void _elm_map_pan_efl_gfx_position_set(Eo *obj, Elm_Map_Pan_Data *pd, int x, int y);
+
+
+void _elm_map_pan_efl_gfx_size_set(Eo *obj, Elm_Map_Pan_Data *pd, int w, int h);
+
+
+void _elm_map_pan_efl_canvas_group_group_calculate(Eo *obj, Elm_Map_Pan_Data *pd);
+
+
+void _elm_map_pan_elm_pan_content_size_get(Eo *obj, Elm_Map_Pan_Data *pd, int *w, int *h);
+
+
+void _elm_map_pan_elm_pan_pos_set(Eo *obj, Elm_Map_Pan_Data *pd, int x, int y);
+
+
+void _elm_map_pan_elm_pan_pos_get(Eo *obj, Elm_Map_Pan_Data *pd, int *x, int *y);
+
+
+void _elm_map_pan_elm_pan_pos_min_get(Eo *obj, Elm_Map_Pan_Data *pd, int *x, int *y);
+
+
+void _elm_map_pan_elm_pan_pos_max_get(Eo *obj, Elm_Map_Pan_Data *pd, int *x, int *y);
+
+
+static Eina_Bool
+_elm_map_pan_class_initializer(Efl_Class *klass)
+{
+   const Efl_Object_Ops *opsp = NULL, *copsp = NULL;
+
+#ifndef ELM_MAP_PAN_EXTRA_OPS
+#define ELM_MAP_PAN_EXTRA_OPS
+#endif
+
+   EFL_OPS_DEFINE(ops,
+      EFL_OBJECT_OP_FUNC(efl_destructor, _elm_map_pan_efl_object_destructor),
+      EFL_OBJECT_OP_FUNC(efl_gfx_position_set, _elm_map_pan_efl_gfx_position_set),
+      EFL_OBJECT_OP_FUNC(efl_gfx_size_set, _elm_map_pan_efl_gfx_size_set),
+      EFL_OBJECT_OP_FUNC(efl_canvas_group_calculate, _elm_map_pan_efl_canvas_group_group_calculate),
+      EFL_OBJECT_OP_FUNC(elm_obj_pan_content_size_get, _elm_map_pan_elm_pan_content_size_get),
+      EFL_OBJECT_OP_FUNC(elm_obj_pan_pos_set, _elm_map_pan_elm_pan_pos_set),
+      EFL_OBJECT_OP_FUNC(elm_obj_pan_pos_get, _elm_map_pan_elm_pan_pos_get),
+      EFL_OBJECT_OP_FUNC(elm_obj_pan_pos_min_get, _elm_map_pan_elm_pan_pos_min_get),
+      EFL_OBJECT_OP_FUNC(elm_obj_pan_pos_max_get, _elm_map_pan_elm_pan_pos_max_get),
+      ELM_MAP_PAN_EXTRA_OPS
+   );
+   opsp = &ops;
+
+#ifdef ELM_MAP_PAN_EXTRA_CLASS_OPS
+   EFL_OPS_DEFINE(cops, ELM_MAP_PAN_EXTRA_CLASS_OPS);
+   copsp = &cops;
+#endif
+
+   return efl_class_functions_set(klass, opsp, copsp);
+}
+
+static const Efl_Class_Description _elm_map_pan_class_desc = {
+   EO_VERSION,
+   "Elm.Map.Pan",
+   EFL_CLASS_TYPE_REGULAR,
+   sizeof(Elm_Map_Pan_Data),
+   _elm_map_pan_class_initializer,
+   _elm_map_pan_class_constructor,
+   NULL
+};
+
+EFL_DEFINE_CLASS(elm_map_pan_class_get, &_elm_map_pan_class_desc, ELM_PAN_CLASS, NULL);

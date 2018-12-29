@@ -1,0 +1,12 @@
+prefix=/usr
+exec_prefix=/usr
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: eio C++ API
+Description: Enlightenned Asynchronous Input Output library C++ API.
+Requires.private: efreet-mime >= 1.20.6 emile >= 1.20.6 efl >= 1.20.6 eina >= 1.20.6 eo >= 1.20.6 eet >= 1.20.6 ecore-file >= 1.20.6 ecore >= 1.20.6  
+Version: 1.20.6
+Libs: -L${libdir} -leio
+Libs.private:  -lm
+Cflags: -I${includedir}/efl-1 -I${includedir}/eio-1 -I${includedir}/eio-cxx-1

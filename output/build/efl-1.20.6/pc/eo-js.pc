@@ -1,0 +1,15 @@
+prefix=/usr
+exec_prefix=/usr
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+datarootdir=${prefix}/share
+datadir=${datarootdir}
+eoincludedir=${datarootdir}/eolian/include
+eolian_flags=-I${eoincludedir}/eo-1
+
+Name: Eo JavaScript
+Description: JavaScript C++ helpers for bindings for EFL's generic object system.
+Version: 1.20.6
+Requires.private: eina >= 1.20.6  
+Libs.private:  -ldl
+Cflags: -I${includedir}/efl-1 -I${includedir}/eo-1 -I${includedir}/eo-js-1

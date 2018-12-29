@@ -1,0 +1,21 @@
+class Efl.Loop_User (Efl.Object)
+{
+   [[An Efl.Loop_User is a class that require one of the parent to provide
+     an Efl.Loop interface when doing provider_find. It will enforce this by
+     only allowing parent that provide such interface or NULL.]]
+   eo_prefix: efl_loop;
+   methods {
+      @property loop {
+         [[The loop to which this object belongs to.]]
+         get {
+            [[Gets a handle to the loop.]]
+         }
+         values {
+            loop: Efl.Loop; [[Efl loop]]
+         }
+      }
+   }
+   implements {
+      Efl.Object.parent { set; }
+   }
+}

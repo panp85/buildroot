@@ -1,0 +1,17 @@
+prefix=/media/panpan/tools/buildroot-2018.02.8/output/host
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+datarootdir=${prefix}/share
+datadir=${datarootdir}
+pkgdatadir=@pkgdatadir@/elementary
+themes=${pkgdatadir}/themes
+eoincludedir=${datadir}/eolian/include
+eolian_flags=-I${eoincludedir}/elementary-1
+
+Name: elementary++
+Description: Elementary C++ bindings
+Requires.private: elocation >= 1.20.6 eio >= 1.20.6 efreet-trash >= 1.20.6 efreet-mime >= 1.20.6 efreet >= 1.20.6 eldbus >= 1.20.6 ecore-con >= 1.20.6 ecore-imf >= 1.20.6 emotion >= 1.20.6 ethumb_client >= 1.20.6 ethumb >= 1.20.6 edje >= 1.20.6 ecore-input >= 1.20.6 ecore-file >= 1.20.6 ecore-evas >= 1.20.6 ecore >= 1.20.6 evas >= 1.20.6 efl >= 1.20.6 eo >= 1.20.6 eet >= 1.20.6 emile >= 1.20.6 eina >= 1.20.6  
+Version: 1.20.6
+Libs: -L${libdir} -lelementary -lefl -leina -lpthread -leet -levas -lecore -lecore_evas -lecore_file -lecore_input -ledje -leo -lethumb_client -lemotion -lecore_imf -lecore_con -leldbus -lefreet -lefreet_mime -lefreet_trash -leio    -lpthread  -lm -ldl -ldl  -lrt    
+Cflags: -I${includedir}/elementary-1 -I${includedir}/elementary-cxx-1

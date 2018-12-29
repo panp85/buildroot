@@ -1,0 +1,566 @@
+# Chinese translations for Efl package
+# efl 软件包的简体中文翻译.
+# Copyright (C) 2012 Enlightenment development team
+# This file is distributed under the same license as the Efl package.
+# Aron Xu <happyaron.xu@gmail.com>, 2012.
+#
+#: src/lib/elementary/elm_config.c:3748
+msgid ""
+msgstr ""
+"Project-Id-Version: elementary\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2017-11-22 13:24+0100\n"
+"PO-Revision-Date: 2012-12-22 03:55+0800\n"
+"Last-Translator: Aron Xu <happyaron.xu@gmail.com>\n"
+"Language-Team: Chinese (simplified)\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/lib/ecore/ecore_getopt.c:89
+msgid "Version:"
+msgstr "版本："
+
+#: src/lib/ecore/ecore_getopt.c:98
+msgid "Usage:"
+msgstr "用法："
+
+#: src/lib/ecore/ecore_getopt.c:105
+#, fuzzy, c-format
+msgid "%s [options]"
+msgstr "%s [选项]\n"
+
+#: src/lib/ecore/ecore_getopt.c:305
+msgid "Copyright:"
+msgstr "版权信息："
+
+#: src/lib/ecore/ecore_getopt.c:317
+msgid "License:"
+msgstr "许可证："
+
+#: src/lib/ecore/ecore_getopt.c:503
+msgid "Type: "
+msgstr "类型："
+
+#: src/lib/ecore/ecore_getopt.c:579
+msgid "Default: "
+msgstr "默认："
+
+#: src/lib/ecore/ecore_getopt.c:606
+msgid "Choices: "
+msgstr "可选项："
+
+#: src/lib/ecore/ecore_getopt.c:644 src/lib/ecore/ecore_getopt.c:645
+msgid "No categories available."
+msgstr ""
+
+#: src/lib/ecore/ecore_getopt.c:649
+#, fuzzy
+msgid "Categories: "
+msgstr "可选项："
+
+#: src/lib/ecore/ecore_getopt.c:771
+msgid "Options:\n"
+msgstr "选项：\n"
+
+#: src/lib/ecore/ecore_getopt.c:780
+msgid "Positional arguments:\n"
+msgstr ""
+
+#: src/lib/ecore/ecore_getopt.c:847
+#, fuzzy, c-format
+msgid "ERROR: unknown category '%s'.\n"
+msgstr "错误：未知选项 --%s。\n"
+
+#: src/lib/ecore/ecore_getopt.c:951
+#, c-format
+msgid "ERROR: unknown option --%s.\n"
+msgstr "错误：未知选项 --%s。\n"
+
+#: src/lib/ecore/ecore_getopt.c:953
+#, c-format
+msgid "ERROR: unknown option -%c.\n"
+msgstr "错误：未知选项 -%c。\n"
+
+#: src/lib/ecore/ecore_getopt.c:1016
+msgid "ERROR: "
+msgstr "错误："
+
+#: src/lib/ecore/ecore_getopt.c:1112 src/lib/ecore/ecore_getopt.c:1249
+#: src/lib/ecore/ecore_getopt.c:1265 src/lib/ecore/ecore_getopt.c:1280
+#: src/lib/ecore/ecore_getopt.c:1300 src/lib/ecore/ecore_getopt.c:1347
+#: src/lib/ecore/ecore_getopt.c:1467 src/lib/ecore/ecore_getopt.c:1508
+msgid "value has no pointer set.\n"
+msgstr "值没有设置指针。\n"
+
+#: src/lib/ecore/ecore_getopt.c:1144 src/lib/ecore/ecore_getopt.c:1367
+#, c-format
+msgid "unknown boolean value %s.\n"
+msgstr "未知的布尔值 %s。\n"
+
+#: src/lib/ecore/ecore_getopt.c:1195 src/lib/ecore/ecore_getopt.c:1455
+#, c-format
+msgid "invalid number format %s\n"
+msgstr "无效的数字格式 %s\n"
+
+#: src/lib/ecore/ecore_getopt.c:1313
+#, c-format
+msgid "invalid choice \"%s\". Valid values are: "
+msgstr "无效选项 %s。有效的值有："
+
+#: src/lib/ecore/ecore_getopt.c:1341
+msgid "missing parameter to append.\n"
+msgstr "缺少要附加的参数。\n"
+
+#: src/lib/ecore/ecore_getopt.c:1445
+msgid "could not parse value.\n"
+msgstr "无法解析值。\n"
+
+#: src/lib/ecore/ecore_getopt.c:1502
+msgid "missing parameter.\n"
+msgstr "缺少参数。\n"
+
+#: src/lib/ecore/ecore_getopt.c:1515
+msgid "missing callback function!\n"
+msgstr "缺少 callback 功能！\n"
+
+#: src/lib/ecore/ecore_getopt.c:1546
+msgid "no version was defined.\n"
+msgstr "未指定版本。\n"
+
+#: src/lib/ecore/ecore_getopt.c:1563
+msgid "no copyright was defined.\n"
+msgstr "未定义版权信息。\n"
+
+#: src/lib/ecore/ecore_getopt.c:1580
+msgid "no license was defined.\n"
+msgstr "未定义许可证。\n"
+
+#: src/lib/ecore/ecore_getopt.c:1670
+#, c-format
+msgid "ERROR: unknown option --%s, ignored.\n"
+msgstr "错误：未知选项 --%s，忽略。\n"
+
+#: src/lib/ecore/ecore_getopt.c:1710
+#, c-format
+msgid "ERROR: option --%s requires an argument!\n"
+msgstr "错误：选项 --%s 需要一个参数！\n"
+
+#: src/lib/ecore/ecore_getopt.c:1752
+#, c-format
+msgid "ERROR: unknown option -%c, ignored.\n"
+msgstr "错误：未知选项 -%c，忽略。\n"
+
+#: src/lib/ecore/ecore_getopt.c:1797
+#, c-format
+msgid "ERROR: option -%c requires an argument!\n"
+msgstr "错误：选项 -%c 需要一个参数！\n"
+
+#: src/lib/ecore/ecore_getopt.c:1892
+#, fuzzy, c-format
+msgid "ERROR: missing required positional argument %s.\n"
+msgstr "错误：选项 -%c 需要一个参数！\n"
+
+#: src/lib/ecore/ecore_getopt.c:1924
+#, c-format
+msgid "ERROR: unsupported action type %d for positional argument %s\n"
+msgstr ""
+
+#: src/lib/ecore/ecore_getopt.c:2045 src/lib/ecore/ecore_getopt.c:2111
+msgid "ERROR: no parser provided.\n"
+msgstr "错误：未提供解析器。\n"
+
+#: src/lib/ecore/ecore_getopt.c:2050 src/lib/ecore/ecore_getopt.c:2116
+msgid "ERROR: no values provided.\n"
+msgstr "错误：未提供值。\n"
+
+#: src/lib/ecore/ecore_getopt.c:2059 src/lib/ecore/ecore_getopt.c:2125
+msgid "ERROR: no arguments provided.\n"
+msgstr "错误：未提供参数。\n"
+
+#: src/lib/ecore/ecore_getopt.c:2085
+msgid "ERROR: invalid options found."
+msgstr "错误：无效的选项。"
+
+#: src/lib/ecore/ecore_getopt.c:2091 src/lib/ecore/ecore_getopt.c:2157
+#, c-format
+msgid " See --%s.\n"
+msgstr " 参看 --%s\n"
+
+#: src/lib/ecore/ecore_getopt.c:2093 src/lib/ecore/ecore_getopt.c:2159
+#, c-format
+msgid " See -%c.\n"
+msgstr " 参看 -%c\n"
+
+#: src/lib/ecore/ecore_getopt.c:2151
+#, fuzzy
+msgid "ERROR: invalid positional arguments found."
+msgstr "错误：无效的选项。"
+
+#: src/lib/ecore/ecore_getopt.c:2186
+#, c-format
+msgid "ERROR: incorrect geometry value '%s'\n"
+msgstr "错误：不正确的形状 %s\n"
+
+#: src/lib/ecore/ecore_getopt.c:2204
+#, c-format
+msgid "ERROR: incorrect size value '%s'\n"
+msgstr "错误：不正确的大小 %s\n"
+
+#: src/lib/efreet/efreet_base.c:126
+msgid "Desktop"
+msgstr "桌面"
+
+#: src/lib/efreet/efreet_base.c:134
+msgid "Downloads"
+msgstr "下载"
+
+#: src/lib/efreet/efreet_base.c:143
+msgid "Templates"
+msgstr "模板"
+
+#: src/lib/efreet/efreet_base.c:152
+msgid "Public"
+msgstr "公共"
+
+#: src/lib/efreet/efreet_base.c:161
+msgid "Documents"
+msgstr "文档"
+
+#: src/lib/efreet/efreet_base.c:169
+msgid "Music"
+msgstr "音乐"
+
+#: src/lib/efreet/efreet_base.c:177
+msgid "Pictures"
+msgstr "图片"
+
+#: src/lib/efreet/efreet_base.c:185
+msgid "Videos"
+msgstr "视频"
+
+#: src/lib/elementary/elc_fileselector.c:1919
+msgid "Up"
+msgstr "向上"
+
+#: src/lib/elementary/elc_fileselector.c:1933
+msgid "Home"
+msgstr "主目录"
+
+#: src/lib/elementary/elc_fileselector.c:1952
+msgid "Search"
+msgstr ""
+
+#: src/lib/elementary/elc_fileselector.c:2246
+msgid "OK"
+msgstr "确定"
+
+#: src/lib/elementary/elc_fileselector.c:2256
+#: src/lib/elementary/elm_entry.c:1732 src/lib/elementary/elm_entry.c:1757
+msgid "Cancel"
+msgstr "取消"
+
+#: src/lib/elementary/elc_hoversel.c:438 src/lib/elementary/efl_ui_button.c:278
+#: src/lib/elementary/efl_ui_check.c:212 src/lib/elementary/elm_gengrid.c:1470
+#: src/lib/elementary/elm_genlist.c:1735 src/lib/elementary/elm_list.c:2176
+#: src/lib/elementary/efl_ui_radio.c:214
+#: src/lib/elementary/elm_segment_control.c:529
+#: src/lib/elementary/elm_spinner.c:1020 src/lib/elementary/elm_toolbar.c:2347
+msgid "State: Disabled"
+msgstr "状态：已禁用"
+
+#: src/lib/elementary/elc_hoversel.c:640
+msgid "Hoversel"
+msgstr ""
+
+#: src/lib/elementary/elc_multibuttonentry.c:711
+msgid "multi button entry label"
+msgstr ""
+
+#: src/lib/elementary/elc_multibuttonentry.c:733
+msgid "multi button entry item"
+msgstr ""
+
+#: src/lib/elementary/elc_multibuttonentry.c:1624
+msgid "multi button entry"
+msgstr ""
+
+#: src/lib/elementary/elc_naviframe.c:442
+msgid "Title"
+msgstr ""
+
+#: src/lib/elementary/elc_naviframe.c:993
+#: src/lib/elementary/elc_naviframe.c:1211
+msgid "Back"
+msgstr ""
+
+#: src/lib/elementary/elc_naviframe.c:1309
+msgid "Next"
+msgstr ""
+
+#: src/lib/elementary/elc_popup.c:310 src/lib/elementary/elc_popup.c:975
+msgid "Popup Title"
+msgstr ""
+
+#: src/lib/elementary/elc_popup.c:320 src/lib/elementary/elc_popup.c:1051
+msgid "Popup Body Text"
+msgstr ""
+
+#: src/lib/elementary/elm_bubble.c:199
+msgid "Bubble"
+msgstr "气泡"
+
+#: src/lib/elementary/efl_ui_button.c:69
+msgid "Clicked"
+msgstr "点击"
+
+#: src/lib/elementary/efl_ui_button.c:303
+msgid "Button"
+msgstr "按钮"
+
+#: src/lib/elementary/elm_calendar.c:272
+msgid "%B %Y"
+msgstr "%B %Y"
+
+#: src/lib/elementary/elm_calendar.c:278
+msgid "%B"
+msgstr ""
+
+#: src/lib/elementary/elm_calendar.c:284
+msgid "%Y"
+msgstr ""
+
+#: src/lib/elementary/elm_calendar.c:409
+msgid "calendar item"
+msgstr "日历条目"
+
+#: src/lib/elementary/elm_calendar.c:436
+#, fuzzy
+msgid "calendar decrement month button"
+msgstr "日历减量按钮"
+
+#: src/lib/elementary/elm_calendar.c:442
+#, fuzzy
+msgid "calendar decrement year button"
+msgstr "日历减量按钮"
+
+#: src/lib/elementary/elm_calendar.c:448
+#, fuzzy
+msgid "calendar increment month button"
+msgstr "日历增量按钮"
+
+#: src/lib/elementary/elm_calendar.c:454
+#, fuzzy
+msgid "calendar increment year button"
+msgstr "日历增量按钮"
+
+#: src/lib/elementary/elm_calendar.c:459
+msgid "calendar month"
+msgstr "日历月"
+
+#: src/lib/elementary/elm_calendar.c:464
+#, fuzzy
+msgid "calendar year"
+msgstr "日历条目"
+
+#: src/lib/elementary/efl_ui_check.c:64 src/lib/elementary/efl_ui_check.c:225
+#: src/lib/elementary/efl_ui_radio.c:118 src/lib/elementary/efl_ui_radio.c:215
+msgid "State: On"
+msgstr "状态：开启"
+
+#: src/lib/elementary/efl_ui_check.c:75 src/lib/elementary/efl_ui_check.c:237
+#: src/lib/elementary/efl_ui_radio.c:217
+msgid "State: Off"
+msgstr "状态：关闭"
+
+#: src/lib/elementary/efl_ui_check.c:221 src/lib/elementary/efl_ui_check.c:234
+msgid "State"
+msgstr "状态"
+
+#: src/lib/elementary/efl_ui_check.c:315
+msgid "Check"
+msgstr "检查"
+
+#: src/lib/elementary/elm_clock.c:303
+msgid "clock increment button for am,pm"
+msgstr "上下午的时钟增量按钮"
+
+#: src/lib/elementary/elm_clock.c:311
+msgid "clock decrement button for am,pm"
+msgstr "上下午的时钟减量按钮"
+
+#: src/lib/elementary/elm_clock.c:647
+msgid "State: Editable"
+msgstr "状态：可编辑"
+
+#: src/lib/elementary/elm_clock.c:682
+msgid "Clock"
+msgstr "时钟"
+
+#: src/lib/elementary/elm_colorselector.c:914
+msgid "Pick a color"
+msgstr ""
+
+#: src/lib/elementary/elm_colorselector.c:952
+msgid "R:"
+msgstr ""
+
+#: src/lib/elementary/elm_colorselector.c:954
+msgid "G:"
+msgstr ""
+
+#: src/lib/elementary/elm_colorselector.c:956
+msgid "B:"
+msgstr ""
+
+#: src/lib/elementary/elm_colorselector.c:958
+msgid "A:"
+msgstr ""
+
+#: src/lib/elementary/elm_colorselector.c:1681
+msgid "color selector palette item"
+msgstr "色彩选择器项目"
+
+# Don't change it!
+#: src/lib/elementary/elm_config.c:3765
+msgid "default:LTR"
+msgstr "default:LTR"
+
+#: src/lib/elementary/elm_dayselector.c:403
+#, fuzzy
+msgid "day selector item"
+msgstr "磁盘选择器项目"
+
+#: src/lib/elementary/elm_diskselector.c:702
+msgid "diskselector item"
+msgstr "磁盘选择器项目"
+
+#: src/lib/elementary/elm_entry.c:1722
+msgid "Cut"
+msgstr "粘贴"
+
+#: src/lib/elementary/elm_entry.c:1725
+msgid "Copy"
+msgstr "复制"
+
+#: src/lib/elementary/elm_entry.c:1729 src/lib/elementary/elm_entry.c:1751
+msgid "Paste"
+msgstr "粘贴"
+
+#: src/lib/elementary/elm_entry.c:1744
+msgid "Select"
+msgstr "选择"
+
+#: src/lib/elementary/elm_entry.c:3833
+msgid "Entry"
+msgstr "条目"
+
+#: src/lib/elementary/elm_gengrid.c:1500
+msgid "Gengrid Item"
+msgstr ""
+
+#: src/lib/elementary/elm_index.c:102
+msgid "Index"
+msgstr "索引"
+
+#: src/lib/elementary/elm_index.c:130
+msgid "Index Item"
+msgstr "索引条目"
+
+#: src/lib/elementary/elm_label.c:405
+msgid "Label"
+msgstr "标签"
+
+#: src/lib/elementary/elm_panel.c:85
+msgid "state: opened"
+msgstr "状态：已打开"
+
+#: src/lib/elementary/elm_panel.c:86
+msgid "state: closed"
+msgstr "状态：已关闭"
+
+#: src/lib/elementary/elm_panel.c:126
+msgid "A panel is open"
+msgstr ""
+
+#: src/lib/elementary/elm_panel.c:128
+msgid "Double tap to close panel menu"
+msgstr ""
+
+#: src/lib/elementary/elm_panel.c:180
+msgid "panel button"
+msgstr "面板按钮"
+
+#: src/lib/elementary/efl_ui_progressbar.c:313
+msgid "progressbar"
+msgstr "进度条"
+
+#: src/lib/elementary/efl_ui_radio.c:243
+msgid "Radio"
+msgstr "无线电"
+
+#: src/lib/elementary/elm_segment_control.c:532
+#: src/lib/elementary/elm_toolbar.c:2349
+msgid "State: Selected"
+msgstr "状态：已选择"
+
+#: src/lib/elementary/elm_segment_control.c:534
+#, fuzzy
+msgid "State: Unselected"
+msgstr "状态：已选择"
+
+#: src/lib/elementary/elm_segment_control.c:548
+msgid "Segment Control Item"
+msgstr ""
+
+#: src/lib/elementary/efl_ui_slider.c:1198
+msgid "slider"
+msgstr "滑块"
+
+#: src/lib/elementary/elm_spinner.c:1050
+msgid "incremented"
+msgstr ""
+
+#: src/lib/elementary/elm_spinner.c:1056
+msgid "decremented"
+msgstr ""
+
+#: src/lib/elementary/elm_spinner.c:1089 src/lib/elementary/elm_spinner.c:1156
+msgid "spinner"
+msgstr ""
+
+#: src/lib/elementary/elm_spinner.c:1098 src/lib/elementary/elm_spinner.c:1139
+msgid "spinner increment button"
+msgstr ""
+
+#: src/lib/elementary/elm_spinner.c:1101 src/lib/elementary/elm_spinner.c:1148
+msgid "spinner decrement button"
+msgstr ""
+
+#: src/lib/elementary/elm_spinner.c:1103
+msgid "spinner text"
+msgstr ""
+
+#: src/lib/elementary/elm_toolbar.c:1804 src/lib/elementary/elm_toolbar.c:2411
+msgid "Selected"
+msgstr "已选择"
+
+#: src/lib/elementary/elm_toolbar.c:2345
+msgid "Separator"
+msgstr "分隔符"
+
+#: src/lib/elementary/elm_toolbar.c:2351
+msgid "Has menu"
+msgstr "有菜单"
+
+#: src/lib/elementary/elm_toolbar.c:2406
+msgid "Unselected"
+msgstr "未选择"
+
+#: src/lib/elementary/elm_toolbar.c:2423
+msgid "Toolbar Item"
+msgstr "工具栏项目"
+
+#~ msgid "List Item"
+#~ msgstr "列表条目"

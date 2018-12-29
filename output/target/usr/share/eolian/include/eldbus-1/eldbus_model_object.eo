@@ -1,0 +1,81 @@
+import eldbus_types;
+
+class Eldbus.Model.Object (Efl.Object, Efl.Model) {
+    [[Eldbus model object class]]
+
+    data: Eldbus_Model_Object_Data;
+    methods {
+        constructor {
+            [[Custom Eldbus_Model_Object constructor.
+
+              @since 1.16]]
+            params {
+                @in type: Eldbus.Connection.Type; [[The connection type]]
+                @in address: string; [[Remote address of DBus]]
+                @in private_: bool; [[Non shared DBus connection]]
+                @in bus: string; [[DBus Name or unique-id]]
+                @in path: string; [[DBus path]]
+            }
+        }
+        connection_constructor {
+            [[Custom Eldbus_Model_Object connection_constructor.
+
+              @since 1.16]]
+            params {
+                @in connection: ptr(Eldbus.Connection); [[Eldbus connection]]
+                @in bus: string; [[DBus Name or unique-id]]
+                @in path: string; [[DBus path]]
+            }
+        }
+    @property type {
+            [[Connection type]]
+            get { }
+            values {
+                type: Eldbus.Connection.Type; [[Connection type]]
+            }
+        }
+    @property address {
+            [[Remote address of DBus]]
+            get { }
+            values {
+                address: string; [[Address]]
+            }
+        }
+    @property private {
+            [[Indicate if the DBus connection is shared or private]]
+            get { }
+            values {
+                private_: bool; [[Private DBus connection]]
+            }
+        }
+    @property bus {
+            [[DBus Name or unique-id]]
+            get { }
+            values {
+                bus: string; [[DBus name]]
+            }
+        }
+    @property path {
+            [[DBus path]]
+            get { }
+            values {
+                path: string; [[DBus path]]
+            }
+        }
+    }
+    implements {
+        Efl.Object.constructor;
+        Efl.Object.destructor;
+        Efl.Model.properties { get; }
+        Efl.Model.property_set;
+        Efl.Model.property_get;
+        Efl.Model.child_add;
+        Efl.Model.child_del;
+        Efl.Model.children_slice_get;
+        Efl.Model.children_count_get;
+    }
+    constructors {
+        .constructor;
+        .connection_constructor;
+    }
+}

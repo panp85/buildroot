@@ -1,0 +1,36 @@
+/* FIXME: Edje Drag and this Dnd Draggable have confusingly similar names! */
+interface Efl.Ui.Draggable ()
+{
+   [[Efl UI draggable interface]]
+   event_prefix: efl_ui;
+   methods {
+        @property drag_target {
+             [[Control whether the object's content is changed by drag and drop.
+
+               If $drag_target is true, the object can be target of dragging
+               object and the content of this object can be changed into
+               dragging content. For example, If object deals with image and
+               $drag_target is true, user can drag new image and drop it into
+               this object. And then this object's image can be changed into
+               new image.]]
+             set {
+             }
+             get {
+             }
+             values {
+                  set: bool; [[Turn on or off drop_target. Default is $false.]]
+             }
+        }
+   }
+
+   events {
+      drag; [[Called when drag operation starts]]
+      drag,start; [[Called when drag started]]
+      drag,stop; [[Called when drag stopped]]
+      drag,end; [[Called when drag operation ends]]
+      drag,start,up; [[Called when drag starts into up direction]]
+      drag,start,down; [[Called when drag starts into down direction]]
+      drag,start,right; [[Called when drag starts into right direction]]
+      drag,start,left; [[Called when drag starts into left direction]]
+   }
+}

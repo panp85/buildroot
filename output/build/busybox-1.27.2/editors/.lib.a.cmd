@@ -1,0 +1,1 @@
+cmd_editors/lib.a := rm -f editors/lib.a; /media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-ar  rcs editors/lib.a editors/awk.o editors/cmp.o editors/diff.o editors/patch.o editors/sed.o editors/vi.o

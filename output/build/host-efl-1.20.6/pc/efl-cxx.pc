@@ -1,0 +1,16 @@
+prefix=/media/panpan/tools/buildroot-2018.02.8/output/host
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+datarootdir=${prefix}/share
+datadir=${datarootdir}
+eoincludedir=${datarootdir}/eolian/include
+eolian_flags=-I${pc_sysrootdir}${eoincludedir}/efl-1
+
+Name: EFL++
+Description: EFL's C++ bindings
+Version: 1.20.6
+Requires.private: eo >= 1.20.6 eina >= 1.20.6  
+Libs: -L${libdir} -lefl
+Libs.private:
+Cflags: -I${includedir}/efl-1 -I${includedir}/efl-1/interfaces -I${includedir}/efl-cxx-1

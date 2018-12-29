@@ -1,0 +1,8 @@
+class Elm.Dayselector.Item(Elm.Widget.Item)
+{
+   [[Elementary dayselector item class]]
+   eo_prefix: elm_dayselector_item;
+   implements {
+        Efl.Object.constructor;
+   }
+}

@@ -1,0 +1,2 @@
+/media/panpan/tools/buildroot-2018.02.8/package/libftdi/0001_pkgconfig_libusb.patch
+/media/panpan/tools/buildroot-2018.02.8/package/libftdi/0002-libftdi.pc-requires-libusb-fix-static-build.patch

@@ -1,0 +1,5 @@
+/media/panpan/tools/buildroot-2018.02.8/package/bluez_utils/0001-enable_cg2900_on_upstream_4.91.patch
+/media/panpan/tools/buildroot-2018.02.8/package/bluez_utils/0002-tools-hciconfig-include-fcntl.h.patch
+/media/panpan/tools/buildroot-2018.02.8/package/bluez_utils/0003-fix-compilation-issues-with-musl.patch
+/media/panpan/tools/buildroot-2018.02.8/package/bluez_utils/0004-test-add-missing-header.patch
+/media/panpan/tools/buildroot-2018.02.8/package/bluez_utils/0005-test-avoid-conflict-with-encrypt-function.patch

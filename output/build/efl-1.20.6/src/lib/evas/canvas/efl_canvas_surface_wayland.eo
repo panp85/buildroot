@@ -1,0 +1,10 @@
+class Efl.Canvas.Surface.Wayland (Efl.Object, Efl.Canvas.Surface)
+{
+   [[Native Wayland surface for Efl canvas]]
+
+   implements {
+      Efl.Object.constructor;
+      Efl.Object.destructor;
+      Efl.Canvas.Surface.native_buffer { set; }
+   }
+}

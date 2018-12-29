@@ -1,0 +1,13 @@
+<plugin>
+  <name>lv2</name>
+  <description>All LV2 plugins</description>
+  <filename>../../ext/lv2/.libs/libgstlv2.so</filename>
+  <basename>libgstlv2.so</basename>
+  <version>1.12.4</version>
+  <license>LGPL</license>
+  <source>gst-plugins-bad</source>
+  <package>GStreamer Bad Plug-ins source release</package>
+  <origin>Unknown package origin</origin>
+  <elements>
+  </elements>
+</plugin>

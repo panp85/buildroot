@@ -1,0 +1,45 @@
+// regular named enum
+enum Foo {
+    first,
+    bar,
+    baz = 5 * 3
+}
+
+enum Bar {
+    legacy: test;
+    foo = Foo.baz
+}
+
+enum Baz {
+    flag1 = 1 << 0,
+    flag2 = 1 << 1,
+    flag3 = 1 << 2, // testing trailing comma on last item
+}
+
+enum Name.Spaced {
+    pants
+}
+
+const Bah: Baz = Baz.flag1;
+
+enum Value {
+    foo,
+    bar,
+    baz = 2,
+    bah,
+    bam,
+    pants
+}
+
+const Pants: Value = Value.pants;
+
+class Enum {
+    methods {
+        foo {
+            params {
+                idx: int;
+            }
+            return: own(ptr(char));
+        }
+    }
+}

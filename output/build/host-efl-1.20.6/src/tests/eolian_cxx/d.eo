@@ -1,0 +1,7 @@
+class D (B, C)
+{
+   data: D_Data;
+   implements {
+      Efl.Object.constructor;
+   }
+}

@@ -1,0 +1,4 @@
+[D-BUS Service]
+Name=org.enlightenment.Ethumb
+Exec=/media/panpan/tools/buildroot-2018.02.8/output/host/bin/ethumbd
+# SystemdService=ethumb.service

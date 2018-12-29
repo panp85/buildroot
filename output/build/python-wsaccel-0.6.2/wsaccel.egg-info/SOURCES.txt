@@ -1,0 +1,9 @@
+README.rst
+setup.py
+wsaccel/__init__.py
+wsaccel/utf8validator.c
+wsaccel/xormask.c
+wsaccel.egg-info/PKG-INFO
+wsaccel.egg-info/SOURCES.txt
+wsaccel.egg-info/dependency_links.txt
+wsaccel.egg-info/top_level.txt

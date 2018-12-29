@@ -1,0 +1,27 @@
+Metadata-Version: 1.2
+Name: jaraco.classes
+Version: 1.4.3
+Summary: Utility functions for Python class constructs
+Home-page: https://github.com/jaraco/jaraco.classes
+Author: Jason R. Coombs
+Author-email: jaraco@jaraco.com
+License: UNKNOWN
+Description-Content-Type: UNKNOWN
+Description: .. image:: https://img.shields.io/pypi/v/jaraco.classes.svg
+           :target: https://pypi.org/project/jaraco.classes
+        
+        .. image:: https://img.shields.io/pypi/pyversions/jaraco.classes.svg
+        
+        .. image:: https://img.shields.io/travis/jaraco/jaraco.classes/master.svg
+           :target: http://travis-ci.org/jaraco/jaraco.classes
+        
+        .. image:: https://readthedocs.org/projects/skeleton/badge/?version=latest
+           :target: http://skeleton.readthedocs.io/en/latest/?badge=latest
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=2.7

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets">
+    <Import Project="json-glib-build-defines.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros">
+    <BinDir>$(SolutionDir)$(Configuration)\$(Platform)\bin</BinDir>
+    <JsonGlibDoInstall>
+mkdir $(CopyDir)
+mkdir $(CopyDir)\bin
+mkdir $(CopyDir)\lib
+copy $(BinDir)\json-glib-$(ApiVersion).lib $(CopyDir)\lib
+copy $(BinDir)\$(JsonGlibDllPrefix)json-glib$(JsonGlibDllSuffix).dll $(CopyDir)\bin
+copy $(BinDir)\$(JsonGlibDllPrefix)json-glib$(JsonGlibDllSuffix).pdb $(CopyDir)\bin
+copy $(BinDir)\json-glib-*.exe $(CopyDir)\bin
+copy $(BinDir)\json-glib-*.pdb $(CopyDir)\bin
+mkdir $(CopyDir)\include\json-glib-$(ApiVersion)\json-glib
+copy ..\..\..\json-glib\json-builder.h $(CopyDir)\include\json-glib-1.0\json-glib\json-builder.h
+copy ..\..\..\json-glib\json-generator.h $(CopyDir)\include\json-glib-1.0\json-glib\json-generator.h
+copy ..\..\..\json-glib\json-gobject.h $(CopyDir)\include\json-glib-1.0\json-glib\json-gobject.h
+copy ..\..\..\json-glib\json-gvariant.h $(CopyDir)\include\json-glib-1.0\json-glib\json-gvariant.h
+copy ..\..\..\json-glib\json-parser.h $(CopyDir)\include\json-glib-1.0\json-glib\json-parser.h
+copy ..\..\..\json-glib\json-path.h $(CopyDir)\include\json-glib-1.0\json-glib\json-path.h
+copy ..\..\..\json-glib\json-reader.h $(CopyDir)\include\json-glib-1.0\json-glib\json-reader.h
+copy ..\..\..\json-glib\json-types.h $(CopyDir)\include\json-glib-1.0\json-glib\json-types.h
+copy ..\..\..\json-glib\json-utils.h $(CopyDir)\include\json-glib-1.0\json-glib\json-utils.h
+copy ..\..\..\json-glib\json-version-macros.h $(CopyDir)\include\json-glib-1.0\json-glib\json-version-macros.h
+copy ..\..\..\json-glib\json-enum-types.h $(CopyDir)\include\json-glib-1.0\json-glib\json-enum-types.h
+copy ..\..\..\json-glib\json-version.h $(CopyDir)\include\json-glib-1.0\json-glib\json-version.h
+copy ..\..\..\json-glib\json-glib.h $(CopyDir)\include\json-glib-1.0\json-glib\json-glib.h
+if exist ..\json-glib.pc copy ..\json-glib.pc $(CopyDir)\lib\pkgconfig
+    </JsonGlibDoInstall>
+    <JSONGLibPCFiles>..\json-glib.pc</JSONGLibPCFiles>
+    <GenJSONGLibPC>if exist $(PythonPath)\python.exe ((if not exist $(CopyDir)\lib\pkgconfig mkdir $(CopyDir)\lib\pkgconfig) &amp; ($(PythonPath)\python.exe ..\jsonglibpc.py --prefix=$(CopyDir) --version=$(JsonGlibMajorVersion).$(JsonGlibMinorVersion).$(JsonGlibMicroVersion)))</GenJSONGLibPC>
+  </PropertyGroup>
+  <PropertyGroup>
+    <_PropertySheetDisplayName>jsonglibinstallprops</_PropertySheetDisplayName>
+  </PropertyGroup>
+  <ItemGroup>
+    <BuildMacro Include="BinDir">
+      <Value>$(BinDir)</Value>
+    </BuildMacro>
+    <BuildMacro Include="JsonGlibDoInstall">
+      <Value>$(JsonGlibDoInstall)</Value>
+    </BuildMacro>
+    <BuildMacro Include="JSONGLibPCFiles">
+      <Value>$(JSONGLibPCFiles)</Value>
+    </BuildMacro>
+    <BuildMacro Include="GenJSONGLibPC">
+      <Value>$(GenJSONGLibPC)</Value>
+    </BuildMacro>
+  </ItemGroup>
+</Project>

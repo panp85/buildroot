@@ -1,0 +1,1263 @@
+The target system is: Buildroot -  - armv7l
+The host system is: Linux - 4.4.0-116-generic - x86_64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc 
+Build flags: -D_LARGEFILE_SOURCE;-D_LARGEFILE64_SOURCE;-D_FILE_OFFSET_BITS=64;-Os
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is GNU, found in "/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/3.10.2/CompilerIdC/a.out"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: /media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-g++ 
+Build flags: -D_LARGEFILE_SOURCE;-D_LARGEFILE64_SOURCE;-D_FILE_OFFSET_BITS=64;-Os
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+
+The CXX compiler identification is GNU, found in "/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/3.10.2/CompilerIdCXX/a.out"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_88f7e/fast"
+make[2]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_88f7e.dir/build.make CMakeFiles/cmTC_88f7e.dir/build
+make[3]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_88f7e.dir/testCCompiler.c.o
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot   -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os   -DNDEBUG   -o CMakeFiles/cmTC_88f7e.dir/testCCompiler.c.o   -c /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_88f7e
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_88f7e.dir/link.txt --verbose=1
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os   -DNDEBUG    -rdynamic CMakeFiles/cmTC_88f7e.dir/testCCompiler.c.o  -o cmTC_88f7e 
+make[3]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_e12b5/fast"
+make[2]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_e12b5.dir/build.make CMakeFiles/cmTC_e12b5.dir/build
+make[3]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e12b5.dir/CMakeCCompilerABI.c.o
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot   -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os   -DNDEBUG   -o CMakeFiles/cmTC_e12b5.dir/CMakeCCompilerABI.c.o   -c /usr/local/share/cmake-3.10/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_e12b5
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e12b5.dir/link.txt --verbose=1
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os   -DNDEBUG   -v -rdynamic CMakeFiles/cmTC_e12b5.dir/CMakeCCompilerABI.c.o  -o cmTC_e12b5 
+Using built-in specs.
+COLLECT_GCC=/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi//bin/arm-linux-gnueabihf-gcc
+COLLECT_LTO_WRAPPER=/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../libexec/gcc/arm-linux-gnueabihf/7.2.1/lto-wrapper
+Target: arm-linux-gnueabihf
+Configured with: /proj/esdt_sdk/gnu_abe/ABE/builds/lin/arm/arm-linux/snapshots//gcc-linaro-7.2-2017.11-rc1/configure SHELL=/bin/sh --with-bugurl=https://bugs.linaro.org --with-mpc=/proj/esdt_sdk/gnu_abe/ABE/builds/lin/arm/arm-linux/builds/destdir/x86_64-unknown-linux-gnu --with-mpfr=/proj/esdt_sdk/gnu_abe/ABE/builds/lin/arm/arm-linux/builds/destdir/x86_64-unknown-linux-gnu --with-gmp=/proj/esdt_sdk/gnu_abe/ABE/builds/lin/arm/arm-linux/builds/destdir/x86_64-unknown-linux-gnu --with-gnu-as --with-gnu-ld --disable-libstdcxx-pch --disable-libmudflap --with-cloog=no --with-ppl=no --with-isl=no --disable-nls --enable-c99 --enable-gnu-indirect-function --disable-multilib --with-tune=cortex-a9 --with-arch=armv7-a --with-fpu=vfpv3-d16 --with-float=hard --with-mode=arm --disable-multilib --enable-multiarch CFLAGS=-O2 CXXFLAGS=-O2 --disable-silent-rules --enable-libquadmath --enable-libg2c --enable-symvers=gnu --enable-libstdcxx-pch --enable-libssp --disable-libmudflap --enable-checking=release --enable-cheaders=c_global --enable-poison-system-directories --enable-clocale=generic --enable-shared --enable-threads=posix --disable-multilib --enable-c99 --without-local-prefix --enable-lto --disable-bootstrap --with-linker-hash-style=gnu --with-ppl=no --with-cloog=no --without-isl --enable-nls --enable-__cxa_atexit --with-build-sysroot=/proj/esdt_sdk/gnu_abe/ABE/builds/lin/arm/arm-linux/builds/destdir/x86_64-unknown-linux-gnu/arm-linux-gnueabihf/libc --enable-plugins --enable-linker-build-id --enable-long-long --enable-shared --with-sysroot=/proj/esdt_sdk/gnu_abe/ABE/builds/lin/arm/arm-linux/builds/destdir/x86_64-unknown-linux-gnu/arm-linux-gnueabihf/libc --enable-languages=c,c++,lto --enable-checking=yes --disable-bootstrap --with-bugurl=https://bugs.linaro.org --build=x86_64-unknown-linux-gnu --host=x86_64-unknown-linux-gnu --target=arm-linux-gnueabihf --prefix=/proj/esdt_sdk/gnu_abe/ABE/builds/lin/arm/arm-linux/builds/destdir/x86_64-unknown-linux-gnu
+Thread model: posix
+gcc version 7.2.1 20171011 (Linaro GCC 7.2-2017.11-rc1) 
+COMPILER_PATH=/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../libexec/gcc/arm-linux-gnueabihf/7.2.1/:/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../libexec/gcc/arm-linux-gnueabihf/:/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../libexec/gcc/:/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabihf/7.2.1/../../../../arm-linux-gnueabihf/bin/
+LIBRARY_PATH=/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabihf/7.2.1/:/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabihf/:/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../lib/gcc/:/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabihf/7.2.1/../../../../arm-linux-gnueabihf/lib/:/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot/lib/:/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot/usr/lib/
+COLLECT_GCC_OPTIONS='-mabi=aapcs-linux' '-mfpu=neon' '-marm' '-mfloat-abi=hard' '-mcpu=cortex-a7' '-D' '_LARGEFILE_SOURCE' '-D' '_LARGEFILE64_SOURCE' '-D' '_FILE_OFFSET_BITS=64' '-Os' '-D' 'NDEBUG' '-v' '-rdynamic' '-o' 'cmTC_e12b5' '-mtls-dialect=gnu'
+ /media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../libexec/gcc/arm-linux-gnueabihf/7.2.1/collect2 -plugin /media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../libexec/gcc/arm-linux-gnueabihf/7.2.1/liblto_plugin.so -plugin-opt=/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../libexec/gcc/arm-linux-gnueabihf/7.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccDSh4kx.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot --build-id --eh-frame-hdr --hash-style=gnu -export-dynamic -dynamic-linker /lib/ld-linux-armhf.so.3 -X -m armelf_linux_eabi -o cmTC_e12b5 /media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot/lib/crt1.o /media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot/lib/crti.o /media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabihf/7.2.1/crtbegin.o -L/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabihf/7.2.1 -L/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabihf -L/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../lib/gcc -L/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabihf/7.2.1/../../../../arm-linux-gnueabihf/lib -L/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot/lib -L/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot/usr/lib CMakeFiles/cmTC_e12b5.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabihf/7.2.1/crtend.o /media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot/lib/crtn.o
+COLLECT_GCC_OPTIONS='-mabi=aapcs-linux' '-mfpu=neon' '-marm' '-mfloat-abi=hard' '-mcpu=cortex-a7' '-D' '_LARGEFILE_SOURCE' '-D' '_LARGEFILE64_SOURCE' '-D' '_FILE_OFFSET_BITS=64' '-Os' '-D' 'NDEBUG' '-v' '-rdynamic' '-o' 'cmTC_e12b5' '-mtls-dialect=gnu'
+make[3]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(arm-linux-gnueabihf-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_e12b5/fast"]
+  ignore line: [make[2]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp']
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_e12b5.dir/build.make CMakeFiles/cmTC_e12b5.dir/build]
+  ignore line: [make[3]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp']
+  ignore line: [Building C object CMakeFiles/cmTC_e12b5.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot   -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os   -DNDEBUG   -o CMakeFiles/cmTC_e12b5.dir/CMakeCCompilerABI.c.o   -c /usr/local/share/cmake-3.10/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_e12b5]
+  ignore line: [/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e12b5.dir/link.txt --verbose=1]
+  ignore line: [/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os   -DNDEBUG   -v -rdynamic CMakeFiles/cmTC_e12b5.dir/CMakeCCompilerABI.c.o  -o cmTC_e12b5 ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi//bin/arm-linux-gnueabihf-gcc]
+  ignore line: [COLLECT_LTO_WRAPPER=/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../libexec/gcc/arm-linux-gnueabihf/7.2.1/lto-wrapper]
+  ignore line: [Target: arm-linux-gnueabihf]
+  ignore line: [Configured with: /proj/esdt_sdk/gnu_abe/ABE/builds/lin/arm/arm-linux/snapshots//gcc-linaro-7.2-2017.11-rc1/configure SHELL=/bin/sh --with-bugurl=https://bugs.linaro.org --with-mpc=/proj/esdt_sdk/gnu_abe/ABE/builds/lin/arm/arm-linux/builds/destdir/x86_64-unknown-linux-gnu --with-mpfr=/proj/esdt_sdk/gnu_abe/ABE/builds/lin/arm/arm-linux/builds/destdir/x86_64-unknown-linux-gnu --with-gmp=/proj/esdt_sdk/gnu_abe/ABE/builds/lin/arm/arm-linux/builds/destdir/x86_64-unknown-linux-gnu --with-gnu-as --with-gnu-ld --disable-libstdcxx-pch --disable-libmudflap --with-cloog=no --with-ppl=no --with-isl=no --disable-nls --enable-c99 --enable-gnu-indirect-function --disable-multilib --with-tune=cortex-a9 --with-arch=armv7-a --with-fpu=vfpv3-d16 --with-float=hard --with-mode=arm --disable-multilib --enable-multiarch CFLAGS=-O2 CXXFLAGS=-O2 --disable-silent-rules --enable-libquadmath --enable-libg2c --enable-symvers=gnu --enable-libstdcxx-pch --enable-libssp --disable-libmudflap --enable-checking=release --enable-cheaders=c_global --enable-poison-system-directories --enable-clocale=generic --enable-shared --enable-threads=posix --disable-multilib --enable-c99 --without-local-prefix --enable-lto --disable-bootstrap --with-linker-hash-style=gnu --with-ppl=no --with-cloog=no --without-isl --enable-nls --enable-__cxa_atexit --with-build-sysroot=/proj/esdt_sdk/gnu_abe/ABE/builds/lin/arm/arm-linux/builds/destdir/x86_64-unknown-linux-gnu/arm-linux-gnueabihf/libc --enable-plugins --enable-linker-build-id --enable-long-long --enable-shared --with-sysroot=/proj/esdt_sdk/gnu_abe/ABE/builds/lin/arm/arm-linux/builds/destdir/x86_64-unknown-linux-gnu/arm-linux-gnueabihf/libc --enable-languages=c,c++,lto --enable-checking=yes --disable-bootstrap --with-bugurl=https://bugs.linaro.org --build=x86_64-unknown-linux-gnu --host=x86_64-unknown-linux-gnu --target=arm-linux-gnueabihf --prefix=/proj/esdt_sdk/gnu_abe/ABE/builds/lin/arm/arm-linux/builds/destdir/x86_64-unknown-linux-gnu]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 7.2.1 20171011 (Linaro GCC 7.2-2017.11-rc1) ]
+  ignore line: [COMPILER_PATH=/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../libexec/gcc/arm-linux-gnueabihf/7.2.1/:/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../libexec/gcc/arm-linux-gnueabihf/:/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../libexec/gcc/:/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabihf/7.2.1/../../../../arm-linux-gnueabihf/bin/]
+  ignore line: [LIBRARY_PATH=/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabihf/7.2.1/:/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabihf/:/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../lib/gcc/:/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabihf/7.2.1/../../../../arm-linux-gnueabihf/lib/:/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot/lib/:/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-mabi=aapcs-linux' '-mfpu=neon' '-marm' '-mfloat-abi=hard' '-mcpu=cortex-a7' '-D' '_LARGEFILE_SOURCE' '-D' '_LARGEFILE64_SOURCE' '-D' '_FILE_OFFSET_BITS=64' '-Os' '-D' 'NDEBUG' '-v' '-rdynamic' '-o' 'cmTC_e12b5' '-mtls-dialect=gnu']
+  link line: [ /media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../libexec/gcc/arm-linux-gnueabihf/7.2.1/collect2 -plugin /media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../libexec/gcc/arm-linux-gnueabihf/7.2.1/liblto_plugin.so -plugin-opt=/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../libexec/gcc/arm-linux-gnueabihf/7.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccDSh4kx.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot --build-id --eh-frame-hdr --hash-style=gnu -export-dynamic -dynamic-linker /lib/ld-linux-armhf.so.3 -X -m armelf_linux_eabi -o cmTC_e12b5 /media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot/lib/crt1.o /media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot/lib/crti.o /media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabihf/7.2.1/crtbegin.o -L/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabihf/7.2.1 -L/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabihf -L/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../lib/gcc -L/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabihf/7.2.1/../../../../arm-linux-gnueabihf/lib -L/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot/lib -L/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot/usr/lib CMakeFiles/cmTC_e12b5.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabihf/7.2.1/crtend.o /media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot/lib/crtn.o]
+    arg [/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../libexec/gcc/arm-linux-gnueabihf/7.2.1/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../libexec/gcc/arm-linux-gnueabihf/7.2.1/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../libexec/gcc/arm-linux-gnueabihf/7.2.1/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccDSh4kx.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [--sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot] ==> ignore
+    arg [--build-id] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [-export-dynamic] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib/ld-linux-armhf.so.3] ==> ignore
+    arg [-X] ==> ignore
+    arg [-m] ==> ignore
+    arg [armelf_linux_eabi] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_e12b5] ==> ignore
+    arg [/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot/lib/crt1.o] ==> ignore
+    arg [/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot/lib/crti.o] ==> ignore
+    arg [/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabihf/7.2.1/crtbegin.o] ==> ignore
+    arg [-L/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabihf/7.2.1] ==> dir [/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabihf/7.2.1]
+    arg [-L/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabihf] ==> dir [/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabihf]
+    arg [-L/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../lib/gcc] ==> dir [/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../lib/gcc]
+    arg [-L/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabihf/7.2.1/../../../../arm-linux-gnueabihf/lib] ==> dir [/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabihf/7.2.1/../../../../arm-linux-gnueabihf/lib]
+    arg [-L/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot/lib] ==> dir [/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot/lib]
+    arg [-L/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot/usr/lib] ==> dir [/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot/usr/lib]
+    arg [CMakeFiles/cmTC_e12b5.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [-lc] ==> lib [c]
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabihf/7.2.1/crtend.o] ==> ignore
+    arg [/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot/lib/crtn.o] ==> ignore
+  collapse library dir [/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabihf/7.2.1] ==> [/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/7.2.1]
+  collapse library dir [/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabihf] ==> [/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf]
+  collapse library dir [/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../lib/gcc] ==> [/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/lib/gcc]
+  collapse library dir [/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabihf/7.2.1/../../../../arm-linux-gnueabihf/lib] ==> [/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/lib]
+  collapse library dir [/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot/lib] ==> [/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot/lib]
+  collapse library dir [/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot/usr/lib] ==> [/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot/usr/lib]
+  implicit libs: [gcc;gcc_s;c;gcc;gcc_s]
+  implicit dirs: [/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/7.2.1;/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf;/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/lib/gcc;/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/lib;/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot/lib;/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot/usr/lib]
+  implicit fwks: []
+
+
+
+
+Detecting C [-std=c11] compiler features compiled with the following output:
+Change Dir: /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_a66ec/fast"
+make[2]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_a66ec.dir/build.make CMakeFiles/cmTC_a66ec.dir/build
+make[3]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a66ec.dir/feature_tests.c.o
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot   -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os   -DNDEBUG   -std=c11 -o CMakeFiles/cmTC_a66ec.dir/feature_tests.c.o   -c /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/feature_tests.c
+Linking C executable cmTC_a66ec
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a66ec.dir/link.txt --verbose=1
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os   -DNDEBUG    -rdynamic CMakeFiles/cmTC_a66ec.dir/feature_tests.c.o  -o cmTC_a66ec 
+make[3]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:1c_restrict
+    Feature record: C_FEATURE:1c_static_assert
+    Feature record: C_FEATURE:1c_variadic_macros
+
+
+Detecting C [-std=c99] compiler features compiled with the following output:
+Change Dir: /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_52481/fast"
+make[2]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_52481.dir/build.make CMakeFiles/cmTC_52481.dir/build
+make[3]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_52481.dir/feature_tests.c.o
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot   -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os   -DNDEBUG   -std=c99 -o CMakeFiles/cmTC_52481.dir/feature_tests.c.o   -c /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/feature_tests.c
+Linking C executable cmTC_52481
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_52481.dir/link.txt --verbose=1
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os   -DNDEBUG    -rdynamic CMakeFiles/cmTC_52481.dir/feature_tests.c.o  -o cmTC_52481 
+make[3]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:1c_restrict
+    Feature record: C_FEATURE:0c_static_assert
+    Feature record: C_FEATURE:1c_variadic_macros
+
+
+Detecting C [-std=c90] compiler features compiled with the following output:
+Change Dir: /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_9bf07/fast"
+make[2]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_9bf07.dir/build.make CMakeFiles/cmTC_9bf07.dir/build
+make[3]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9bf07.dir/feature_tests.c.o
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot   -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os   -DNDEBUG   -std=c90 -o CMakeFiles/cmTC_9bf07.dir/feature_tests.c.o   -c /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/feature_tests.c
+Linking C executable cmTC_9bf07
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9bf07.dir/link.txt --verbose=1
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os   -DNDEBUG    -rdynamic CMakeFiles/cmTC_9bf07.dir/feature_tests.c.o  -o cmTC_9bf07 
+make[3]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:0c_restrict
+    Feature record: C_FEATURE:0c_static_assert
+    Feature record: C_FEATURE:0c_variadic_macros
+Determining if the CXX compiler works passed with the following output:
+Change Dir: /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_e9399/fast"
+make[2]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_e9399.dir/build.make CMakeFiles/cmTC_e9399.dir/build
+make[3]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_e9399.dir/testCXXCompiler.cxx.o
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-g++ --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot    -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os   -DNDEBUG   -o CMakeFiles/cmTC_e9399.dir/testCXXCompiler.cxx.o -c /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_e9399
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e9399.dir/link.txt --verbose=1
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-g++ --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot  -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os   -DNDEBUG    -rdynamic CMakeFiles/cmTC_e9399.dir/testCXXCompiler.cxx.o  -o cmTC_e9399 
+make[3]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_bc5df/fast"
+make[2]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_bc5df.dir/build.make CMakeFiles/cmTC_bc5df.dir/build
+make[3]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_bc5df.dir/CMakeCXXCompilerABI.cpp.o
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-g++ --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot    -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os   -DNDEBUG   -o CMakeFiles/cmTC_bc5df.dir/CMakeCXXCompilerABI.cpp.o -c /usr/local/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_bc5df
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bc5df.dir/link.txt --verbose=1
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-g++ --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot  -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os   -DNDEBUG   -v -rdynamic CMakeFiles/cmTC_bc5df.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_bc5df 
+Using built-in specs.
+COLLECT_GCC=/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi//bin/arm-linux-gnueabihf-g++
+COLLECT_LTO_WRAPPER=/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../libexec/gcc/arm-linux-gnueabihf/7.2.1/lto-wrapper
+Target: arm-linux-gnueabihf
+Configured with: /proj/esdt_sdk/gnu_abe/ABE/builds/lin/arm/arm-linux/snapshots//gcc-linaro-7.2-2017.11-rc1/configure SHELL=/bin/sh --with-bugurl=https://bugs.linaro.org --with-mpc=/proj/esdt_sdk/gnu_abe/ABE/builds/lin/arm/arm-linux/builds/destdir/x86_64-unknown-linux-gnu --with-mpfr=/proj/esdt_sdk/gnu_abe/ABE/builds/lin/arm/arm-linux/builds/destdir/x86_64-unknown-linux-gnu --with-gmp=/proj/esdt_sdk/gnu_abe/ABE/builds/lin/arm/arm-linux/builds/destdir/x86_64-unknown-linux-gnu --with-gnu-as --with-gnu-ld --disable-libstdcxx-pch --disable-libmudflap --with-cloog=no --with-ppl=no --with-isl=no --disable-nls --enable-c99 --enable-gnu-indirect-function --disable-multilib --with-tune=cortex-a9 --with-arch=armv7-a --with-fpu=vfpv3-d16 --with-float=hard --with-mode=arm --disable-multilib --enable-multiarch CFLAGS=-O2 CXXFLAGS=-O2 --disable-silent-rules --enable-libquadmath --enable-libg2c --enable-symvers=gnu --enable-libstdcxx-pch --enable-libssp --disable-libmudflap --enable-checking=release --enable-cheaders=c_global --enable-poison-system-directories --enable-clocale=generic --enable-shared --enable-threads=posix --disable-multilib --enable-c99 --without-local-prefix --enable-lto --disable-bootstrap --with-linker-hash-style=gnu --with-ppl=no --with-cloog=no --without-isl --enable-nls --enable-__cxa_atexit --with-build-sysroot=/proj/esdt_sdk/gnu_abe/ABE/builds/lin/arm/arm-linux/builds/destdir/x86_64-unknown-linux-gnu/arm-linux-gnueabihf/libc --enable-plugins --enable-linker-build-id --enable-long-long --enable-shared --with-sysroot=/proj/esdt_sdk/gnu_abe/ABE/builds/lin/arm/arm-linux/builds/destdir/x86_64-unknown-linux-gnu/arm-linux-gnueabihf/libc --enable-languages=c,c++,lto --enable-checking=yes --disable-bootstrap --with-bugurl=https://bugs.linaro.org --build=x86_64-unknown-linux-gnu --host=x86_64-unknown-linux-gnu --target=arm-linux-gnueabihf --prefix=/proj/esdt_sdk/gnu_abe/ABE/builds/lin/arm/arm-linux/builds/destdir/x86_64-unknown-linux-gnu
+Thread model: posix
+gcc version 7.2.1 20171011 (Linaro GCC 7.2-2017.11-rc1) 
+COMPILER_PATH=/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../libexec/gcc/arm-linux-gnueabihf/7.2.1/:/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../libexec/gcc/arm-linux-gnueabihf/:/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../libexec/gcc/:/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabihf/7.2.1/../../../../arm-linux-gnueabihf/bin/
+LIBRARY_PATH=/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabihf/7.2.1/:/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabihf/:/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../lib/gcc/:/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabihf/7.2.1/../../../../arm-linux-gnueabihf/lib/:/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot/lib/:/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot/usr/lib/
+COLLECT_GCC_OPTIONS='-mabi=aapcs-linux' '-mfpu=neon' '-marm' '-mfloat-abi=hard' '-mcpu=cortex-a7' '-D' '_LARGEFILE_SOURCE' '-D' '_LARGEFILE64_SOURCE' '-D' '_FILE_OFFSET_BITS=64' '-Os' '-D' 'NDEBUG' '-v' '-rdynamic' '-o' 'cmTC_bc5df' '-shared-libgcc' '-mtls-dialect=gnu'
+ /media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../libexec/gcc/arm-linux-gnueabihf/7.2.1/collect2 -plugin /media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../libexec/gcc/arm-linux-gnueabihf/7.2.1/liblto_plugin.so -plugin-opt=/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../libexec/gcc/arm-linux-gnueabihf/7.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/cctrZV9f.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot --build-id --eh-frame-hdr --hash-style=gnu -export-dynamic -dynamic-linker /lib/ld-linux-armhf.so.3 -X -m armelf_linux_eabi -o cmTC_bc5df /media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot/lib/crt1.o /media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot/lib/crti.o /media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabihf/7.2.1/crtbegin.o -L/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabihf/7.2.1 -L/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabihf -L/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../lib/gcc -L/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabihf/7.2.1/../../../../arm-linux-gnueabihf/lib -L/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot/lib -L/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot/usr/lib CMakeFiles/cmTC_bc5df.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabihf/7.2.1/crtend.o /media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot/lib/crtn.o
+COLLECT_GCC_OPTIONS='-mabi=aapcs-linux' '-mfpu=neon' '-marm' '-mfloat-abi=hard' '-mcpu=cortex-a7' '-D' '_LARGEFILE_SOURCE' '-D' '_LARGEFILE64_SOURCE' '-D' '_FILE_OFFSET_BITS=64' '-Os' '-D' 'NDEBUG' '-v' '-rdynamic' '-o' 'cmTC_bc5df' '-shared-libgcc' '-mtls-dialect=gnu'
+make[3]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+
+
+Parsed CXX implicit link information from above output:
+  link line regex: [^( *|.*[/\])(arm-linux-gnueabihf-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_bc5df/fast"]
+  ignore line: [make[2]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp']
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_bc5df.dir/build.make CMakeFiles/cmTC_bc5df.dir/build]
+  ignore line: [make[3]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp']
+  ignore line: [Building CXX object CMakeFiles/cmTC_bc5df.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-g++ --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot    -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os   -DNDEBUG   -o CMakeFiles/cmTC_bc5df.dir/CMakeCXXCompilerABI.cpp.o -c /usr/local/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTC_bc5df]
+  ignore line: [/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bc5df.dir/link.txt --verbose=1]
+  ignore line: [/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-g++ --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot  -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os   -DNDEBUG   -v -rdynamic CMakeFiles/cmTC_bc5df.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_bc5df ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi//bin/arm-linux-gnueabihf-g++]
+  ignore line: [COLLECT_LTO_WRAPPER=/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../libexec/gcc/arm-linux-gnueabihf/7.2.1/lto-wrapper]
+  ignore line: [Target: arm-linux-gnueabihf]
+  ignore line: [Configured with: /proj/esdt_sdk/gnu_abe/ABE/builds/lin/arm/arm-linux/snapshots//gcc-linaro-7.2-2017.11-rc1/configure SHELL=/bin/sh --with-bugurl=https://bugs.linaro.org --with-mpc=/proj/esdt_sdk/gnu_abe/ABE/builds/lin/arm/arm-linux/builds/destdir/x86_64-unknown-linux-gnu --with-mpfr=/proj/esdt_sdk/gnu_abe/ABE/builds/lin/arm/arm-linux/builds/destdir/x86_64-unknown-linux-gnu --with-gmp=/proj/esdt_sdk/gnu_abe/ABE/builds/lin/arm/arm-linux/builds/destdir/x86_64-unknown-linux-gnu --with-gnu-as --with-gnu-ld --disable-libstdcxx-pch --disable-libmudflap --with-cloog=no --with-ppl=no --with-isl=no --disable-nls --enable-c99 --enable-gnu-indirect-function --disable-multilib --with-tune=cortex-a9 --with-arch=armv7-a --with-fpu=vfpv3-d16 --with-float=hard --with-mode=arm --disable-multilib --enable-multiarch CFLAGS=-O2 CXXFLAGS=-O2 --disable-silent-rules --enable-libquadmath --enable-libg2c --enable-symvers=gnu --enable-libstdcxx-pch --enable-libssp --disable-libmudflap --enable-checking=release --enable-cheaders=c_global --enable-poison-system-directories --enable-clocale=generic --enable-shared --enable-threads=posix --disable-multilib --enable-c99 --without-local-prefix --enable-lto --disable-bootstrap --with-linker-hash-style=gnu --with-ppl=no --with-cloog=no --without-isl --enable-nls --enable-__cxa_atexit --with-build-sysroot=/proj/esdt_sdk/gnu_abe/ABE/builds/lin/arm/arm-linux/builds/destdir/x86_64-unknown-linux-gnu/arm-linux-gnueabihf/libc --enable-plugins --enable-linker-build-id --enable-long-long --enable-shared --with-sysroot=/proj/esdt_sdk/gnu_abe/ABE/builds/lin/arm/arm-linux/builds/destdir/x86_64-unknown-linux-gnu/arm-linux-gnueabihf/libc --enable-languages=c,c++,lto --enable-checking=yes --disable-bootstrap --with-bugurl=https://bugs.linaro.org --build=x86_64-unknown-linux-gnu --host=x86_64-unknown-linux-gnu --target=arm-linux-gnueabihf --prefix=/proj/esdt_sdk/gnu_abe/ABE/builds/lin/arm/arm-linux/builds/destdir/x86_64-unknown-linux-gnu]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 7.2.1 20171011 (Linaro GCC 7.2-2017.11-rc1) ]
+  ignore line: [COMPILER_PATH=/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../libexec/gcc/arm-linux-gnueabihf/7.2.1/:/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../libexec/gcc/arm-linux-gnueabihf/:/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../libexec/gcc/:/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabihf/7.2.1/../../../../arm-linux-gnueabihf/bin/]
+  ignore line: [LIBRARY_PATH=/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabihf/7.2.1/:/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabihf/:/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../lib/gcc/:/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabihf/7.2.1/../../../../arm-linux-gnueabihf/lib/:/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot/lib/:/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-mabi=aapcs-linux' '-mfpu=neon' '-marm' '-mfloat-abi=hard' '-mcpu=cortex-a7' '-D' '_LARGEFILE_SOURCE' '-D' '_LARGEFILE64_SOURCE' '-D' '_FILE_OFFSET_BITS=64' '-Os' '-D' 'NDEBUG' '-v' '-rdynamic' '-o' 'cmTC_bc5df' '-shared-libgcc' '-mtls-dialect=gnu']
+  link line: [ /media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../libexec/gcc/arm-linux-gnueabihf/7.2.1/collect2 -plugin /media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../libexec/gcc/arm-linux-gnueabihf/7.2.1/liblto_plugin.so -plugin-opt=/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../libexec/gcc/arm-linux-gnueabihf/7.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/cctrZV9f.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot --build-id --eh-frame-hdr --hash-style=gnu -export-dynamic -dynamic-linker /lib/ld-linux-armhf.so.3 -X -m armelf_linux_eabi -o cmTC_bc5df /media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot/lib/crt1.o /media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot/lib/crti.o /media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabihf/7.2.1/crtbegin.o -L/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabihf/7.2.1 -L/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabihf -L/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../lib/gcc -L/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabihf/7.2.1/../../../../arm-linux-gnueabihf/lib -L/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot/lib -L/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot/usr/lib CMakeFiles/cmTC_bc5df.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabihf/7.2.1/crtend.o /media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot/lib/crtn.o]
+    arg [/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../libexec/gcc/arm-linux-gnueabihf/7.2.1/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../libexec/gcc/arm-linux-gnueabihf/7.2.1/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../libexec/gcc/arm-linux-gnueabihf/7.2.1/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/cctrZV9f.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [--sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot] ==> ignore
+    arg [--build-id] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [-export-dynamic] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib/ld-linux-armhf.so.3] ==> ignore
+    arg [-X] ==> ignore
+    arg [-m] ==> ignore
+    arg [armelf_linux_eabi] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_bc5df] ==> ignore
+    arg [/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot/lib/crt1.o] ==> ignore
+    arg [/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot/lib/crti.o] ==> ignore
+    arg [/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabihf/7.2.1/crtbegin.o] ==> ignore
+    arg [-L/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabihf/7.2.1] ==> dir [/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabihf/7.2.1]
+    arg [-L/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabihf] ==> dir [/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabihf]
+    arg [-L/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../lib/gcc] ==> dir [/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../lib/gcc]
+    arg [-L/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabihf/7.2.1/../../../../arm-linux-gnueabihf/lib] ==> dir [/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabihf/7.2.1/../../../../arm-linux-gnueabihf/lib]
+    arg [-L/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot/lib] ==> dir [/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot/lib]
+    arg [-L/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot/usr/lib] ==> dir [/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot/usr/lib]
+    arg [CMakeFiles/cmTC_bc5df.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [-lstdc++] ==> lib [stdc++]
+    arg [-lm] ==> lib [m]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lc] ==> lib [c]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabihf/7.2.1/crtend.o] ==> ignore
+    arg [/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot/lib/crtn.o] ==> ignore
+  collapse library dir [/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabihf/7.2.1] ==> [/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/7.2.1]
+  collapse library dir [/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabihf] ==> [/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf]
+  collapse library dir [/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../lib/gcc] ==> [/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/lib/gcc]
+  collapse library dir [/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabihf/7.2.1/../../../../arm-linux-gnueabihf/lib] ==> [/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/lib]
+  collapse library dir [/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot/lib] ==> [/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot/lib]
+  collapse library dir [/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot/usr/lib] ==> [/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot/usr/lib]
+  implicit libs: [stdc++;m;gcc_s;gcc;c;gcc_s;gcc]
+  implicit dirs: [/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/7.2.1;/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf;/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/lib/gcc;/media/panpan/xilinx/SDK/2018.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/lib;/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot/lib;/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot/usr/lib]
+  implicit fwks: []
+
+
+
+
+Detecting CXX [-std=c++1z] compiler features compiled with the following output:
+Change Dir: /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_dc33e/fast"
+make[2]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_dc33e.dir/build.make CMakeFiles/cmTC_dc33e.dir/build
+make[3]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_dc33e.dir/feature_tests.cxx.o
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-g++ --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot    -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os   -DNDEBUG   -std=c++1z -o CMakeFiles/cmTC_dc33e.dir/feature_tests.cxx.o -c /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_dc33e
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_dc33e.dir/link.txt --verbose=1
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-g++ --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot  -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os   -DNDEBUG    -rdynamic CMakeFiles/cmTC_dc33e.dir/feature_tests.cxx.o  -o cmTC_dc33e 
+make[3]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+
+
+    Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:1cxx_alias_templates
+    Feature record: CXX_FEATURE:1cxx_alignas
+    Feature record: CXX_FEATURE:1cxx_alignof
+    Feature record: CXX_FEATURE:1cxx_attributes
+    Feature record: CXX_FEATURE:1cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:1cxx_auto_type
+    Feature record: CXX_FEATURE:1cxx_binary_literals
+    Feature record: CXX_FEATURE:1cxx_constexpr
+    Feature record: CXX_FEATURE:1cxx_contextual_conversions
+    Feature record: CXX_FEATURE:1cxx_decltype
+    Feature record: CXX_FEATURE:1cxx_decltype_auto
+    Feature record: CXX_FEATURE:1cxx_decltype_incomplete_return_types
+    Feature record: CXX_FEATURE:1cxx_default_function_template_args
+    Feature record: CXX_FEATURE:1cxx_defaulted_functions
+    Feature record: CXX_FEATURE:1cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:1cxx_delegating_constructors
+    Feature record: CXX_FEATURE:1cxx_deleted_functions
+    Feature record: CXX_FEATURE:1cxx_digit_separators
+    Feature record: CXX_FEATURE:1cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:1cxx_explicit_conversions
+    Feature record: CXX_FEATURE:1cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:1cxx_extern_templates
+    Feature record: CXX_FEATURE:1cxx_final
+    Feature record: CXX_FEATURE:1cxx_func_identifier
+    Feature record: CXX_FEATURE:1cxx_generalized_initializers
+    Feature record: CXX_FEATURE:1cxx_generic_lambdas
+    Feature record: CXX_FEATURE:1cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:1cxx_inline_namespaces
+    Feature record: CXX_FEATURE:1cxx_lambdas
+    Feature record: CXX_FEATURE:1cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:1cxx_local_type_template_args
+    Feature record: CXX_FEATURE:1cxx_long_long_type
+    Feature record: CXX_FEATURE:1cxx_noexcept
+    Feature record: CXX_FEATURE:1cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:1cxx_nullptr
+    Feature record: CXX_FEATURE:1cxx_override
+    Feature record: CXX_FEATURE:1cxx_range_for
+    Feature record: CXX_FEATURE:1cxx_raw_string_literals
+    Feature record: CXX_FEATURE:1cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:1cxx_relaxed_constexpr
+    Feature record: CXX_FEATURE:1cxx_return_type_deduction
+    Feature record: CXX_FEATURE:1cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:1cxx_rvalue_references
+    Feature record: CXX_FEATURE:1cxx_sizeof_member
+    Feature record: CXX_FEATURE:1cxx_static_assert
+    Feature record: CXX_FEATURE:1cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:1cxx_thread_local
+    Feature record: CXX_FEATURE:1cxx_trailing_return_types
+    Feature record: CXX_FEATURE:1cxx_unicode_literals
+    Feature record: CXX_FEATURE:1cxx_uniform_initialization
+    Feature record: CXX_FEATURE:1cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:1cxx_user_literals
+    Feature record: CXX_FEATURE:1cxx_variable_templates
+    Feature record: CXX_FEATURE:1cxx_variadic_macros
+    Feature record: CXX_FEATURE:1cxx_variadic_templates
+
+
+Detecting CXX [-std=c++14] compiler features compiled with the following output:
+Change Dir: /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_b5fd5/fast"
+make[2]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_b5fd5.dir/build.make CMakeFiles/cmTC_b5fd5.dir/build
+make[3]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_b5fd5.dir/feature_tests.cxx.o
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-g++ --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot    -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os   -DNDEBUG   -std=c++14 -o CMakeFiles/cmTC_b5fd5.dir/feature_tests.cxx.o -c /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_b5fd5
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b5fd5.dir/link.txt --verbose=1
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-g++ --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot  -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os   -DNDEBUG    -rdynamic CMakeFiles/cmTC_b5fd5.dir/feature_tests.cxx.o  -o cmTC_b5fd5 
+make[3]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+
+
+    Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:1cxx_alias_templates
+    Feature record: CXX_FEATURE:1cxx_alignas
+    Feature record: CXX_FEATURE:1cxx_alignof
+    Feature record: CXX_FEATURE:1cxx_attributes
+    Feature record: CXX_FEATURE:1cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:1cxx_auto_type
+    Feature record: CXX_FEATURE:1cxx_binary_literals
+    Feature record: CXX_FEATURE:1cxx_constexpr
+    Feature record: CXX_FEATURE:1cxx_contextual_conversions
+    Feature record: CXX_FEATURE:1cxx_decltype
+    Feature record: CXX_FEATURE:1cxx_decltype_auto
+    Feature record: CXX_FEATURE:1cxx_decltype_incomplete_return_types
+    Feature record: CXX_FEATURE:1cxx_default_function_template_args
+    Feature record: CXX_FEATURE:1cxx_defaulted_functions
+    Feature record: CXX_FEATURE:1cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:1cxx_delegating_constructors
+    Feature record: CXX_FEATURE:1cxx_deleted_functions
+    Feature record: CXX_FEATURE:1cxx_digit_separators
+    Feature record: CXX_FEATURE:1cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:1cxx_explicit_conversions
+    Feature record: CXX_FEATURE:1cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:1cxx_extern_templates
+    Feature record: CXX_FEATURE:1cxx_final
+    Feature record: CXX_FEATURE:1cxx_func_identifier
+    Feature record: CXX_FEATURE:1cxx_generalized_initializers
+    Feature record: CXX_FEATURE:1cxx_generic_lambdas
+    Feature record: CXX_FEATURE:1cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:1cxx_inline_namespaces
+    Feature record: CXX_FEATURE:1cxx_lambdas
+    Feature record: CXX_FEATURE:1cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:1cxx_local_type_template_args
+    Feature record: CXX_FEATURE:1cxx_long_long_type
+    Feature record: CXX_FEATURE:1cxx_noexcept
+    Feature record: CXX_FEATURE:1cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:1cxx_nullptr
+    Feature record: CXX_FEATURE:1cxx_override
+    Feature record: CXX_FEATURE:1cxx_range_for
+    Feature record: CXX_FEATURE:1cxx_raw_string_literals
+    Feature record: CXX_FEATURE:1cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:1cxx_relaxed_constexpr
+    Feature record: CXX_FEATURE:1cxx_return_type_deduction
+    Feature record: CXX_FEATURE:1cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:1cxx_rvalue_references
+    Feature record: CXX_FEATURE:1cxx_sizeof_member
+    Feature record: CXX_FEATURE:1cxx_static_assert
+    Feature record: CXX_FEATURE:1cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:1cxx_thread_local
+    Feature record: CXX_FEATURE:1cxx_trailing_return_types
+    Feature record: CXX_FEATURE:1cxx_unicode_literals
+    Feature record: CXX_FEATURE:1cxx_uniform_initialization
+    Feature record: CXX_FEATURE:1cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:1cxx_user_literals
+    Feature record: CXX_FEATURE:1cxx_variable_templates
+    Feature record: CXX_FEATURE:1cxx_variadic_macros
+    Feature record: CXX_FEATURE:1cxx_variadic_templates
+
+
+Detecting CXX [-std=c++11] compiler features compiled with the following output:
+Change Dir: /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_0d113/fast"
+make[2]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_0d113.dir/build.make CMakeFiles/cmTC_0d113.dir/build
+make[3]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_0d113.dir/feature_tests.cxx.o
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-g++ --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot    -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os   -DNDEBUG   -std=c++11 -o CMakeFiles/cmTC_0d113.dir/feature_tests.cxx.o -c /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_0d113
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0d113.dir/link.txt --verbose=1
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-g++ --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot  -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os   -DNDEBUG    -rdynamic CMakeFiles/cmTC_0d113.dir/feature_tests.cxx.o  -o cmTC_0d113 
+make[3]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+
+
+    Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:1cxx_alias_templates
+    Feature record: CXX_FEATURE:1cxx_alignas
+    Feature record: CXX_FEATURE:1cxx_alignof
+    Feature record: CXX_FEATURE:1cxx_attributes
+    Feature record: CXX_FEATURE:0cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:1cxx_auto_type
+    Feature record: CXX_FEATURE:0cxx_binary_literals
+    Feature record: CXX_FEATURE:1cxx_constexpr
+    Feature record: CXX_FEATURE:0cxx_contextual_conversions
+    Feature record: CXX_FEATURE:1cxx_decltype
+    Feature record: CXX_FEATURE:0cxx_decltype_auto
+    Feature record: CXX_FEATURE:1cxx_decltype_incomplete_return_types
+    Feature record: CXX_FEATURE:1cxx_default_function_template_args
+    Feature record: CXX_FEATURE:1cxx_defaulted_functions
+    Feature record: CXX_FEATURE:1cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:1cxx_delegating_constructors
+    Feature record: CXX_FEATURE:1cxx_deleted_functions
+    Feature record: CXX_FEATURE:0cxx_digit_separators
+    Feature record: CXX_FEATURE:1cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:1cxx_explicit_conversions
+    Feature record: CXX_FEATURE:1cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:1cxx_extern_templates
+    Feature record: CXX_FEATURE:1cxx_final
+    Feature record: CXX_FEATURE:1cxx_func_identifier
+    Feature record: CXX_FEATURE:1cxx_generalized_initializers
+    Feature record: CXX_FEATURE:0cxx_generic_lambdas
+    Feature record: CXX_FEATURE:1cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:1cxx_inline_namespaces
+    Feature record: CXX_FEATURE:1cxx_lambdas
+    Feature record: CXX_FEATURE:0cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:1cxx_local_type_template_args
+    Feature record: CXX_FEATURE:1cxx_long_long_type
+    Feature record: CXX_FEATURE:1cxx_noexcept
+    Feature record: CXX_FEATURE:1cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:1cxx_nullptr
+    Feature record: CXX_FEATURE:1cxx_override
+    Feature record: CXX_FEATURE:1cxx_range_for
+    Feature record: CXX_FEATURE:1cxx_raw_string_literals
+    Feature record: CXX_FEATURE:1cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:0cxx_relaxed_constexpr
+    Feature record: CXX_FEATURE:0cxx_return_type_deduction
+    Feature record: CXX_FEATURE:1cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:1cxx_rvalue_references
+    Feature record: CXX_FEATURE:1cxx_sizeof_member
+    Feature record: CXX_FEATURE:1cxx_static_assert
+    Feature record: CXX_FEATURE:1cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:1cxx_thread_local
+    Feature record: CXX_FEATURE:1cxx_trailing_return_types
+    Feature record: CXX_FEATURE:1cxx_unicode_literals
+    Feature record: CXX_FEATURE:1cxx_uniform_initialization
+    Feature record: CXX_FEATURE:1cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:1cxx_user_literals
+    Feature record: CXX_FEATURE:0cxx_variable_templates
+    Feature record: CXX_FEATURE:1cxx_variadic_macros
+    Feature record: CXX_FEATURE:1cxx_variadic_templates
+
+
+Detecting CXX [-std=c++98] compiler features compiled with the following output:
+Change Dir: /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_6c9bb/fast"
+make[2]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_6c9bb.dir/build.make CMakeFiles/cmTC_6c9bb.dir/build
+make[3]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_6c9bb.dir/feature_tests.cxx.o
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-g++ --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot    -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os   -DNDEBUG   -std=c++98 -o CMakeFiles/cmTC_6c9bb.dir/feature_tests.cxx.o -c /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_6c9bb
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6c9bb.dir/link.txt --verbose=1
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-g++ --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot  -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os   -DNDEBUG    -rdynamic CMakeFiles/cmTC_6c9bb.dir/feature_tests.cxx.o  -o cmTC_6c9bb 
+make[3]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+
+
+    Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:0cxx_alias_templates
+    Feature record: CXX_FEATURE:0cxx_alignas
+    Feature record: CXX_FEATURE:0cxx_alignof
+    Feature record: CXX_FEATURE:0cxx_attributes
+    Feature record: CXX_FEATURE:0cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:0cxx_auto_type
+    Feature record: CXX_FEATURE:0cxx_binary_literals
+    Feature record: CXX_FEATURE:0cxx_constexpr
+    Feature record: CXX_FEATURE:0cxx_contextual_conversions
+    Feature record: CXX_FEATURE:0cxx_decltype
+    Feature record: CXX_FEATURE:0cxx_decltype_auto
+    Feature record: CXX_FEATURE:0cxx_decltype_incomplete_return_types
+    Feature record: CXX_FEATURE:0cxx_default_function_template_args
+    Feature record: CXX_FEATURE:0cxx_defaulted_functions
+    Feature record: CXX_FEATURE:0cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:0cxx_delegating_constructors
+    Feature record: CXX_FEATURE:0cxx_deleted_functions
+    Feature record: CXX_FEATURE:0cxx_digit_separators
+    Feature record: CXX_FEATURE:0cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:0cxx_explicit_conversions
+    Feature record: CXX_FEATURE:0cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:0cxx_extern_templates
+    Feature record: CXX_FEATURE:0cxx_final
+    Feature record: CXX_FEATURE:0cxx_func_identifier
+    Feature record: CXX_FEATURE:0cxx_generalized_initializers
+    Feature record: CXX_FEATURE:0cxx_generic_lambdas
+    Feature record: CXX_FEATURE:0cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:0cxx_inline_namespaces
+    Feature record: CXX_FEATURE:0cxx_lambdas
+    Feature record: CXX_FEATURE:0cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:0cxx_local_type_template_args
+    Feature record: CXX_FEATURE:0cxx_long_long_type
+    Feature record: CXX_FEATURE:0cxx_noexcept
+    Feature record: CXX_FEATURE:0cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:0cxx_nullptr
+    Feature record: CXX_FEATURE:0cxx_override
+    Feature record: CXX_FEATURE:0cxx_range_for
+    Feature record: CXX_FEATURE:0cxx_raw_string_literals
+    Feature record: CXX_FEATURE:0cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:0cxx_relaxed_constexpr
+    Feature record: CXX_FEATURE:0cxx_return_type_deduction
+    Feature record: CXX_FEATURE:0cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:0cxx_rvalue_references
+    Feature record: CXX_FEATURE:0cxx_sizeof_member
+    Feature record: CXX_FEATURE:0cxx_static_assert
+    Feature record: CXX_FEATURE:0cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:0cxx_thread_local
+    Feature record: CXX_FEATURE:0cxx_trailing_return_types
+    Feature record: CXX_FEATURE:0cxx_unicode_literals
+    Feature record: CXX_FEATURE:0cxx_uniform_initialization
+    Feature record: CXX_FEATURE:0cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:0cxx_user_literals
+    Feature record: CXX_FEATURE:0cxx_variable_templates
+    Feature record: CXX_FEATURE:0cxx_variadic_macros
+    Feature record: CXX_FEATURE:0cxx_variadic_templates
+Determining if files assert.h exist passed with the following output:
+Change Dir: /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_968f9/fast"
+make[2]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_968f9.dir/build.make CMakeFiles/cmTC_968f9.dir/build
+make[3]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_968f9.dir/CheckIncludeFiles.c.o
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot   -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os   -DNDEBUG   -o CMakeFiles/cmTC_968f9.dir/CheckIncludeFiles.c.o   -c /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTC_968f9
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_968f9.dir/link.txt --verbose=1
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os   -DNDEBUG    -rdynamic CMakeFiles/cmTC_968f9.dir/CheckIncludeFiles.c.o  -o cmTC_968f9 
+make[3]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+
+
+Determining if files byteswap.h exist passed with the following output:
+Change Dir: /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_86588/fast"
+make[2]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_86588.dir/build.make CMakeFiles/cmTC_86588.dir/build
+make[3]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_86588.dir/CheckIncludeFiles.c.o
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot   -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os   -DNDEBUG   -o CMakeFiles/cmTC_86588.dir/CheckIncludeFiles.c.o   -c /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTC_86588
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_86588.dir/link.txt --verbose=1
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os   -DNDEBUG    -rdynamic CMakeFiles/cmTC_86588.dir/CheckIncludeFiles.c.o  -o cmTC_86588 
+make[3]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+
+
+Determining if files ctype.h exist passed with the following output:
+Change Dir: /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_9e225/fast"
+make[2]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_9e225.dir/build.make CMakeFiles/cmTC_9e225.dir/build
+make[3]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9e225.dir/CheckIncludeFiles.c.o
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot   -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os   -DNDEBUG   -o CMakeFiles/cmTC_9e225.dir/CheckIncludeFiles.c.o   -c /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTC_9e225
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9e225.dir/link.txt --verbose=1
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os   -DNDEBUG    -rdynamic CMakeFiles/cmTC_9e225.dir/CheckIncludeFiles.c.o  -o cmTC_9e225 
+make[3]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+
+
+Determining if files dlfcn.h exist passed with the following output:
+Change Dir: /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_de90d/fast"
+make[2]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_de90d.dir/build.make CMakeFiles/cmTC_de90d.dir/build
+make[3]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_de90d.dir/CheckIncludeFiles.c.o
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot   -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os   -DNDEBUG   -o CMakeFiles/cmTC_de90d.dir/CheckIncludeFiles.c.o   -c /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTC_de90d
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_de90d.dir/link.txt --verbose=1
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os   -DNDEBUG    -rdynamic CMakeFiles/cmTC_de90d.dir/CheckIncludeFiles.c.o  -o cmTC_de90d 
+make[3]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+
+
+Determining if files endian.h exist passed with the following output:
+Change Dir: /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_7975f/fast"
+make[2]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_7975f.dir/build.make CMakeFiles/cmTC_7975f.dir/build
+make[3]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_7975f.dir/CheckIncludeFiles.c.o
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot   -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os   -DNDEBUG   -o CMakeFiles/cmTC_7975f.dir/CheckIncludeFiles.c.o   -c /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTC_7975f
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7975f.dir/link.txt --verbose=1
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os   -DNDEBUG    -rdynamic CMakeFiles/cmTC_7975f.dir/CheckIncludeFiles.c.o  -o cmTC_7975f 
+make[3]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+
+
+Determining if files inttypes.h exist passed with the following output:
+Change Dir: /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_3f945/fast"
+make[2]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_3f945.dir/build.make CMakeFiles/cmTC_3f945.dir/build
+make[3]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3f945.dir/CheckIncludeFiles.c.o
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot   -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os   -DNDEBUG   -o CMakeFiles/cmTC_3f945.dir/CheckIncludeFiles.c.o   -c /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTC_3f945
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3f945.dir/link.txt --verbose=1
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os   -DNDEBUG    -rdynamic CMakeFiles/cmTC_3f945.dir/CheckIncludeFiles.c.o  -o cmTC_3f945 
+make[3]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+
+
+Determining if files memory.h exist passed with the following output:
+Change Dir: /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_11993/fast"
+make[2]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_11993.dir/build.make CMakeFiles/cmTC_11993.dir/build
+make[3]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_11993.dir/CheckIncludeFiles.c.o
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot   -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os   -DNDEBUG   -o CMakeFiles/cmTC_11993.dir/CheckIncludeFiles.c.o   -c /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTC_11993
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_11993.dir/link.txt --verbose=1
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os   -DNDEBUG    -rdynamic CMakeFiles/cmTC_11993.dir/CheckIncludeFiles.c.o  -o cmTC_11993 
+make[3]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+
+
+Determining if files pthread.h exist passed with the following output:
+Change Dir: /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_868f3/fast"
+make[2]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_868f3.dir/build.make CMakeFiles/cmTC_868f3.dir/build
+make[3]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_868f3.dir/CheckIncludeFiles.c.o
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot   -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os   -DNDEBUG   -o CMakeFiles/cmTC_868f3.dir/CheckIncludeFiles.c.o   -c /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTC_868f3
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_868f3.dir/link.txt --verbose=1
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os   -DNDEBUG    -rdynamic CMakeFiles/cmTC_868f3.dir/CheckIncludeFiles.c.o  -o cmTC_868f3 
+make[3]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+
+
+Determining if files stdint.h exist passed with the following output:
+Change Dir: /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_c0df7/fast"
+make[2]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_c0df7.dir/build.make CMakeFiles/cmTC_c0df7.dir/build
+make[3]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c0df7.dir/CheckIncludeFiles.c.o
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot   -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os   -DNDEBUG   -o CMakeFiles/cmTC_c0df7.dir/CheckIncludeFiles.c.o   -c /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTC_c0df7
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c0df7.dir/link.txt --verbose=1
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os   -DNDEBUG    -rdynamic CMakeFiles/cmTC_c0df7.dir/CheckIncludeFiles.c.o  -o cmTC_c0df7 
+make[3]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+
+
+Determining if files stdlib.h exist passed with the following output:
+Change Dir: /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_3f85c/fast"
+make[2]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_3f85c.dir/build.make CMakeFiles/cmTC_3f85c.dir/build
+make[3]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3f85c.dir/CheckIncludeFiles.c.o
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot   -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os   -DNDEBUG   -o CMakeFiles/cmTC_3f85c.dir/CheckIncludeFiles.c.o   -c /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTC_3f85c
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3f85c.dir/link.txt --verbose=1
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os   -DNDEBUG    -rdynamic CMakeFiles/cmTC_3f85c.dir/CheckIncludeFiles.c.o  -o cmTC_3f85c 
+make[3]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+
+
+Determining if files strings.h exist passed with the following output:
+Change Dir: /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_82a40/fast"
+make[2]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_82a40.dir/build.make CMakeFiles/cmTC_82a40.dir/build
+make[3]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_82a40.dir/CheckIncludeFiles.c.o
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot   -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os   -DNDEBUG   -o CMakeFiles/cmTC_82a40.dir/CheckIncludeFiles.c.o   -c /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTC_82a40
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_82a40.dir/link.txt --verbose=1
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os   -DNDEBUG    -rdynamic CMakeFiles/cmTC_82a40.dir/CheckIncludeFiles.c.o  -o cmTC_82a40 
+make[3]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+
+
+Determining if files string.h exist passed with the following output:
+Change Dir: /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_1c114/fast"
+make[2]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_1c114.dir/build.make CMakeFiles/cmTC_1c114.dir/build
+make[3]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1c114.dir/CheckIncludeFiles.c.o
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot   -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os   -DNDEBUG   -o CMakeFiles/cmTC_1c114.dir/CheckIncludeFiles.c.o   -c /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTC_1c114
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1c114.dir/link.txt --verbose=1
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os   -DNDEBUG    -rdynamic CMakeFiles/cmTC_1c114.dir/CheckIncludeFiles.c.o  -o cmTC_1c114 
+make[3]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+
+
+Determining if files sys/stat.h exist passed with the following output:
+Change Dir: /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_36fd7/fast"
+make[2]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_36fd7.dir/build.make CMakeFiles/cmTC_36fd7.dir/build
+make[3]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_36fd7.dir/CheckIncludeFiles.c.o
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot   -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os   -DNDEBUG   -o CMakeFiles/cmTC_36fd7.dir/CheckIncludeFiles.c.o   -c /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTC_36fd7
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_36fd7.dir/link.txt --verbose=1
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os   -DNDEBUG    -rdynamic CMakeFiles/cmTC_36fd7.dir/CheckIncludeFiles.c.o  -o cmTC_36fd7 
+make[3]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+
+
+Determining if files sys/types.h exist passed with the following output:
+Change Dir: /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_b9502/fast"
+make[2]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_b9502.dir/build.make CMakeFiles/cmTC_b9502.dir/build
+make[3]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b9502.dir/CheckIncludeFiles.c.o
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot   -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os   -DNDEBUG   -o CMakeFiles/cmTC_b9502.dir/CheckIncludeFiles.c.o   -c /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTC_b9502
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b9502.dir/link.txt --verbose=1
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os   -DNDEBUG    -rdynamic CMakeFiles/cmTC_b9502.dir/CheckIncludeFiles.c.o  -o cmTC_b9502 
+make[3]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+
+
+Determining if files time.h exist passed with the following output:
+Change Dir: /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_54ea0/fast"
+make[2]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_54ea0.dir/build.make CMakeFiles/cmTC_54ea0.dir/build
+make[3]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_54ea0.dir/CheckIncludeFiles.c.o
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot   -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os   -DNDEBUG   -o CMakeFiles/cmTC_54ea0.dir/CheckIncludeFiles.c.o   -c /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTC_54ea0
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_54ea0.dir/link.txt --verbose=1
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os   -DNDEBUG    -rdynamic CMakeFiles/cmTC_54ea0.dir/CheckIncludeFiles.c.o  -o cmTC_54ea0 
+make[3]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+
+
+Determining if files unistd.h exist passed with the following output:
+Change Dir: /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_ebb70/fast"
+make[2]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_ebb70.dir/build.make CMakeFiles/cmTC_ebb70.dir/build
+make[3]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ebb70.dir/CheckIncludeFiles.c.o
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot   -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os   -DNDEBUG   -o CMakeFiles/cmTC_ebb70.dir/CheckIncludeFiles.c.o   -c /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTC_ebb70
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ebb70.dir/link.txt --verbose=1
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os   -DNDEBUG    -rdynamic CMakeFiles/cmTC_ebb70.dir/CheckIncludeFiles.c.o  -o cmTC_ebb70 
+make[3]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+
+
+Determining if files wctype.h exist passed with the following output:
+Change Dir: /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_5f4b3/fast"
+make[2]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_5f4b3.dir/build.make CMakeFiles/cmTC_5f4b3.dir/build
+make[3]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5f4b3.dir/CheckIncludeFiles.c.o
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot   -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os   -DNDEBUG   -o CMakeFiles/cmTC_5f4b3.dir/CheckIncludeFiles.c.o   -c /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTC_5f4b3
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5f4b3.dir/link.txt --verbose=1
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os   -DNDEBUG    -rdynamic CMakeFiles/cmTC_5f4b3.dir/CheckIncludeFiles.c.o  -o cmTC_5f4b3 
+make[3]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+
+
+Determining if the function backtrace exists passed with the following output:
+Change Dir: /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_23644/fast"
+make[2]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_23644.dir/build.make CMakeFiles/cmTC_23644.dir/build
+make[3]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_23644.dir/CheckFunctionExists.c.o
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot   -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os -DCHECK_FUNCTION_EXISTS=backtrace  -DNDEBUG   -o CMakeFiles/cmTC_23644.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_23644
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_23644.dir/link.txt --verbose=1
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os -DCHECK_FUNCTION_EXISTS=backtrace  -DNDEBUG    -rdynamic CMakeFiles/cmTC_23644.dir/CheckFunctionExists.c.o  -o cmTC_23644 
+make[3]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+
+
+Determining if the function gmtime_r exists passed with the following output:
+Change Dir: /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_f4056/fast"
+make[2]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_f4056.dir/build.make CMakeFiles/cmTC_f4056.dir/build
+make[3]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f4056.dir/CheckFunctionExists.c.o
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot   -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os -DCHECK_FUNCTION_EXISTS=gmtime_r  -DNDEBUG   -o CMakeFiles/cmTC_f4056.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_f4056
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f4056.dir/link.txt --verbose=1
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os -DCHECK_FUNCTION_EXISTS=gmtime_r  -DNDEBUG    -rdynamic CMakeFiles/cmTC_f4056.dir/CheckFunctionExists.c.o  -o cmTC_f4056 
+make[3]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+
+
+Determining if the function isspace exists passed with the following output:
+Change Dir: /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_65899/fast"
+make[2]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_65899.dir/build.make CMakeFiles/cmTC_65899.dir/build
+make[3]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_65899.dir/CheckFunctionExists.c.o
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot   -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os -DCHECK_FUNCTION_EXISTS=isspace  -DNDEBUG   -o CMakeFiles/cmTC_65899.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-3.10/Modules/CheckFunctionExists.c
+<command-line>:0:23: warning: conflicting types for built-in function ‘isspace’ [-Wbuiltin-declaration-mismatch]
+/usr/local/share/cmake-3.10/Modules/CheckFunctionExists.c:7:3: note: in expansion of macro ‘CHECK_FUNCTION_EXISTS’
+   CHECK_FUNCTION_EXISTS(void);
+   ^~~~~~~~~~~~~~~~~~~~~
+Linking C executable cmTC_65899
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_65899.dir/link.txt --verbose=1
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os -DCHECK_FUNCTION_EXISTS=isspace  -DNDEBUG    -rdynamic CMakeFiles/cmTC_65899.dir/CheckFunctionExists.c.o  -o cmTC_65899 
+make[3]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+
+
+Determining if the function iswspace exists passed with the following output:
+Change Dir: /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_ad0c3/fast"
+make[2]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_ad0c3.dir/build.make CMakeFiles/cmTC_ad0c3.dir/build
+make[3]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ad0c3.dir/CheckFunctionExists.c.o
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot   -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os -DCHECK_FUNCTION_EXISTS=iswspace  -DNDEBUG   -o CMakeFiles/cmTC_ad0c3.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-3.10/Modules/CheckFunctionExists.c
+<command-line>:0:23: warning: conflicting types for built-in function ‘iswspace’ [-Wbuiltin-declaration-mismatch]
+/usr/local/share/cmake-3.10/Modules/CheckFunctionExists.c:7:3: note: in expansion of macro ‘CHECK_FUNCTION_EXISTS’
+   CHECK_FUNCTION_EXISTS(void);
+   ^~~~~~~~~~~~~~~~~~~~~
+Linking C executable cmTC_ad0c3
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ad0c3.dir/link.txt --verbose=1
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os -DCHECK_FUNCTION_EXISTS=iswspace  -DNDEBUG    -rdynamic CMakeFiles/cmTC_ad0c3.dir/CheckFunctionExists.c.o  -o cmTC_ad0c3 
+make[3]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+
+
+Determining if the function setenv exists passed with the following output:
+Change Dir: /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_47c1b/fast"
+make[2]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_47c1b.dir/build.make CMakeFiles/cmTC_47c1b.dir/build
+make[3]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_47c1b.dir/CheckFunctionExists.c.o
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot   -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os -DCHECK_FUNCTION_EXISTS=setenv  -DNDEBUG   -o CMakeFiles/cmTC_47c1b.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_47c1b
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_47c1b.dir/link.txt --verbose=1
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os -DCHECK_FUNCTION_EXISTS=setenv  -DNDEBUG    -rdynamic CMakeFiles/cmTC_47c1b.dir/CheckFunctionExists.c.o  -o cmTC_47c1b 
+make[3]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+
+
+Determining if the function snprintf exists passed with the following output:
+Change Dir: /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_f0726/fast"
+make[2]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_f0726.dir/build.make CMakeFiles/cmTC_f0726.dir/build
+make[3]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f0726.dir/CheckFunctionExists.c.o
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot   -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os -DCHECK_FUNCTION_EXISTS=snprintf  -DNDEBUG   -o CMakeFiles/cmTC_f0726.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-3.10/Modules/CheckFunctionExists.c
+<command-line>:0:23: warning: conflicting types for built-in function ‘snprintf’ [-Wbuiltin-declaration-mismatch]
+/usr/local/share/cmake-3.10/Modules/CheckFunctionExists.c:7:3: note: in expansion of macro ‘CHECK_FUNCTION_EXISTS’
+   CHECK_FUNCTION_EXISTS(void);
+   ^~~~~~~~~~~~~~~~~~~~~
+Linking C executable cmTC_f0726
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f0726.dir/link.txt --verbose=1
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os -DCHECK_FUNCTION_EXISTS=snprintf  -DNDEBUG    -rdynamic CMakeFiles/cmTC_f0726.dir/CheckFunctionExists.c.o  -o cmTC_f0726 
+make[3]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+
+
+Determining if the function strdup exists passed with the following output:
+Change Dir: /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_3b849/fast"
+make[2]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_3b849.dir/build.make CMakeFiles/cmTC_3b849.dir/build
+make[3]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3b849.dir/CheckFunctionExists.c.o
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot   -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os -DCHECK_FUNCTION_EXISTS=strdup  -DNDEBUG   -o CMakeFiles/cmTC_3b849.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-3.10/Modules/CheckFunctionExists.c
+<command-line>:0:23: warning: conflicting types for built-in function ‘strdup’ [-Wbuiltin-declaration-mismatch]
+/usr/local/share/cmake-3.10/Modules/CheckFunctionExists.c:7:3: note: in expansion of macro ‘CHECK_FUNCTION_EXISTS’
+   CHECK_FUNCTION_EXISTS(void);
+   ^~~~~~~~~~~~~~~~~~~~~
+Linking C executable cmTC_3b849
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3b849.dir/link.txt --verbose=1
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os -DCHECK_FUNCTION_EXISTS=strdup  -DNDEBUG    -rdynamic CMakeFiles/cmTC_3b849.dir/CheckFunctionExists.c.o  -o cmTC_3b849 
+make[3]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+
+
+Determining if the function unsetenv exists passed with the following output:
+Change Dir: /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_c4216/fast"
+make[2]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_c4216.dir/build.make CMakeFiles/cmTC_c4216.dir/build
+make[3]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c4216.dir/CheckFunctionExists.c.o
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot   -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os -DCHECK_FUNCTION_EXISTS=unsetenv  -DNDEBUG   -o CMakeFiles/cmTC_c4216.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_c4216
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c4216.dir/link.txt --verbose=1
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os -DCHECK_FUNCTION_EXISTS=unsetenv  -DNDEBUG    -rdynamic CMakeFiles/cmTC_c4216.dir/CheckFunctionExists.c.o  -o cmTC_c4216 
+make[3]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file stddef.h exists passed with the following output:
+Change Dir: /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_7898b/fast"
+make[2]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_7898b.dir/build.make CMakeFiles/cmTC_7898b.dir/build
+make[3]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_7898b.dir/CheckIncludeFile.c.o
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot   -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os   -DNDEBUG   -o CMakeFiles/cmTC_7898b.dir/CheckIncludeFile.c.o   -c /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_7898b
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7898b.dir/link.txt --verbose=1
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os   -DNDEBUG    -rdynamic CMakeFiles/cmTC_7898b.dir/CheckIncludeFile.c.o  -o cmTC_7898b 
+make[3]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+
+
+Determining size of mode_t passed with the following output:
+Change Dir: /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_57d81/fast"
+make[2]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_57d81.dir/build.make CMakeFiles/cmTC_57d81.dir/build
+make[3]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_57d81.dir/SIZEOF_MODE_T.c.o
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot   -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os   -DNDEBUG   -o CMakeFiles/cmTC_57d81.dir/SIZEOF_MODE_T.c.o   -c /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CheckTypeSize/SIZEOF_MODE_T.c
+Linking C executable cmTC_57d81
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_57d81.dir/link.txt --verbose=1
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os   -DNDEBUG    -rdynamic CMakeFiles/cmTC_57d81.dir/SIZEOF_MODE_T.c.o  -o cmTC_57d81 
+make[3]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+
+
+Determining size of size_t passed with the following output:
+Change Dir: /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_ebba4/fast"
+make[2]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_ebba4.dir/build.make CMakeFiles/cmTC_ebba4.dir/build
+make[3]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ebba4.dir/SIZEOF_SIZE_T.c.o
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot   -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os   -DNDEBUG   -o CMakeFiles/cmTC_ebba4.dir/SIZEOF_SIZE_T.c.o   -c /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CheckTypeSize/SIZEOF_SIZE_T.c
+Linking C executable cmTC_ebba4
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ebba4.dir/link.txt --verbose=1
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os   -DNDEBUG    -rdynamic CMakeFiles/cmTC_ebba4.dir/SIZEOF_SIZE_T.c.o  -o cmTC_ebba4 
+make[3]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+
+
+Determining size of intptr_t passed with the following output:
+Change Dir: /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_4def1/fast"
+make[2]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_4def1.dir/build.make CMakeFiles/cmTC_4def1.dir/build
+make[3]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_4def1.dir/INTPTR_T.c.o
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot   -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os   -DNDEBUG   -o CMakeFiles/cmTC_4def1.dir/INTPTR_T.c.o   -c /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CheckTypeSize/INTPTR_T.c
+Linking C executable cmTC_4def1
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4def1.dir/link.txt --verbose=1
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os   -DNDEBUG    -rdynamic CMakeFiles/cmTC_4def1.dir/INTPTR_T.c.o  -o cmTC_4def1 
+make[3]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+
+
+Determining size of pid_t passed with the following output:
+Change Dir: /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_1afe1/fast"
+make[2]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_1afe1.dir/build.make CMakeFiles/cmTC_1afe1.dir/build
+make[3]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1afe1.dir/HAVE_PID_T.c.o
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot   -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os   -DNDEBUG   -o CMakeFiles/cmTC_1afe1.dir/HAVE_PID_T.c.o   -c /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CheckTypeSize/HAVE_PID_T.c
+Linking C executable cmTC_1afe1
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1afe1.dir/link.txt --verbose=1
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os   -DNDEBUG    -rdynamic CMakeFiles/cmTC_1afe1.dir/HAVE_PID_T.c.o  -o cmTC_1afe1 
+make[3]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+
+
+Determining size of time_t passed with the following output:
+Change Dir: /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_42a4b/fast"
+make[2]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_42a4b.dir/build.make CMakeFiles/cmTC_42a4b.dir/build
+make[3]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_42a4b.dir/SIZEOF_TIME_T.c.o
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot   -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os   -DNDEBUG   -o CMakeFiles/cmTC_42a4b.dir/SIZEOF_TIME_T.c.o   -c /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CheckTypeSize/SIZEOF_TIME_T.c
+Linking C executable cmTC_42a4b
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_42a4b.dir/link.txt --verbose=1
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os   -DNDEBUG    -rdynamic CMakeFiles/cmTC_42a4b.dir/SIZEOF_TIME_T.c.o  -o cmTC_42a4b 
+make[3]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_555c1/fast"
+make[2]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_555c1.dir/build.make CMakeFiles/cmTC_555c1.dir/build
+make[3]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_555c1.dir/CheckIncludeFile.c.o
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot   -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os   -DNDEBUG   -o CMakeFiles/cmTC_555c1.dir/CheckIncludeFile.c.o   -c /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_555c1
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_555c1.dir/link.txt --verbose=1
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os   -DNDEBUG    -rdynamic CMakeFiles/cmTC_555c1.dir/CheckIncludeFile.c.o  -o cmTC_555c1 
+make[3]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_c308a/fast"
+make[2]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_c308a.dir/build.make CMakeFiles/cmTC_c308a.dir/build
+make[3]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c308a.dir/CheckFunctionExists.c.o
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot   -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os -DCHECK_FUNCTION_EXISTS=pthread_create  -DNDEBUG   -o CMakeFiles/cmTC_c308a.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_c308a
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c308a.dir/link.txt --verbose=1
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os -DCHECK_FUNCTION_EXISTS=pthread_create  -DNDEBUG    -rdynamic CMakeFiles/cmTC_c308a.dir/CheckFunctionExists.c.o  -o cmTC_c308a -lpthread 
+make[3]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_getattr_np exists in the pthread passed with the following output:
+Change Dir: /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_2b119/fast"
+make[2]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_2b119.dir/build.make CMakeFiles/cmTC_2b119.dir/build
+make[3]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_2b119.dir/CheckFunctionExists.c.o
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot   -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os -DCHECK_FUNCTION_EXISTS=pthread_getattr_np  -DNDEBUG   -o CMakeFiles/cmTC_2b119.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_2b119
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2b119.dir/link.txt --verbose=1
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os -DCHECK_FUNCTION_EXISTS=pthread_getattr_np  -DNDEBUG    -rdynamic CMakeFiles/cmTC_2b119.dir/CheckFunctionExists.c.o  -o cmTC_2b119 -lpthread 
+make[3]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_122ee/fast"
+make[2]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_122ee.dir/build.make CMakeFiles/cmTC_122ee.dir/build
+make[3]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_122ee.dir/CheckFunctionExists.c.o
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot   -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os -DCHECK_FUNCTION_EXISTS=pthread_create  -DNDEBUG   -o CMakeFiles/cmTC_122ee.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_122ee
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_122ee.dir/link.txt --verbose=1
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os -DCHECK_FUNCTION_EXISTS=pthread_create  -DNDEBUG    -rdynamic CMakeFiles/cmTC_122ee.dir/CheckFunctionExists.c.o  -o cmTC_122ee -lpthread 
+make[3]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+
+
+Performing C SOURCE FILE Test HAVE_GCC_UNUSED_BUT_SET succeeded with the following output:
+Change Dir: /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_e2ff0/fast"
+make[2]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_e2ff0.dir/build.make CMakeFiles/cmTC_e2ff0.dir/build
+make[3]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e2ff0.dir/src.c.o
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot   -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os -DHAVE_GCC_UNUSED_BUT_SET  -DNDEBUG   -Wunused-but-set-variable -o CMakeFiles/cmTC_e2ff0.dir/src.c.o   -c /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_e2ff0
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e2ff0.dir/link.txt --verbose=1
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os -DHAVE_GCC_UNUSED_BUT_SET  -DNDEBUG    -rdynamic CMakeFiles/cmTC_e2ff0.dir/src.c.o  -o cmTC_e2ff0 
+make[3]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test HAVE_GCC_LOGICAL_OP succeeded with the following output:
+Change Dir: /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_50fb6/fast"
+make[2]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_50fb6.dir/build.make CMakeFiles/cmTC_50fb6.dir/build
+make[3]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_50fb6.dir/src.c.o
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot   -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os -DHAVE_GCC_LOGICAL_OP  -DNDEBUG   -Wlogical-op -o CMakeFiles/cmTC_50fb6.dir/src.c.o   -c /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_50fb6
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_50fb6.dir/link.txt --verbose=1
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os -DHAVE_GCC_LOGICAL_OP  -DNDEBUG    -rdynamic CMakeFiles/cmTC_50fb6.dir/src.c.o  -o cmTC_50fb6 
+make[3]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test HAVE_GCC_POINTER_MEMACCESS succeeded with the following output:
+Change Dir: /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_68862/fast"
+make[2]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_68862.dir/build.make CMakeFiles/cmTC_68862.dir/build
+make[3]: Entering directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_68862.dir/src.c.o
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot   -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os -DHAVE_GCC_POINTER_MEMACCESS  -DNDEBUG   -Wsizeof-pointer-memaccess -o CMakeFiles/cmTC_68862.dir/src.c.o   -c /media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_68862
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_68862.dir/link.txt --verbose=1
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc --sysroot=/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os -DHAVE_GCC_POINTER_MEMACCESS  -DNDEBUG    -rdynamic CMakeFiles/cmTC_68862.dir/src.c.o  -o cmTC_68862 
+make[3]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/media/panpan/tools/buildroot-2018.02.8/output/build/libical-1.0.1/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main(void) { return 0; }

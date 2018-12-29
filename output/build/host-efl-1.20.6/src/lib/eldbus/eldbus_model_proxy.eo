@@ -1,0 +1,38 @@
+import eldbus_types;
+
+class Eldbus.Model.Proxy (Efl.Object, Efl.Model) {
+    [[Eldbus model proxy class]]
+
+    methods {
+        constructor {
+            [[Custom Eldbus_Model_Proxy constructor.
+
+              @since 1.16]]
+            params {
+                @in object: ptr(Eldbus.Object); [[Eldbus object]]
+                @in interface: ptr(const(Eldbus.Introspection.Interface)); [[The introspected interface]]
+            }
+        }
+    @property name {
+            [[Proxy name]]
+            get {}
+            values {
+                name: string; [[Proxy name]]
+            }
+        }
+    }
+    implements {
+        Efl.Object.constructor;
+        Efl.Object.destructor;
+        Efl.Model.properties { get; }
+        Efl.Model.property_set;
+        Efl.Model.property_get;
+        Efl.Model.child_add;
+        Efl.Model.child_del;
+        Efl.Model.children_slice_get;
+        Efl.Model.children_count_get;
+    }
+    constructors {
+        .constructor;
+    }
+}

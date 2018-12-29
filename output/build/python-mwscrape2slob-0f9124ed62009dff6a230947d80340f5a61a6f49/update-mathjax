@@ -1,0 +1,64 @@
+#! /usr/bin/env sh
+MJX_HOME=${MJX_HOME:-~/MathJax}
+MJX_DEV_HOME=${MJX_DEV_HOME:-~/MathJax-dev}
+DEST=$PWD/mwscrape2slob/MathJax
+TYPE=${OUTPUT_TYPE:-"SVG"}
+
+echo "MathJax home: $MJX_HOME"
+echo "MathJax-dev home: $MJX_DEV_HOME"
+echo "Destination: $DEST"
+echo "Output type: $TYPE"
+
+cd $PWD/mathjax/
+cp MediaWiki_${TYPE}.lis $MJX_DEV_HOME/combiner/lists/
+cp config/MediaWiki_${TYPE}_settings.js $MJX_HOME/config/
+cp extensions/texvc.js  $MJX_HOME/extensions/TeX/
+cp extensions/wiki2jax.js $MJX_HOME/extensions/
+
+rm $MJX_HOME/config/MediaWiki_${TYPE}.js
+$MJX_DEV_HOME/combiner/combineMJ $MJX_HOME
+
+mkdir -p $DEST/jax/output
+mkdir -p $DEST/extensions/TeX
+cd $MJX_HOME
+
+SYNC="rsync -aP"
+$SYNC MathJax.js $DEST
+cp config/MediaWiki_${TYPE}.js $DEST/MediaWiki.js
+sed -i "s/\[MathJax\]\/config\/MediaWiki_${TYPE}\.js/\[MathJax\]\/MediaWiki\.js/g" $DEST/MediaWiki.js
+
+#enabling CommonHTML preview incurs
+#prohibiting penalty on mobile, at least in MathJax 2.5
+#$SYNC jax/output/CommonHTML $DEST/jax/output/
+
+$SYNC jax/output/${TYPE} \
+--exclude imageFonts.js \
+--exclude config.js \
+--exclude jax.js \
+--exclude mtable.js \
+--exclude Asana-Math \
+--exclude Gyre-Termes \
+--exclude Neo-Euler \
+--exclude Gyre-Pagella \
+--exclude Latin-Modern \
+--exclude TeX \
+$DEST/jax/output/
+
+$SYNC extensions/TeX \
+--exclude noErrors.js \
+--exclude noUndefined.js \
+--exclude AMSmath.js \
+--exclude AMSsymbols.js \
+--exclude mathchoice.js \
+--exclude texvc.js \
+--exclude color.js \
+--exclude cancel.js \
+--exclude mediawiki-texvc.js \
+$DEST/extensions/
+
+if [ -d fonts/${TYPE}/STIX-Web/woff ]; then
+    mkdir -p $DEST/fonts/${TYPE}/STIX-Web/
+    $SYNC fonts/${TYPE}/STIX-Web/woff $DEST/fonts/${TYPE}/STIX-Web/
+fi
+
+du -hs $DEST

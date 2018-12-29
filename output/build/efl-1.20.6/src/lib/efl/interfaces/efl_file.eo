@@ -1,0 +1,106 @@
+import eina_types;
+
+interface Efl.File {
+   [[Efl file interface]]
+   methods {
+      @property mmap {
+         set {
+            [[Set the source mmaped file from where an image object must fetch the real
+              image data (it must be an Eina_File).
+
+              If the file supports multiple data stored in it (as Eet files do),
+              you can specify the key to be used as the index of the image in
+              this file.
+
+              @since 1.8]]
+
+            return: bool; [[$true on success, $false otherwise]]
+         }
+         get {
+            [[Get the source mmaped file from where an image object must fetch the real
+              image data (it must be an Eina_File).
+
+              If the file supports multiple data stored in it (as Eet files do),
+              you can get the key to be used as the index of the image in
+              this file.
+
+              @since 1.10]]
+         }
+         values {
+            f: ptr(const(Eina.File)); [[The handler to an Eina_File that will be used as image source]]
+            key: string @optional; [[The group that the image belongs to, in case 
+                                           it's an EET(including Edje case) file. This can be used
+                                           as a key inside evas image cache if this is a normal image
+                                           file not eet file.]]
+         }
+      }
+      @property file {
+         set {
+            [[Set the source file from where an image object must fetch the real
+              image data (it may be an Eet file, besides pure image ones).
+
+              If the file supports multiple data stored in it (as Eet files do),
+              you can specify the key to be used as the index of the image in
+              this file.]]
+
+            /* FIXME-doc
+             * Example:
+             * @code
+             * img = evas_object_image_add(canvas);
+             * evas_object_image_file_set(img, "/path/to/img", NULL);
+             * err = evas_object_image_load_error_get(img);
+             * if (err != EVAS_LOAD_ERROR_NONE)
+             * {
+             * fprintf(stderr, "could not load image '%s'. error string is \"%s\"\n",
+             * valid_path, evas_load_error_str(err));
+             * }
+             * else
+             * {
+             * evas_object_image_fill_set(img, 0, 0, w, h);
+             * evas_object_resize(img, w, h);
+             * evas_object_show(img);
+             * }
+             * @endcode
+             */
+
+            return: bool; [[$true on success, $false otherwise]]
+         }
+         get {
+            [[Retrieve the source file from where an image object is to fetch the
+              real image data (it may be an Eet file, besides pure image ones).
+
+              You must not modify the strings on the returned pointers.
+
+              Note: Use $null pointers on the file components you're not
+              interested in: they'll be ignored by the function.]]
+         }
+         values {
+            file: string; [[The image file path.]]
+            key: string; [[The image key in $file (if its an Eet one), or
+                                 $null, otherwise.]]
+         }
+      }
+      save @const {
+         [[Save the given image object's contents to an (image) file.
+
+           The extension suffix on $file will determine which saver
+           module Evas is to use when saving, thus the final file's
+           format. If the file supports multiple data stored in it (Eet ones),
+           you can specify the key to be used as the index of the image in it.
+
+           You can specify some flags when saving the image.  Currently
+           acceptable flags are $quality and $compress. Eg.:
+           "quality=100 compress=9"]]
+
+         return: bool;  [[$true on success, $false otherwise]]
+         params {
+            @in file: string @nonull; [[The filename to be used to save the image (extension
+                                              obligatory).]]
+            @in key: string; [[The image key in the file (if an Eet one), or $null,
+                                     otherwise.]]
+            @in flags: string; [[String containing the flags to be used ($null for
+                                       none).]]
+         }
+      }
+   }
+}

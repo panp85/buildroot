@@ -1,0 +1,18 @@
+include *.bat
+include *.rst
+include .coveragerc
+include CREDITS*
+include IDEAS
+include INSTALL*
+include LICENSE*
+include HISTORY*
+include Makefile
+include tox.ini
+
+recursive-include psutil *.py *.c *.h *.rst
+recursive-include scripts *.py
+recursive-include README*
+
+recursive-include docs *.conf *.rst *.js *.html *.css *.py *.bat *Makefile* README*
+recursive-exclude docs/_build *
+recursive-exclude .ci *

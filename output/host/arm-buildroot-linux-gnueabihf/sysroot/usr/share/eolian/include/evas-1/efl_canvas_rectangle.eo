@@ -1,0 +1,7 @@
+class Efl.Canvas.Rectangle (Efl.Canvas.Object)
+{
+   [[Evas canvas rectangle class]]
+   implements {
+      Efl.Object.constructor;
+   }
+}

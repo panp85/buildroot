@@ -1,0 +1,14 @@
+CONTRIBUTORS.rst
+HISTORY.rst
+LICENSE
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+src/priority/__init__.py
+src/priority/priority.py
+src/priority.egg-info/PKG-INFO
+src/priority.egg-info/SOURCES.txt
+src/priority.egg-info/dependency_links.txt
+src/priority.egg-info/top_level.txt
+test/test_priority.py

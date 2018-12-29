@@ -1,0 +1,105 @@
+mixin Elm.Interface.Atspi_Component ()
+{
+   [[AT-SPI component mixin]]
+   eo_prefix: elm_interface_atspi_component;
+   data: null;
+   methods {
+      @property size @protected {
+         [[Size of accessible widget.]]
+         set {
+            return: bool; [[$true if size was set, $false otherwise]]
+         }
+         get {
+         }
+         values {
+            w: int; [[Width of the widget]]
+            h: int; [[Height of the widget]]
+         }
+      }
+      @property layer @protected {
+         [[Evas layer of accessible widget.]]
+         get {
+         }
+         values {
+            layer: int; [[Evas layer of the widget]]
+         }
+      }
+      @property alpha @protected {
+         [[Gets alpha of accessible widget.]]
+         get {
+         }
+         values {
+            alpha: double; [[Alpha value in [0, 1] range.]]
+         }
+      }
+      @property z_order @protected {
+         [[Gets the depth at which the component is shown in relation to other
+           components in the same container.]]
+         get {
+         }
+         values {
+            z_order: int; [[Z order of component]]
+         }
+      }
+      @property extents @protected {
+         [[Geometry of accessible widget.]]
+         get {
+         }
+         set {
+            return: bool; [[$true if geometry was set, $false otherwise]]
+         }
+         keys {
+            screen_coords: bool; [[If $true x and y values will be relative to
+                                   screen origin, otherwise relative to canvas]]
+         }
+         values {
+            x: int; [[X coordinate]]
+            y: int; [[Y coordinate]]
+            w: int; [[Width]]
+            h: int; [[Height]]
+         }
+      }
+      @property position @protected {
+         [[Position of accessible widget.]]
+         set {
+            return: bool; [[$true if position was set, $false otherwise]]
+         }
+         get {
+         }
+         keys {
+            screen_coords: bool; [[If $true x and y values will be relative to
+                                   screen origin, otherwise relative to canvas]]
+         }
+         values {
+            x: int; [[X coordinate]]
+            y: int; [[Y coordinate]]
+         }
+      }
+      contains @protected {
+      	 [[Contains accessible widget]]
+         params {
+            screen_coords: bool; [[If $true x and y values will be relative to
+                                   screen origin, otherwise relative to canvas]]
+            @in x: int; [[X coordinate]]
+            @in y: int; [[Y coordinate]]
+         }
+         return: bool; [[$true if params have been set, $false otherwise]]
+      }
+      focus_grab @protected {
+         [[Focuses accessible widget.]]
+
+         return: bool; [[$true if focus grab focus succeed, $false otherwise.]]
+
+      }
+      accessible_at_point_get @protected {
+         [[Gets top component object occupying space at given coordinates.]]
+         params {
+            screen_coords: bool; [[If $true x and y values will be relative to
+                                   screen origin, otherwise relative to canvas]]
+            @in x: int; [[X coordinate]]
+            @in y: int; [[Y coordinate]]
+         }
+         return: Efl.Object; [[Top component object at given coordinate]]
+      }
+   }
+}

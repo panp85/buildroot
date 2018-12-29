@@ -1,0 +1,12 @@
+prefix=
+exec_prefix=
+libdir=@waylandlibdir@
+includedir=/media/panpan/tools/buildroot-2018.02.8/output/build/gst1-plugins-bad-1.12.4/gst-libs
+
+Name: GStreamer Wayland, Uninstalled
+Description: GStreamer Wayland support, uninstalled
+Requires: gstreamer-1.0 gstreamer-video-1.0
+Version: 1.12.4
+Libs: -L${libdir} -lgstwayland-1.0
+Cflags: -I/media/panpan/tools/buildroot-2018.02.8/output/build/gst1-plugins-bad-1.12.4/gst-libs -I/media/panpan/tools/buildroot-2018.02.8/output/build/gst1-plugins-bad-1.12.4/gst-libs
+

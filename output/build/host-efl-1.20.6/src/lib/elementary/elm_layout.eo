@@ -1,0 +1,347 @@
+import edje_types;
+
+struct Elm.Layout_Part_Alias_Description
+{
+   [[
+     Elementary Layout-based widgets may declare part proxies, i.e., aliases
+     for real theme part names to expose to the API calls:
+     - elm_layout_text_set()
+     - elm_layout_text_get()
+     - elm_layout_content_set()
+     - elm_layout_content_get()
+     - elm_layout_content_unset()
+     and their equivalents. This list must be set on the "_smart_set_user()" function of inheriting widgets,
+     so that part aliasing is handled automatically for them.
+   ]]
+   alias: string; [[Alternate name for a given (real) part. Calls receiving this string as a part name will be translated to the string at Elm.Layout_Part_Proxies_Description::real_part]]
+   real_part: string; [[Target part name for the alias set on Elm.Layout_Part_Proxies_Description::real_part. An example of usage would be "default" on that field, with "elm.content.swallow" on this one]]
+}
+
+class Elm.Layout (Elm.Widget, Efl.Part, Efl.Container, Efl.File,
+                         Efl.Ui.View, Efl.Ui.Model.Connect, Efl.Ui.Model.Factory.Connect)
+{
+   [[Elementary layout class]]
+   legacy_prefix: elm_layout;
+   eo_prefix: elm_obj_layout;
+   event_prefix: elm_layout;
+   data: Elm_Layout_Smart_Data;
+   methods {
+      @property edje_object_can_access {
+         set {
+            [[Set accessibility to all texblock(text) parts in the layout
+              object.
+
+              @since 1.7
+            ]]
+            return: bool; [[$true on success or $false on failure. If $obj
+                            is not a proper layout object, $false is returned.]]
+         }
+         get {
+            [[Get accessibility state of texblock(text) parts in the layout
+              object
+
+              @since 1.7
+            ]]
+         }
+         values {
+            can_access: bool; [[Makes all textblock(text) parts in the layout
+                                $obj possible to have accessibility. $true
+                                means textblock(text) parts can be accessible.]]
+         }
+      }
+      @property theme {
+         set {
+            [[Set the edje group from the elementary theme that will be used
+              as layout.
+
+              Note that $style will be the new style of $obj too, as in an
+              \@ref elm_object_style_set call.
+            ]]
+            return: bool; [[$true on success, $false otherwise]]
+         }
+         values {
+            klass: string; [[The class of the group.]]
+            group: string; [[The group.]]
+            style: string; [[The style to used.]]
+         }
+      }
+      @property text_aliases @protected {
+      	 [[Text aliases property]]
+         get {
+            legacy: null;
+         }
+         values {
+            aliases: ptr(const(Elm.Layout_Part_Alias_Description)); [[Text aliases]]
+         }
+      }
+      @property content_aliases @protected {
+      	 [[Content aliases property]]
+         get {
+            legacy: null;
+         }
+         values {
+            aliases: ptr(const(Elm.Layout_Part_Alias_Description)); [[Content aliases]]
+         }
+      }
+      @property edje {
+         get {
+            [[Get the edje layout
+
+              This returns the edje object. It is not expected to be used
+              to then swallow objects via \@ref edje_object_part_swallow
+              for example. Use \@ref elm_layout_content_set instead so
+              child object handling and sizing is done properly.
+
+              Note: This function should only be used if you really need
+              to call some low level Edje function on this edje object.
+              All the common stuff (setting text, emitting signals,
+              hooking callbacks to signals, etc.) can be done with
+              proper elementary functions.
+            ]]
+            return: Efl.Canvas.Object; [[An Evas_Object with the edje layout
+                                     settings loaded \@ref elm_layout_file_set.]]
+         }
+      }
+      part_cursor_engine_only_set {
+         [[Sets if the cursor set should be searched on the theme or should
+           use the provided by the engine, only.
+
+           Note: Before you set if should look on theme you should define a
+           cursor with @.part_cursor_set. By default it will only look for
+           cursors provided by the engine.
+         ]]
+         return: bool; [[$true on success or $false on failure, that may be
+                         part not exists or it did not had a cursor set.]]
+         params {
+            @in part_name: string; [[A part from loaded edje group.]]
+            @in engine_only: bool; [[If cursors should be just provided by
+                                     the engine ($true) or should also search
+                                     on widget's theme as well ($false)]]
+         }
+      }
+      part_cursor_engine_only_get @const {
+         [[Get a specific cursor engine_only for an edje part.]]
+         return: bool; [[Whenever the cursor is just provided by engine
+                         or also from theme.]]
+         params {
+            @in part_name: string; [[A part from loaded edje group.]]
+         }
+      }
+      freeze {
+         [[Freezes the Elementary layout object.
+
+           This function puts all changes on hold. Successive freezes will
+           nest, requiring an equal number of thaws.
+
+           See also @.thaw.
+         ]]
+         return: int; [[The frozen state or 0 on error.]]
+      }
+      theme_enable {
+      	 [[Enable theme]]
+         legacy: null;
+         return: bool; [[$true on success, $false otherwise]]
+      }
+      sizing_eval {
+         [[Eval sizing.
+
+           Manually forces a sizing re-evaluation. This is useful when the
+           minimum size required by the edje theme of this layout has
+           changed. The change on the minimum size required by the edje
+           theme is not immediately reported to the elementary layout,
+           so one needs to call this function in order to tell the widget
+           (layout) that it needs to reevaluate its own size.
+
+           The minimum size of the theme is calculated based on minimum
+           size of parts, the size of elements inside containers like box
+           and table, etc. All of this can change due to state changes,
+           and that's when this function should be called.
+
+           Also note that a standard signal of "size,eval" "elm" emitted
+           from the edje object will cause this to happen too.
+         ]]
+      }
+      sizing_restricted_eval {
+         [[Request sizing reevaluation, restricted to current width and/or
+           height.
+
+           Useful mostly when there are TEXTBLOCK parts defining the height
+           of the object and nothing else restricting it to a minimum width.
+           Calling this function will restrict the minimum size in the Edje
+           calculation to whatever size it the layout has at the moment.
+
+           @since 1.8
+         ]]
+         params {
+            @in width: bool; [[Restrict minimum size to the current width.]]
+            @in height: bool; [[Restrict minimum size ot the current height.]]
+         }
+      }
+      part_cursor_style_set {
+         [[Sets a specific cursor style for an edje part.]]
+         return: bool; [[$true on success or $false on failure, that may be
+                         part not exists or it did not had a cursor set.]]
+         params {
+            @in part_name: string; [[A part from loaded edje group.]]
+            @in style: string; [[The theme style to use (default,
+                                       transparent, ...).]]
+         }
+      }
+      part_cursor_style_get @const {
+         [[Get a specific cursor style for an edje part.]]
+         return: string; [[The theme style in use, defaults to "default".
+                                 If the object does not have a cursor set,
+                                 then $null is returned.]]
+         params {
+            @in part_name: string; [[A part from loaded edje group.]]
+         }
+      }
+      signal_callback_add {
+         [[Add a callback for a (Edje) signal emitted by a layout widget's
+           underlying Edje object.
+
+           This function connects a callback function to a signal emitted by
+           the underlying Edje object of $obj. Globs are accepted in either
+           the emission or source strings.
+         ]]
+         params {
+            @in emission: string; [[The signal's name string.]]
+            @in source: string; [[The signal's source string.]]
+            @in func: Edje.Signal_Cb; [[The callback function to be executed
+                                        when the signal is emitted.]]
+            @in data: void_ptr @optional; [[A pointer to data to pass in to the
+                                          callback function.]]
+         }
+      }
+      part_cursor_set {
+         [[Sets a specific cursor for an edje part.]]
+         return: bool; [[$true on success or $false on failure, that may be
+                         part not exists or it has "mouse_events: 0".]]
+         params {
+            @in part_name: string; [[A part from loaded edje group.]]
+            @in cursor: string; [[Cursor name to use, see Elementary_Cursor.h.]]
+         }
+      }
+      part_cursor_get @const {
+         [[Get the cursor to be shown when mouse is over an edje part.]]
+         return: string; [[Cursor name]]
+         params {
+            @in part_name: string; [[A part from loaded edje group.]]
+         }
+      }
+      sub_object_add_enable {
+      	 [[Enable sub object add]]
+         legacy: null;
+         return: bool; [[$true on success, $false otherwise]]
+      }
+      data_get @const {
+         [[Get the edje data from the given layout.
+
+           This function fetches data specified inside the edje theme of
+           this layout. This function return NULL if data is not found.
+
+           In EDC this comes from a data block within the group block that
+           $obj was loaded from.
+         ]]
+         /* FIXME-doc
+         @code
+         collections {
+         group {
+         name: "a_group";
+         data {
+         item: "key1" "value1";
+         item: "key2" "value2";
+         }
+         }
+         }
+         @endcode
+         */
+         return: string; [[The edje data string.]]
+         params {
+            @in key: string; [[The data key.]]
+         }
+      }
+      signal_callback_del {
+         [[Remove a signal-triggered callback from a given layout widget.
+
+           This function removes the last callback attached to a signal
+           emitted by the undelying Edje object of $obj, with parameters
+           $emission, $source and $func matching exactly those passed to a
+           previous call to @.signal_callback_add. The data pointer that
+           was passed to this call will be returned.
+         ]]
+         return: void_ptr; [[The data pointer of the signal callback (passed on
+                           @.signal_callback_add) or $null on errors.]]
+         params {
+            @in emission: string; [[The signal's name string.]]
+            @in source: string; [[The signal's source string.]]
+            @in func: Edje.Signal_Cb; [[The callback function being executed
+                                        when the signal was emitted.]]
+         }
+      }
+      thaw {
+         [[Thaws the Elementary object.
+
+           This function thaws the given Edje object and the Elementary
+           sizing calc.
+
+           Note: If sucessives freezes were done, an equal number of
+           thaws will be required.
+
+           See also @.freeze.
+         ]]
+         return: int; [[The frozen state or 0 if the object is not frozen or on error.]]
+      }
+      signal_emit {
+         [[Send a (Edje) signal to a given layout widget's underlying Edje
+           object.
+
+           This function sends a signal to the underlying Edje object of
+           $obj. An Edje program on that Edje object's definition can
+           respond to a signal by specifying matching 'signal' and
+           'source' fields.
+         ]]
+         params {
+            @in emission: string; [[The signal's name string.]]
+            @in source: string; [[The signal's source string.]]
+         }
+      }
+      part_cursor_unset {
+         [[Unsets a cursor previously set with @.part_cursor_set.]]
+         return: bool; [[$true on success, $false otherwise]]
+         params {
+            @in part_name: string; [[A part from loaded edje group,
+                                           that had a cursor set wit
+                                           @.part_cursor_set.]]
+         }
+      }
+   }
+   implements {
+      class.constructor;
+      Efl.Object.constructor;
+      Efl.File.file { get; set; }
+      Efl.File.mmap { get; set; }
+      Efl.Canvas.Group.group_calculate;
+      Elm.Widget.focus_direction;
+      Elm.Widget.sub_object_add;
+      Elm.Widget.theme_apply;
+      Elm.Widget.focus_direction_manager_is;
+      Elm.Widget.focus_next_manager_is;
+      Elm.Widget.focus_next;
+      Elm.Widget.disable;
+      Elm.Widget.sub_object_del;
+      Elm.Widget.on_focus;
+      Efl.Container.content_count;
+      Efl.Container.content_remove;
+      Efl.Container.content_iterate;
+      Efl.Container.content { get; set; }
+      Efl.Container.content_unset;
+      Efl.Part.part;
+      Efl.Ui.View.model { get; set; }
+      Efl.Ui.Model.Connect.connect;
+      Efl.Ui.Model.Factory.Connect.connect;
+   }
+   events {
+      theme,changed; [[Called when theme changed]]
+   }
+}

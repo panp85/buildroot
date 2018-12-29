@@ -1,0 +1,40 @@
+class Efl.Ui.Check (Efl.Ui.Nstate, Elm.Interface.Atspi_Widget_Action)
+{
+   [[Check widget
+
+   The check widget allows for toggling a value between true and false.
+   Check objects are a lot like radio objects in layout and functionality,
+   except they do not work as a group, but independently, and only toggle
+   the value of a boolean between false and true.
+   ]]
+   legacy_prefix: elm_check;
+   methods {
+      @property selected {
+         [[The on/off state of the check object.]]
+         set {
+         }
+         get {
+         }
+         values {
+            value: bool; [[$true if the check object is selected, $false otherwise]]
+         }
+      }
+   }
+   implements {
+      class.constructor;
+      Efl.Object.constructor;
+      Elm.Widget.activate;
+      Elm.Widget.theme_apply;
+      Elm.Widget.sub_object_del;
+      Elm.Widget.widget_event;
+      Elm.Layout.text_aliases { get; }
+      Efl.Ui.Nstate.count { set; }
+      Efl.Ui.Nstate.value { set; }
+      Elm.Interface.Atspi_Accessible.state_set { get; }
+      Elm.Interface.Atspi_Widget_Action.elm_actions { get; }
+   }
+   events {
+      changed; [[This is called whenever the user changes the state of the check
+                  objects (event_info is always NULL).]]
+   }
+}

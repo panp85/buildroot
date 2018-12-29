@@ -1,0 +1,12 @@
+prefix=
+exec_prefix=
+libdir=@playerlibdir@
+includedir=/media/panpan/tools/buildroot-2018.02.8/output/build/gst1-plugins-bad-1.12.4/gst-libs
+
+Name: GStreamer Player, Uninstalled
+Description: GStreamer Player convenience library, uninstalled
+Requires: gstreamer-1.0 gstreamer-video-1.0
+Version: 1.12.4
+Libs: -L${libdir} -lgstplayer-1.0
+Cflags: -I/media/panpan/tools/buildroot-2018.02.8/output/build/gst1-plugins-bad-1.12.4/gst-libs -I/media/panpan/tools/buildroot-2018.02.8/output/build/gst1-plugins-bad-1.12.4/gst-libs
+

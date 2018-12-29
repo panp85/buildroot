@@ -1,0 +1,15 @@
+class Ector.Renderer.Software.Gradient.Radial (Ector.Renderer.Software, Ector.Renderer.Gradient, Ector.Renderer.Gradient.Radial)
+{
+   [[Ector software renderer gradient radial]]
+   eo_prefix: ector_renderer_software_gradient_radial;
+   data: Ector_Renderer_Software_Gradient_Data;
+   implements {
+      Ector.Renderer.prepare;
+      Ector.Renderer.draw;
+      Ector.Renderer.crc { get; }
+      Ector.Renderer.Software.fill;
+      Efl.Object.constructor;
+      Efl.Object.destructor;
+      Efl.Gfx.Gradient.stop { set; }
+   }
+}

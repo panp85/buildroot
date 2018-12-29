@@ -1,0 +1,107 @@
+class Efl.Canvas.Video (Efl.Canvas.Group, Efl.File, Efl.Player, Efl.Image, Efl.Image.Load)
+{
+   [[Efl canvas video class]]
+   methods {
+        @property option {
+             set {
+                  [[Set the specified option for the current module.
+
+                    This function allows one to mute the video or audio of the
+                    emotion object.
+
+                    Please don't use this function, consider using
+                    \@ref emotion_object_audio_mute_set and
+                    \@ref emotion_object_video_mute_set instead.
+                  ]]
+                  legacy: emotion_object_module_option_set;
+             }
+             values {
+                  opt: string; [[The option that is being set. Currently
+                                        supported options: "video" and "audio".]]
+                  val: string; [[The value of the option. Currently only
+                                        supports "off" (?!?!?!)]]
+             }
+        }
+        @property engine {
+             set {
+                  [[Initializes an emotion object with the specified module.
+
+                    This function is required after creating the emotion object,
+                    in order to specify which module will be used with this
+                    object. Different objects can use different modules to
+                    play a media file. The current supported modules are
+                    gstreamer and xine.
+
+                    To use any of them, you need to make sure that support for
+                    them was compiled correctly.
+
+                    It's possible to disable the build of a module with
+                    --disable-module_name.
+
+                    See also \@ref emotion_object_add and
+                    \@ref emotion_object_file_set.
+                  ]]
+                  legacy: emotion_object_init;
+                  return: bool; [[$true if the specified module was successfully
+                                  initialized for this object, $false otherwise.]]
+             }
+             values {
+                  module_filename: string; [[The name of the module to be
+                                                    used (gstreamer or xine).]]
+             }
+        }
+   }
+   implements {
+        Efl.Object.constructor;
+        Efl.Gfx.color { set; }
+        Efl.Gfx.visible { set; }
+        Efl.Gfx.position { set; }
+        Efl.Gfx.size { set; }
+        Efl.Canvas.Object.clip { set; }
+        Efl.File.file { get; set; }
+        Efl.Player.play { get; set; }
+        Efl.Player.position { get; set; }
+        Efl.Player.progress { get; }
+        Efl.Player.volume { get; set; }
+        Efl.Player.mute { get; set; }
+        Efl.Player.length { get; }
+        Efl.Player.seekable { get; }
+        Efl.Image.Load.load_size { get; }
+        Efl.Image.ratio { get; }
+        Efl.Image.smooth_scale { get; set; }
+   }
+   events {
+        frame,decode; [[Called when the frame was decoded]]
+        position,change; [[Called when the position changed]]
+        length,change; [[Called when the length changed]]
+        frame,resize; [[Called when the frame was resized]]
+        playback,start; [[Called when playback started]]
+        playback,stop; [[Called when playback stopped]]
+        volume,change; [[Called when volume changed]]
+        channels,change; [[Called when the channels changed]]
+        title,change; [[Called when the title changed]]
+        progress,change; [[Called when the progress changed]]
+        ref,change; [[Called when ref changed]]
+        button,num,change; [[Called when button number changed]]
+        button,change; [[Called when button changed]]
+        open,done; [[Called when the files was opened]]
+        position,save,done; [[Called when the position was saved]]
+        position,save,fail; [[Called when saving the position failed]]
+        position,load,done; [[Called when the position loaded]]
+        position,load,fail; [[Called when loading the position failed]]
+   }
+}
+
+/* FIXME: Need to be added:
+EAPI double       emotion_object_buffer_size_get       (const Evas_Object *obj);
+EAPI const char  *emotion_object_progress_info_get     (const Evas_Object *obj);
+
+Everything starting from (needs to be added):
+EAPI int          emotion_object_audio_channel_count   (const Evas_Object *obj);
+
+Should this be part of player or emotion object?
+EAPI void         emotion_object_event_simple_send     (Evas_Object *obj, Emotion_Event ev);
+
+Deliberations:
+Should this really implement the image interface?
+*/

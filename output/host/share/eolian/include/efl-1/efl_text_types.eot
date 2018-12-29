@@ -1,0 +1,13 @@
+enum Efl.Text.Bidirectional_Type {
+   [[Bidirectionaltext type]]
+   natural = 0, [[Natural text type, same as neutral]]
+   neutral = 0, [[Neutral text type, same as natural]]
+   ltr, [[Left to right text type]]
+   rtl, [[Right to left text type]]
+   inherit [[Inherit text type]]
+}
+
+type @extern Efl.Text.Annotate.Annotation: __undefined_type; [[EFL text annotations data structure]]
+
+type @extern Efl.Text.Cursor.Cursor: __undefined_type; [[Text cursor data structure]]
+

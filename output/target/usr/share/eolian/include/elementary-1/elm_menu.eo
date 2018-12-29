@@ -1,0 +1,77 @@
+class Elm.Menu (Elm.Widget, Efl.Ui.Clickable, Efl.Ui.Menu,
+                Elm.Interface.Atspi.Selection, Efl.Ui.Focus.Manager)
+{
+   [[Elementary menu class]]
+   legacy_prefix: elm_menu;
+   eo_prefix: elm_obj_menu;
+   event_prefix: elm_menu;
+   methods {
+      move {
+         [[Move the menu to a new position
+
+           Sets the top-left position of the menu to ($x, $y).
+
+           Note: $x and $y coordinates are relative to parent.
+         ]]
+         params {
+            @in x: int; [[The new X coordinate]]
+            @in y: int; [[The new Y coordinate]]
+         }
+      }
+      item_add {
+         [[Add an item at the end of the given menu widget.
+
+           Note: This function does not accept relative icon path.
+         ]]
+         return: Elm.Widget.Item; [[The new menu item.]]
+         params {
+            @in parent: Elm.Widget.Item @optional; [[The parent menu item (optional).]]
+            @in icon: string @optional; [[An icon display on the item. The icon will be destroyed by the menu.]]
+            @in label: string; [[The label of the item.]]
+            @in func: Evas_Smart_Cb @optional; [[Function called when the user select the item.]]
+            @in data: const(void_ptr) @optional; [[Data sent by the callback.]]
+         }
+      }
+      open {
+         [[Open a closed menu
+
+           Show the menu with no child sub-menus expanded..
+         ]]
+      }
+      close {
+         [[Close a opened menu
+
+           Hides the menu and all it's sub-menus.
+         ]]
+      }
+      item_separator_add {
+         [[Add a separator item to menu $obj under $parent.]]
+         return: Elm.Widget.Item; [[The created item or $null.]]
+         params {
+            @in parent: Elm.Widget.Item; [[The item to add the separator under.]]
+         }
+      }
+   }
+   implements {
+      class.constructor;
+      Efl.Object.constructor;
+      Efl.Object.destructor;
+      Efl.Gfx.visible { set; }
+      Elm.Widget.widget_parent { get; set; }
+      Elm.Widget.theme_apply;
+      Elm.Widget.translate;
+      Elm.Widget.focus_manager_factory;
+      Elm.Interface.Atspi_Accessible.children { get; }
+      Elm.Interface.Atspi.Selection.selected_children_count { get; }
+      Elm.Interface.Atspi.Selection.selected_child { get; }
+      Efl.Ui.Menu.selected_item { get; }
+      Efl.Ui.Menu.first_item { get; }
+      Efl.Ui.Menu.last_item { get; }
+      Efl.Ui.Menu.items { get; }
+   }
+   events {
+      dismissed; [[Called when menu widget was dismissed]]
+      elm,action,block_menu; [[Called when menu blocking have been enabled]]
+      elm,action,unblock_menu; [[Called when menu blocking has been disabled]]
+   }
+}

@@ -1,0 +1,7 @@
+/media/panpan/tools/buildroot-2018.02.8/package/busybox/0001-networking-libiproute-use-linux-if_packet.h-instead-.patch
+/media/panpan/tools/buildroot-2018.02.8/package/busybox/0002-Makefile.flags-strip-non-l-arguments-returned-by-pkg.patch
+/media/panpan/tools/buildroot-2018.02.8/package/busybox/0003-Makefile-include-per-arch-Makefile-before-Makefile.f.patch
+/media/panpan/tools/buildroot-2018.02.8/package/busybox/0004-arch-sparc-sparc64-Makefile-define-ARCH_FPIC.patch
+/media/panpan/tools/buildroot-2018.02.8/package/busybox/0005-httpd-fix-handling-of-range-requests.patch
+/media/panpan/tools/buildroot-2018.02.8/package/busybox/0006-bunzip2-fix-runCnt-overflow-from-bug-10431.patch
+/media/panpan/tools/buildroot-2018.02.8/package/busybox/0007-unlzma-fix-SEGV-closes-10436.patch

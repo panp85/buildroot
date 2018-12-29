@@ -1,0 +1,32 @@
+mixin Efl.Canvas.Surface (Efl.Interface, Efl.Canvas.Image.Internal)
+{
+   [[Native surfaces usually bound to an externally-managed buffer.
+
+     The attached @.native_buffer is entirely platform-dependent, which means
+     some of this mixin's subclasses will not work (constructor returns $null)
+     on some platforms. This class is meant to be used from native code only
+     (C or C++), with direct access to the display system or a buffer
+     allocation system.
+   ]]
+   methods {
+      @property native_buffer {
+          [[External buffer attached to this native surface.
+
+            Set to $null to detach this surface from the external buffer.
+          ]]
+          get {}
+          set @pure_virtual {
+             [[Set the buffer. If this fails, this function returns $false,
+               and the surface is left without any attached buffer.
+             ]]
+             return: bool @warn_unused; [[$true on success, $false otherwise]]
+          }
+          values {
+             buffer: void_ptr; [[The external buffer, depends on its type.]]
+          }
+      }
+   }
+   implements {
+      Efl.Object.constructor;
+   }
+}

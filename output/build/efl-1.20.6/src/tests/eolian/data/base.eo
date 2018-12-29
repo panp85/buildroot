@@ -1,0 +1,18 @@
+class Base {
+   methods {
+      @property z {
+           values {
+                a: int;
+                b: char;
+                c: float;
+           }
+      }
+      constructor @pure_virtual {
+      }
+      destructor {
+      }
+   }
+   constructors {
+      .constructor;
+   }
+}

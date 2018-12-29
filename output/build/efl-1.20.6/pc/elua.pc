@@ -1,0 +1,17 @@
+prefix=/usr
+exec_prefix=/usr
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+datarootdir=${prefix}/share
+datadir=${datarootdir}/elua
+vmaj=1
+vmin=20
+vmic=6
+
+Name: elua
+Description: EFL Lua application platform backend
+Requires.private: luajit >= 2.0.0 ecore-file >= 1.20.6 ecore >= 1.20.6 efl >= 1.20.6 eo >= 1.20.6 eina >= 1.20.6  
+Version: 1.20.6
+Libs: -L${libdir} -lelua
+Libs.private: 
+Cflags: -I${includedir}/efl-1 -I${includedir}/elua-1

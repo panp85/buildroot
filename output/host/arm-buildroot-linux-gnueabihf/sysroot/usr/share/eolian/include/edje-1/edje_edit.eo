@@ -1,0 +1,16 @@
+class Edje.Edit (Edje.Object)
+{
+   [[Edje editing class to access edje object internals.
+   
+   This was intended ONLY for use in an actual edje editor program. Unless
+   you are writing one of these, do NOT use this API here.
+   ]]
+   legacy_prefix: edje_edit;
+   data: Edje_Edit;
+   implements {
+      Efl.Object.constructor;
+      Efl.Object.destructor;
+      Efl.File.file { set; }
+      Efl.File.mmap { set; }
+   }
+}

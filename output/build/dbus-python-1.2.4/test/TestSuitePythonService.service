@@ -1,0 +1,3 @@
+[D-BUS Service]
+Name=org.freedesktop.DBus.TestSuitePythonService
+Exec=/bin/bash -c "/media/panpan/tools/buildroot-2018.02.8/output/host/bin/python3 /media/panpan/tools/buildroot-2018.02.8/output/build/dbus-python-1.2.4/test/test-service.py"

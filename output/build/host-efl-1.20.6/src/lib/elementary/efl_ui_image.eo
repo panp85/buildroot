@@ -1,0 +1,156 @@
+enum Efl.Ui.Image.Scale_Type
+{
+   [[Enumeration that defines scale types for the object's internal image.
+
+     @since 1.18
+   ]]
+   fill,        [[Scale the internal image so that it matches 
+                  the object's area exactly.
+                  The image's aspect ratio might be changed.]]
+   fit_inside,  [[Scale the internal image
+                  so that it fits inside the object's area
+                  while maintaining the aspect ratio.
+                  At least one of the dimensions of the image
+                  should be equal to the corresponding dimension 
+                  of the object.]]
+   fit_outside, [[Scale the internal image
+                  so that it covers the entire object area
+                  while maintaining the aspect ratio.
+                  At least one of the dimensions of the image
+                  should be equal to the corresponding 
+                  dimension of the object.]]
+   none         [[Not scale the internal image]]
+}
+
+struct Efl.Ui.Image.Progress
+{
+   [[
+     Structure associated with smart callback 'download,progress'.
+     @since 1.8
+   ]]
+   now:   double; [[Current percentage]]
+   total: double; [[Total percentage]]
+}
+
+struct Efl.Ui.Image.Error
+{
+   [[
+     Structure associated with smart callback 'download,progress'.
+     @since 1.8
+   ]]
+   status:     int; [[Error status of the download]]
+   open_error: bool; [[$true if the error happened when opening the file, $false otherwise]]
+}
+
+class Efl.Ui.Image (Elm.Widget, Efl.Ui.Clickable, Efl.Ui.Draggable,
+                 Efl.File, Efl.Image, Efl.Image.Load, Efl.Player, Efl.Gfx.View, 
+                 Elm.Interface.Atspi_Image, Elm.Interface.Atspi_Widget_Action,
+                 Edje.Object, Efl.Orientation, Efl.Flipable,
+                 Efl.Ui.View, Efl.Ui.Model.Connect)
+{
+   [[ Efl UI image class]]
+   event_prefix: efl_ui_image;
+   methods {
+      @property scale_type {
+         [[Control how the internal image is scaled.
+
+           @since 1.18]]
+         values {
+            scale_type: Efl.Ui.Image.Scale_Type; [[Image scale type]]
+         }
+      }
+      @property scalable {
+         [[Enable or disable scaling up or down the internal image.
+
+           @since 1.18]]
+         values {
+            scale_up: bool;   [[If $true, the internal image might be scaled up
+                                if necessary according to the scale type.
+                                if $false, the internal image is not scaled up
+                                no matter what the scale type is.]]
+            scale_down: bool; [[If $true, the internal image might be scaled down
+                                if necessary according to the scale type.
+                                if $false, the internal image is not scaled down
+                                no matter what the scale type is.]]
+         }
+      }
+      @property align {
+         [[Control how the internal image is positioned inside an image object.
+
+           @since 1.18]]
+         values {
+            align_x: double; [[Alignment in the horizontal axis (0 <= align_x <= 1).]]
+            align_y: double; [[Alignment in the vertical axis (0 <= align_y <= 1).]]
+         }
+      }
+      @property icon {
+         set {
+            [[Set the image by icon standards names.
+
+              For example, freedesktop.org defines standard icon names such
+              as "home", "network", etc. There can be different icon sets to
+              match those icon keys. The "name" given as parameter is one of
+              these "keys", and will be used to look in the freedesktop.org
+              paths and elementary theme.
+
+              If name is not found in any of the expected locations and it is
+              the absolute path of an image file, this image will be used.
+              Lookup order used by @.icon.set can be set using "icon_theme" in config.
+
+              Note: The image set by this function can be changed by
+              @Efl.File.file.set.
+
+              Note: This function does not accept relative icon path.
+
+              See also @.icon.get.
+            ]]
+            return: bool; [[$true on success, $false on error]]
+         }
+         get {
+            [[Get the icon name of image set by icon standard names.
+
+              If the image was set using efl_file_set() instead of
+              @.icon.set, then this function will return null.
+            ]]
+         }
+         values {
+            name: string; [[The icon name]]
+         }
+      }
+   }
+   implements {
+      class.constructor;
+      Efl.Object.constructor;
+      Efl.File.file { get; set; }
+      Efl.File.mmap { set; }
+      Efl.Gfx.color { set; }
+      Efl.Gfx.visible { set; }
+      Efl.Gfx.position { set; }
+      Efl.Gfx.size { set; }
+      Efl.Gfx.View.view_size { get; }
+      Efl.Image.image_size { get; }
+      Efl.Image.Load.load_size { get; set; }
+      Efl.Image.smooth_scale { get; set; }
+      Efl.Orientation.orientation { get; set; }
+      Efl.Flipable.flip { get; set; }
+      Efl.Player.playable { get; }
+      Efl.Player.play { get; set; }
+      Edje.Object.signal_emit;
+      Edje.Object.group_size_min { get; }
+      Edje.Object.group_size_max { get; }
+      Edje.Object.size_min_calc;
+      Edje.Object.calc_force;
+      Efl.Canvas.Object.clip { set; }
+      Efl.Canvas.Group.group_member_add;
+      Efl.Ui.Draggable.drag_target { get; set; }
+      Efl.Ui.Model.Connect.connect;
+      Efl.Ui.View.model { get; set; }
+      Elm.Widget.theme_apply;
+      Elm.Widget.widget_event;
+      Elm.Interface.Atspi_Image.extents { get; }
+      Elm.Interface.Atspi_Widget_Action.elm_actions { get; }
+   }
+   events {
+      drop; [[Called when drop from drag and drop happened]] /* FIXME - Belongs to DnD interface */
+   }
+}

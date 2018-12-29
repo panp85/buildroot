@@ -1,0 +1,8 @@
+creating build/temp.linux-x86_64-3.6/build
+creating build/temp.linux-x86_64-3.6/build/temp.linux-x86_64-3.6
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc -Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os -fPIC -I/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot/usr/include/python3.6m -c build/temp.linux-x86_64-3.6/conftest-0.c -o build/temp.linux-x86_64-3.6/build/temp.linux-x86_64-3.6/conftest-0.o
+build/temp.linux-x86_64-3.6/conftest-0.c: In function ‘main’:
+build/temp.linux-x86_64-3.6/conftest-0.c:7:19: warning: variable ‘ret’ set but not used [-Wunused-but-set-variable]
+               int ret;
+                   ^~~
+/media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-gcc build/temp.linux-x86_64-3.6/build/temp.linux-x86_64-3.6/conftest-0.o -L/media/panpan/tools/buildroot-2018.02.8/output/host/arm-buildroot-linux-gnueabihf/sysroot/usr/lib -o build/temp.linux-x86_64-3.6/conftest

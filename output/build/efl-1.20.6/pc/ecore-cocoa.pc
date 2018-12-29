@@ -1,0 +1,12 @@
+prefix=/usr
+exec_prefix=/usr
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: ecore-cocoa
+Description: E core library, Cocoa module
+Requires.private: 
+Version: 1.20.6
+Libs: -L${libdir} -lecore_cocoa
+Libs.private: 
+Cflags: -I${includedir}/efl-1 -I${includedir}/efl-1 -I${includedir}/ecore-cocoa-1

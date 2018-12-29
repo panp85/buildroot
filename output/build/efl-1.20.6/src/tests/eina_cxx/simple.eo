@@ -1,0 +1,7 @@
+class Simple (Efl.Object)
+{
+   data: null;
+   implements {
+      Efl.Object.constructor;
+   }
+}

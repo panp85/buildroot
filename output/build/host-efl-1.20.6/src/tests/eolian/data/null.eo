@@ -1,0 +1,12 @@
+class Null {
+   methods {
+      foo {
+         params {
+            x: ptr(char);
+            y: ptr(char) @nullable;
+            z: ptr(char) @optional;
+            w: ptr(char) @optional @nullable;
+         }
+      }
+   }
+}

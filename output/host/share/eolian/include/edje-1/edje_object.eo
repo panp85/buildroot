@@ -1,0 +1,1195 @@
+import edje_types;
+
+// FIXME: This EO doc needs a direct link to the "edcref" doc
+
+class Edje.Object (Efl.Canvas.Group.Clipped, Efl.File, Efl.Container, Efl.Part,
+                   Efl.Observer, Efl.Ui.Base)
+{
+   [[Edje object class]]
+   legacy_prefix: edje_object;
+   eo_prefix: edje_obj;
+   event_prefix: edje_object;
+   data: Edje;
+   methods {
+      @property animation {
+         [[Whether this object is animating or not.
+
+           This property indicates whether animations are stopped or not.
+           Animations here refer to transitions between states.
+
+           If animations are disabled, transitions between states (as
+           defined in EDC) are then instantaneous. This is conceptually similar
+           to setting the @.transition_duration_factor to an infinitely high
+           value.
+         ]]
+         get {
+            [[Get the current state of animation, $true by default.]]
+         }
+         set {
+            [[Start or stop animating this object.]]
+         }
+         values {
+            on: bool; [[The animation state, $true by default.]]
+         }
+      }
+      @property play {
+         [[Whether this object is playing or not.
+
+           This property indicates whether the object is running or not. If
+           stopped (or paused), all transitions are disabled and programs
+           stop running, until resumed.
+
+           If play is disabled, the object will remain the same, and its parts
+           will not change state. Note that play can be disabled during a
+           transition between states, effectively freezing the object in
+           flight. When paused, no events will be processed or sent.
+
+           Setting to $true resumes playing from the current state.
+         ]]
+         get {
+            [[Get the current state of play, $true by default.]]
+         }
+         set {
+            [[Start or stop playing programs in this object.]]
+         }
+         values {
+            play: bool; [[The play state, $true by default.]]
+         }
+      }
+      @property perspective {
+         set {
+            [[Sets the given perspective object on this Edje object.
+
+              Make the given perspective object be the default perspective for this Edje
+              object.
+
+              There can be only one perspective object per Edje object, and if a
+              previous one was set, it will be removed and the new perspective object
+              will be used.
+
+              An Edje perspective will only affect a part if it doesn't point to another
+              part to be used as perspective.
+
+              \@ref edje_object_perspective_new()
+              See also @.perspective.get()
+              \@ref edje_perspective_set()]]
+            values {
+                ps: ptr(Edje.Perspective); [[The perspective object that will be used.]]
+            }
+         }
+         get {
+            [[Gets the current perspective used on this Edje object.
+
+              See also @.perspective.set()]]
+            values {
+                ps: ptr(const(Edje.Perspective)); [[The perspective object that will be used.]]
+            }
+         }
+      }
+      @property transition_duration_factor {
+         [[Transition duration factor.
+
+           This defines a multiplier for the duration of transitions as they
+           are defined in EDC. By default this factor is 1.0, which means
+           animations play at the same speed as described in EDC.
+         ]]
+         set {
+            [[Sets transition duration factor.]]
+         }
+         get {
+            [[Gets transition duration factor.]]
+         }
+         values {
+            scale: double(1.0); [[The transition duration factor.]]
+         }
+      }
+
+      // TODO: Legacy only. EO may rely on futures.
+      preload {
+         [[Preloads the images on the Edje Object in the background.
+
+           This function requests the preload of all data images (on the given
+           object) in the background. The work is queued before being processed
+           (because there might be other pending requests of this type).
+           It emits a signal "preload,done" when finished.
+
+           Note: Use $true on scenarios where you don't need
+           the image data preloaded anymore.]]
+
+         return: bool; [[$false if obj was not a valid Edje object
+                         otherwise $true]]
+         params {
+            @in cancel: bool; [[$false will add it the preloading work queue,
+                                $true will remove it (if it was issued before).]]
+         }
+      }
+      @property load_error {
+         get {
+            [[Gets the (last) file loading error for a given Edje object
+
+              This function is meant to be used after an Edje EDJ file
+              loading, what takes place with the $file_set() function. If that
+              function does not return $true, one should check for the reason
+              of failure with this one.
+            ]]
+            legacy: null;
+         }
+         values {
+            error: Efl.Image.Load.Error(Efl.Image.Load.Error.generic);
+               [[The load error code.]]
+         }
+      }
+
+      /* EDJE CALC APIS BEGIN ---------------------------------------------- */
+      @property calc_update_hints {
+         [[Whether this object updates its size hints automatically.
+
+           By default edje doesn't set size hints on itself. If this property
+           is set to $true, size hints will be updated after recalculation.
+           Be careful, as recalculation may happen often, enabling this
+           property may have a considerable performance impact as other widgets
+           will be notified of the size hints changes.
+
+           A layout recalculation can be triggered by @.size_min_calc(),
+           @.size_min_restricted_calc(), @.parts_extends_calc() or even any
+           other internal event.
+         ]]
+         set {
+            [[Enable or disable auto-update of size hints.]]
+            legacy: edje_object_update_hints_set;
+         }
+         get {
+            [[Whether this object updates its size hints automatically.]]
+            legacy: edje_object_update_hints_get;
+         }
+         values {
+            update: bool(false); [[Whether or not update the size hints.]]
+         }
+      }
+      // FIXME: Prefix with calc_ ?
+      size_min_calc {
+         [[Calculates the minimum required size for a given Edje object.
+
+           This call works exactly as edje_object_size_min_restricted_calc(),
+           with the last two arguments set to 0. Please refer to its
+           documentation, then.
+         ]]
+         // FIXME: Return a 2D size type (no @out values)
+         params {
+            @out minw: int; [[The minimum required width (return value)]]
+            @out minh: int; [[The minimum required height (return value)]]
+         }
+      }
+      // FIXME: Prefix with calc_ ?
+      size_min_restricted_calc {
+         [[Calculates the minimum required size for a given Edje object.
+
+           This call will trigger an internal recalculation of all parts of
+           the object, in order to return its minimum required dimensions for
+           width and height. The user might choose to impose those minimum
+           sizes, making the resulting calculation to get to values equal or
+           larger than $restrictedw and $restrictedh, for width and height,
+           respectively.
+
+           Note: At the end of this call, the object  won't be automatically
+           resized to the new dimensions, but just return the calculated sizes.
+           The caller is the one up to change its geometry or not.
+
+           Warning: Be advised that invisible parts in the object will be taken
+           into account in this calculation.
+         ]]
+         // FIXME: Return a 2D size type (no @out values)
+         params {
+            @out minw: int; [[The minimum required width (return value)]]
+            @out minh: int; [[The minimum required height (return value)]]
+            @in restrictedw: int; [[The minimum width constraint as input,
+                                    $minw can not be lower than this]]
+            @in restrictedh: int; [[The minimum height constraint as input,
+                                    $minh can not be lower than this]]
+         }
+      }
+      // FIXME: Prefix with calc_ ?
+      parts_extends_calc {
+         [[Calculates the geometry of the region, relative to a given Edje
+           object's area, occupied by all parts in the object.
+
+           This function gets the geometry of the rectangle equal to the area
+           required to group all parts in obj's group/collection. The x
+           and y coordinates are relative to the top left corner of the
+           whole obj object's area. Parts placed out of the group's
+           boundaries will also be taken in account, so that x and y
+           may be negative.
+
+           Note: On failure, this function will make all non-$null geometry
+           pointers' pointed variables be set to zero.
+         ]]
+         return: bool; [[$true on success, $false otherwise]]
+         /* FIXME: Return a 2D size type (no @out values) */
+         params {
+            @out x: int; [[The parts region's X coordinate]]
+            @out y: int; [[The parts region's Y coordinate]]
+            @out w: int; [[The parts region's width]]
+            @out h: int; [[The parts region's height]]
+         }
+      }
+      calc_force {
+         [[Forces a Size/Geometry calculation.
+
+           Forces the object to recalculate its layout regardless of
+           freeze/thaw.
+
+           See also @.calc_freeze and @.calc_thaw.
+         ]]
+      }
+      calc_freeze {
+         [[Freezes the Edje object.
+
+           This function puts all changes on hold. Successive freezes will
+           nest, requiring an equal number of thaws.
+
+           See also @.calc_thaw()
+         ]]
+         return: int; [[The frozen state or 0 on error]]
+         legacy: edje_object_freeze;
+      }
+      calc_thaw {
+         [[Thaws the Edje object.
+
+           This function thaws the given Edje object.
+
+           Note: If sucessive freezes were done, an equal number of thaws will
+           be required.
+
+           See also @.calc_freeze()
+         ]]
+         return: int; [[The frozen state or 0 if the object is not frozen or on error.]]
+         legacy: edje_object_thaw;
+      }
+      /* EDJE CALC APIS END ------------------------------------------------ */
+
+      /* EDJE GROUP DATA APIS BEGIN ---------------------------------------- */
+      @property group_size_min {
+         get {
+            [[Gets the minimum size specified -- as an EDC property -- for a
+              given Edje object
+
+              This function retrieves the obj object's minimum size values,
+              as declared in its EDC group definition. For instance, for an
+              Edje object of minimum size 100x100 pixels:
+              collections {
+                 group {
+                    name: "a_group";
+                    min: 100 100;
+                 }
+              }
+
+              Note: If the $min EDC property was not declared for this object,
+              this call will return 0x0.
+
+              Note: On failure, this function also return 0x0.
+
+              See also @.group_size_max.
+            ]]
+            legacy: edje_object_size_min_get;
+         }
+         values {
+            minw: int; [[Pointer to a variable where to store the minimum width]]
+            minh: int; [[Pointer to a variable where to store the minimum height]]
+         }
+      }
+      @property group_size_max {
+         get {
+            [[Gets the maximum size specified -- as an EDC property -- for a
+              given Edje object
+
+              This function retrieves the object's maximum size values,
+              as declared in its EDC group definition. For instance, for an
+              Edje object of maximum size 100x100 pixels:
+              collections {
+                 group {
+                    name: "a_group";
+                    max: 100 100;
+                 }
+              }
+
+              Note: If the $max EDC property was not declared for the object,
+              this call will return the maximum size a given Edje object may
+              have, for each axis.
+
+              Note: On failure, this function will return 0x0.
+
+              See also @.group_size_min.
+            ]]
+            legacy: edje_object_size_max_get;
+         }
+         values {
+            maxw: int; [[The maximum width]]
+            maxh: int; [[The maximum height]]
+         }
+      }
+      @property group_data {
+         get {
+            [[Retrives an EDC data field's value from a given Edje object's group.
+
+              This function fetches an EDC data field's value, which is declared
+              on the objects building EDC file, under its group. EDC data blocks
+              are most commonly used to pass arbitrary parameters from an
+              application's theme to its code.
+
+              EDC data fields always hold  strings as values, hence the return
+              type of this function. Check the complete "syntax reference"
+              for EDC files.
+
+              This is how a data item is defined in EDC:
+              collections {
+                 group {
+                    name: "a_group";
+                    data {
+                       item: "key1" "value1";
+                       item: "key2" "value2";
+                    }
+                 }
+              }
+
+              Warning: Do not confuse this call with edje_file_data_get(), which
+              queries for a global EDC data field on an EDC declaration file.
+            ]]
+            legacy: edje_object_data_get;
+         }
+         keys {
+            key: string; [[The data field's key string]]
+         }
+         values {
+            val: string; [[The data's value string.]]
+         }
+      }
+      /* EDJE GROUP DATA APIS END ------------------------------------------ */
+
+      /* MESSAGE & SIGNAL APIS BEGIN --------------------------------------- */
+      message_send {
+         [[Sends an (Edje) message to a given Edje object
+
+           This function sends an Edje message to obj and to all of its
+           child objects, if it has any (swallowed objects are one kind of
+           child object). Only a few types are supported:
+             - int,
+             - float/double,
+             - string/stringshare,
+             - arrays of int, float, double or strings.
+
+           The id argument as a form of code and theme defining a common
+           interface on message communication. One should define the same IDs
+           on both code and EDC declaration, to individualize messages
+           (binding them to a given context).
+         ]]
+         params {
+            @in id: int; [[A identification number for the message to be sent]]
+            @in msg: const(generic_value); [[The message's payload]]
+         }
+         legacy: null;
+      }
+      signal_callback_add {
+         [[Adds a callback for an arriving Edje signal, emitted by
+           a given Edje object.
+
+           Edje signals are one of the communication interfaces between
+            code and a given Edje object's theme. With signals, one can
+           communicate two string values at a time, which are:
+           - "emission" value: the name of the signal, in general
+           - "source" value: a name for the signal's context, in general
+
+           Though there are those common uses for the two strings, one is free
+           to use them however they like.
+
+           Signal callback registration is powerful, in the way that  blobs
+           may be used to match multiple signals at once. All the
+           "*?[\" set of $fnmatch() operators can be used, both for
+           emission and source.
+
+           Edje has  internal signals it will emit, automatically, on
+           various actions taking place on group parts. For example, the mouse
+           cursor being moved, pressed, released, etc., over a given part's
+           area, all generate individual signals.
+
+           By using something like
+           edje_object_signal_callback_add(obj, "mouse,down,*", "button.*",
+           signal_cb, NULL);
+           being \@ref "button.*" the pattern for the names of parts implementing
+           buttons on an interface, you'd be registering for notifications on
+           events of mouse buttons being pressed down on either of those parts
+           (those events all have the @"mouse,down," common prefix on their
+           names, with a suffix giving the button number). The actual emission
+           and source strings of an event will be passed in as the  emission
+           and  source parameters of the callback function (e.g.
+           "mouse,down,2" and @"button.close"), for each of those events.
+
+           Note: See \@ref edcref "the syntax" for EDC files
+           See also @.signal_emit() on how to emits Edje signals from
+           code to a an object
+           \@ref edje_object_signal_callback_del_full()]]
+           /* FIXME-doc
+            * This function adds a callback function to a signal emitted by  obj, to
+            * be issued every time an EDC program like the following
+            * @code
+            * program
+            *   {
+            *      name: "emit_example";
+            *      action: SIGNAL_EMIT "a_signal" "a_source";
+            *   }
+            * @endcode
+            * is run, if emission and source are given those same values,
+            * here.
+            */
+
+         params {
+            @in emission: string; [[The signal's "emission" string]]
+            @in source: string; [[The signal's "source" string]]
+            @in func: Edje.Signal_Cb; [[The callback function to be executed when the signal is
+                                        emitted.]]
+            @in data: void_ptr; [[A pointer to data to pass in to func.]]
+         }
+      }
+      signal_callback_del {
+         [[Removes a signal-triggered callback from an object.
+
+           This function removes a callback, previously attached to the
+           emission of a signal, from the object  obj. The parameters
+           emission,  source and  func must match exactly those passed to
+           a previous call to edje_object_signal_callback_add(). The data
+           pointer that was passed to this call will be returned.
+
+           See also @.signal_callback_add().
+           \@ref edje_object_signal_callback_del_full().]]
+
+         legacy: null;
+         return: void_ptr; [[The data pointer]]
+         params {
+            @in emission: string; [[The emission string.]]
+            @in source: string; [[The source string.]]
+            @in func: Edje.Signal_Cb; [[The callback function.]]
+            @in data: void_ptr; [[The callback function.]]
+         }
+      }
+      signal_emit {
+         [[Sends/emits an Edje signal to a given Edje object
+
+           This function sends a signal to the object  obj. An Edje program,
+           at obj's EDC specification level, can respond to a signal by
+           having declared matching @'signal' and @'source' fields on its
+           block (see \@ref edcref "the syntax" for EDC files).
+
+           See also @.signal_callback_add() for more on Edje signals.]]
+           /* FIXME-doc
+            * @code
+            * program
+            *   {
+            *      name: "a_program";
+            *      signal: "a_signal";
+            *      source: "";
+            *      action: ...
+            *   }
+            * @endcode
+            */
+         params {
+            @in emission: string; [[The signal's "emission" string]]
+            @in source: string; [[The signal's "source" string]]
+         }
+      }
+      message_signal_process {
+         [[Processes an object's message queue.
+
+           This function goes through the object message queue processing the
+           pending messages for this specific Edje object. Normally they'd
+           be processed only at idle time.
+
+           If $recurse is $true, this function will be called recursively
+           on all subobjects.
+         ]]
+         params {
+            recurse: bool @optional; [[Whether to process messages on children
+                                       objects.]]
+         }
+         legacy: null;
+      }
+      /* MESSAGE & SIGNAL APIS END ----------------------------------------- */
+
+      /* CLASS APIS BEGIN -------------------------------------------------- */
+      @property global_color_class @class {
+         set {
+            [[Sets Edje color class.
+
+              This function sets the color values for a process level color
+              class.  This will cause all edje parts in the current process that
+              have the specified color class to have their colors multiplied by
+              these values.  (Object level color classes set by
+              edje_object_color_class_set() will override the values set by this
+              function).
+
+              Setting color emits a signal "color_class,set" with source being
+              the given color class in all objects.
+
+              Note: unlike Evas, Edje colors are not pre-multiplied. That is,
+              half-transparent white is 255 255 255 128.]]
+            legacy: null;
+            return: bool; [[$true on success, $false otherwise]]
+         }
+         get {
+            [[Gets Edje color class.
+
+              This function gets the color values for a process level color
+              class. This value is the globally set and not per-object, that is,
+              the value that would be used by objects if they did not override with
+              @.color_class.set().
+
+              See also, @.global_color_class.set()
+
+              Note: unlike Evas, Edje colors are not pre-multiplied. That is,
+              half-transparent white is 255 255 255 128.]]
+            legacy: null;
+            return: bool; [[$true if found or $false if not found and all values
+                            are zeored.]]
+         }
+         keys {
+            color_class: string; [[The name of color class]]
+            mode: Edje.Color_Class.Mode; [[Edje color class mode]]
+         }
+         values {
+            r: int; [[Object Red value]]
+            g: int; [[Object Green value]]
+            b: int; [[Object Blue value]]
+            a: int; [[Object Alpha value]]
+         }
+      }
+      @property color_class {
+         set {
+            [[Sets the object color class.
+
+              This function sets the color values for an object level color
+              class. This will cause all edje parts in the specified object that
+              have the specified color class to have their colors multiplied by
+              these values.
+
+              The first color is the object, the second is the text outline, and
+              the third is the text shadow. (Note that the second two only apply
+              to text parts).
+
+              Setting color emits a signal "color_class,set" with source being
+              the given color.
+
+              Note: unlike Evas, Edje colors are not pre-multiplied. That is,
+              half-transparent white is 255 255 255 128.]]
+            legacy: null;
+            return: bool; [[$true on success, $false otherwise]]
+         }
+         get {
+            [[Gets the object color class.
+
+              This function gets the color values for an object level color
+              class. If no explicit object color is set, then global values will
+              be used.
+
+              The first color is the object, the second is the text outline, and
+              the third is the text shadow. (Note that the second two only apply
+              to text parts).
+
+              Note: unlike Evas, Edje colors are not pre-multiplied. That is,
+              half-transparent white is 255 255 255 128.]]
+            legacy: null;
+            return: bool; [[$true if found or $false if not found and all
+                            values are zeroed.]]
+         }
+         keys {
+            color_class: string; [[The name of color class]]
+            mode: Edje.Color_Class.Mode; [[Edje color class mode]]
+         }
+         values {
+            r: int; [[Object Red value]]
+            g: int; [[Object Green value]]
+            b: int; [[Object Blue value]]
+            a: int; [[Object Alpha value]]
+         }
+      }
+      @property color_class_description {
+         get {
+            [[Gets the description of an object color class.
+
+              This function gets the description of a color class in use by an object.]]
+            return: string; [[The description of the target color class or $null if not found]]
+         }
+         keys {
+            color_class: string; [[Color class description]]
+         }
+      }
+      color_class_clear @const {
+         [[Clears object color classes.
+
+           @since 1.17.0]]
+         return: bool; [[$true on success, or $false on error]]
+      }
+      color_class_del {
+         [[Deletes the object color class.
+
+           This function deletes any values at the object level for the
+           specified object and color class.
+
+           Deleting the color class will revert it to the values
+           defined by edje_color_class_set() or the color class
+           defined in the theme file.
+
+           Deleting the color class will emit the signal "color_class,del"
+           for the given Edje object.]]
+         params {
+            @in color_class: string; [[The color class to be deleted.]]
+         }
+      }
+      @property text_class {
+         set {
+            [[Sets Edje text class.
+
+              This function sets the text class for the Edje.]]
+            return: bool; [[$true on success, or $false on error]]
+         }
+         get {
+            [[Gets font and font size from edje text class.
+
+              This function gets the font and the font size from the object
+              text class. The font string will only be valid until the text
+              class is changed or the edje object is deleted.]]
+            return: bool; [[$true on success, or $false on error]]
+         }
+         keys {
+            text_class: string; [[The text class name]]
+         }
+         values {
+            font: string; [[Font name]]
+            size: int; [[Font Size]]
+         }
+      }
+      text_class_del {
+         [[Deletes the object text class.
+
+           This function deletes any values at the object level for the
+           specified object and text class.
+
+           Deleting the text class will revert it to the values
+           defined by edje_text_class_set() or the text class
+           defined in the theme file.
+
+           @since 1.17]]
+         params {
+            @in text_class: string; [[The color class to be deleted.]]
+         }
+      }
+      @property size_class {
+         set {
+            [[Sets the object size class.
+
+              This function sets the min and max values for an object level size
+              class. This will make all edje parts in the specified object that
+              have the specified size class update their min and max size with given values.
+
+              @since 1.17]]
+            return: bool; [[$true on success, or $false on error]]
+         }
+         get {
+            [[Gets the object size class.
+
+              This function gets the min and max values for an object level size
+              class. These values will only be valid until the size class is changed
+              or the edje object is deleted.
+
+              @since 1.17]]
+            return: bool; [[$true on success, or $false on error]]
+         }
+         keys {
+            size_class: string; [[The size class name]]
+         }
+         values {
+            minw: int; [[The min width]]
+            minh: int; [[The min height]]
+            maxw: int; [[The max width]]
+            maxh: int; [[The max height]]
+         }
+      }
+      size_class_del {
+         [[Deletes the object size class.
+
+           This function deletes any values at the object level for the
+           specified object and size class.
+
+           Deleting the size class will revert it to the values
+           defined by edje_size_class_set() or the color class
+           defined in the theme file.
+
+           @since 1.17]]
+         params {
+            @in size_class: string; [[Size class name]]
+         }
+      }
+      /* CLASS APIS END ---------------------------------------------------- */
+
+      access_part_iterate {
+         [[Iterates over all accessibility-enabled part names.]]
+         legacy: null;
+         return: free(own(iterator<string>), eina_iterator_free); [[Part name iterator]]
+      }
+      part_exists @const {
+         [[Checks if a part exists in a given Edje object's group definition.
+
+           This function returns if a given part exists in the Edje group
+           bound to this object (with @Efl.File.file.set()).
+
+           This call is useful, for example, when one could expect or not a
+           given GUI element, depending on the theme applied to the object.
+
+           Note: @Efl.Part.part() called on an Edje object will return $null
+           if it doesn't contain the given part.
+         ]]
+         return: bool; [[$true if the Edje part exists in obj's group, or
+                         $false otherwise (and on errors)]]
+         params {
+            @in part: string; [[The part's name to check for existence in obj's
+                                group]]
+         }
+      }
+
+      /* TEXT PART APIS BEGIN ---------------------------------------------- */
+      @property text_change_cb {
+         set {
+            [[Sets the object text callback.
+
+              This function sets the callback to be called when the text changes.]]
+         }
+         values {
+            func: Edje.Text.Change_Cb; [[The callback function to handle the text change]]
+            data: void_ptr; [[The data associated to the callback function.]]
+         }
+      }
+      @property part_text_autocapital_type {
+         set {
+            [[Sets the autocapitalization type on the immodule.
+
+              @since 1.1.0]]
+         }
+         get {
+            [[Retrieves the autocapitalization type
+
+              @since 1.1.0]]
+         }
+         keys {
+            part: string; [[The part name]]
+         }
+         values {
+            autocapital_type: Edje.Text.Autocapital_Type; [[The type of autocapitalization]]
+         }
+      }
+      @property part_text_prediction_allow {
+         set {
+            [[Sets whether the prediction is allowed or not.
+
+              @since 1.2.0]]
+         }
+         get {
+            [[Gets whether the prediction is allowed or not.
+
+              @since 1.2.0]]
+         }
+         keys {
+            part: string; [[The part name]]
+         }
+         values {
+            prediction: bool; [[If $true, the prediction feature is allowed.]]
+         }
+      }
+      @property item_provider {
+         set {
+            [[Sets the function that provides item objects for named items in an edje entry text
+
+              Item objects may be deleted any time by Edje, and will be deleted when the
+              Edje object is deleted (or file is set to a new file).]]
+         }
+         values {
+            func: Edje.Item_Provider_Cb; [[The function to call (or $null to disable) to get item objects]]
+            data: void_ptr; [[The data pointer to pass to the func callback]]
+         }
+      }
+      @property part_text_select_allow {
+         set {
+            [[Enables selection if the entry is an EXPLICIT selection mode
+              type.
+
+              The default is to  not allow selection. This function only affects user
+              selection, functions such as edje_object_part_text_select_all() and
+              edje_object_part_text_select_none() are not affected.]]
+            legacy: null;
+         }
+         keys {
+            part: string; [[The part name]]
+         }
+         values {
+            allow: bool; [[$true to enable, $false otherwise]]
+         }
+      }
+      part_text_select_begin @const {
+         [[Starts selecting at current cursor position]]
+         params {
+            @in part: string; [[The part name]]
+         }
+      }
+      part_text_select_abort @const {
+         [[Aborts any selection action on a part.]]
+         params {
+            @in part: string; [[The part name]]
+         }
+      }
+      part_text_select_extend @const {
+         [[Extends the current selection to the current cursor position]]
+         params {
+            @in part: string; [[The part name]]
+         }
+      }
+      part_text_select_all @const {
+         [[Sets the selection to be everything.
+
+           This function selects all text of the object of the part.]]
+         params {
+            @in part: string; [[The part name]]
+         }
+      }
+      part_text_select_none @const {
+         [[Sets the selection to be none.
+
+           This function sets the selection text to be none.]]
+         params {
+            @in part: string; [[The part name]]
+         }
+      }
+      @property part_text_selection {
+         get {
+            [[Returns the selection text of the object part.
+
+              This function returns selection text of the object part.
+
+              See also @.part_text_select_all() and @.part_text_select_none()]]
+            return: string; [[The text string]]
+         }
+         keys {
+            part: string; [[The part name]]
+         }
+      }
+      @property part_text_imf_context {
+         get {
+            [[Gets the input method context in entry.
+
+              If ecore_imf was not available when edje was compiled, this function returns $null
+              otherwise, the returned pointer is an Ecore_IMF
+
+              @since 1.2.0]]
+            return: void_ptr; [[The input method context (Ecore_IMF_Context *) in entry]]
+         }
+         keys {
+            part: string; [[The part name]]
+         }
+      }
+      part_text_imf_context_reset @const {
+         [[Resets the input method context if needed.
+
+           This can be necessary in the case where modifying the buffer would confuse on-going input method behavior
+
+           @since 1.2.0]]
+         params {
+            @in part: string; [[The part name]]
+         }
+      }
+      @property part_text_input_hint {
+         set {
+            [[Sets the input hint which allows input methods to fine-tune their behavior.
+
+              @since 1.12.0]]
+         }
+         get {
+            [[Gets the value of input hint
+
+              @since 1.12.0]]
+         }
+         keys {
+            part: string; [[The part name]]
+         }
+         values {
+            input_hints: Edje.Input_Hints; [[Input hints]]
+         }
+      }
+      part_text_input_panel_show @const {
+         [[Shows the input panel (virtual keyboard) based on the input panel property such as layout, autocapital types, and so on.
+
+           Note that input panel is shown or hidden automatically according to the focus state.
+           This API can be used in the case of manually controlling by using edje_object_part_text_input_panel_enabled_set.
+
+           @since 1.2.0]]
+         params {
+            @in part: string; [[The part name]]
+         }
+      }
+      part_text_input_panel_hide @const {
+         [[Hides the input panel (virtual keyboard).
+           See also @.part_text_input_panel_show
+
+           Note that input panel is shown or hidden automatically according to the focus state.
+           This API can be used in the case of manually controlling by using edje_object_part_text_input_panel_enabled_set.
+
+           @since 1.2.0]]
+         params {
+            @in part: string; [[The part name]]
+         }
+      }
+      @property part_text_input_panel_imdata {
+         set {
+            [[Sets the input panel-specific data to deliver to the input panel.
+
+              This API is used by applications to deliver specific data to the input panel.
+              The data format MUST be negotiated by both application and the input panel.
+              The size and format of data are defined by the input panel.
+
+              @since 1.2.0]]
+            keys {
+               part: string; [[The part name]]
+               data: const(void_ptr); [[The specific data to be set to the input panel.]]
+            }
+         }
+         get {
+            [[Gets the specific data of the current active input panel.
+
+              @since 1.2.0]]
+            return: void; [[FIXME: void needed here?]]
+            keys {
+               part: string; [[The part name]]
+               data: void_ptr; [[The specific data to be set to the input panel.]]
+            }
+         }
+         values {
+            len: int; [[The length of data, in bytes, to send to the input panel]]
+         }
+      }
+      @property part_text_input_panel_layout {
+         set {
+            [[Sets the layout of the input panel.
+
+              The layout of the input panel or virtual keyboard can make it easier or
+              harder to enter content. This allows you to hint what kind of input you
+              are expecting to enter and thus have the input panel automatically
+              come up with the right mode.
+
+              @since 1.1]]
+         }
+         get {
+            [[Gets the layout of the input panel.
+
+              See also @.part_text_input_panel_layout.set
+
+              @since 1.1]]
+         }
+         keys {
+            part: string; [[The part name]]
+         }
+         values {
+            layout: Edje.Input_Panel.Layout; [[Layout type of the input panel]]
+         }
+      }
+      @property part_text_input_panel_language {
+         set {
+            [[Sets the language mode of the input panel.
+
+              This API can be used if you want to show the Alphabet keyboard.
+
+              @since 1.2.0]]
+         }
+         get {
+            [[Gets the language mode of the input panel.
+
+              See also @.part_text_input_panel_language.set for more details.
+
+              @since 1.2.0]]
+         }
+         keys {
+            part: string; [[The part name]]
+         }
+         values {
+            lang: Edje.Input_Panel.Lang; [[The language to be set to the input panel.]]
+         }
+      }
+      @property part_text_input_panel_layout_variation {
+         set {
+            [[Sets the layout variation of the input panel.
+
+              The layout variation of the input panel or virtual keyboard can make it easier or
+              harder to enter content. This allows you to hint what kind of input you
+              are expecting to enter and thus have the input panel automatically
+              come up with the right mode.
+
+              @since 1.8]]
+         }
+         get {
+            [[Gets the layout variation of the input panel.
+
+              See also @.part_text_input_panel_layout_variation.set
+
+              @since 1.8]]
+         }
+         keys {
+            part: string; [[The part name]]
+         }
+         values {
+            variation: int; [[Layout variation type]]
+         }
+      }
+      @property part_text_input_panel_enabled {
+         set {
+            [[Sets the attribute to show the input panel automatically.
+
+              @since 1.1.0]]
+         }
+         get {
+            [[Retrieves the attribute to show the input panel automatically.
+              See also @.part_text_input_panel_enabled.set
+
+              @since 1.1.0]]
+         }
+         keys {
+            part: string; [[The part name]]
+         }
+         values {
+            enabled: bool; [[If $true, the input panel is appeared when entry is clicked or has a focus]]
+         }
+      }
+      @property part_text_input_panel_return_key_disabled {
+         set {
+            [[Sets the return key on the input panel to be disabled.
+
+              @since 1.2.0]]
+         }
+         get {
+            [[Gets whether the return key on the input panel should be disabled or not.
+
+              @since 1.2.0]]
+         }
+         keys {
+            part: string; [[The part name]]
+         }
+         values {
+            disabled: bool; [[The state]]
+         }
+      }
+      @property part_text_input_panel_return_key_type {
+         set {
+            [[Sets the "return" key type. This type is used to set string or icon on the "return" key of the input panel.
+
+              An input panel displays the string or icon associated with this type
+
+              @since 1.2.0]]
+         }
+         get {
+            [[Gets the "return" key type.
+
+              See also @.part_text_input_panel_return_key_type.set() for more details
+
+              @since 1.2.0]]
+         }
+         keys {
+            part: string; [[The part name]]
+         }
+         values {
+            return_key_type: Edje.Input_Panel.Return_Key_Type; [[The type of "return" key on the input panel]]
+         }
+      }
+      @property part_text_input_panel_show_on_demand {
+         set {
+            [[Sets the attribute to show the input panel in case of only an user's explicit Mouse Up event.
+              It doesn't request to show the input panel even though it has focus.
+
+              @since 1.9.0]]
+         }
+         get {
+            [[Gets the attribute to show the input panel in case of only an user's explicit Mouse Up event.
+
+              @since 1.9.0]]
+         }
+         keys {
+            part: string; [[The part name]]
+         }
+         values {
+            ondemand: bool; [[If $true, the input panel will be shown in case of only Mouse up event. (Focus event will be ignored.)]]
+         }
+      }
+      @property part_text_prediction_hint {
+         set {
+            [[Sets the prediction hint to use an intelligent reply suggestion service.
+
+              @since 1.20.0]]
+         }
+         keys {
+            part: string; [[The part name]]
+         }
+         values {
+            prediction_hint: string; [[Prediction hint]]
+         }
+      }
+      /* TEXT PART APIS END ------------------------------------------------ */
+
+      @property seat {
+         get {
+            [[Returns the seat device given its Edje's name.
+
+              Edje references seats by a name that differs from Evas.
+              Edje naming follows a incrementional convention: first
+              registered name is "seat1", second is "seat2", differently
+              from Evas.
+
+              @since 1.19]]
+
+            return: Efl.Input.Device; [[The seat device or $null if not found.]]
+         }
+         keys {
+            name: stringshare; [[The name's character string.]]
+         }
+      }
+      @property seat_name {
+         get {
+            [[Gets the name given to a set by Edje.
+
+              Edje references seats by a name that differs from Evas.
+              Edje naming follows a incrementional convention: first
+              registered name is "seat1", second is "seat2", differently
+              from Evas.
+
+              @since 1.19]]
+
+            return: stringshare; [[The name's character string or $null if not found.]]
+         }
+         keys {
+            device: Efl.Input.Device; [[The seat device]]
+         }
+      }
+   }
+   implements {
+      Efl.Gfx.visible { set; }
+      Efl.Gfx.position { set; }
+      Efl.Gfx.size { set; }
+      Efl.Object.constructor;
+      Efl.Object.destructor;
+      Efl.Canvas.Object.no_render { set; }
+      Efl.Canvas.Object.paragraph_direction { set; }
+      Efl.Canvas.Group.group_calculate;
+      Efl.Ui.Base.mirrored { set; get; }
+      Efl.Ui.Base.language { set; get; }
+      Efl.Ui.Base.scale { set; get; }
+      Efl.Ui.Base.base_scale { get; }
+      Efl.File.file { get; set; }
+      Efl.File.mmap { get; set; }
+      Efl.Container.content_remove;
+      Efl.Part.part;
+      Efl.Observer.update;
+   }
+   events {
+      recalc; [[Edje re-calculated the object.]]
+   }
+}

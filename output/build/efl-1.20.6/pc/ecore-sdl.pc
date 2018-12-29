@@ -1,0 +1,11 @@
+prefix=/usr
+exec_prefix=/usr
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: ecore-sdl
+Description: E core library, SDL module
+Version: 1.20.6
+Requires.private: 
+Libs: -L${libdir} -lecore_sdl
+Cflags: -I${includedir}/efl-1 -I${includedir}/ecore-sdl-1

@@ -1,0 +1,12 @@
+prefix=/media/panpan/tools/buildroot-2018.02.8/output/host
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: ecore-evas
+Description: E core library, Evas module
+Requires.private: emile >= 1.20.6 eina >= 1.20.6 eo >= 1.20.6 efl >= 1.20.6 evas >= 1.20.6 eet >= 1.20.6 ecore >= 1.20.6 ecore-input >= 1.20.6 ecore-input-evas >= 1.20.6  
+Version: 1.20.6
+Libs: -L${libdir} -lecore_evas
+Libs.private: 
+Cflags: -I${includedir}/efl-1 -I${includedir}/ecore-evas-1

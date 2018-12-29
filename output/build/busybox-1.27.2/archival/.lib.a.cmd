@@ -1,0 +1,1 @@
+cmd_archival/lib.a := rm -f archival/lib.a; /media/panpan/tools/buildroot-2018.02.8/output/host/bin/arm-linux-gnueabihf-ar  rcs archival/lib.a archival/ar.o archival/bbunzip.o archival/cpio.o archival/gzip.o archival/lzop.o archival/tar.o archival/unzip.o

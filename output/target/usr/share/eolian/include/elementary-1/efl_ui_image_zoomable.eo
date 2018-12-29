@@ -1,0 +1,85 @@
+class Efl.Ui.Image.Zoomable (Elm.Widget, Efl.Ui.Image, Efl.Ui.Zoom,
+                             Elm.Interface_Scrollable,
+                             Efl.Ui.Scrollable)
+{
+   [[Elementary Image Zoomable class]]
+   legacy_prefix: elm_photocam;
+   methods {
+      @property gesture_enabled {
+         set {
+            [[Set the gesture state for photocam.
+
+              This sets the gesture state to on or off for photocam. The
+              default is off. This will start multi touch zooming.
+            ]]
+         }
+         get {
+            [[Get the gesture state for photocam.
+
+              This gets the current gesture state for the photocam object.
+            ]]
+         }
+         values {
+            gesture: bool; [[The gesture state.]]
+         }
+      }
+      @property image_region {
+         get {
+            [[Get the region of the image that is currently shown
+
+              See also @.image_region.set.
+            ]]
+         }
+         set {
+            [[Set the viewed region of the image
+
+              This shows the region of the image without using animation.
+              @since 1.20
+            ]]
+            legacy: null;
+         }
+         values {
+            x: int; [[X-coordinate of region in image original pixels]]
+            y: int; [[Y-coordinate of region in image original pixels]]
+            w: int; [[Width of region in image original pixels]]
+            h: int; [[Height of region in image original pixels]]
+         }
+      }
+   }
+   implements {
+      class.constructor;
+      Efl.Object.constructor;
+      Efl.Gfx.position { set; }
+      Efl.Gfx.size { set; }
+      Efl.Gfx.View.view_size { get; }
+      Efl.Image.image_size { get; }
+      Efl.Ui.Image.icon { set; get; }
+      Efl.Player.playable { get; }
+      Efl.Player.play { get; set; }
+      Efl.Ui.Zoom.zoom_animation { set; get; }
+      Efl.Ui.Zoom.zoom { set; get; }
+      Efl.Ui.Zoom.zoom_mode { set; get; }
+      Efl.Canvas.Group.group_member_add;
+      Elm.Widget.theme_apply;
+      Elm.Widget.on_focus;
+      Elm.Widget.widget_event;
+      Elm.Interface_Scrollable.region_bring_in;
+      Elm.Interface.Atspi_Widget_Action.elm_actions { get; }
+      Efl.File.file { get; set; }
+      Efl.Orientation.orientation { get; set; }
+      Efl.Flipable.flip { get; set; }
+      Edje.Object.group_size_min { get; }
+      Edje.Object.group_size_max { get; }
+   }
+   events {
+      press; [[Called when photocam got pressed]]
+      load; [[Called when photocam loading started]]
+      loaded; [[Called when photocam loading finished]]
+      load,detail; [[Called when photocal detail loading started]]
+      loaded,detail; [[Called when photocam detail loading finished]]
+      download,start; [[Called when photocam download started]]
+      download,progress; [[Called when photocam download progress updated]]
+      download,done; [[Called when photocam download finished]]
+      download,error; [[Called when photocam download failed]]
+   }
+}

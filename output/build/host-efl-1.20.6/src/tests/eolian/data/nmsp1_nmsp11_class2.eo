@@ -1,0 +1,9 @@
+class nmsp1.nmsp11.class2
+{
+   methods {
+      @property a {
+         set @pure_virtual {
+         }
+      }
+   }
+}

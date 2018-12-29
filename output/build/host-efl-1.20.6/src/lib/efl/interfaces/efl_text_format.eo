@@ -1,0 +1,123 @@
+enum Efl.Text.Format.Wrap {
+   [[Wrap mode of the text (not in effect if not multiline)]]
+   none, [[No wrapping]]
+   char, [[Wrap mode character]]
+   word, [[Wrap mode word]]
+   mixed, [[Wrap mode mixed]]
+   hyphenation [[Wrap mode hyphenation]]
+}
+
+enum Efl.Text.Format.Horizontal_Alignment_Type {
+   [[Horizontal alignment of the text]]
+   legacy: efl_text_horizontal_alignment;
+   auto,    [[Respects LTR/RTL (bidirectional) settings]]
+   locale,  [[Respects locale's langauge settings]]
+   left,    [[Text is placed at the left end of the line]]
+   right,   [[Text is placed at the right end of the line]]
+   center   [[Text is places at the center of the line]]
+}
+
+enum Efl.Text.Format.Vertical_Alignment_Type {
+   [[Horizontal alignment of the text]]
+   legacy: efl_text_vertical_alignment;
+   top,    [[Text is placed at the top]]
+   center, [[Text is placed at the center]]
+   bottom  [[Text is placed at the bottom]]
+}
+
+interface Efl.Text.Format {
+   [[The look and layout of the text
+
+     The text format can affect the geometry of the text object, as well as
+     how characters are presented.
+
+     @since 1.20
+   ]]
+   eo_prefix: efl_text;
+   methods {
+      @property ellipsis {
+         [[Ellipsis value (number from -1.0 to 1.0)]]
+         values
+         {
+            value: double;
+         }
+      }
+
+      @property wrap {
+         [[Wrap mode for use in the text]]
+         values {
+            wrap: Efl.Text.Format.Wrap;
+         }
+      }
+
+      @property multiline {
+         [[Multiline is enabled or not]]
+         values {
+            enabled: bool;
+         }
+      }
+
+      @property halign {
+         [[Horizontal alignment of text]]
+         values {
+            value: Efl.Text.Format.Horizontal_Alignment_Type;
+         }
+      }
+
+      @property valign {
+         [[Vertical alignment of text]]
+         values {
+            value: Efl.Text.Format.Vertical_Alignment_Type;
+         }
+      }
+
+      @property linegap {
+         [[Minimal line gap (top and bottom) for each line in the text
+
+           $value is absolute size.
+         ]]
+         values
+         {
+            value: double;
+         }
+      }
+
+      @property linerelgap {
+         [[Relative line gap (top and bottom) for each line in the text
+
+           The original line gap value is multiplied by $value.
+         ]]
+         values
+         {
+            value: double;
+         }
+      }
+
+      @property tabstops {
+         [[Tabstops value]]
+         values
+         {
+            value: int;
+         }
+      }
+
+      @property password {
+         [[Whether text is a password]]
+         values
+         {
+            enabled: bool;
+         }
+      }
+
+      @property replacement_char {
+         [[The character used to replace characters that can not be displayed
+
+           Currently, only used to replace characters if @.password
+           is enabled.
+         ]]
+         values {
+            repch: string;
+         }
+      }
+   }
+}

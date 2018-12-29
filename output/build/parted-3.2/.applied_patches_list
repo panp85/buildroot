@@ -1,0 +1,5 @@
+/media/panpan/tools/buildroot-2018.02.8/package/parted/0001-libparted-arch-linux.c-Compile-without-ENABLE_DEVICE.patch
+/media/panpan/tools/buildroot-2018.02.8/package/parted/0002-configure.ac-uclinux-is-also-linux.patch
+/media/panpan/tools/buildroot-2018.02.8/package/parted/0003-Include-fcntl.h-to-get-loff_t-definition.patch
+/media/panpan/tools/buildroot-2018.02.8/package/parted/0004-libparted-labels-link-with-libiconv-if-needed.patch
+/media/panpan/tools/buildroot-2018.02.8/package/parted/0005-linux-Include-sys-sysmacros.h-for-major-macro.patch

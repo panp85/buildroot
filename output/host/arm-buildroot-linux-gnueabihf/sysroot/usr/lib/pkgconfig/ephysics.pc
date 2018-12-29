@@ -1,0 +1,12 @@
+prefix=/usr
+exec_prefix=/usr
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+vmaj=1
+
+Name: ephysics
+Description: EPhysics is a wrapper for physics engine.
+Requires.private: bullet >= 2.80 emile >= 1.20.6 eo >= 1.20.6 ecore >= 1.20.6 efl >= 1.20.6 evas >= 1.20.6 eina >= 1.20.6  
+Version: 1.20.6
+Libs: -L${libdir} -lephysics
+Cflags: -I${includedir}/efl-1 -I${includedir}/ephysics-1

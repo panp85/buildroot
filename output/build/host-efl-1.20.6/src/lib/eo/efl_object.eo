@@ -1,0 +1,253 @@
+import eina_types;
+
+struct Efl.Event.Description {
+    [[This struct holds the description of a specific event.]]
+    name: string; [[name of the event.]]
+    unfreezable: bool; [[$true if the event cannot be frozen.]]
+    legacy_is: bool; [[Internal use: $true if a legacy event.]]
+    restart: bool; [[$true if when the event is triggered again from a callback, it should start from where it was]]
+}
+
+abstract Efl.Object ()
+{
+   [[Abstract Efl object class]]
+   eo_prefix: efl;
+
+   methods {
+      @property parent {
+         [[The parent of an object.
+
+           Parents keep references to their children so in order to
+           delete objects that have parents you need to set parent to
+           NULL or use efl_del() that does that for you (and also unrefs
+           the object).
+
+           The Eo parent is conceptually user set. That means that a parent
+           should not be changed behind the scenes in a surprising manner.
+
+           For example:
+           if you have a widget that has a box internally, and
+           when you swallow into that widget the object you swallow ends up in
+           the box, the parent should be the widget, and not the box.
+         ]]
+
+         set {
+         }
+         get {
+         }
+         values {
+            parent: Efl.Object @nullable; [[The new parent]]
+         }
+      }
+      del @const {
+         [[Unrefs the object and reparents it to NULL.
+
+           Because efl_del() unrefs and reparents to NULL, it doesn't really delete the object.
+
+           This method accepts a const object for convenience, so all objects
+           could be passed to it easily.
+         ]]
+      }
+      @property name {
+         [[ The name of the object.
+
+           Every object can have a string name. Names may not contain
+           the following charactors:
+             / ? * [ ] ! \ :
+           They are illegal. Using it in a name will result in undefined
+           behavior later on. An empty string is considered the same as a
+           NULL string or no string for the name at all.
+         ]]
+         set {
+         }
+         get {
+         }
+         values {
+           name: string @nullable; [[The name]]
+         }
+      }
+      @property comment {
+         [[ A human readable comment for the object
+
+           Every object can have a string comment intended for developers
+           and debugging. An empty string is considered the same as a NULL
+           string or no string for the comment at all.
+         ]]
+         set {
+         }
+         get {
+         }
+         values {
+           comment: string @nullable; [[The comment]]
+         }
+      }
+      @property event_global_freeze_count @class {
+         get {
+            [[Return freeze events of object.
+
+              Return event freeze count.
+            ]]
+         }
+         values {
+            fcount: int; [[The event freeze count of the object]]
+         }
+      }
+      @property event_freeze_count {
+         get {
+            [[Return freeze events of object.
+
+              Return event freeze count.
+            ]]
+         }
+         values {
+            fcount: int; [[The event freeze count of the object]]
+         }
+      }
+      @property finalized {
+         [[True if the object is already finalized, false otherwise.]]
+         get {
+         }
+         values {
+            finalized: bool; [[$true if the object is finalized, $false otherwise]]
+         }
+      }
+      provider_find {
+        [[Searches up in the object tree for a provider which knows the given class/interface.
+
+          The object from the provider will then be returned.
+          The base implementation calls the provider_find function on the object parent,
+          and returns its result. If no parent is present NULL is returned.
+          Each implementation has to support this function by overriding
+          it and returning itself if the interface matches the parameter.
+          If this is not done the class cannot be found up in the object tree.
+        ]]
+        params {
+          klass : const(Efl.Object); [[The class identifier to search for]]
+        }
+        return : Efl.Object; [[Object from the provider list]]
+      }
+      constructor {
+         [[Call the object's constructor.
+
+           Should not be used with #eo_do. Only use it with #eo_do_super.
+         ]]
+         return: Efl.Object; [[The new object created, can be NULL if aborting]]
+      }
+      destructor {
+         [[Call the object's destructor.
+
+           Should not be used with #eo_do. Only use it with #eo_do_super.
+         ]]
+      }
+      finalize {
+         [[Called at the end of #eo_add. Should not be called, just overridden.]]
+         return: Efl.Object; [[The new object created, can be NULL if aborting]]
+      }
+      name_find {
+         [[Find a child object with the given name and return it.
+           The search string can be a glob (shell style). It can also
+           specify class name in the format of "class:name" where ":"
+           separates class and name. Both class and name can be globs.
+           If class is specified, and name is empty like "class:" then
+           the search will match any object of that class.
+         ]]
+         params {
+            @in search: string; [[The name search string]]
+         }
+         return: Efl.Object; [[The first object found]]
+      }
+      event_thaw {
+         [[Thaw events of object.
+
+           Lets event callbacks be called for the object.
+         ]]
+      }
+      event_freeze {
+         [[Freeze events of object.
+
+           Prevents event callbacks from being called for the object.
+         ]]
+      }
+      event_global_thaw @class {
+         [[Thaw events of object.
+
+           Lets event callbacks be called for the object.
+         ]]
+      }
+      event_global_freeze @class {
+         [[Freeze events of object.
+
+           Prevents event callbacks from being called for the object.
+         ]]
+      }
+      event_callback_stop {
+         [[Stop the current callback call.
+
+           This stops the current callback call. Any other callbacks for the
+           current event will not be called. This is useful when you want to
+           filter out events. You just add higher priority events and call this
+           on certain conditions to block a certain event.
+         ]]
+      }
+      event_callback_forwarder_add {
+         [[Add an event callback forwarder for an event and an object.]]
+         params {
+            @in desc: ptr(const(Efl.Event.Description)); [[The description of the event to listen to]]
+            @in new_obj: Efl.Object; [[The object to emit events from]]
+         }
+      }
+      event_callback_forwarder_del {
+         [[Remove an event callback forwarder for an event and an object.]]
+         params {
+            @in desc: ptr(const(Efl.Event.Description)); [[The description of the event to listen to]]
+            @in new_obj: Efl.Object; [[The object to emit events from]]
+         }
+      }
+      children_iterator_new {
+         [[Get an iterator on all childrens]]
+         return: free(own(iterator<Efl.Object>), eina_iterator_free) @warn_unused; [[Children iterator]]
+      }
+      composite_attach {
+           [[Make an object a composite object of another.
+
+             The class of comp_obj must be part of the extensions of the class of the parent.
+             It is not possible to attach more then 1 composite of the same class.
+             This functions also sets the parent of comp_obj to parent.
+
+             See @.composite_detach, @.composite_part_is.
+           ]]
+           params {
+                @in comp_obj: Efl.Object; [[the object that will be used to composite the parent.]]
+           }
+           return: bool; [[$true if successful. $false otherwise.]]
+      }
+      composite_detach {
+           [[Detach a composite object from another object.
+
+             This functions also sets the parent of comp_obj to $null.
+
+             See @.composite_attach, @.composite_part_is.
+           ]]
+           params {
+                @in comp_obj: Efl.Object; [[The object that will be removed from the parent.]]
+           }
+           return: bool; [[$true if successful. $false otherwise.]]
+      }
+      composite_part_is {
+           [[Check if an object is part of a composite object.
+
+             See @.composite_attach, @.composite_part_is.
+           ]]
+           return: bool; [[$true if it is. $false otherwise.]]
+      }
+   }
+   implements {
+        class.constructor;
+        class.destructor;
+   }
+   events {
+      callback,add @hot; [[A callback was added.]]
+      callback,del @hot; [[A callback was deleted.]]
+      del @hot; [[Object is being deleted.]]
+   }
+}

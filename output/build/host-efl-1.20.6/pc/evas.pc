@@ -1,0 +1,16 @@
+prefix=/media/panpan/tools/buildroot-2018.02.8/output/host
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+datarootdir=${prefix}/share
+datadir=${datarootdir}
+eoincludedir=${datarootdir}/eolian/include
+eolian_flags=-I${pc_sysrootdir}${eoincludedir}/evas-1
+
+Name: evas
+Description: Evas canvas display library
+Requires.private: freetype2 >= 16.2.10 ecore >= 1.20.6 ector >= 1.20.6 emile >= 1.20.6 efl >= 1.20.6 eina >= 1.20.6 eet >= 1.20.6 eo >= 1.20.6 luajit >= 2.0.0  
+Version: 1.20.6
+Libs: -L${libdir} -levas
+Libs.private:  -ldl -lm  -lrt
+Cflags: -I${includedir}/efl-1 -I${includedir}/evas-1 -I${includedir}/evas-1/canvas

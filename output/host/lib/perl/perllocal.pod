@@ -1,0 +1,22 @@
+=head2 Wed Dec 12 11:57:38 2018: C<Module> L<XML::Parser|XML::Parser>
+
+=over 4
+
+=item *
+
+C<installed into: /media/panpan/tools/buildroot-2018.02.8/output/host/lib/perl>
+
+=item *
+
+C<LINKTYPE: dynamic>
+
+=item *
+
+C<VERSION: 2.44>
+
+=item *
+
+C<EXE_FILES: >
+
+=back
+

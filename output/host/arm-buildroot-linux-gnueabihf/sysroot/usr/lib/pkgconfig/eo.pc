@@ -1,0 +1,16 @@
+prefix=/usr
+exec_prefix=/usr
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+datarootdir=${prefix}/share
+datadir=${datarootdir}
+eoincludedir=${datarootdir}/eolian/include
+eolian_flags=-I${pc_sysrootdir}${eoincludedir}/eo-1
+
+Name: Eo
+Description: EFL's generic object system library.
+Version: 1.20.6
+Requires.private: eina >= 1.20.6  
+Libs: -L${libdir} -leo
+Libs.private:
+Cflags: -I${includedir}/efl-1 -I${includedir}/eo-1

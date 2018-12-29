@@ -1,0 +1,3 @@
+/media/panpan/tools/buildroot-2018.02.8/package/util-linux/0001-docs-add-ISC-licence.patch
+/media/panpan/tools/buildroot-2018.02.8/package/util-linux/0002-lib-randutils-Do-not-block-on-getrandom.patch
+/media/panpan/tools/buildroot-2018.02.8/package/util-linux/0003-lib-randutils-don-t-break-on-EAGAIN-use-usleep.patch

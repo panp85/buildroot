@@ -1,0 +1,5 @@
+class Ector.GL.Buffer (Efl.Object, Ector.Buffer)
+{
+   [[Ector GL buffer class]]
+   data: null;
+}

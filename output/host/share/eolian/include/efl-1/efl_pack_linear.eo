@@ -1,0 +1,85 @@
+interface Efl.Pack.Linear (Efl.Pack)
+{
+   [[API for containers ]]
+   eo_prefix: efl_pack;
+   methods {
+      pack_begin {
+         [[Prepend an object at the beginning of this container.
+
+           This is the same as @.pack_at($subobj, 0).
+         ]]
+         params {
+            @in subobj: own(Efl.Gfx); [[Item to pack.]]
+         }
+         return: bool; [[$false if $subobj could not be packed]]
+      }
+      pack_end {
+         [[Append object at the end of this container.
+
+           This is the same as @.pack_at($subobj, -1).
+         ]]
+         params {
+            @in subobj: own(Efl.Gfx); [[Item to pack.]]
+         }
+         return: bool; [[$false if $subobj could not be packed]]
+      }
+      pack_before {
+         [[Prepend item before other sub object.]]
+         params {
+            @in subobj:   own(Efl.Gfx); [[Item to pack.]]
+            @in existing: const(Efl.Gfx); [[Item to refer to.]]
+         }
+         return: bool; [[$false if $existing could not be found or $subobj
+                         could not be packed]]
+      }
+      pack_after {
+         [[Append item after other sub object.]]
+         params {
+            @in subobj:   own(Efl.Gfx); [[Item to pack.]]
+            @in existing: const(Efl.Gfx); [[Item to refer to.]]
+         }
+         return: bool; [[$false if $existing could not be found or $subobj
+                         could not be packed]]
+      }
+      pack_at {
+          [[Inserts $subobj at the specified $index.
+
+            Valid range: -$count to +$count. -1 refers to the last element.
+            Out of range indices will trigger an append.
+          ]]
+          params {
+             @in subobj: own(Efl.Gfx); [[Item to pack.]]
+             @in index:  int; [[A position.]]
+          }
+          return: bool; [[$false if $subobj could not be packed]]
+      }
+      pack_content_get {
+         [[Content at a given index in this container.
+
+           Index -1 refers to the last item. The valid range is -(count - 1) to
+           (count - 1).
+         ]]
+         params {
+            index: int; [[Index number]]
+         }
+         return: Efl.Gfx; [[The object contained at the given $index.]]
+      }
+      pack_index_get {
+         [[Get the index of a child in this container.]]
+         params {
+            subobj: const(Efl.Gfx); [[An object contained in this pack.]]
+         }
+         return: int(-1); [[-1 in case of failure, or the index of this item.]]
+      }
+      pack_unpack_at {
+         [[Pop out item at specified $index.
+
+           Equivalent to unpack(content_at($index)).
+         ]]
+         params {
+            index: int; [[Index number]]
+         }
+         return: Efl.Gfx; [[The child item if it could be removed.]]
+      }
+   }
+}

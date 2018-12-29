@@ -1,0 +1,29 @@
+class Elm.Fileselector_Entry (Elm.Layout, Elm.Interface.Fileselector,
+                              Efl.Ui.Clickable, Efl.Ui.Selectable)
+{
+   [[Elementary fileselector entry class]]
+   event_prefix: elm_fileselector_entry;
+   implements {
+      class.constructor;
+      Efl.Object.constructor;
+      Elm.Widget.theme_apply;
+      Elm.Widget.focus_next_manager_is;
+      Elm.Widget.focus_next;
+      Elm.Widget.disable;
+      Elm.Widget.focus_direction_manager_is;
+      Elm.Layout.sizing_eval;
+      Elm.Interface.Fileselector.selected_model_get;
+      Elm.Interface.Fileselector.selected_model_set;
+      Elm.Interface.Fileselector.folder_only { get; set; }
+      Elm.Interface.Fileselector.is_save { get; set; }
+      Elm.Interface.Fileselector.model { get; set; }
+      Elm.Interface.Fileselector.expandable { get; set; }
+      Efl.Part.part;
+   }
+   events {
+      changed; [[Called when the entry changed]]
+      activated; [[Called when the entry was activated]]
+      file,chosen; [[Called when a file was chosen in the fileselector]]
+      press; [[Called when entry was pressed]]
+   }
+}

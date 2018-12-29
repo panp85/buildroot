@@ -1,0 +1,90 @@
+/* FIXME: Any better name? Efl.Ui? Efl.Ui.Common? */
+interface Efl.Ui.Base
+{
+   [[A common interface for UI objects.]]
+   eo_prefix: efl_ui;
+   methods {
+      @property mirrored {
+         [[Whether this object should be mirrored.
+
+           If mirrored, an object is in RTL (right to left) mode instead of LTR
+           (left to right).
+         ]]
+         values {
+            rtl: bool(false); [[$true for RTL, $false for LTR (default).]]
+         }
+      }
+      @property mirrored_automatic {
+         [[Whether the property @.mirrored should be set automatically.
+
+           If enabled, the system or application configuration will be used
+           to set the value of @.mirrored.
+
+           This property may be implemented by high-level widgets (in $Efl.Ui)
+           but not by low-level widgets (in $Efl.Canvas) as the configuration
+           should affect only high-level widgets.
+         ]]
+         values {
+            automatic: bool(true); [[Whether the widget uses automatic mirroring]]
+         }
+      }
+      @property language {
+         [[The (human) language for this object.]]
+         set {
+            [[Sets the language for this object.]]
+         }
+         get {
+            [[Gets the language for this object.]]
+         }
+         values {
+            language: string; [[The current language.]]
+          }
+      }
+      @property scale {
+         [[The scaling factor of an object.
+
+           This property is an individual scaling factor on the object (Edje
+           or UI widget). This property (or Edje's global scaling factor, when
+           applicable), will affect this object's part sizes. If scale is
+           not zero, than the individual scaling will override any global
+           scaling set, for the object obj's parts. Set it back to zero to
+           get the effects of the global scaling again.
+
+           Warning: In Edje, only parts which, at EDC level, had the "scale"
+           property set to 1, will be affected by this function. Check the
+           complete "syntax reference" for EDC files.
+         ]]
+         set {
+            [[Sets the scaling factor of an object.]]
+         }
+         get {
+            [[Gets an object's scaling factor.]]
+         }
+         values {
+            scale: double(0.0); [[The scaling factor (the default value is 0.0,
+                                  meaning individual scaling is not set)]]
+         }
+      }
+      @property base_scale {
+         [[The base scale of a layout object (read-only).
+
+           The base scale refers to the scale for which the backing EDC file
+           was designed. By default it is 1.0 which means the EDC file was
+           designed for a scale of 1.0.
+
+           This base scale can be specified in an EDC file as the
+           collections' "base_scale" field.
+
+           If the object is not a layout, this will return 1.0.
+         ]]
+         get {
+            [[Gets a given layout object's base_scale factor.]]
+         }
+         values {
+            base_scale: double(1.0); [[The base_scale factor (the default value
+                                       is 1.0, meaning that the edc file was
+                                       designed based on scale 1.0).]]
+         }
+      }
+   }
+}

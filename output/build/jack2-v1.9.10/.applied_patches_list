@@ -1,0 +1,6 @@
+/media/panpan/tools/buildroot-2018.02.8/package/jack2/0001-Fix-initialization-in-test-iodelay.patch
+/media/panpan/tools/buildroot-2018.02.8/package/jack2/0002-Improve-check-for-ucontext.patch
+/media/panpan/tools/buildroot-2018.02.8/package/jack2/0003-Make-backtrace-support-depends-on-execinfo.h-existen.patch
+/media/panpan/tools/buildroot-2018.02.8/package/jack2/0004-tests-define-__STDC_LIMIT_MACROS.patch
+/media/panpan/tools/buildroot-2018.02.8/package/jack2/0005-gcc7.patch
+/media/panpan/tools/buildroot-2018.02.8/package/jack2/0006-fix-ftbfs-with-clang.patch

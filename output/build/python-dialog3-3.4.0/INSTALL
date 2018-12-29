@@ -1,0 +1,159 @@
+INSTALLATION
+============
+
+pythondialog is packaged with Distutils. With the current state of
+Python packaging and installation tools, there are several ways to
+install pythondialog from source.
+
+Probably, the easiest and cleanest method at this date (April 2015) is
+to use pip, possibly inside a virtual environment created with
+virtualenv or venv.py/pyvenv. Typically, assuming you have a working pip
+setup (see below), you just have to run one of the following commands:
+
+  pip install pythondialog       (which normally installs from PyPI)
+
+or
+
+  pip install /path/to/python3-pythondialog-X.Y.Z.tar.gz
+
+or
+
+  pip install https://url/to/python3-pythondialog-X.Y.Z.tar.gz
+
+or
+
+  pip install http://url/to/python3-pythondialog-X.Y.Z.tar.gz
+
+Notes:
+  - old versions of pip don't support https;
+  - upgrades can be done by passing '--upgrade' or '-U' to the
+    'pip install' command; please refer to the pip documentation for
+    details.
+
+Uninstallation should be as easy as:
+
+  pip uninstall pythondialog
+
+For more information about pip, venv.py/pyvenv and virtualenv, you can
+visit the following pages:
+
+  <https://pip.pypa.io/>
+  <https://docs.python.org/3/library/venv.html>
+  <https://virtualenv.pypa.io/>
+
+
+So, what is a "working pip setup"?
+----------------------------------
+
+What I call a "working pip setup" here is a setup where a command that
+is typically something like 'pip', 'pip3' or 'pip3.4' (for a Python 3.4
+installation) can be run to safely install, upgrade and remove packages
+into or from a particular Python installation.
+
+Normally, a given 'pip' executable is tied to a particular Python
+installation that can be discovered by running 'pip --version' (or
+'pip3 --version', etc., depending on the particular 'pip' executable
+name; for sanity's sake, we'll assume 'pip' in the rest of this
+document). For instance, the following would indicate a Python 3.4
+installation based at /some/path:
+
+  % pip --version
+  pip 1.5.6 from /some/path/lib/python3.4/site-packages (python 3.4)
+
+In general, it is safe to run 'pip' from a Python interpreter you
+installed yourself without a Linux package manager or similar. It is
+also safe if the Python interpreter running 'pip' lives in a virtual
+environment created with virtualenv or venv.py/pyvenv. The one case
+where you should probably avoid using a given 'pip' executable is if it
+runs directly under a system Python (typically, /usr/bin/python or
+/usr/bin/pythonX.Y) installed with the package manager of your Linux
+distribution (or any other OS, for that matter): in such a situation,
+'pip' might, if run with superuser privileges, mess with files under the
+control of the OS package manager (i.e., 'dpkg' on Debian and its
+derivatives, 'rpm' on Redhat and Suse, etc.).
+
+Depending on how you installed Python, you may need superuser privileges
+to install, upgrade or remove Python packages inside that installation.
+For instance, this will be the case if you compiled Python yourself and
+performed the installation step ('make install') as root. However,
+running 'pip' with superuser privileges should not be necessary nor
+desirable inside a virtual environment created with virtualenv or
+venv.py/pyvenv.
+
+
+Old way, without pip
+--------------------
+
+The following instructions explain how to install pythondialog directly
+from its setup.py, without using pip. If possible, the method based on
+pip is preferable because it makes uninstallation standard and easy.
+
+Here are the steps:
+  - make this file's directory your shell's current directory
+  - optionally edit setup.cfg (cf. the "Installing Python Modules"
+    chapter of the Python documentation).
+
+  - a) 1) type:
+
+            python3 ./setup.py build
+
+          (depending on your system and the Python version you want to
+          install for, you may have to replace "python3" with, for
+          instance, "python3.2" or "python3.3")
+
+       2) then, as root (after replacing /usr/local with the actual
+          installation prefix you want to use):
+
+            python3 ./setup.py install --prefix=/usr/local \
+                                       --record /path/to/foo
+
+          where foo is a file of your choice which will contain the list
+          of all files installed on your system by the preceding
+          command. This will make uninstallation easy (you could ommit
+          the "--record /path/to/foo", but uninstallation could not be
+          automated, then).
+
+    OR
+
+    b) type, as root (after replacing the installation prefix):
+
+            python3 ./setup.py install --prefix=/usr/local \
+                                       --record /path/to/foo
+
+       This will automatically build the package before installing it.
+       The observations made in a) also apply here.
+
+
+If this default installation is not what you wish, please read the
+Distutils documentation which should be available in the "Installing
+Python Modules" chapter of the Python documentation.
+
+
+UNINSTALLATION
+==============
+
+If you installed pythondialog with pip, you can uninstall it with the
+following command:
+
+  pip uninstall pythondialog
+
+(which should be run under the same account that was used to run the
+"pip install" command)
+
+Otherwise, if you have followed the old installation procedure, you have
+a /path/to/foo file that contains all the files the installation process
+put on your system. Great! All you have to do is:
+
+   while read file; do rm -f "$file"; done < /path/to/foo
+
+under a POSIX-style shell and with appropriate privileges (maybe root,
+depending on how you installed pythondialog).
+
+Note: this will handle file names with spaces correctly, unlike the
+simpler "rm -f $(cat /path/to/foo)".
+
+
+# Local Variables:
+# coding: utf-8
+# fill-column: 72
+# End:

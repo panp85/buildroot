@@ -1,0 +1,13 @@
+prefix=
+exec_prefix=
+libdir=/media/panpan/tools/buildroot-2018.02.8/output/build/gst1-plugins-good-1.12.4/gst-libs/gst
+includedir=/media/panpan/tools/buildroot-2018.02.8/output/build/gst1-plugins-good-1.12.4/gst-libs
+pluginsdir=/media/panpan/tools/buildroot-2018.02.8/output/build/gst1-plugins-good-1.12.4
+
+Name: GStreamer Good Plugins, Uninstalled
+Description: Streaming media framework, good plugins, uninstalled
+Version: 1.12.4
+Requires: gstreamer-1.0 gstreamer-plugins-base-1.0
+
+Libs: 
+Cflags: 

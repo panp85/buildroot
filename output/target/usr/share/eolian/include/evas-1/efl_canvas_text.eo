@@ -1,0 +1,343 @@
+import efl_text_types;
+
+struct Efl.Canvas.Text.Style; [[EFL text style data structure]]
+
+class Efl.Canvas.Text (Efl.Canvas.Object, Efl.Text, Efl.Text.Properties, Efl.Canvas.Filter.Internal,
+Efl.Text.Font, Efl.Text.Style, Efl.Text.Format, Efl.Text.Cursor, Efl.Text.Annotate)
+{
+   [[Efl canvas text class]]
+   legacy_prefix: evas_object_textblock;
+   methods {
+      @property is_empty {
+         [[Whether the object is empty (no text) or not
+
+           @since 1.18
+         ]]
+         get {
+            legacy: null;
+         }
+         values {
+            is_empty: bool; [[$true if empty, $false otherwise]]
+         }
+      }
+      visible_range_get {
+         [[Returns the currently visible range.
+
+           The given $start and $end cursor act like an out-variables here,
+           as these are set to the positions of the start and the end of the
+           visible range in the text, respectively.
+
+           @since 1.18
+         ]]
+         return: bool; [[$true on success, $false otherwise]]
+         params {
+            @in start: ptr(Efl.Text.Cursor.Cursor); [[Range start position]]
+            @in end: ptr(Efl.Text.Cursor.Cursor); [[Range end position]]
+         }
+      }
+      @property style_insets {
+         [[Gets the left, right, top and bottom insets of the text.
+
+           The inset is any applied padding on the text.
+
+           @since 1.18
+         ]]
+         get {}
+         values {
+            l: int; [[Left padding]]
+            r: int; [[Right padding]]
+            t: int; [[Top padding]]
+            b: int; [[Bottom padding]]
+         }
+      }
+      @property bidi_delimiters {
+         [[BiDi delimiters are used for in-paragraph separation of bidi
+           segments. This is useful for example in recipients fields of
+           e-mail clients where bidi oddities can occur when mixing RTL
+           and LTR.
+
+           @since 1.18
+         ]]
+         set {}
+         get {}
+         values {
+            delim: string; [[A null terminated string of delimiters, e.g ",|" or $null if empty]]
+         }
+      }
+      @property legacy_newline {
+         [[When $true, newline character will behave as a paragraph separator.
+
+           @since 1.18
+         ]]
+         set {}
+         get {}
+         values {
+            mode: bool; [[$true for legacy mode, $false otherwise]]
+         }
+      }
+      @property style {
+         [[The text style of the object.
+
+           $key is how you reference the style (for deletion or fetching). $NULL
+           as key indicates the style has the highest priority (default style).
+           The style priority is the order of creation, styles created first
+           are applied first with the exception of $NULL which is implicitly
+           first.
+
+           Set $style to $NULL to delete it.
+
+           @since 1.18
+         ]]
+         set {
+            legacy: null;
+         }
+         get {
+            legacy: null;
+         }
+         keys {
+            key: string; [[The name to the style. $NULL is the default style]]
+         }
+         values {
+            style: string; [[The style]]
+         }
+      }
+      @property size_formatted {
+         [[The formatted width and height.
+
+           This calculates the actual size after restricting the
+           textblock to the current size of the object.
+
+           The main difference between this and @.size_native.get
+           is that the "native" function does not wrapping into account
+           it just calculates the real width of the object if it was
+           placed on an infinite canvas, while this function gives the
+           size after wrapping according to the size restrictions of the
+           object.
+
+           For example for a textblock containing the text:
+           "You shall not pass!" with no margins or padding and assuming
+           a monospace font and a size of 7x10 char widths (for simplicity)
+           has a native size of 19x1 and a formatted size of 5x4.
+
+           @since 1.18
+         ]]
+         get {}
+         values {
+            w: int; [[The width of the object.]]
+            h: int; [[The height of the object.]]
+         }
+      }
+      @property size_native {
+         [[The native width and height.
+
+           This calculates the actual size without taking account the
+           current size of the object.
+
+           The main difference between this and @.size_formatted.get
+           is that the "native" function does not take wrapping into
+           account it just calculates the real width of the object if
+           it was placed on an infinite canvas, while the "formatted"
+           function gives the size after  wrapping text according to
+           the size restrictions of the object.
+
+           For example for a textblock containing the text:
+           "You shall not pass!" with no margins or padding and assuming
+           a monospace font and a size of 7x10 char widths (for simplicity)
+           has a native size of 19x1 and a formatted size of 5x4.
+
+           @since 1.18
+         ]]
+         get {}
+         values {
+            w: int; [[The width returned.]]
+            h: int; [[The height returned.]]
+         }
+      }
+      range_text_get {
+         [[Returns the text in the range between $cur1 and $cur2.
+
+           @since 1.18
+         ]]
+         legacy: null;
+         return: own(ptr(char)); [[The text in the given range]]
+         params {
+            @in cur1: const(ptr(Efl.Text.Cursor.Cursor)); [[Start of range]]
+            @in cur2: const(ptr(Efl.Text.Cursor.Cursor)); [[End of range]]
+         }
+      }
+      range_geometry_get {
+         [[Get the geometry of a range in the text.
+
+           The geometry is represented as rectangles for each of the line
+           segments in the given range [$cur1, $cur2].
+
+           @since 1.19
+         ]]
+         legacy: null;
+         params {
+             @in cur1: const(ptr(Efl.Text.Cursor.Cursor)); [[Start of range]]
+             @in cur2: const(ptr(Efl.Text.Cursor.Cursor)); [[End of range]]
+         }
+         return: free(own(iterator<Eina.Rectangle>),
+                         eina_iterator_free); [[Iterator on all geoemtries of
+                     the given range]]
+      }
+      range_simple_geometry_get {
+         [[Get the "simple" geometry of a range.
+
+           The geometry is the geometry in which rectangles in middle lines of
+           range are merged into one big rectangle. This is an optimized
+           version of @.range_geometry_get.
+
+           @since 1.19
+         ]]
+         legacy: null;
+         params {
+             @in cur1: ptr(const(Efl.Text.Cursor.Cursor)); [[Start of range]]
+             @in cur2: ptr(const(Efl.Text.Cursor.Cursor)); [[End of range]]
+         }
+         return: free(own(iterator<Eina.Rectangle>),
+                         eina_iterator_free); [[Iterator on all simple
+                     geometries of the given range]]
+      }
+      range_delete {
+         [[Deletes the range between given cursors.
+
+           This removes all the text in given range [$start,$end].
+         ]]
+         legacy: null;
+         params {
+            @in cur1: ptr(Efl.Text.Cursor.Cursor); [[Range start position]]
+            @in cur2: ptr(Efl.Text.Cursor.Cursor); [[Range end position]]
+         }
+      }
+      // Obstacles
+      obstacle_add {
+         [[Add obstacle evas object $eo_obs to be observed during layout
+           of text.
+
+           The textblock does the layout of the text according to the
+           position of the obstacle.
+
+           @since 1.18
+         ]]
+         params {
+            @in eo_obs: Efl.Canvas.Object; [[Obstacle object]]
+         }
+         return: bool; [[$true on success, $false otherwise.]]
+      }
+      obstacle_del {
+         [[Removes $eo_obs from observation during text layout.
+
+           @since 1.18
+         ]]
+         params {
+            @in eo_obs: Efl.Canvas.Object; [[Obstacle object]]
+         }
+         return: bool; [[$true on success, $false otherwise.]]
+      }
+      obstacles_update {
+         [[Triggers for relayout due to obstacles' state change.
+
+           The obstacles alone don't affect the layout, until this is
+           called. Use this after doing changes (moving, positioning etc.)
+           in the obstacles that you  would like to be considered in the
+           layout.
+
+           For example: if you have just repositioned the obstacles to
+           differrent coordinates relative to the textblock, you need to
+           call this so it will consider this new state and will relayout
+           the text.
+
+           @since 1.18
+         ]]
+      }
+   }
+   implements {
+      Efl.Object.constructor;
+      Efl.Object.destructor;
+      Efl.Canvas.Object.paragraph_direction { get; set; }
+      Efl.Text.text { get; set; }
+      Efl.Gfx.Filter.filter_program { get; set; }
+      Efl.Gfx.Filter.filter_data { get; set; }
+      Efl.Gfx.Filter.filter_source { get; set; }
+      Efl.Canvas.Filter.Internal.filter_dirty;
+      Efl.Canvas.Filter.Internal.filter_input_render;
+      Efl.Canvas.Filter.Internal.filter_state_prepare;
+      Efl.Text.Font.font { get; set; }
+      Efl.Text.Font.font_source { get; set; }
+      Efl.Text.Font.font_fallbacks { get; set; }
+      Efl.Text.Font.font_lang { get; set; }
+      Efl.Text.Font.font_weight { get; set; }
+      Efl.Text.Font.font_slant { get; set; }
+      Efl.Text.Font.font_width { get; set; }
+      Efl.Text.Style.normal_color { get; set; }
+      Efl.Text.Style.backing_type { get; set; }
+      Efl.Text.Style.backing_color { get; set; }
+      Efl.Text.Style.underline_type { get; set; }
+      Efl.Text.Style.underline_color { get; set; }
+      Efl.Text.Style.underline_height { get; set; }
+      Efl.Text.Style.underline_dashed_color { get; set; }
+      Efl.Text.Style.underline_dashed_width { get; set; }
+      Efl.Text.Style.underline_dashed_gap { get; set; }
+      Efl.Text.Style.underline2_type { get; set; }
+      Efl.Text.Style.underline2_color { get; set; }
+      Efl.Text.Style.strikethrough_type { get; set; }
+      Efl.Text.Style.strikethrough_color { get; set; }
+      Efl.Text.Style.effect_type { get; set; }
+      Efl.Text.Style.outline_color { get; set; }
+      Efl.Text.Style.shadow_direction { get; set; }
+      Efl.Text.Style.shadow_color { get; set; }
+      Efl.Text.Style.glow_color { get; set; }
+      Efl.Text.Style.glow2_color { get; set; }
+      Efl.Text.Style.gfx_filter { get; set; }
+      Efl.Text.Format.ellipsis { get; set; }
+      Efl.Text.Format.wrap { get; set; }
+      Efl.Text.Format.multiline { get; set; }
+      Efl.Text.Format.halign { get; set; }
+      Efl.Text.Format.valign { get; set; }
+      Efl.Text.Format.linegap { get; set; }
+      Efl.Text.Format.linerelgap { get; set; }
+      Efl.Text.Format.tabstops { get; set; }
+      Efl.Text.Format.password { get; set; }
+      Efl.Text.Format.replacement_char { get; set; }
+      Efl.Text.Cursor.cursor { get; }
+      Efl.Text.Cursor.cursor_position { set; get; }
+      Efl.Text.Cursor.cursor_content { get; }
+      Efl.Text.Cursor.cursor_geometry { get; }
+      Efl.Text.Cursor.cursor_new;
+      Efl.Text.Cursor.cursor_free;
+      Efl.Text.Cursor.cursor_equal;
+      Efl.Text.Cursor.cursor_compare;
+      Efl.Text.Cursor.cursor_copy;
+      Efl.Text.Cursor.cursor_char_next;
+      Efl.Text.Cursor.cursor_char_prev;
+      Efl.Text.Cursor.cursor_paragraph_char_first;
+      Efl.Text.Cursor.cursor_paragraph_char_last;
+      Efl.Text.Cursor.cursor_word_start;
+      Efl.Text.Cursor.cursor_word_end;
+      Efl.Text.Cursor.cursor_line_char_first;
+      Efl.Text.Cursor.cursor_line_char_last;
+      Efl.Text.Cursor.cursor_paragraph_first;
+      Efl.Text.Cursor.cursor_paragraph_last;
+      Efl.Text.Cursor.cursor_paragraph_next;
+      Efl.Text.Cursor.cursor_paragraph_prev;
+      Efl.Text.Cursor.cursor_line_jump_by;
+      Efl.Text.Cursor.cursor_coord_set;
+      Efl.Text.Cursor.cursor_text_insert;
+      Efl.Text.Cursor.cursor_char_delete;
+      Efl.Text.Annotate.annotation { set; get; }
+      Efl.Text.Annotate.range_annotations_get;
+      Efl.Text.Annotate.annotation_insert;
+      Efl.Text.Annotate.annotation_del;
+      Efl.Text.Annotate.object_item_geometry_get;
+      Efl.Text.Annotate.annotation_positions_get;
+      Efl.Text.Annotate.cursor_object_item_annotation { get; }
+      Efl.Text.Annotate.cursor_object_item_insert;
+   }
+   events {
+      cursor,changed;
+      changed;
+      style_insets,changed; [[Called when the property @.style_insets changed.]]
+   }
+}

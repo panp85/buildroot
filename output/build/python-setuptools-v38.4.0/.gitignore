@@ -1,0 +1,17 @@
+# syntax: glob
+bin
+build
+dist
+include
+lib
+distribute.egg-info
+setuptools.egg-info
+.coverage
+.eggs
+.tox
+*.egg
+*.py[cod]
+*.swp
+*~
+.hg*
+.cache

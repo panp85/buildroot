@@ -1,0 +1,77 @@
+class Elm.Menu.Item(Elm.Widget.Item, Elm.Interface.Atspi.Selection,
+                    Efl.Ui.Item)
+{
+   [[Elementary menu item class]]
+   legacy_prefix: elm_menu_item;
+   eo_prefix: elm_obj_menu_item;
+   methods {
+        @property icon_name {
+             get {
+                [[Get the string representation from the icon of a menu item
+
+                  Once this icon is set, any previously set icon will be deleted.
+                  To hide icon set it to "".
+                ]]
+             }
+             set {
+                [[Set the icon of a menu item to the standard icon with the
+                  given name.
+
+                  Once this icon is set, any previously set icon will be deleted.
+                  To hide icon set it to "".
+                ]]
+             }
+             values {
+                 icon: string; [[The name of icon object.]]
+             }
+        }
+      index_get @const {
+             [[Get the item index]]
+             return: uint; [[Item index]]
+        }
+     subitems_clear {
+             [[Remove all sub-items (children) of the given item
+
+               This removes all items that are children (and their descendants)
+               of the given item $it.
+
+               @since 1.8
+             ]]
+        }
+     subitems_get @const {
+             [[Returns a list of $item's subitems.]]
+             return: const(list<Elm.Widget.Item>); [[A list of $item's subitems]]
+        }
+     is_separator @const {
+             [[Returns whether $item is a separator.]]
+             return: bool; [[$true if the item is a separator.]]
+        }
+     object_get @const {
+             [[Get the real Evas(Edje) object created to implement the view of
+               a given menu item.
+
+               Warning: Don't manipulate this object!
+             ]]
+             return: Efl.Canvas.Object; [[The base Edje object containing the
+                                     swallowed content associated with the item.]]
+        }
+   }
+   implements {
+        Efl.Object.constructor;
+        Efl.Object.destructor;
+        Elm.Widget.Item.disable;
+        Elm.Widget.Item.signal_emit;
+        Elm.Widget.Item.part_text { get; set; }
+        Elm.Widget.Item.part_content { get; set; }
+        Elm.Interface.Atspi_Accessible.children { get; }
+        Elm.Interface.Atspi_Accessible.parent { get; }
+        Elm.Interface.Atspi_Accessible.role { get; }
+        Elm.Interface.Atspi_Accessible.name { get; }
+        Elm.Interface.Atspi_Accessible.state_set { get; }
+        Elm.Interface.Atspi.Selection.selected_children_count { get; }
+        Elm.Interface.Atspi.Selection.selected_child { get; }
+        Efl.Ui.Item.selected { get; set; }
+        Efl.Ui.Item.prev { get; }
+        Efl.Ui.Item.next { get; }
+   }
+}

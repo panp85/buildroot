@@ -1,0 +1,32 @@
+struct Named {
+    field: ptr(int);
+    something: string;
+    arr: static_array<int, 16>;
+    tarr: terminated_array<string>;
+}
+
+struct Another {
+    field: Named;
+}
+
+/* opaque struct */
+struct Opaque;
+
+struct @extern Not.Generated {
+    field: int;
+}
+
+class Struct {
+   methods {
+      foo {
+         [[Foo docs. This is $monospace. This is alone-standing $.]]
+         params {
+            idx: int;
+         }
+         return: own(ptr(char));
+      }
+      bar {
+         return: ptr(Named);
+      }
+   }
+}

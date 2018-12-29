@@ -1,0 +1,12 @@
+prefix=
+exec_prefix=
+libdir=/media/panpan/tools/buildroot-2018.02.8/output/build/gst1-plugins-bad-1.12.4/gst-libs/gst/audio/.libs
+includedir=/media/panpan/tools/buildroot-2018.02.8/output/build/gst1-plugins-bad-1.12.4/gst-libs
+
+Name: GStreamer bad audio library, uninstalled
+Description: Bad audio library for GStreamer, Not Installed
+Version: 1.12.4
+Requires: gstreamer-1.0 gstreamer-bad-base-1.0
+
+Libs: -L${libdir} -lgstbadaudio-1.0
+Cflags: -I/media/panpan/tools/buildroot-2018.02.8/output/build/gst1-plugins-bad-1.12.4/gst-libs -I/media/panpan/tools/buildroot-2018.02.8/output/build/gst1-plugins-bad-1.12.4/gst-libs

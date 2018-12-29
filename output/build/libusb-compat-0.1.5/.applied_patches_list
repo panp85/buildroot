@@ -1,0 +1,2 @@
+/media/panpan/tools/buildroot-2018.02.8/package/libusb-compat/0001-Use-C99-standard-fixed-width-integer-types-in-usb.h.patch
+/media/panpan/tools/buildroot-2018.02.8/package/libusb-compat/0002-fix-a-build-issue-on-linux.patch

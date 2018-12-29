@@ -1,0 +1,32 @@
+class Elm.View.Form (Efl.Object)
+{
+    [[Elementary view form class]]
+    methods {
+        model_set {
+             [[Set model
+
+               @since 1.11
+             ]]
+             params {
+                 @in model: Efl.Model; [[Emodel object]]
+             }
+        }
+        widget_add {
+             [[Add new widget
+
+               @since 1.11
+             ]]
+             params {
+                 @in propname: string; [[Property name]]
+                 @in evas: Efl.Canvas.Object; [[Evas widget]]
+             }
+        }
+    }
+    implements {
+        Efl.Object.destructor;
+        Efl.Object.constructor;
+    }
+    constructors {
+        .model_set;
+    }
+}

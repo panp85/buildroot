@@ -1,0 +1,610 @@
+# Greek translation for Efl.
+# Copyright (C) 2012 Enlightenment development team
+# This file is put in the public domain.
+# ragecryx <ragecryx@yahoo.gr>, 2009.
+# George Rizopoulos <george.rizopoulos.1@gmail.com> 2011
+# Alex-P. Natsios <drakevr@linuxteam.teilar.gr> 2012
+# Efstathios Iosifidis <iosifidis@opensuse.org>, 2012.
+#
+#: src/lib/elementary/elm_config.c:3748
+msgid ""
+msgstr ""
+"Project-Id-Version: elementary\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2017-11-22 13:24+0100\n"
+"PO-Revision-Date: 2012-12-19 15:58+0200\n"
+"Last-Translator: Efstathios Iosifidis <iosifidis@opensuse.org>\n"
+"Language-Team: Ελληνικά, Σύγχρονα <opensuse-translation-el@opensuse.org>\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bits\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"X-Generator: Gtranslator 2.91.5\n"
+
+#: src/lib/ecore/ecore_getopt.c:89
+msgid "Version:"
+msgstr "Έκδοση:"
+
+#: src/lib/ecore/ecore_getopt.c:98
+msgid "Usage:"
+msgstr "Χρήση:"
+
+#: src/lib/ecore/ecore_getopt.c:105
+#, fuzzy, c-format
+msgid "%s [options]"
+msgstr "%s [επιλογές]\n"
+
+#: src/lib/ecore/ecore_getopt.c:305
+msgid "Copyright:"
+msgstr "Πνευματικά δικαιώματα:"
+
+#: src/lib/ecore/ecore_getopt.c:317
+msgid "License:"
+msgstr "Άδεια:"
+
+#: src/lib/ecore/ecore_getopt.c:503
+msgid "Type: "
+msgstr "Τύπος: "
+
+#: src/lib/ecore/ecore_getopt.c:579
+msgid "Default: "
+msgstr "Προκαθορισμένο: "
+
+#: src/lib/ecore/ecore_getopt.c:606
+msgid "Choices: "
+msgstr "Επιλογές:"
+
+#: src/lib/ecore/ecore_getopt.c:644 src/lib/ecore/ecore_getopt.c:645
+msgid "No categories available."
+msgstr ""
+
+#: src/lib/ecore/ecore_getopt.c:649
+#, fuzzy
+msgid "Categories: "
+msgstr "Επιλογές:"
+
+#: src/lib/ecore/ecore_getopt.c:771
+msgid "Options:\n"
+msgstr "Επιλογές:\n"
+
+#: src/lib/ecore/ecore_getopt.c:780
+msgid "Positional arguments:\n"
+msgstr ""
+
+#: src/lib/ecore/ecore_getopt.c:847
+#, fuzzy, c-format
+msgid "ERROR: unknown category '%s'.\n"
+msgstr "ΣΦΑΛΜΑ: άγνωστη επιλογή --%s.\n"
+
+#: src/lib/ecore/ecore_getopt.c:951
+#, c-format
+msgid "ERROR: unknown option --%s.\n"
+msgstr "ΣΦΑΛΜΑ: άγνωστη επιλογή --%s.\n"
+
+#: src/lib/ecore/ecore_getopt.c:953
+#, c-format
+msgid "ERROR: unknown option -%c.\n"
+msgstr "ΣΦΑΛΜΑ: άγνωστη επιλογή -%c.\n"
+
+#: src/lib/ecore/ecore_getopt.c:1016
+msgid "ERROR: "
+msgstr "ΣΦΑΛΜΑ: "
+
+#: src/lib/ecore/ecore_getopt.c:1112 src/lib/ecore/ecore_getopt.c:1249
+#: src/lib/ecore/ecore_getopt.c:1265 src/lib/ecore/ecore_getopt.c:1280
+#: src/lib/ecore/ecore_getopt.c:1300 src/lib/ecore/ecore_getopt.c:1347
+#: src/lib/ecore/ecore_getopt.c:1467 src/lib/ecore/ecore_getopt.c:1508
+msgid "value has no pointer set.\n"
+msgstr "η τιμή δεν έχει καθορισμένο τον δείκτη.\n"
+
+#: src/lib/ecore/ecore_getopt.c:1144 src/lib/ecore/ecore_getopt.c:1367
+#, c-format
+msgid "unknown boolean value %s.\n"
+msgstr "άγνωστη τιμή boolean %s.\n"
+
+#: src/lib/ecore/ecore_getopt.c:1195 src/lib/ecore/ecore_getopt.c:1455
+#, c-format
+msgid "invalid number format %s\n"
+msgstr "μη έγκυρη μορφή αριθμού %s\n"
+
+#: src/lib/ecore/ecore_getopt.c:1313
+#, c-format
+msgid "invalid choice \"%s\". Valid values are: "
+msgstr "μη έγκυρη επιλογή \"%s\". Οι έγκυρες τιμές είναι: "
+
+#: src/lib/ecore/ecore_getopt.c:1341
+msgid "missing parameter to append.\n"
+msgstr "απούσα παράμετρος για προσάρτηση.\n"
+
+#: src/lib/ecore/ecore_getopt.c:1445
+msgid "could not parse value.\n"
+msgstr "αδυναμία ανάλυσης τιμών.\n"
+
+#: src/lib/ecore/ecore_getopt.c:1502
+msgid "missing parameter.\n"
+msgstr "απούσα παράμετρος.\n"
+
+#: src/lib/ecore/ecore_getopt.c:1515
+msgid "missing callback function!\n"
+msgstr "απούσα λειτουργία επανάκλησης!\n"
+
+#: src/lib/ecore/ecore_getopt.c:1546
+msgid "no version was defined.\n"
+msgstr "δεν έχει οριστεί έκδοση.\n"
+
+#: src/lib/ecore/ecore_getopt.c:1563
+msgid "no copyright was defined.\n"
+msgstr "δεν έχουν οριστεί πνευματικά δικαιώματα.\n"
+
+#: src/lib/ecore/ecore_getopt.c:1580
+msgid "no license was defined.\n"
+msgstr "δεν έχει οριστεί άδεια.\n"
+
+#: src/lib/ecore/ecore_getopt.c:1670
+#, c-format
+msgid "ERROR: unknown option --%s, ignored.\n"
+msgstr "ΣΦΑΛΜΑ: άγνωστη επιλογή --%s, αγνοήθηκε.\n"
+
+#: src/lib/ecore/ecore_getopt.c:1710
+#, c-format
+msgid "ERROR: option --%s requires an argument!\n"
+msgstr "ΣΦΑΛΜΑ: η επιλογή --%s απαιτεί μια παράμετρο!\n"
+
+#: src/lib/ecore/ecore_getopt.c:1752
+#, c-format
+msgid "ERROR: unknown option -%c, ignored.\n"
+msgstr "ΣΦΑΛΜΑ: άγνωστη επιλογή -%c, αγνοήθηκε.\n"
+
+#: src/lib/ecore/ecore_getopt.c:1797
+#, c-format
+msgid "ERROR: option -%c requires an argument!\n"
+msgstr "ΣΦAΛΜΑ: η επιλογή -%c απαιτεί μία παράμετρο!\n"
+
+#: src/lib/ecore/ecore_getopt.c:1892
+#, fuzzy, c-format
+msgid "ERROR: missing required positional argument %s.\n"
+msgstr "ΣΦAΛΜΑ: η επιλογή -%c απαιτεί μία παράμετρο!\n"
+
+#: src/lib/ecore/ecore_getopt.c:1924
+#, c-format
+msgid "ERROR: unsupported action type %d for positional argument %s\n"
+msgstr ""
+
+#: src/lib/ecore/ecore_getopt.c:2045 src/lib/ecore/ecore_getopt.c:2111
+msgid "ERROR: no parser provided.\n"
+msgstr "ΣΦΑΛΜΑ: δεν παρέχεται αναλυτής.\n"
+
+#: src/lib/ecore/ecore_getopt.c:2050 src/lib/ecore/ecore_getopt.c:2116
+msgid "ERROR: no values provided.\n"
+msgstr "ΣΦΑΛΜΑ: δεν έχουν δοθεί τιμές.\n"
+
+#: src/lib/ecore/ecore_getopt.c:2059 src/lib/ecore/ecore_getopt.c:2125
+msgid "ERROR: no arguments provided.\n"
+msgstr "ΣΦΑΛΜΑ:δεν έχουν δοθεί παράμετροι.\n"
+
+#: src/lib/ecore/ecore_getopt.c:2085
+msgid "ERROR: invalid options found."
+msgstr "ΣΦΑΛΜΑ: βρέθηκαν μη έγκυρες επιλογές."
+
+#: src/lib/ecore/ecore_getopt.c:2091 src/lib/ecore/ecore_getopt.c:2157
+#, c-format
+msgid " See --%s.\n"
+msgstr " Δείτε --%s.\n"
+
+#: src/lib/ecore/ecore_getopt.c:2093 src/lib/ecore/ecore_getopt.c:2159
+#, c-format
+msgid " See -%c.\n"
+msgstr " Δείτε -%c.\n"
+
+#: src/lib/ecore/ecore_getopt.c:2151
+#, fuzzy
+msgid "ERROR: invalid positional arguments found."
+msgstr "ΣΦΑΛΜΑ: βρέθηκαν μη έγκυρες επιλογές."
+
+#: src/lib/ecore/ecore_getopt.c:2186
+#, c-format
+msgid "ERROR: incorrect geometry value '%s'\n"
+msgstr "ΣΦΑΛΜΑ: μη έγκυρη γεωμετρική τιμή '%s'\n"
+
+#: src/lib/ecore/ecore_getopt.c:2204
+#, c-format
+msgid "ERROR: incorrect size value '%s'\n"
+msgstr "ΣΦΑΛΜΑ: μη έγκυρη τιμή μεγέθους '%s'\n"
+
+#: src/lib/efreet/efreet_base.c:126
+msgid "Desktop"
+msgstr "Επιφάνεια εργασίας"
+
+#: src/lib/efreet/efreet_base.c:134
+msgid "Downloads"
+msgstr "Λήψεις"
+
+#: src/lib/efreet/efreet_base.c:143
+msgid "Templates"
+msgstr "Πρότυπα"
+
+#: src/lib/efreet/efreet_base.c:152
+msgid "Public"
+msgstr "Δημόσια"
+
+#: src/lib/efreet/efreet_base.c:161
+msgid "Documents"
+msgstr "Λήψεις"
+
+#: src/lib/efreet/efreet_base.c:169
+msgid "Music"
+msgstr "Μουσική"
+
+#: src/lib/efreet/efreet_base.c:177
+msgid "Pictures"
+msgstr "Εικόνες"
+
+#: src/lib/efreet/efreet_base.c:185
+msgid "Videos"
+msgstr "Βίντεο"
+
+#: src/lib/elementary/elc_fileselector.c:1919
+msgid "Up"
+msgstr "Πάνω"
+
+#: src/lib/elementary/elc_fileselector.c:1933
+msgid "Home"
+msgstr "Αρχική"
+
+#: src/lib/elementary/elc_fileselector.c:1952
+msgid "Search"
+msgstr ""
+
+#: src/lib/elementary/elc_fileselector.c:2246
+msgid "OK"
+msgstr "Εντάξει"
+
+#: src/lib/elementary/elc_fileselector.c:2256
+#: src/lib/elementary/elm_entry.c:1732 src/lib/elementary/elm_entry.c:1757
+msgid "Cancel"
+msgstr "Άκυρο"
+
+#: src/lib/elementary/elc_hoversel.c:438 src/lib/elementary/efl_ui_button.c:278
+#: src/lib/elementary/efl_ui_check.c:212 src/lib/elementary/elm_gengrid.c:1470
+#: src/lib/elementary/elm_genlist.c:1735 src/lib/elementary/elm_list.c:2176
+#: src/lib/elementary/efl_ui_radio.c:214
+#: src/lib/elementary/elm_segment_control.c:529
+#: src/lib/elementary/elm_spinner.c:1020 src/lib/elementary/elm_toolbar.c:2347
+msgid "State: Disabled"
+msgstr "Κατάσταση: Απενεργοποιημένο"
+
+#: src/lib/elementary/elc_hoversel.c:640
+msgid "Hoversel"
+msgstr ""
+
+#: src/lib/elementary/elc_multibuttonentry.c:711
+msgid "multi button entry label"
+msgstr ""
+
+#: src/lib/elementary/elc_multibuttonentry.c:733
+msgid "multi button entry item"
+msgstr ""
+
+#: src/lib/elementary/elc_multibuttonentry.c:1624
+msgid "multi button entry"
+msgstr ""
+
+#: src/lib/elementary/elc_naviframe.c:442
+msgid "Title"
+msgstr ""
+
+#: src/lib/elementary/elc_naviframe.c:993
+#: src/lib/elementary/elc_naviframe.c:1211
+msgid "Back"
+msgstr ""
+
+#: src/lib/elementary/elc_naviframe.c:1309
+msgid "Next"
+msgstr ""
+
+#: src/lib/elementary/elc_popup.c:310 src/lib/elementary/elc_popup.c:975
+msgid "Popup Title"
+msgstr ""
+
+#: src/lib/elementary/elc_popup.c:320 src/lib/elementary/elc_popup.c:1051
+msgid "Popup Body Text"
+msgstr ""
+
+#: src/lib/elementary/elm_bubble.c:199
+#, fuzzy
+msgid "Bubble"
+msgstr "Πλαίσιο"
+
+#: src/lib/elementary/efl_ui_button.c:69
+msgid "Clicked"
+msgstr "Επιλεγμένο"
+
+#: src/lib/elementary/efl_ui_button.c:303
+msgid "Button"
+msgstr "Κουμπί"
+
+#: src/lib/elementary/elm_calendar.c:272
+msgid "%B %Y"
+msgstr "%B %Y"
+
+#: src/lib/elementary/elm_calendar.c:278
+msgid "%B"
+msgstr ""
+
+#: src/lib/elementary/elm_calendar.c:284
+msgid "%Y"
+msgstr ""
+
+#: src/lib/elementary/elm_calendar.c:409
+msgid "calendar item"
+msgstr "αντικείμενο ημερολογίου"
+
+#: src/lib/elementary/elm_calendar.c:436
+#, fuzzy
+msgid "calendar decrement month button"
+msgstr "Προηγούμενο Ημερολόγιο"
+
+#: src/lib/elementary/elm_calendar.c:442
+#, fuzzy
+msgid "calendar decrement year button"
+msgstr "Προηγούμενο Ημερολόγιο"
+
+#: src/lib/elementary/elm_calendar.c:448
+#, fuzzy
+msgid "calendar increment month button"
+msgstr "Επόμενο Ημερολόγιο"
+
+#: src/lib/elementary/elm_calendar.c:454
+#, fuzzy
+msgid "calendar increment year button"
+msgstr "Επόμενο Ημερολόγιο"
+
+#: src/lib/elementary/elm_calendar.c:459
+msgid "calendar month"
+msgstr "Μηνας Ημερολογίου"
+
+#: src/lib/elementary/elm_calendar.c:464
+#, fuzzy
+msgid "calendar year"
+msgstr "αντικείμενο ημερολογίου"
+
+#: src/lib/elementary/efl_ui_check.c:64 src/lib/elementary/efl_ui_check.c:225
+#: src/lib/elementary/efl_ui_radio.c:118 src/lib/elementary/efl_ui_radio.c:215
+msgid "State: On"
+msgstr "Κατάσταση: Ενεργό"
+
+#: src/lib/elementary/efl_ui_check.c:75 src/lib/elementary/efl_ui_check.c:237
+#: src/lib/elementary/efl_ui_radio.c:217
+msgid "State: Off"
+msgstr "Κατάσταση: Ανενεργό"
+
+#: src/lib/elementary/efl_ui_check.c:221 src/lib/elementary/efl_ui_check.c:234
+msgid "State"
+msgstr "Κατάσταση"
+
+#: src/lib/elementary/efl_ui_check.c:315
+msgid "Check"
+msgstr "Επιλογή"
+
+#: src/lib/elementary/elm_clock.c:303
+#, fuzzy
+msgid "clock increment button for am,pm"
+msgstr "επόμενο κουμπί ρολογιού για πμ,μμ"
+
+#: src/lib/elementary/elm_clock.c:311
+#, fuzzy
+msgid "clock decrement button for am,pm"
+msgstr "προηγούμενο κουμπί ρολογιού για πμ,μμ"
+
+#: src/lib/elementary/elm_clock.c:647
+msgid "State: Editable"
+msgstr "Κατάσταση: Επεξεργάσιμο"
+
+#: src/lib/elementary/elm_clock.c:682
+msgid "Clock"
+msgstr "Ρολοι"
+
+#: src/lib/elementary/elm_colorselector.c:914
+msgid "Pick a color"
+msgstr ""
+
+#: src/lib/elementary/elm_colorselector.c:952
+msgid "R:"
+msgstr ""
+
+#: src/lib/elementary/elm_colorselector.c:954
+msgid "G:"
+msgstr ""
+
+#: src/lib/elementary/elm_colorselector.c:956
+msgid "B:"
+msgstr ""
+
+#: src/lib/elementary/elm_colorselector.c:958
+msgid "A:"
+msgstr ""
+
+#: src/lib/elementary/elm_colorselector.c:1681
+msgid "color selector palette item"
+msgstr "παλέτα επιλογής χρώματος"
+
+#: src/lib/elementary/elm_config.c:3765
+msgid "default:LTR"
+msgstr "default:LTR"
+
+#: src/lib/elementary/elm_dayselector.c:403
+#, fuzzy
+msgid "day selector item"
+msgstr "επιλογή δίσκου"
+
+#: src/lib/elementary/elm_diskselector.c:702
+msgid "diskselector item"
+msgstr "επιλογή δίσκου"
+
+#: src/lib/elementary/elm_entry.c:1722
+msgid "Cut"
+msgstr "Αποκοπή"
+
+#: src/lib/elementary/elm_entry.c:1725
+msgid "Copy"
+msgstr "Αντιγραφή"
+
+#: src/lib/elementary/elm_entry.c:1729 src/lib/elementary/elm_entry.c:1751
+msgid "Paste"
+msgstr "Επικόλληση"
+
+#: src/lib/elementary/elm_entry.c:1744
+msgid "Select"
+msgstr "Επιλογή"
+
+#: src/lib/elementary/elm_entry.c:3833
+msgid "Entry"
+msgstr "Καταχώριση"
+
+#: src/lib/elementary/elm_gengrid.c:1500
+msgid "Gengrid Item"
+msgstr "Αντικείμενο Gengrid"
+
+#: src/lib/elementary/elm_index.c:102
+msgid "Index"
+msgstr "Κατάλογος"
+
+#: src/lib/elementary/elm_index.c:130
+msgid "Index Item"
+msgstr "Αντικείμενο Καταλόγου"
+
+#: src/lib/elementary/elm_label.c:405
+msgid "Label"
+msgstr "Ετικέτα"
+
+#: src/lib/elementary/elm_panel.c:85
+msgid "state: opened"
+msgstr "Κατάσταση: Ανοικτό"
+
+#: src/lib/elementary/elm_panel.c:86
+msgid "state: closed"
+msgstr "Κατάσταση: Κλειστό"
+
+#: src/lib/elementary/elm_panel.c:126
+msgid "A panel is open"
+msgstr ""
+
+#: src/lib/elementary/elm_panel.c:128
+msgid "Double tap to close panel menu"
+msgstr ""
+
+#: src/lib/elementary/elm_panel.c:180
+msgid "panel button"
+msgstr "κουμπί πινακα"
+
+#: src/lib/elementary/efl_ui_progressbar.c:313
+msgid "progressbar"
+msgstr "Μπάρα Προόδου"
+
+#: src/lib/elementary/efl_ui_radio.c:243
+msgid "Radio"
+msgstr "Επιλογή"
+
+#: src/lib/elementary/elm_segment_control.c:532
+#: src/lib/elementary/elm_toolbar.c:2349
+msgid "State: Selected"
+msgstr "Κατάσταση: Επιλεγμένο"
+
+#: src/lib/elementary/elm_segment_control.c:534
+#, fuzzy
+msgid "State: Unselected"
+msgstr "Κατάσταση: Επιλεγμένο"
+
+#: src/lib/elementary/elm_segment_control.c:548
+msgid "Segment Control Item"
+msgstr ""
+
+#: src/lib/elementary/efl_ui_slider.c:1198
+msgid "slider"
+msgstr "μπάρα κύλισης"
+
+#: src/lib/elementary/elm_spinner.c:1050
+msgid "incremented"
+msgstr ""
+
+#: src/lib/elementary/elm_spinner.c:1056
+msgid "decremented"
+msgstr ""
+
+#: src/lib/elementary/elm_spinner.c:1089 src/lib/elementary/elm_spinner.c:1156
+#, fuzzy
+msgid "spinner"
+msgstr "spinner"
+
+#: src/lib/elementary/elm_spinner.c:1098 src/lib/elementary/elm_spinner.c:1139
+#, fuzzy
+msgid "spinner increment button"
+msgstr "κουμπί spinner επόμενο"
+
+#: src/lib/elementary/elm_spinner.c:1101 src/lib/elementary/elm_spinner.c:1148
+#, fuzzy
+msgid "spinner decrement button"
+msgstr "κουμπί spinner προηγούμενο"
+
+#: src/lib/elementary/elm_spinner.c:1103
+#, fuzzy
+msgid "spinner text"
+msgstr "spinner"
+
+#: src/lib/elementary/elm_toolbar.c:1804 src/lib/elementary/elm_toolbar.c:2411
+msgid "Selected"
+msgstr "Επιλεγμένο"
+
+#: src/lib/elementary/elm_toolbar.c:2345
+msgid "Separator"
+msgstr "Διαχωριστικό"
+
+#: src/lib/elementary/elm_toolbar.c:2351
+msgid "Has menu"
+msgstr "Έχει μενού"
+
+#: src/lib/elementary/elm_toolbar.c:2406
+msgid "Unselected"
+msgstr "Μη Επιλεγμένο"
+
+#: src/lib/elementary/elm_toolbar.c:2423
+msgid "Toolbar Item"
+msgstr "Αντικείμενο μπάρας εργαλείων"
+
+#~ msgid ""
+#~ "\n"
+#~ "   "
+#~ msgstr ""
+#~ "\n"
+#~ "   "
+
+#~ msgid "true"
+#~ msgstr "true"
+
+#~ msgid "false"
+#~ msgstr "false"
+
+#~ msgid "f"
+#~ msgstr "f"
+
+#~ msgid "no"
+#~ msgstr "no"
+
+#~ msgid "off"
+#~ msgstr "off"
+
+#~ msgid "t"
+#~ msgstr "t"
+
+#~ msgid "yes"
+#~ msgstr "yes"
+
+#~ msgid "on"
+#~ msgstr "on"
+
+#~ msgid "Genlist Item"
+#~ msgstr "Αντικείμενο Genlist"
+
+#~ msgid "List Item"
+#~ msgstr "Αντικείμενο Λίστας"

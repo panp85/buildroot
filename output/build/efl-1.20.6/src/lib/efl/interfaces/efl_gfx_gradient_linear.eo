@@ -1,0 +1,30 @@
+interface Efl.Gfx.Gradient.Linear (Efl.Gfx.Gradient)
+{
+   [[Efl graphics gradient linear interface]]
+   methods {
+      @property start {
+         set {
+            [[Sets the start point of this linear gradient.]]
+         }
+         get {
+            [[Gets the start point of this linear gradient.]]
+         }
+         values {
+            x: double; [[X co-ordinate of start point]]
+            y: double; [[Y co-ordinate of start point]]
+         }
+      }
+      @property end {
+         set {
+            [[Sets the end point of this linear gradient.]]
+         }
+         get {
+            [[Gets the end point of this linear gradient.]]
+         }
+         values {
+            x: double; [[X co-ordinate of end point]]
+            y: double; [[Y co-ordinate of end point]]
+         }
+      }
+   }
+}

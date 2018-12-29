@@ -1,0 +1,15 @@
+prefix=/usr
+exec_prefix=/usr
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+datarootdir=${prefix}/share
+datadir=${datarootdir}
+want_js=none
+
+Name: EFL JavaScript
+Description: JavaScript C++ helpers for data structures
+Version: 1.20.6
+Requires.private:  
+Libs.private:  -lm -ldl -ldl  -lrt    
+Libs: -L${libdir} -lefl_js
+Cflags: -I${includedir}/efl-js-1 

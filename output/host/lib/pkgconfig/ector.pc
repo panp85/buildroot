@@ -1,0 +1,12 @@
+prefix=/media/panpan/tools/buildroot-2018.02.8/output/host
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: ector
+Description: Enlightened retained mode drawing library
+Requires.private: efl >= 1.20.6 eo >= 1.20.6 eet >= 1.20.6 emile >= 1.20.6 eina >= 1.20.6  
+Version: 1.20.6
+Libs: -L${libdir} -lector
+Libs.private:  -lm
+Cflags:

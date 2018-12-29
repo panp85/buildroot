@@ -1,0 +1,41 @@
+interface Efl.Gfx.Gradient.Radial (Efl.Gfx.Gradient)
+{
+   [[Efl graphics gradient radial interface]]
+   methods {
+      @property center {
+         set {
+            [[Sets the center of this radial gradient.]]
+         }
+         get {
+            [[Gets the center of this radial gradient.]]
+         }
+         values {
+            x: double; [[X co-ordinate of center point]]
+            y: double; [[Y co-ordinate of center point]]
+         }
+      }
+      @property radius {
+         set {
+            [[Sets the center radius of this radial gradient.]]
+         }
+         get {
+            [[Gets the center radius of this radial gradient.]]
+         }
+         values {
+            r: double; [[Center radius]]
+         }
+      }
+      @property focal {
+         set {
+            [[Sets the focal point of this radial gradient.]]
+         }
+         get {
+            [[Gets the focal point of this radial gradient.]]
+         }
+         values {
+            x: double; [[X co-ordinate of focal point]]
+            y: double; [[Y co-ordinate of focal point]]
+         }
+      }
+   }
+}

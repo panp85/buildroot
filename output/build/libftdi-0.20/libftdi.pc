@@ -1,0 +1,12 @@
+prefix=/usr
+exec_prefix=/usr
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: libftdi
+Description: Library to program and control the FTDI USB controller
+Requires: libusb
+Version: 0.20
+Libs: -L${libdir} -lftdi
+Cflags: -I${includedir}
+

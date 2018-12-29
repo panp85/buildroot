@@ -1,0 +1,67 @@
+class Object_Impl (Base) {
+   methods {
+      @property a {
+         set {
+            values {
+                value: const(list<int>);
+            }
+            return: bool (false);
+         }
+         get {
+         }
+         keys {
+            part: string;
+         }
+         values {
+            value: own(list<int>);
+         }
+      }
+      @property b {
+         set {
+         }
+         get @pure_virtual {
+            /* set as virtual pure - no implementation expected */
+         }
+         values {
+            value: own(list<int>);
+         }
+      }
+      constructor_1 {
+         params {
+            @in a: int;
+            @in b: char;
+         }
+      }
+      constructor_2 {
+      }
+      foo1 {
+         [[comment foo]]
+         params {
+            @in a: int; [[a]]
+            @inout b: char;
+            @out c: double;
+         }
+         return: ptr(char) (null); [[comment for method return]]
+      }
+      foo2 @const {
+         [[comment foo]]
+         params {
+            @in a: int;
+            @in b: string;
+         }
+      }
+      pure_foo3 @pure_virtual {
+         /* set as virtual pure - no implementation expected */
+      }
+   }
+   implements {
+      class.constructor;
+      class.destructor;
+      Base.constructor;
+      Base.destructor;
+   }
+   constructors {
+      .constructor_1;
+      .constructor_2;
+   }
+}

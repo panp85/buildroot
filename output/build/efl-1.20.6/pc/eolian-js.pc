@@ -1,0 +1,14 @@
+prefix=/usr
+exec_prefix=/usr
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+datarootdir=${prefix}/share
+datadir=${datarootdir}
+
+Name: Eolian-JS
+Description: EFL's JavaScript bindings generator.
+Version: 1.20.6
+Require.private: eina >= 1.20.6  
+Libs: -L${libdir} 
+Libs.private:  
+Cflags: -I${includedir}/efl-1 -I${includedir}/eolian-js-1 

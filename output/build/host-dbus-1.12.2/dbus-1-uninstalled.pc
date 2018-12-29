@@ -1,0 +1,20 @@
+abs_top_builddir=/media/panpan/tools/buildroot-2018.02.8/output/build/host-dbus-1.12.2
+abs_top_srcdir=/media/panpan/tools/buildroot-2018.02.8/output/build/host-dbus-1.12.2
+prefix=
+exec_prefix=
+bindir=${exec_prefix}/bin
+system_bus_default_address=unix:path=/media/panpan/tools/buildroot-2018.02.8/output/host/var/run/dbus/system_bus_socket
+datarootdir=${prefix}/share
+datadir=${datarootdir}
+sysconfdir=/media/panpan/tools/buildroot-2018.02.8/output/host/etc
+session_bus_services_dir=${datadir}/dbus-1/services
+system_bus_services_dir=${datadir}/dbus-1/system-services
+interfaces_dir=${datadir}/dbus-1/interfaces
+daemondir=$bindir
+
+Name: dbus
+Description: Free desktop message bus (uninstalled copy)
+Version: 1.12.2
+Libs: ${abs_top_builddir}/dbus/libdbus-1.la
+Libs.private: -lpthread    
+Cflags: -I${abs_top_srcdir} 

@@ -1,0 +1,8 @@
+#! /bin/sh
+# This file was generated automatically by configure. Don't edit.
+# Run this file to recreate the current configuration.
+#
+# This script is free software: you have unlimited permission
+# to copy, distribute and modify it.
+
+exec /bin/sh ./configure  "--prefix=/media/panpan/tools/buildroot-2018.02.8/output/host" "PATH=/media/panpan/tools/buildroot-2018.02.8/output/host/bin:/media/panpan/tools/buildroot-2018.02.8/output/host/sbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/panpan/player/webrtc/go_appengine" "PKG_CONFIG=/media/panpan/tools/buildroot-2018.02.8/output/host/bin/pkg-config" "PKG_CONFIG_SYSROOT_DIR=/" "PKG_CONFIG_ALLOW_SYSTEM_CFLAGS=1" "PKG_CONFIG_ALLOW_SYSTEM_LIBS=1" "PKG_CONFIG_LIBDIR=/media/panpan/tools/buildroot-2018.02.8/output/host/lib/pkgconfig:/media/panpan/tools/buildroot-2018.02.8/output/host/share/pkgconfig" "AR=/usr/bin/ar" "AS=/usr/bin/as" "LD=/usr/bin/ld" "NM=/usr/bin/nm" "CC=/usr/bin/gcc" "GCC=/usr/bin/gcc" "CXX=/usr/bin/g++" "CPP=/usr/bin/cpp" "OBJCOPY=/usr/bin/objcopy" "RANLIB=/usr/bin/ranlib" "CPPFLAGS=-I/media/panpan/tools/buildroot-2018.02.8/output/host/include" "CFLAGS=-O2 -I/media/panpan/tools/buildroot-2018.02.8/output/host/include" "CXXFLAGS=-O2 -I/media/panpan/tools/buildroot-2018.02.8/output/host/include" "LDFLAGS=-L/media/panpan/tools/buildroot-2018.02.8/output/host/lib -Wl,-rpath,/media/panpan/tools/buildroot-2018.02.8/output/host/lib" "INTLTOOL_PERL=/usr/bin/perl" --no-create

@@ -1,0 +1,19 @@
+sudo: required
+dist: trusty
+language: python
+python:
+  - "2.7"
+  - "3.3"
+  - "3.4"
+  - "3.5"
+before_install:
+  - sudo apt-get update
+  - sudo apt-get install -y libdbus-glib-1-dev
+install:
+  - which python3.3-config && sed -i "s|not getvar('Py_ENABLE_SHARED')|True|" $(which python3.3-config) || true
+  - pip install dbus-python cryptography
+before_script:
+  - git clone git://git.gnome.org/libsecret.git
+script:
+  - dbus-launch --exit-with-session python tests/run_tests.py libsecret/libsecret/mock-service-normal.py
+  - dbus-launch --exit-with-session python tests/run_tests.py libsecret/libsecret/mock-service-only-plain.py

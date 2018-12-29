@@ -1,0 +1,32 @@
+class Efl.Ui.Box (Elm.Widget, Efl.Pack.Linear, Efl.Pack.Layout,
+                  Efl.Orientation)
+{
+   [[Efl UI box class]]
+   implements {
+      Efl.Object.constructor;
+      Efl.Canvas.Group.group_calculate;
+      Elm.Widget.focus_direction;
+      Elm.Widget.focus_next_manager_is;
+      Elm.Widget.focus_direction_manager_is;
+      Elm.Widget.focus_next;
+      Efl.Container.content_iterate;
+      Efl.Container.content_count;
+      Efl.Orientation.orientation { get; set; }
+      Efl.Pack.pack_clear;
+      Efl.Pack.unpack_all;
+      Efl.Pack.unpack;
+      Efl.Pack.pack;
+      Efl.Pack.pack_padding { get; set; }
+      Efl.Pack.pack_align { get; set; }
+      Efl.Pack.Linear.pack_begin;
+      Efl.Pack.Linear.pack_end;
+      Efl.Pack.Linear.pack_before;
+      Efl.Pack.Linear.pack_after;
+      Efl.Pack.Linear.pack_at;
+      Efl.Pack.Linear.pack_content_get;
+      Efl.Pack.Linear.pack_unpack_at;
+      Efl.Pack.Linear.pack_index_get;
+      Efl.Pack.Layout.layout_update;
+      Efl.Pack.Layout.layout_request;
+   }
+}

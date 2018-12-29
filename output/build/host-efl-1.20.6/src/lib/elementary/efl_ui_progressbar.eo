@@ -1,0 +1,69 @@
+class Efl.Ui.Progressbar (Elm.Layout, Efl.Ui.Range,
+                          Efl.Orientation)
+{
+   [[Elementary progressbar class]]
+   methods {
+      @property pulse_mode {
+         [[Control whether a given progress bar widget is at "pulsing mode" or not.
+
+           By default, progress bars will display values from the low to
+           high value boundaries. There are, though, contexts in which the
+           progress of a given task is unknown. For such cases,
+           one can set a progress bar widget to a "pulsing state", to give
+           the user an idea that some computation is being held, but
+           without exact progress values. In the default theme, it will
+           animate its bar with the contents filling in constantly and back
+           to non-filled, in a loop. To start and stop this pulsing
+           animation, one has to explicitly call elm_progressbar_pulse().
+
+           @since 1.20
+         ]]
+
+         set {
+         }
+         get {
+         }
+         values {
+            pulse: bool; [[$true to put $obj in pulsing mode, $false to put it back to its default one]]
+         }
+      }
+      @property pulse {
+         set {
+           [[Start/stop a given progress bar "pulsing" animation, if its under that mode
+
+           Note: This call won't do anything if $obj is not under "pulsing mode".
+
+           @since 1.20
+           ]]
+         }
+         get {
+            [[ Get the pulsing state on a given progressbar widget.
+
+            @since 1.20
+            ]]
+         }
+         values {
+           state: bool; [[$true, to start the pulsing animation, $false to stop it]]
+         }
+      }
+   }
+   implements {
+      class.constructor;
+      Efl.Object.constructor;
+      Elm.Widget.theme_apply;
+      Elm.Widget.focus_next_manager_is;
+      Elm.Widget.focus_direction_manager_is;
+      Elm.Widget.sub_object_del;
+      Elm.Layout.text_aliases { get; }
+      Elm.Layout.content_aliases { get; }
+      Elm.Layout.sizing_eval;
+      Efl.Ui.Range.span_size { get; set; }
+      Efl.Ui.Range.range_value { get; set; }
+      Efl.Ui.Range.range_unit_format { get; set; }
+      Efl.Orientation.orientation { get; set; }
+      Efl.Part.part;
+   }
+   events {
+      changed; [[Called when progressbar changed]]
+   }
+}

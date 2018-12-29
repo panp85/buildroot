@@ -1,0 +1,14 @@
+prefix=
+exec_prefix=
+libdir=/media/panpan/tools/buildroot-2018.02.8/output/build/gst1-plugins-bad-1.12.4/gst-libs/gst/video/.libs
+includedir=/media/panpan/tools/buildroot-2018.02.8/output/build/gst1-plugins-bad-1.12.4/gst-libs
+girdir=/media/panpan/tools/buildroot-2018.02.8/output/build/gst1-plugins-bad-1.12.4/gst-libs/gst/video
+typelibdir=/media/panpan/tools/buildroot-2018.02.8/output/build/gst1-plugins-bad-1.12.4/gst-libs/gst/video
+
+Name: GStreamer bad video library, uninstalled
+Description: Bad video library for GStreamer elements, Not Installed
+Version: 1.12.4
+Requires: gstreamer-1.0 gstreamer-bad-base-1.0
+
+Libs: -L${libdir} -lgstbadvideo-1.0
+Cflags: -I/media/panpan/tools/buildroot-2018.02.8/output/build/gst1-plugins-bad-1.12.4/gst-libs -I/media/panpan/tools/buildroot-2018.02.8/output/build/gst1-plugins-bad-1.12.4/gst-libs

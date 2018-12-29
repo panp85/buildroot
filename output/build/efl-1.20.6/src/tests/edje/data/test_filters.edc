@@ -1,0 +1,137 @@
+color_classes {
+   color_class {
+      name: "cc1";
+      color: 0 0 255 255;
+      color2: 0 255 255 255;
+      color3: 0 0 255 255;
+   }
+}
+filters {
+   // some unused filters
+   filter {
+      name: "filter0";
+      file: "filter.lua";
+   }
+   filter {
+      name: "filter1";
+      script {
+         blend {}
+      }
+   }
+}
+collections {
+   filters {
+      // some more unused filters
+      filter {
+         name: "filterfile";
+         file: "filter.lua";
+      }
+      filter {
+         name: "filter3";
+         script {
+            if not a then a = 255 end
+            fill { color = (color('lime') * a) }
+            blend { color = (color('red') * a) }
+         }
+      }
+   }
+   images {
+      // found in tests/emotion/data
+      image: "pnl.png" COMP;
+   }
+   group { name: "test_group";
+      filters {
+         filter.file: "filter.lua";
+      }
+      parts {
+         part { name: "background";
+            type: RECT;
+            description { state: "default" 0.0;
+               color: 33 32 32 255;
+               rel1.relative: 0 0;
+               rel2.relative: 1 1;
+               max: 200 200;
+            }
+         }
+         part { name: "mask";
+            type: IMAGE;
+            no_render: 1;
+            description { state: "default" 0.0;
+               rel1.relative: 0 0;
+               rel2.relative: 1 1;
+               rel.to: "text";
+               max: 999 50;
+               image.normal: "pnl.png";
+            }
+         }
+         part {
+            "mask2";
+            inherit: "mask";
+            render;
+            desc { "default";
+               rel1.relative: 0.0 0.8;
+            }
+         }
+         part {
+            "mask3";
+            inherit: "mask";
+         }
+         proxy { "prxy";
+            desc { "default";
+               filter {
+                  code: "filter3";
+                  data: "a" "96";
+               }
+               max: 64 -1;
+               align: 1 0.5;
+               source: "mask";
+               fill {
+                  type: TILE;
+                  origin {
+                     relative: 0 0;
+                     offset: 0 0;
+                  }
+                  size {
+                     relative: 1 1;
+                     offset: -1 -1;
+                  }
+               }
+            }
+         }
+         image {
+            "img";
+            desc {
+               "default";
+               image.normal: "pnl.png";
+               max: 64 -1;
+               align: 0 0.5;
+               filter.code: "filter3";
+            }
+         }
+         part {
+            name: "text";
+            type: TEXT;
+            description {
+               state: "default" 0.0;
+               rel1.relative: 0 0;
+               rel2.relative: 1 1;
+               rel1.to: "background";
+               rel2.to: "background";
+               text {
+                  text: "FILTER";
+                  font: "Sans";
+                  size: 48;
+                  ellipsis: -1;
+               }
+               filter {
+                  code: "filterfile";
+                  source: "mask";
+                  data: "mycolor" "#f0f8";
+                  data: "cc" "color_class('cc1')";
+               }
+               color: 255 80 0 200;
+            }
+         }
+      }
+   }
+}

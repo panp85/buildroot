@@ -1,0 +1,17 @@
+0.9.0
+- C extension re-implemented (without Cython) with major speedup (7-10x)
+- object_pairs_hook now works like built-in json module
+- Minor pure version improvements
+- Windows build compatibility
+
+0.8.5
+- Added Python 3.5 to classifiers list
+- Fix index in argv (command line utility)
+
+0.8.4
+- License information update
+- Allow for lack of stdin/stdout/stdout buffer access (#1)
+- Allow for extenion building to be skipped via env. var (#2)
+
+0.8.3
+- Initial public release

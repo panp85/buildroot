@@ -1,0 +1,191 @@
+struct Elm.Event.Policy_Changed
+{
+   [[Data on the event when an Elementary policy has changed]]
+   policy: uint; [[the policy identifier]]
+   new_value: int; [[value the policy had before the change]]
+   old_value: int; [[new value the policy got]]
+}
+
+/* FIXME: These shouldn't be here, we don't do functions in eolian!!! */
+type Elm_Tooltip_Item_Content_Cb: __undefined_type; [[Elementary tooltip item content callback type]]
+type Elm_Object_Item_Signal_Cb: __undefined_type; [[Elementary object item signal callback type]]
+type Evas_Smart_Cb: __undefined_type; [[Evas smart callback type]]
+type Eina_Compare_Cb: __undefined_type; [[Eina compare callback type]]
+type @extern Elm.Glob.Match_Flags: __undefined_type; [[Elementary glob matching flags]]
+
+/* FIXME: elm_policy API is not bound to EO */
+enum Elm.Policy
+{
+   [[Policy identifiers.]]
+   quit, [[under which circumstances the application should quit automatically.
+           See also @Elm.Policy.quit.]]
+   exit, [[defines elm_exit() behaviour. See also @Elm.Policy.exit.
+
+           @since 1.8
+         ]]
+   throttle, [[defines how throttling should work. See also @Elm.Policy.throttle
+
+               @since 1.8
+             ]]
+   last [[Sentinel value to indicate last enum field during iteration]]
+}
+
+enum Elm.Policy.Quit
+{
+   [[Possible values for the #ELM_POLICY_QUIT policy]]
+   none = 0, [[never quit the application automatically]]
+   last_window_closed, [[quit when the application's last window is closed]]
+   last_window_hidden [[quit when the application's last window is hidden
+
+                        @since 1.14]]
+}
+
+enum Elm.Policy.Exit
+{
+   [[Possible values for the #ELM_POLICY_EXIT policy.
+
+     @since 1.8
+   ]]
+   none = 0, [[just quit the main loop on elm_exit()]]
+   windows_del [[delete all the windows after quitting the main loop]]
+}
+
+enum Elm.Policy.Throttle
+{
+   [[Possible values for the #ELM_POLICY_THROTTLE policy.
+
+     @since 1.8
+   ]]
+   config = 0, [[do whatever elementary config is configured to do]]
+   hidden_always, [[always throttle when all windows are no longer visible]]
+   never [[never throttle when windows are all hidden, regardless of config
+           settings]]
+}
+
+enum Elm.Object.Select_Mode
+{
+   [[Possible values for the #ELM_OBJECT_SELECT_MODE policy.
+
+     @since 1.7
+   ]]
+   default = 0, [[default select mode. Once an item is selected, it would stay
+                  highlighted and not going to call selected callback again
+                  even it was clicked. Items can get focus.]]
+   always, [[always select mode. Item selected callbacks will be called every
+             time for click events, even after the item was already selected.
+             Items can get focus.]]
+   none, [[no select mode. Items will never be highlighted and selected but
+           the size will be adjusted by the finger size configuration. Items
+           can't get focus.]]
+   display_only, [[no select mode with no finger size rule. Items will never
+                   be highlighted and selected and ignore the finger size. So
+                   the item size can be reduced below than the finger size
+                   configuration. Items can't get focus.]]
+   max [[canary value: any value greater or equal to ELM_OBJECT_SELECT_MODE_MAX
+         is forbidden.]]
+}
+
+enum Elm.Object.Multi_Select_Mode
+{
+   [[Possible values for the #ELM_OBJECT_MULTI_SELECT_MODE policy.
+
+     @since 1.8
+   ]]
+   default = 0, [[default multiple select mode]]
+   with_control, [[disallow mutiple selection when clicked without control key
+                   pressed]]
+   max [[canary value: any value greater or equal to
+         ELM_OBJECT_MULTI_SELECT_MODE_MAX is forbidden.]]
+}
+
+enum Elm.Wrap.Type
+{
+   [[Line wrapping types.
+     Type of word or character wrapping to use.
+
+     See also \@ref elm_entry_line_wrap_set, \@ref
+     elm_popup_content_text_wrap_type_set, \@ref elm_label_line_wrap_set.
+   ]]
+
+   legacy: elm_wrap;
+   none = 0, [[No wrap - value is zero.]]
+   char,     [[Char wrap - wrap between characters.]]
+   word,     [[Word wrap - wrap in allowed wrapping points (as defined in the unicode standard).]]
+   mixed,    [[Mixed wrap - Word wrap, and if that fails, char wrap.]]
+   last      [[Sentinel value to indicate last enum field during iteration]]
+}
+
+enum Elm.Focus_Direction
+{
+   [[ Focus directions. ]]
+   legacy: elm_focus;
+   previous, [[ previous direction ]]
+   next,     [[ next direction ]]
+   up,       [[ up direction ]]
+   down,     [[ down direction ]]
+   right,    [[ right direction ]]
+   left,     [[ left direction ]]
+}
+
+enum Elm.Focus.Region.Show_Mode
+{
+   [[Focus region show mode.]]
+   legacy: elm_focus_region_show;
+   widget, [[As a widget.]]
+   item, [[As an item.]]
+}
+
+enum Efl.Ui.Focus.Move_Policy
+{
+   [[Focus Movement Policy.
+     @since 1.10]]
+   click, [[Move focus by mouse click or touch. Elementary focus is set on mouse
+            click and this is checked at mouse up time. (default)]]
+   in, [[Move focus by mouse in. Elementary focus is set on mouse move when the
+         mouse pointer is moved into an object.]]
+   key_only, [[Move focus by key. Elementary focus is set on key input like
+               Left, Right, Up, Down, Tab, or Shift+Tab.]]
+}
+
+enum Efl.Ui.Slider.Indicator_Visible_Mode
+{
+   [[Slider's indicator visiblity mode.
+
+     @since 1.13
+   ]]
+   default,   [[show indicator on mouse down or change in slider value]]
+   always,    [[Always show the indicator.]]
+   on_focus,  [[Show the indicator on focus]]
+   none       [[Never show the indicator ]]
+}
+
+enum Efl.Ui.Focus.Autoscroll_Mode
+{
+   [[Focus Autoscroll Mode
+
+     @since 1.10
+   ]]
+   show,    [[Directly show the focused region or item automatically.]]
+   none,    [[Do not show the focused region or item automatically.]]
+   bring_in [[Bring in the focused region or item automatically which might invole the scrolling.]]
+}
+
+enum Efl.Ui.Softcursor_Mode
+{
+   [[Software cursor mode.
+
+     @since 1.7
+   ]]
+   auto, [[Auto-detect if a software cursor should be used (default).]]
+   on,   [[Always use a softcursor.]]
+   off   [[Never use a softcursor.]]
+}
+
+enum Elm.Icon.Type
+{
+   [[Elementary icon types]]
+   legacy: elm_icon;
+   none, [[Icon has no type set]]
+   file, [[Icon is of type file]]
+   standard [[Icon is of type standard]]
+}

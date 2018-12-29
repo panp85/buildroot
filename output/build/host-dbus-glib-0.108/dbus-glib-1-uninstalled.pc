@@ -1,0 +1,12 @@
+prefix=/media/panpan/tools/buildroot-2018.02.8/output/host
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: dbus-glib
+Description: GLib integration for the free desktop message bus
+Version: 0.108
+Requires: dbus-1 glib-2.0 gobject-2.0
+Libs: ${pc_top_builddir}/${pcfiledir}/dbus/libdbus-glib-1.la
+Cflags: -I${pc_top_builddir}/${pcfiledir}
+

@@ -1,0 +1,14 @@
+prefix=/media/panpan/tools/buildroot-2018.02.8/output/host
+exec_prefix=/media/panpan/tools/buildroot-2018.02.8/output/host
+libdir=/media/panpan/tools/buildroot-2018.02.8/output/host/lib
+includedir=/media/panpan/tools/buildroot-2018.02.8/output/host/include
+
+Name: FreeType 2
+URL: http://freetype.org
+Description: A free, high-quality, and portable font engine.
+Version: 21.0.15
+Requires:
+Requires.private: 
+Libs: -L${libdir} -lfreetype
+Libs.private: 
+Cflags: -I${includedir}/freetype2

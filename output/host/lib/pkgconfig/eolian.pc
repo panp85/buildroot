@@ -1,0 +1,14 @@
+prefix=/media/panpan/tools/buildroot-2018.02.8/output/host
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+datarootdir=${prefix}/share
+datadir=${datarootdir}
+eoincludedir=${datarootdir}/eolian/include
+
+Name: eolian
+Description: EFL's .eo parser and code generator.
+Version: 1.20.6
+Libs: -L${libdir} -leolian
+Libs.private: 
+Cflags: -I${includedir}/efl-1 -I${includedir}/eolian-1

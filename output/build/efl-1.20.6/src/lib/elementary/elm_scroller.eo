@@ -1,0 +1,81 @@
+class Elm.Scroller (Elm.Layout, Elm.Interface_Scrollable,
+                    Elm.Interface.Atspi_Widget_Action,
+                    Efl.Ui.Scrollable)
+{
+   [[Elementary scroller class]]
+   legacy_prefix: elm_scroller;
+   eo_prefix: elm_obj_scroller;
+   event_prefix: elm_scroller;
+   methods {
+      @property custom_widget_base_theme {
+         set {
+            [[Set custom theme elements for the scroller]]
+         }
+         values {
+            klass: string; [[Klass name]]
+            group: string; [[Group name]]
+         }
+      }
+      page_scroll_limit_set @const {
+         [[Set the maximum of the movable page at a flicking.
+
+           The value of maximum movable page should be more than 1.
+
+           @since 1.8
+         ]]
+         params {
+            @in page_limit_h: int; [[The maximum of the movable horizontal page]]
+            @in page_limit_v: int; [[The maximum of the movable vertical page]]
+         }
+      }
+      page_scroll_limit_get @const {
+         [[Get the maximum of the movable page at a flicking.
+
+           @since 1.8
+         ]]
+         params {
+            @in page_limit_h: ptr(int); [[The maximum of the movable horizontal page]]
+            @in page_limit_v: ptr(int); [[The maximum of the movable vertical page]]
+         }
+      }
+   }
+   implements {
+      class.constructor;
+      Efl.Object.constructor;
+      Efl.Gfx.position { set; }
+      Efl.Gfx.size { set; }
+      Efl.Canvas.Group.group_member_add;
+      Elm.Widget.theme_apply;
+      Elm.Widget.activate;
+      Elm.Widget.focus_next_manager_is;
+      Elm.Widget.focus_direction_manager_is;
+      Elm.Widget.focus_next;
+      Elm.Widget.focus_direction;
+      Elm.Widget.sub_object_del;
+      Elm.Widget.widget_event;
+      Elm.Layout.sizing_eval;
+      Elm.Interface_Scrollable.page_size { set; }
+      Elm.Interface_Scrollable.policy { set; }
+      Elm.Interface_Scrollable.single_direction { get; set; }
+      Elm.Interface.Atspi_Widget_Action.elm_actions { get; }
+      Efl.Part.part;
+      Elm.Widget.focus_register;
+   }
+   events {
+      scroll,page,changed; [[Called when scroll page changed]]
+      hbar,unpress; [[Called when horizontal bar is no longer pressed]]
+      hbar,press; [[Called when horizontal bar is pressed]]
+      hbar,drag; [[Called when horizontal bar is dragged]]
+      vbar,unpress; [[Called when vertical bar is no longer pressed]]
+      vbar,press; [[Called when vertical bar is pressed]]
+      vbar,drag; [[Called when vertical bar is dragged]]
+      scroll,left; [[Called when scrolling to left]]
+      scroll,right; [[Called when scrolling to right]]
+      scroll,up;  [[Called scrolled upwards]]
+      scroll,down; [[Called when scrolled downwards]]
+      edge,left; [[Called when hitting the left edge]]
+      edge,right; [[Called when hitting the right edge]]
+      edge,top; [[Called when hitting the top edge]]
+      edge,bottom; [[Called when hitting the bottom edge]]
+   }
+}

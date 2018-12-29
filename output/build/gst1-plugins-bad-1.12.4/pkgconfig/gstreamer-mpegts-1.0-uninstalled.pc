@@ -1,0 +1,12 @@
+prefix=
+exec_prefix=
+libdir=/media/panpan/tools/buildroot-2018.02.8/output/build/gst1-plugins-bad-1.12.4/gst-libs/gst/mpegts/.libs
+includedir=/media/panpan/tools/buildroot-2018.02.8/output/build/gst1-plugins-bad-1.12.4/gst-libs
+
+Name: GStreamer MPEG-TS, Uninstalled
+Description: GStreamer MPEG-TS support, uninstalled
+Requires: gstreamer-1.0 gstreamer-base-1.0
+Version: 1.12.4
+Libs: -L${libdir} -lgstmpegts-1.0
+Cflags: -I/media/panpan/tools/buildroot-2018.02.8/output/build/gst1-plugins-bad-1.12.4/gst-libs -I/media/panpan/tools/buildroot-2018.02.8/output/build/gst1-plugins-bad-1.12.4/gst-libs
+

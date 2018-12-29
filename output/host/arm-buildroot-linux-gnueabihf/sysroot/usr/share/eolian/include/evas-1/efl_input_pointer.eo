@@ -1,0 +1,176 @@
+import efl_orientation;
+import efl_input_types;
+
+class Efl.Input.Pointer (Efl.Object, Efl.Input.Event, Efl.Input.State)
+{
+   [[Event data carried over with any pointer event (mouse, touch, pen, ...)
+
+     @since 1.18
+   ]]
+   methods {
+      @property action {
+         [[The action represented by this event.]]
+         values {
+            act: Efl.Pointer.Action; [[Event action]]
+         }
+      }
+      @property value_has {
+         [[$true if this event carries a valid value for the specified $key.]]
+         get {}
+         keys {
+            key: Efl.Input.Value; [[Pressed $key]]
+         }
+         values {
+            has: bool; [[$true if input value is valid, $false otherwise]]
+         }
+      }
+      @property value {
+         [[Represents a generic value for this event.
+
+           Refer to the documentation of @Efl.Input.Value for each value's
+           meaning, type and range. Call @.value_has.get to determine whether
+           the returned value is valid or not for this event.
+
+           Most values are precise floating point values, usually in pixels,
+           radians, or in a range of [-1, 1] or [0, 1]. Some values are
+           discrete values (integers) and thus should preferably be queried
+           with the other methods of this class.
+         ]]
+         set {
+            return: bool; [[$false if the value could not be set (eg. delta).]]
+         }
+         get {}
+         keys {
+            key: Efl.Input.Value; [[$key]]
+         }
+         values {
+            val: double; [[$key value]]
+         }
+      }
+      @property button {
+         [[The mouse button that triggered the event.
+
+           Valid if and only if @.value_has($button) is $true.
+         ]]
+         values {
+            but: int; [[1 to 32, 0 if not a button event.]]
+         }
+      }
+      @property button_pressed {
+         [[Whether a mouse button is pressed at the moment of the event.
+
+           Valid if and only if @.value_has($button_pressed) is $true.]]
+         keys {
+            button: int; [[1 to 32, 0 if not a button event.]]
+         }
+         values {
+            pressed: bool; [[$true when the button was pressed, $false otherwise]]
+         }
+      }
+      @property position {
+         [[Position where the event happened, relative to the window.
+
+           This position, in integers, is an approximation of
+           @.value.get($x), @.value.get($y). Use @.position if you need
+           simple pixel positions, but prefer the generic interface
+           if you need precise coordinates.
+         ]]
+         values {
+            x: int; [[X coordinate of the event]]
+            y: int; [[Y coordinate of the event]]
+         }
+      }
+      @property previous_position {
+         [[Position of the previous event, valid for move events.
+
+           Relative to the window. May be equal to @.position (by default).
+
+           This position, in integers, is an approximation of
+           @.value.get($previous_x), @.value.get($previous_y).
+           Use @.previous_position if you need simple pixel positions,
+           but prefer the generic interface if you need precise coordinates.
+         ]]
+         values {
+            x: int; [[X coordinate of the previous event]]
+            y: int; [[Y coordinate of the previous event]]
+         }
+      }
+      @property delta {
+         [[Position delta, or movement, since the last event.
+
+           This position, in integers, is an approximation of
+           @.value.get($dx), @.value.get($dy). Use @.delta if you need
+           simple pixel positions, but prefer the generic interface
+           if you need precise coordinates.
+         ]]
+         get {}
+         values {
+            dx: int; [[X coordinate delta]]
+            dy: int; [[Y coordinate delta]]
+         }
+      }
+      @property tool {
+         [[ID of the tool (eg. pen) that triggered this event.]]
+         values {
+            id: int; [[Tool ID]]
+         }
+      }
+      @property source {
+         [[The object where this event first originated, in case of
+           propagation or repetition of the event.
+         ]]
+         values {
+            src: Efl.Object; [[Source object: $Efl.Gfx]]
+         }
+      }
+      @property button_flags {
+         [[Double or triple click information.]]
+         values {
+            flags: Efl.Pointer.Flags; [[Button information flags]]
+         }
+      }
+      @property double_click {
+         [[$true if @.button_flags indicates a double click (2nd press).
+
+           This is just a helper function around @.button_flags.
+         ]]
+         values {
+            val: bool; [[$true if the button press was a double click, $false otherwise]]
+         }
+      }
+      @property triple_click {
+         [[$true if @.button_flags indicates a triple click (3rd press).
+
+           This is just a helper function around @.button_flags.
+         ]]
+         values {
+            val: bool; [[$true if the button press was a triple click, $false otherwise]]
+         }
+      }
+      @property wheel_direction {
+         [[Direction of the wheel.]]
+         values {
+            dir: Efl.Orient; [[Horizontal or Vertical only.]]
+         }
+      }
+      @property wheel_delta {
+         [[Delta movement of the wheel in discrete steps.]]
+         values {
+            dist: int; [[Wheel movement delta]]
+         }
+      }
+   }
+   implements {
+      Efl.Object.constructor;
+      Efl.Object.destructor;
+      class.destructor;
+      Efl.Input.Event.reset;
+      Efl.Input.Event.dup;
+      Efl.Input.Event.timestamp { get; set; }
+      Efl.Input.Event.fake { get; }
+      Efl.Input.Event.event_flags { get; set; }
+      Efl.Input.Event.device { get; set; }
+      Efl.Input.State.modifier_enabled { get; }
+      Efl.Input.State.lock_enabled { get; }
+   }
+}

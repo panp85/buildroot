@@ -1,0 +1,12 @@
+prefix=/usr
+exec_prefix=/usr
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: elocation
+Description: Enlightenment location library
+Requires.private: eldbus >= 1.20.6 ecore >= 1.20.6 efl >= 1.20.6 eo >= 1.20.6 eina >= 1.20.6  
+Version: 1.20.6
+Libs: -L${libdir} -lelocation
+Libs.private:  -lm
+Cflags: -I${includedir}/elocation-1

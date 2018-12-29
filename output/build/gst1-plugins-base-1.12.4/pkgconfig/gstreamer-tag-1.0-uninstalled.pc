@@ -1,0 +1,16 @@
+# the standard variables don't make sense for an uninstalled copy
+prefix=
+exec_prefix=
+libdir=/media/panpan/tools/buildroot-2018.02.8/output/build/gst1-plugins-base-1.12.4/gst-libs/gst/tag/.libs
+# includedir is builddir because it is used to find gstconfig.h in places
+includedir=/media/panpan/tools/buildroot-2018.02.8/output/build/gst1-plugins-base-1.12.4/gst-libs
+girdir=/media/panpan/tools/buildroot-2018.02.8/output/build/gst1-plugins-base-1.12.4/gst-libs/gst/tag
+typelibdir=/media/panpan/tools/buildroot-2018.02.8/output/build/gst1-plugins-base-1.12.4/gst-libs/gst/tag
+
+Name: GStreamer Tag Library, Uninstalled
+Description: Tag base classes and helper functions, uninstalled
+Version: 1.12.4
+Requires: gstreamer-1.0
+Libs: -L${libdir} -lgsttag-1.0
+Cflags: -I/media/panpan/tools/buildroot-2018.02.8/output/build/gst1-plugins-base-1.12.4/gst-libs -I/media/panpan/tools/buildroot-2018.02.8/output/build/gst1-plugins-base-1.12.4/gst-libs
+

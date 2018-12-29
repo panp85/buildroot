@@ -1,0 +1,147 @@
+type slider_func_type: __undefined_type; [[Elementary slider function type]]
+type slider_freefunc_type: __undefined_type; [[Elementary slider free function type]]
+
+class Efl.Ui.Slider (Elm.Layout, Efl.Ui.Range,
+                     Efl.Orientation,
+                     Elm.Interface.Atspi.Value,
+                     Elm.Interface.Atspi_Widget_Action)
+{
+   [[Elementary slider class]]
+   legacy_prefix: elm_slider;
+   methods {
+      @property indicator_format {
+         set {
+            [[Set the format string for the indicator label.
+
+              The slider may display its value somewhere else then unit label,
+              for example, above the slider knob that is dragged around. This
+              function sets the format string used for this.
+
+              If $null, indicator label won't be visible. If not it sets the
+              format string for the label text. To the label text is provided
+              a floating point value, so the label text can display up to 1
+              floating point value. Note that this is optional.
+
+              Use a format string such as "%1.2f meters" for example, and it
+              will display values like: "3.14 meters" for a value equal to
+              3.14159.
+
+              Default is indicator label disabled.
+            ]]
+         }
+         get {
+            [[Get the indicator label format of the slider.
+
+              The slider may display its value somewhere else then unit label,
+              for example, above the slider knob that is dragged around. This
+              function gets the format string used for this.
+            ]]
+         }
+         values {
+            indicator: string @nullable; [[The format string for the indicator display.]]
+         }
+      }
+      @property indicator_show {
+         set {
+            [[Set whether to enlarge slider indicator (augmented knob) or not.
+
+              By default, indicator will be bigger while dragged by the user.
+
+              Warning: It won't display values set with @.indicator_format.set
+              if you disable indicator.
+            ]]
+         }
+         get {
+            [[Get whether a given slider widget's enlarging indicator or not.]]
+         }
+         values {
+            show: bool; [[$true will make it enlarge, $false will
+                          let the knob always at default size.]]
+         }
+      }
+      @property indicator_show_on_focus {
+         set {
+            [[Show the indicator of slider on focus.]]
+         }
+         get {
+            [[Get whether the indicator of the slider is set or not.]]
+         }
+         values {
+            flag: bool; [[$true if indicator is shown on focus, $false otherwise]]
+         }
+      }
+      @property step {
+         set {
+            [[Set the step by which slider indicator will move.
+
+              This value is used when draggable object is moved automatically
+              i.e., in case of key event when up/down/left/right key is pressed
+              or in case when accessibility is set and flick event is used to
+              inc/dec slider values. By default step value is equal to 0.05.
+
+              @since 1.8
+            ]]
+         }
+         get {
+            [[Get the step by which slider indicator moves.
+
+              @since 1.8
+            ]]
+         }
+         values {
+            step: double; [[The step value.]]
+         }
+      }
+      @property indicator_visible_mode {
+         [[Set/Get the visible mode of indicator.
+         ]]
+         values {
+            indicator_visible_mode: Efl.Ui.Slider.Indicator_Visible_Mode; [[The indicator visible mode.]]
+         }
+      }
+      @property indicator_format_function {
+         set {
+            [[Set the format function pointer for the indicator label
+
+              Set the callback function to format the indicator string.
+            ]]
+         }
+         values {
+            func: slider_func_type @nullable; [[The indicator format function.]]
+            free_func: slider_freefunc_type @nullable; [[The freeing function for the format string.]]
+         }
+      }
+   }
+   implements {
+      class.constructor;
+      Efl.Object.constructor;
+      Efl.Canvas.Group.group_calculate;
+      Elm.Widget.theme_apply;
+      Elm.Widget.activate;
+      Elm.Widget.focus_next_manager_is;
+      Elm.Widget.focus_direction_manager_is;
+      Elm.Widget.on_focus;
+      Elm.Widget.widget_event;
+      Elm.Layout.text_aliases { get; }
+      Elm.Layout.content_aliases { get; }
+      Elm.Layout.sizing_eval;
+      Efl.Ui.Range.span_size { get; set; }
+      Efl.Ui.Range.range_value { get; set; }
+      Efl.Ui.Range.range_unit_format { get; set; }
+      Efl.Ui.Range.range_min_max {get; set; }
+      Efl.Ui.Range.range_interval_enabled { get; set; }
+      Efl.Ui.Range.range_interval { get; set; }
+      Efl.Orientation.orientation { get; set; }
+      Elm.Interface.Atspi.Value.value_and_text { get; set; }
+      Elm.Interface.Atspi.Value.range { get; }
+      Elm.Interface.Atspi.Value.increment { get; }
+      Elm.Interface.Atspi_Widget_Action.elm_actions { get; }
+      Efl.Part.part;
+   }
+   events {
+      changed; [[Called when slider changed]]
+      delay,changed; [[Called when delay changed]]
+      slider,drag,start; [[Called when slider drag started]]
+      slider,drag,stop; [[Called when slider drag stopped]]
+   }
+}

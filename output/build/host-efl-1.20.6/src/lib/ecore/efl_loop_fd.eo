@@ -1,0 +1,46 @@
+import eina_types;
+
+class Efl.Loop.Fd (Efl.Loop_User)
+{
+   [[Fds are objects that what the activity on a given
+     file descriptor. This file descriptor can be a
+     network, a file, provided by a library.
+
+     The object will trigger relevant event depending
+     on what is happening.]]
+
+   methods {
+      @property fd {
+         [[Defines which file descriptor to watch. If it is a file, use file_fd variant.]]
+	 set {
+	    [[Defines the fd to watch on.]]
+	 }
+	 get {
+	 }
+	 values {
+	    fd: int; [[The file descriptor.]]
+	 }
+      }
+      @property fd_file {
+         [[Defines which file descriptor to watch when watching a file.]]
+	 set {
+	    [[Defines the fd to watch on.]]
+	 }
+	 get {
+	 }
+	 values {
+	    fd: int; [[The file descriptor.]]
+	 }
+      }
+   }
+   events {
+      read; [[Called when a read happened on the file descriptor]]
+      write; [[Called when a write happened on the file descriptor]]
+      error; [[Called when a error occurred on the file descriptor]]
+   }
+   implements {
+      Efl.Object.constructor;
+      Efl.Object.destructor;
+      Efl.Object.parent { set; }
+   }
+}

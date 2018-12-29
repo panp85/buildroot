@@ -1,0 +1,16 @@
+prefix=/usr
+exec_prefix=/usr
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+datarootdir=${prefix}/share
+datadir=${datarootdir}
+eoincludedir=${datarootdir}/eolian/include
+eolian_flags=-I${pc_sysrootdir}${eoincludedir}/efl-1
+
+Name: Efl
+Description: EFL's general purpose library
+Version: 1.20.6
+Requires.private: eo >= 1.20.6 eina >= 1.20.6  
+Libs: -L${libdir} -lefl
+Libs.private:
+Cflags: -I${includedir}/efl-1

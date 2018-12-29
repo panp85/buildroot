@@ -1,0 +1,5 @@
+/media/panpan/tools/buildroot-2018.02.8/package/libffi/0001-Fix-installation-location-of-libffi.patch
+/media/panpan/tools/buildroot-2018.02.8/package/libffi/0002-Fix-use-of-compact-eh-frames-on-MIPS.patch
+/media/panpan/tools/buildroot-2018.02.8/package/libffi/0003-libffi-enable-hardfloat-in-the-MIPS-assembly-code.patch
+/media/panpan/tools/buildroot-2018.02.8/package/libffi/0004-m68k-support-ISA-A-Coldfire-CPUs.patch
+/media/panpan/tools/buildroot-2018.02.8/package/libffi/0005-mips-use-__linux__-and-not-linux.patch

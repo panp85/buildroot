@@ -1,0 +1,22 @@
+class Efl.Canvas.Scene3d (Efl.Canvas.Image.Internal, Efl.Gfx.Buffer)
+{
+   [[A UI view for EFL Canvas 3D.]]
+   data: null;
+   methods {
+      @property scene3d {
+         [[The 3d scene to display in this view.
+
+           @since 1.10
+         ]]
+         set {}
+         get {}
+         values {
+            scene: Evas.Canvas3D.Scene; [[3D scene.]]
+         }
+      }
+   }
+   implements {
+      Efl.Gfx.Buffer.buffer_map;
+      Efl.Gfx.Buffer.buffer_unmap;
+   }
+}

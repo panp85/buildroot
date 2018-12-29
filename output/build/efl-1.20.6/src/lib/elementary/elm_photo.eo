@@ -1,0 +1,12 @@
+class Elm.Photo (Elm.Widget, Efl.File, Efl.Ui.Clickable, Efl.Ui.Draggable)
+{
+   [[Elementary photo class]]
+   legacy_prefix: elm_photo;
+   eo_prefix: elm_obj_photo;
+   implements {
+      class.constructor;
+      Efl.Object.constructor;
+      Efl.File.file { set; }
+      Elm.Widget.theme_apply;
+   }
+}

@@ -1,0 +1,264 @@
+Version 1.9.6 -> 1.9.7
+----------------------
+  - fixed bug in setup.py with Python 3 when ICU_VERSION obtained from env
+  - added workaround for https://gcc.gnu.org/bugzilla/show_bug.cgi?id=54249
+  - added support for ICU 59.1
+
+Version 1.9.5 -> 1.9.6
+----------------------
+  - turned icu into a package and moved docs.py into it
+  - fixed a bunch of warnings about missing int/int32_t casts
+  - added reduced version of missing in < 2.7 check_output() used in setup.py
+  - added wrapper for MessageFormat::getFormatNames()
+  - added check for ICU_VERSION env variable before calling icu-config
+  - added wrappers for static Normalizer2 constructors that appeared in ICU 49
+  - hopefully workedaround 'daylight' #define on Windows
+
+Version 1.9.4 -> 1.9.5
+----------------------
+  - added icu-config --version check in setup.py to exclude libicule from libs
+  - fixed bug with Python3.3+ <-> UnicodeString conversion with surrogate pairs
+  - reworked Python3.3+ <-> UnicodeString with no allocations (Markus Scherer)
+  - fixed bugs with 32bit Python2..Python3.2 <-> UnicodeString conversions
+  - added conditionals around uses of features in newer ICUs (Keegan Parker)
+
+Version 1.9.3 -> 1.9.4
+----------------------
+  - added wrappers for uloc_addLikelySubtags(), uloc_minimizeSubtags() on Locale
+  - fixed bug in some script.cpp wrappers not accepting surrogate pairs
+  - added wrapper for UnicodeString.countChar32() and test
+  - fixed crasher due to ICUException not incref'ing members during copy
+  - added support for ICU 58.1 (conditionally removed layout engine wrapper)
+  - fixed bug in StringCharacterIterator's dealloc freeing random memory
+  - reworked Python <-> Unicode conversions for Python 3.3+ to use new APIs
+
+Version 1.9.2 -> 1.9.3
+----------------------
+  - added missing conditionals around uses of features in newer ICU versions
+  - added wrappers for TimeZone::getIDForWindowsID, TimeZone::getWindowsID
+  - added wrappers for DateTimePatternGenerator
+  - added missing Context and BooleanAttribute wrappers on DateFormat
+  - added support for ICU 57.1
+  - build tested with Python 2.7.5, Python 3.5.1 and PyPy 2.2.1
+
+Version 1.9 -> 1.9.2
+--------------------
+  - added MANIFEST.in to ensure nothing's missing in the 'sdist' package
+  - enabled -Wwrite-strings and fixed warnings
+  - added missing conditionals around uses of features in newer ICU versions
+
+Version 1.8 -> 1.9
+------------------
+  - fixed utf-8 conversion error position reporting (bug 13113)
+  - fixed delete/delete[] bug in common.cpp (Fredrik Roubert)
+  - added support for ICU 54.1
+  - added wrapper for USpoofChecker and related enums
+  - added support for ICU 55.1
+  - replaced UnicodeString idna methods with new uidna.h UTS #46 wrapper (55.1)
+  - added wrapper for Char functions and related enums (from uchar.h)
+  - added wrapper for Shape defines and shapeArabic() (from ushape.h)
+  - added wrapper for RelativeDateTimeFormatter (bug 13115)
+  - build tested with Python 2.7.5, Python 3.3.0 and PyPy 2.2.1
+
+Version 1.7 -> 1.8
+------------------
+  - added wrapper for Locale::getRoot()
+  - added tp_hash implementation for Locale type based on Locale::hashCode()
+  - fixed bug 13112 (Markus Scherer)
+  - added support for building with PyPy (tested on PyPy 2.2.1 / Python 2.7.3)
+  - added Locale(lcid) constructor calling uloc_getLocaleForLCID()
+  - added wrapper for CompactDecimalFormat and its createInstance() method
+
+Version 1.6 -> 1.7
+------------------
+  - added missing #include for <unicode/uscript.h>
+  - fixed issues building against ICU 4.2
+  - added wrapper for Script.isRightToLeft() (bug 13081)
+  - added support for ICU 53.1 (bug 13110)
+  - added wrappers for other Script functions introduced in ICU 51
+
+Version 1.5 -> 1.6
+------------------
+  - removed wrappers for some layoutengine.cpp internal flags (bug 13074)
+  - added wrappers for ULocaleData functions (bug 13080)
+  - added wrappers for uscript functions and UScriptCode enum (bug 13081)
+  - generalized freebsd setup.py support (Laurence Parry)
+  - added support for ICU 52.1
+  - added wrapper for Locale::setKeywordValue()
+  - added Locale::removeKeywordValue()
+  - added support for ListFormatter
+  - build tested with Python 2.7 and Python 3.3.0
+
+Version 1.4 -> 1.5
+------------------
+  - added wrapper for MessageFormat::format(argumentNames, arguments, ...)
+  - fixed bug in t_transliterator_filteredTransliterate passing UBool for int
+  - added wrapper for DateFormat::format(Calendar)
+  - added wrapper for Calendar::set(UCalendarDateFields field, value)
+  - added wrappers for UnicodeString::toTitle() w/o iterator (Fredrik Roubert)
+  - added support for ICU 50.1
+  - improved test_Collator's testGetSortKey() (Markus Scherer)
+  - added pypi classifiers to PyICU project info, including Python 3 tag
+  - build tested with Python 2.7 and Python 3.3.0
+
+Version 1.3 -> 1.4
+------------------
+  - fixed bug with default tzinfo set on ICUtzinfo type (bug 13038)
+  - fixed bug 13040 (Martin Hosken)
+  - added wrapper for Transliterator::toRules()
+  - added missing wrapper for RuleBasedNumberFormat(URBNFRuleSetTag, Locale)
+  - added support for ICU 49.1.1
+  - implemented wrapper for new NumberFormat.parseCurrency()
+  - fixed bug in CurrencyAmount.str() not calling correct getDouble() overload
+  - added ScriptCode constants new in 49.0
+
+Version 1.2 -> 1.3
+------------------
+  - fixed bug 13031
+  - PyICU ready for Python 3.2 (tests pass 2to3'd) (Martin von Gagern)
+  - added auto-conversion of test sources for Python 3 during setup
+  - added support for LEFontInstance and LayoutEngine (Martin Hosken, bug 13035)
+  - fixed bugs in RegexMatcher and RegexPattern not keeping their inputs
+  - added support for ICU 4.8.1.1
+
+Version 1.1 -> 1.2
+------------------
+  - fixed bug 13009 (Martin von Gagern)
+  - fixed bug 13011 (Martin von Gagern)
+  - some unit test beautification (Martin von Gagern)
+  - added macros for RTTI checks (Martin von Gagern)
+  - fixed bug 13012
+  - fixed bug 13013 (Yuriy Pilgun)
+  - added wrappers for Locale::isBogus()/setToBogus() (Jimmy Yuen Ho Wong)
+  - fixed bug 13022 (Martin von Gagern)
+  - added support for ICU 4.8
+
+Version 1.0 -> 1.1
+------------------
+  - added support for ICU 4.6
+  - switched to using RTTI if ICU >= 4.6 instead of poor man's ICU RTTI
+  - fixed bug with incorrect icu.VERSION string on Windows build
+
+Version 1.0 -> 1.0.1
+--------------------
+  - removed variable length array uses in regex.cpp (Chandler Carruth)
+  - fixed bug 12983
+  - fixed bug with BreakIterator.setText() not keeping reference to text
+  - fixed incorrect conditional <windows.h> include in locale.cpp (Ralf Haring)
+  - fixed incorrect spellings of PyErr_SetFromWindowsErrWithFilename (ditto)
+  - fixed incorrect declaration of PythonTransliterator (Christian Heimes)
+
+Version 0.9 -> 1.0
+------------------
+  - added support for UnicodeSet, UnicodeFunctor, UnicodeFilter, UnicodeMatcher
+  - added support for RegexPattern and RegexMatcher
+  - added support for Normalizer
+  - added support for UTransPosition (Christoph Burgmer)
+  - added support for UTransPosition and UnicodeFilter methods to Transliterator
+  - fixed bug in UnicodeString single character assignment method
+  - added support for extending Transliterator from Python (Christoph Burgmer)
+  - improved support for in-place operations on UnicodeStrings
+  - added support for Transliterator::registerInstance (Christoph Burgmer)
+  - added support for ICU 4.4
+  - added support for Normalizer2, FilteredNormalizer2 if ICU version >= 4.4
+  - added support for SelectFormat if ICU version >= 4.4
+  - added support for TimeUnitFormat if ICU version >= 4.2
+  - added support for PluralRules and PluralFormat if ICU version >= 4.0
+  - added support for DateInterval, DateIntervalFormat if ICU version >= 4.0
+  - added support for CurrencyPluralInfo if ICU version >= 4.2
+  - added support for UnicodeSetIterator and UnicodeSet iterates via it
+  - added support for SearchIterator and StringSearch
+  - added some missing Collator and RuleBasedCollator methods
+  - refreshed README and CREDITS
+  - fixed bugs with UnicodeString-converted text arg ownership in iterators
+  - added missing conditionals for features in ICU versions >= 4.0
+  - README now marked-up with reStructuredText (Christoph Burgmer)
+  - PyICU main module renamed to 'icu' (with deprecation warning for old name)
+  - UnicodeString objects are now hashable
+  - reviewed all wrapped ICU setters for parameter ownership
+  - removed symbol prefixes from wrapped typed enums symbols
+  - added ResourceBundle.setAppData() implementation that memory maps file
+
+Version 0.8 -> 0.9
+------------------
+  - fixed 64-bit random crasher bug in registerType()/isInstance()
+  - fixed bug 11548
+  - added entries for freebsd7 to setup.py (Jan Gehring)
+  - added support for building on Solaris (Christian Kesselheim)
+  - added missing wrapper for Collator.getSortKey()
+  - added support for built-in Transliterators (bug 12870)
+  - removed support for ICU internal URES_TABLE32 ResourceBundle type
+  - added support for TimeZone::getDSTSavings() (Jimmy Yuen Ho Wong)
+  - added support for ICU 4.2
+  - refreshed README
+
+Version 0.6 -> 0.8
+------------------
+  - ICUtzinfo and FloatingTZ types now written in C for faster performance
+  - fixed bug 8180
+  - fixed bug 9229
+  - reworked FloatingTZ to optionally wrap a specific tzinfo instead of default
+  - incorporated c++ patches by Fredrik Roubert
+  - changed Exact unicode and string check to allow subclasses
+  - replaced Makefile with setup.py for distutils-based build (Bernd Zeimetz)
+  - PyICU supported with ICU 3.6 or 3.8
+  - PyICU supported on 64-bit processors (bug 11394)
+
+Version 0.5 -> 0.6
+------------------
+  - integrated patch to support Python 2.3 and MSVC 6
+  - changed naive datetime to UDate conversion to use ICUtzinfo.default
+  - fixed bug not checking return value of PyImport_ImportModule
+  - PyICU now wraps ICU 3.6
+  - added support for building with Python 2.5
+  - added support for CharsetDetector and CharsetMatch C ICU APIs
+  - added UnicodeString.encode() to access compression and conversion APIs
+  - added support for IDNA APIs to UnicodeString
+  - added support for MessageFormat(string) %(objs) style formatting
+  - fixed bug in Formattable constructor not accepting a python unicode string
+  - added support for BreakIterator::DONE
+  - added support for BreakIterator::getText()
+  - added support for BreakIterator::nextBoundary() to bypass iterator code
+
+Version 0.4 -> 0.5
+------------------
+  - changed OS X linking to resolve all symbols at link time
+  - Collator.getCollationKey() wasn't working
+  - added Collator.getCollationKey(string) overload
+  - using u_strFromUTF32() now to convert 4 byte unicode to 2 byte unicode
+  - improved support for Python 2.3
+  - PyICU no longer uses SWIG, wrappers are written by hand
+  - all APIs returning UnicodeString now return 'unicode'
+  - all APIs returning UnicodeString also take a UnicodeString arg to return it
+
+Version 0.3 -> 0.4
+------------------
+  - PyICU now wraps ICU 3.4
+  - added Calendar.getType(), changed Calendar.__repr__()
+  - added Locale.createKeywords(), Locale.getKeywordValue()
+  - moved Locale to locale.i and added support for ResourceBundle
+  - replaced TimeZone.adoptDefault() with TimeZone.getDefault()
+
+Version 0.2 -> 0.3
+------------------
+  - added support for CanonicalIterator, CollationElementIterator
+  - added static formatMessage() method on MessageFormat
+  - added static encoding helper methods to UnicodeString
+  - reworked PyString_AsUnicodeString() to report decode errors by default
+  - added support for Collator, RuleBasedCollator and CollationKey
+  - added test_Collator unit tests
+  - added test_MessageFormat unit tests
+  - fixed various MessageFormat bugs
+  - fixed bug in ICUtzinfo, now returning copy of ICU TimeZone instance
+  - fixed bug in TimeZone.adoptDefault() not checking type of pointer
+  - added __eq__, __ne__ and __hash__ methods to ICUtzinfo
+  - MessageFormat.getFormats() now returns copies of concrete formats
+
+Version 0.1 -> 0.2
+------------------
+  - added most missing UnicodeString methods
+  - added support for the BreakIterator and CharacterIterator classes
+
+Version 0.0 -> 0.1
+------------------
+- initial release

@@ -1,0 +1,5 @@
+/media/panpan/tools/buildroot-2018.02.8/package/icu/0001-dont-build-static-dynamic-twice.patch
+/media/panpan/tools/buildroot-2018.02.8/package/icu/0002-workaround-toolchain-bugs.patch
+/media/panpan/tools/buildroot-2018.02.8/package/icu/0003-detect-compiler-symbol-prefix.patch
+/media/panpan/tools/buildroot-2018.02.8/package/icu/0004-link-icudata-as-data-only.patch
+/media/panpan/tools/buildroot-2018.02.8/package/icu/0005-fix-static-linking-with-icu-uc.patch

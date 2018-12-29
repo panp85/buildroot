@@ -1,0 +1,25 @@
+mixin Ector.Surface (Ector.Buffer)
+{
+   [[Surface interface for Ector]]
+
+   eo_prefix: ector_surface;
+   data: null;
+   methods {
+      @property reference_point {
+         [[This define where is (0,0) in pixels coordinate inside the surface]]
+         set @pure_virtual {
+         }
+         values {
+            x: int; [[X coordinate for reference point]]
+            y: int; [[Y coordinate for reference point]]
+         }
+      }
+      renderer_factory_new @pure_virtual {
+         [[Create a new renderer factory for the given type]]
+         return: Efl.Object; [[Renderer factory object]] /* FIXME: Should be a more restricted type, only here for cyclic. */
+         params {
+            @in type: const(Efl.Class) @nonull; [[Efl class]] /* FIXME: Should probably be a more restricted type */
+         }
+      }
+   }
+}

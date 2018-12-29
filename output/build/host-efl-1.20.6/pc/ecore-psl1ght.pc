@@ -1,0 +1,12 @@
+prefix=/media/panpan/tools/buildroot-2018.02.8/output/host
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: ecore-psl1ght
+Description: E core library, PSL1GHT module
+Requires.private: 
+Version: 1.20.6
+Libs: -L${libdir} -lecore_psl1ght
+Libs.private: 
+Cflags: -I${includedir}/efl-1 -I${includedir}/ecore-psl1ght-1

@@ -1,0 +1,155 @@
+struct Efl.Model.Property_Event {
+     [[EFL model property event data structure]]
+     changed_properties: array<string>; [[List of changed properties]]
+     invalidated_properties: array<string>; [[Removed properties identified by name]]
+}
+
+interface Efl.Model ()
+{
+   [[Efl model interface]]
+   eo_prefix: efl_model;
+      methods {
+         @property properties {
+            get {
+               [[Get properties from model.
+
+                 properties_get is due to provide callers a way the fetch the
+                 current properties implemented/used by the model. The event
+                 EFL_MODEL_EVENT_PROPERTIES_CHANGED will be raised to notify
+                 listeners of any modifications in the properties.
+
+                 See also \@ref EFL_MODEL_EVENT_PROPERTIES_CHANGED.
+
+                 @since 1.14
+               ]]
+         }
+         values {
+               properties: const(array<string>); [[Array of current properties]]
+            }
+        }
+        property_set {
+           [[Set a property value of a given property name.
+
+             The caller must ensure to call at least efl_model_prop_list
+             before being able to see/set properties. This function sets
+             a new property value into given property name. Once the
+             operation is completed the concrete implementation should
+             raise EFL_MODEL_EVENT_PROPERTIES_CHANGED event in order to
+             notify listeners of the new value of the property.
+
+             If the model doesn't have the property then there are two
+             possibilities, either raise an error or create the new
+             property in model
+
+             See @.property_get, \@ref EFL_MODEL_EVENT_PROPERTIES_CHANGED
+
+             @since 1.14
+            ]]
+           params {
+               @in property: string; [[Property name]]
+               @in value: ptr(const(generic_value)); [[New value]]
+           }
+           return: future<generic_value>; [[Future returning the recorded value or error]]
+        }
+        property_get {
+           [[Retrieve the value of a given property name.
+
+             At this point the caller is free to get values from properties.
+             The event EFL_MODEL_EVENT_PROPERTIES_CHANGED may be raised to
+             notify listeners of the property/value.
+
+             See @.properties.get, \@ref EFL_MODEL_EVENT_PROPERTIES_CHANGED
+
+             @since 1.14
+           ]]
+           params {
+               @in property: string; [[Property name]]
+           }
+           return: future<generic_value>; [[Future of the value that was got]]
+        }
+        children_slice_get {
+               [[Get children slice OR full range.
+
+                 children_slice_get behaves in two different ways, it may
+                 provide the slice if both $start AND $count are non-zero
+                 OR full range otherwise.
+
+                 Since 'slice' is a range, for example if we have 20 childs a
+                 slice could be the range from 3(start) to 4(count), see:
+
+                 child 0  [no]
+                 child 1  [no]
+                 child 2  [yes]
+                 child 3  [yes]
+                 child 4  [yes]
+                 child 5  [yes]
+                 child 6  [no]
+                 child 7  [no]
+
+                 Optionally the user can call children_count_get to know the
+                 number of children so a valid range can be known in advance.
+
+                 See @.children_count_get
+
+                 @since 1.14
+               ]]
+            params {
+                @in start: uint; [[Range begin - start from here. If start and
+                               count are 0 slice is ignored.]]
+                @in count: uint; [[Range size. If count and start are 0 slice is
+                               ignored.]]
+            }
+            return: future<accessor<Efl.Object> >; [[Future of the children]]
+         }
+         children_count_get {
+                [[Get children count.
+
+                  When efl_model_load is completed efl_model_coildren_count_get
+                  can be use to get the number of children. children_count_get
+                  can also be used before calling children_slice_get so a valid
+                  range is known. Event EFL_MODEL_CHILDREN_COUNT_CHANGED is
+                  emitted when count is finished.
+
+                  See also @.children_slice_get.
+
+                  @since 1.14
+                ]]
+            return: future<uint>; [[Future of the children count]]
+         }
+         child_add {
+            [[Add a new child.
+
+              Add a new child, possibly dummy, depending on the implementation,
+              of a internal keeping. When the child is effectively
+              added the event \@ref EFL_MODEL_EVENT_CHILD_ADDED is then raised
+              and the new child is kept along with other children.
+
+              @since 1.14
+            ]]
+            return: Efl.Object; [[Child object]]
+         }
+         child_del {
+            [[Remove a child.
+
+              Remove a child of a internal keeping. When the child is effectively
+              removed the event \@ref EFL_MODEL_EVENT_CHILD_REMOVED is then
+              raised to give a chance for listeners to perform any cleanup
+              and/or update references.
+
+              @since 1.14
+            ]]
+            params {
+               @in child: Efl.Object; [[Child to be removed]]
+            }
+         }
+      }
+
+   events {
+      properties,changed: Efl.Model.Property_Event; [[Event dispatched when
+                                                      properties list is
+                                                      available.]]
+      child,added: Efl.Object; [[Event dispatched when new child is added.]]
+      child,removed: Efl.Object; [[Event dispatched when child is removed.]]
+      children,count,changed; [[Event dispatched when children count is finished.]]
+   }
+}

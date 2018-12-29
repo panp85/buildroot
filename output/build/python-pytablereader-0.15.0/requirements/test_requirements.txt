@@ -1,0 +1,8 @@
+pytablewriter>=0.26.1
+pytest-cov
+pytest
+responses
+SimpleSQLite>=0.19.0
+tox
+urllib3==1.21.1
+XlsxWriter

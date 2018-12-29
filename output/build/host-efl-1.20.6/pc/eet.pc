@@ -1,0 +1,12 @@
+prefix=/media/panpan/tools/buildroot-2018.02.8/output/host
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: eet
+Description: Library for speedy data storage, retrieval, and compression
+Version: 1.20.6
+Requires.private: emile >= 1.20.6 eina >= 1.20.6  efl >= 1.20.6 eina >= 1.20.6  zlib >= 1.2.3  
+Libs: -L${libdir} -leet
+Libs.private:  -ljpeg -lm
+Cflags: -I${includedir}/efl-1 -I${includedir}/eet-1

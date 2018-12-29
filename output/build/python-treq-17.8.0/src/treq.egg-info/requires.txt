@@ -1,0 +1,12 @@
+incremental
+requests>=2.1.0
+six
+Twisted[tls]>=16.4.0
+attrs
+
+[dev]
+mock
+pep8
+pyflakes
+sphinx
+httpbin

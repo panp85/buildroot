@@ -1,0 +1,41 @@
+import eina_types;
+
+mixin Efl.Ui.Focus.Object
+{
+    [[Functions of focusable objects.
+
+      @since 1.20
+    ]]
+    methods {
+        @property focus_geometry {
+            [[The geometry to use to calculate the relations to other objects.]]
+            get {
+
+            }
+            values {
+                rect : Eina.Rectangle; [[The geometry to use.]]
+            }
+        }
+        @property focus {
+            [[This gets called by the manager and should never be called by
+              someone else.
+
+             It can be used by an implementation of a focus object to adapt to
+             changes that are needed.
+
+             The function is emitting the focus state events, if focus is
+             different to the previous state.
+            ]]
+            values {
+                focus : bool; [[The state in which the object should be put]]
+            }
+        }
+    }
+    implements {
+        @empty .focus_geometry;
+        @empty .focus { get; }
+    }
+    events {
+        focus,changed : bool; [[Emitted if the focus state has changed]]
+    }
+}

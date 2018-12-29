@@ -1,0 +1,10 @@
+*.pyc
+*.swp
+ChangeLog
+MANIFEST
+build
+dist
+pyparted.spec
+.tox
+.coverage
+coverage-report.log

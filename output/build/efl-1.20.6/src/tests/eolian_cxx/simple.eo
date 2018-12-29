@@ -1,0 +1,18 @@
+class Simple (Efl.Object)
+{
+   data: null;
+   methods {
+      simple_get {
+         return: bool;
+      }
+      name_get {
+         params {
+            @out name: string;
+         }
+         return: bool;
+      }
+   }
+   implements {
+      Efl.Object.constructor;
+   }
+}

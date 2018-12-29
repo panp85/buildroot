@@ -1,0 +1,11 @@
+prefix=/media/panpan/tools/buildroot-2018.02.8/output/host
+exec_prefix=/media/panpan/tools/buildroot-2018.02.8/output/host
+libdir=/media/panpan/tools/buildroot-2018.02.8/output/host/lib
+includedir=/media/panpan/tools/buildroot-2018.02.8/output/host/include
+
+Name: mount
+Description: mount library
+Version: 2.31.1
+Requires.private: blkid
+Cflags: -I${includedir}/libmount
+Libs: -L${libdir} -lmount

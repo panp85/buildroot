@@ -1,0 +1,47 @@
+import eina_types;
+
+struct Eio.Sentry.Event
+{
+  [[Wraps the data about a monitor event on a file.]]
+  trigger: string; [[The cause of the event.]]
+  source: string; [[The original monitored path.]]
+}
+
+class Eio.Sentry (Efl.Object)
+{
+  [[Monitors files and directories for changes.]]
+
+  methods {
+    add {
+      [[Adds a new path to the list of monitored paths.]]
+      params {
+        @in path: string; [[Path to monitor]]
+      }
+      return : bool; [[$true on success, $false otherwise]]
+    }
+    del {
+      [[Removes the given path from the monitored list.]]
+      params {
+        @in path: string; [[Path to remove from monitoring]]
+      }
+    }
+  }
+ events {
+    file,created: Eio.Sentry.Event; [[Called when a file was created]]
+    file,deleted: Eio.Sentry.Event; [[Called when a file was deleted]]
+    file,modified: Eio.Sentry.Event; [[Called when a file was modified]]
+    file,closed: Eio.Sentry.Event; [[Called when a file was closed]]
+    directory,created: Eio.Sentry.Event; [[Called when a directory was created]]
+    directory,deleted: Eio.Sentry.Event; [[Called when a directory was deleted]]
+    directory,modified: Eio.Sentry.Event; [[called when a directory was modified]]
+    directory,closed: Eio.Sentry.Event; [[Called when a directory was closed]]
+    self,rename: Eio.Sentry.Event; [[Called when the object was renamed]]
+    self,deleted: Eio.Sentry.Event; [[Called when the object was deleted]]
+    error: Eio.Sentry.Event; [[Called in case of an error]]
+ }
+
+ implements {
+    Efl.Object.constructor;
+    Efl.Object.destructor;
+  }
+}

@@ -1,0 +1,333 @@
+:mod:`cli` --- command line tools
+=================================
+
+.. automodule:: cli
+
+Installing :mod:`cli`
+---------------------
+
+.. highlight:: none
+
+You can install the latest stable version of :mod:`cli` using :command:`pip`::
+    
+    $ pip install pyCLI
+
+Public repositories for the project are hosted at `github`_ and `bitbucket`_, so
+you can use either `git`_ or `Mercurial`_ to get a copy of the project's code
+and history::
+    
+    $ hg clone http://bitbucket.org/wcmaier/cli
+    $ git clone git://github.com/wcmaier/cli.git
+
+.. _github:     http://github.com/wcmaier/cli
+.. _bitbucket:  http://bitbucket.org/wcmaier/cli
+.. _git:        http://git-scm.com/
+.. _Mercurial:  http://mercurial.selenic.com/
+
+If you notice a problem with :mod:`cli`, please report it using the github
+`issue tracker`_ (or, if you have a fix, send a `pull request`_).
+
+.. _issue tracker:  http://github.com/wcmaier/cli/issues
+.. _pull request:   http://github.com/wcmaier/cli/pull/new/master
+
+A note about versions
++++++++++++++++++++++
+
+:mod:`cli` is developed along two branches. The first, 'default' (or 'master' in
+git) contains new features and possible bugs -- this branch is the active
+development branch. The second, 'stable', contains releases both major and minor
+as well as bugfixes. If you'd like to help improve :mod:`cli`, take a look at
+default/master. Otherwise, stick with stable.
+
+A quick tour of :mod:`cli`'s features
+-------------------------------------
+
+.. highlight:: python
+
+Command line parsing:
+
+.. literalinclude:: /tests/functional/scripts/ls
+
+.. highlight:: none
+
+When run, this script produces the following output::
+
+    $ python ls.py -h
+    usage: ls [-h] [-l]
+
+    optional arguments:
+      -h, --help  show this help message and exit
+      -l, --long  list in long format
+
+.. highlight:: python
+
+Logging:
+
+.. literalinclude:: /tests/functional/scripts/sleep
+
+.. highlight:: none
+
+Which produces the following::
+
+    $ python sleep.py -h
+    usage: sleep [-h] [-l LOGFILE] [-q] [-s] [-v] seconds
+
+    positional arguments:
+      seconds               time to sleep
+
+    optional arguments:
+      -h, --help            show this help message and exit
+      -l LOGFILE, --logfile LOGFILE
+                            log to file (default: log to stdout)
+      -q, --quiet           decrease the verbosity
+      -s, --silent          only log warnings
+      -v, --verbose         raise the verbosity
+    $ python sleep.py -vv 3
+    About to sleep for 3 seconds
+
+.. highlight:: python
+
+Daemonizing:
+
+.. literalinclude:: /tests/functional/scripts/daemon
+
+.. highlight:: none
+
+And on the command line::
+
+    $ python daemon.py -h
+    usage: daemon [-h] [-l LOGFILE] [-q] [-s] [-v] [-d] [-u USER] [-p PIDFILE]
+
+    optional arguments:
+      -h, --help            show this help message and exit
+      -l LOGFILE, --logfile LOGFILE
+                            log to file (default: log to stdout)
+      -q, --quiet           decrease the verbosity
+      -s, --silent          only log warnings
+      -v, --verbose         raise the verbosity
+      -d, --daemonize       run the application in the background
+      -u USER, --user USER  change to USER[:GROUP] after daemonizing
+      -p PIDFILE, --pidfile PIDFILE
+                            write PID to PIDFILE after daemonizing
+    $ python daemon.py -d -vv
+    About to daemonize
+
+.. highlight:: python
+
+Basic usage
+-----------
+
+While the :mod:`cli` modules provide a simple API for designing your own
+applications, the default implementations are intended to be flexible
+enough to cover most use cases. No matter which :class:`cli.app.Application` you
+use, the basic pattern is the same: create a callable that does the
+work, wrap it in an :class:`cli.app.Application`, add some parameters and call
+its :meth:`run` method.
+
+Your callable may be a simple function or a more complex class that
+implements the :meth:`__call__` protocol. Either way, it should accept a
+single :data:`app` instance as its only argument. It will use this
+object to interact with the application framework, find out what
+arguments were passed on the command line, log messages, etc.
+
+You can wrap the callable in one of two ways. First,
+:class:`cli.app.Application` can be thought of as a decorator (see :pep:`318`
+for more information). For example::
+
+    @cli.app.Application
+    def yourapp(app):
+        do_stuff()
+
+If you need to pass keyword arguments to the application, you can still
+use the decorator pattern::
+
+    @cli.app.CommandLineApp(argv=["-v"])
+    def yourapp(app):
+        do_stuff()
+
+If you don't like decorators (or your interpreter doesn't support them),
+you can also simply pass your application callable to the
+:class:`cli.app.Application`::
+
+    def yourapp(app):
+        do_stuff()
+
+    yourapp = cli.app.CommandLineApp(yourapp)
+
+Some more complex scripts and applications may benefit from subclassing the
+:class:`cli.app.Application` class itself. This approach can help make your 
+code more reusable::
+
+    class YourApp(cli.app.CommandLineApp):
+        
+        def main(self):
+            do_stuff()
+
+When subclassing :class:`cli.app.Application`, you'll likely want to incorporate
+functionality from the other application classes (like
+:class:`cli.app.CommandLineApp`). To do this, simply call methods from the
+appropriate mixin classes (like :class:`cli.app.CommandLineMixin`) -- in fact,
+this is how the application classes themselves work.
+
+Most of the supplied :class:`cli.app.Application` implementations support
+parameters. Parameters determine how your users interact with your
+program on the command line. To add parameters to your application, call
+:meth:`add_param` after you've wrapped your callable (or in its :meth:`setup`
+method)::
+
+    yourapp.add_param("-v", "--verbose", default=0, action="count",
+        help="increase the verbosity", )
+
+The interface here is the same as that implemented by
+:class:`argparse.ArgumentParser`. In this case, an :attr:`verbose`
+attribute will be created on the :attr:`app.params` object with an
+integer representing the desired verbosity level.
+
+Once you've added all the parameters you need (if any -- the default
+implementations include sensible defaults), simply call the :meth:`run`
+method on the wrapped callable. It's best to do this only if your script
+is actually being run, so shield it with a conditional::
+
+    if __name__ == "__main__":
+        yourapp.run()
+
+This will allow you to import your application and tweak it
+programmatically from another script without actually invoking it.
+
+Projects using :mod:`cli`
+-------------------------
+
+The following projects are known to use :mod:`cli`; please email
+`willmaier@ml1.net <mailto:willmaier@ml1.net>`_ if you'd like to see your
+project listed here.
+
+*  `gc3pie`_ - Python libraries and tools for running applications on diverse
+   Grids and clusters
+
+.. _gc3pie: http://code.google.com/p/gc3pie/
+
+Best practices
+--------------
+
+:mod:`cli` is designed to encourage a simple set of best practices in
+script development. Following this simple guide will help you write
+robust, maintainable and user-friendly scripts.
+
+Use a standard style
+++++++++++++++++++++
+
+A standard and clear coding style will make it easier for you to read
+your scripts months or years after you first wrote them. A good style
+will also help other people quickly understand your code so that they
+can use it, too and (hopefully) help you improve it.
+
+Since you're writing your scripts in Python, it is strongly recommended
+that you follow the coding style described in :pep:`8`. This style is
+easy to read and will be recognized by most people familiar with Python.
+
+Modularize
+++++++++++
+
+Monolithic code is hard to read. By breaking your script into functions,
+classes and maybe even separate modules, you help the reader (including
+your future self) navigate the code. Modular code can also be easily
+reused so that you don't have to continually reimplement useful
+functions in all of your scripts.
+
+When writing or refactoring your code to make it more modular, a good
+rule of thumb is to break large functions or methods into chunks that
+fit on a single screen (perhaps up to 50 lines of code or so). These
+chunks are large enough to get the job done but small enough for your
+reader to fully comprehend them.
+
+Share your code
++++++++++++++++
+
+If you've written modular code, you'll find it easy to package it for
+wider distribution. Sharing your code helps other programmers or system
+administrators solve similar problems. Even better, the more users you
+have, the more likely you are to receive support or contributions from
+your community.
+
+Start with the `Hitchhiker's Guide to Packaging`_, which will soon become
+part of the official `Python documentation`_.
+
+.. _Hitchhiker's Guide to Packaging:    http://guide.python-distribute.org/
+.. _Python documentation:       		http://www.python.org/doc/
+
+Test your code
+++++++++++++++
+
+In most cases, you can make your code more robust by adding tests to
+verify specific algorithms or even the macro behavior of the entire
+script. For testing small chunks of your code (unit tests), :mod:`cli`
+provides :class:`cli.test.AppTest`, a :class:`unittest.TestCase`
+with a few customizations to make it more useful for testing
+command line applications. To test larger behavior (functional
+tests), use :class:`cli.test.FunctionalTest`. :mod:`cli` itself
+uses both of these classes for its own tests; for examples, see the
+:file:`tests/functional/` directory shipped with the :mod:`cli` package.
+
+When packaging your scripts, use Titus' `SomePackage`_ as a guide for
+integrating your tests.
+
+.. _SomePackage:    http://github.com/ctb/SomePackage
+
+API
+---
+
+.. automodule:: cli.app
+    :members:
+    :show-inheritance:
+    :exclude-members: Application
+
+    .. autoclass:: Application
+        :members:
+        :show-inheritance:
+
+        .. automethod:: __call__(main)
+
+.. automodule:: cli.log
+    :members:
+    :show-inheritance:
+
+.. automodule:: cli.daemon
+    :members:
+    :show-inheritance:
+
+.. automodule:: cli.profiler
+    :members:
+    :show-inheritance:
+
+.. automodule:: cli.test
+    :members:
+    :show-inheritance:
+
+Testing :mod:`cli`
+------------------
+
+:mod:`cli` ships with a number of unit tests that help ensure that the code runs
+correctly. To run the tests, use the `tox`_ automated testing tool::
+    
+    $ tox
+
+.. _tox:    http://codespeak.net/tox/
+
+By default, :command:`tox` will attempt to run the unittests on all of the
+platforms currently supported by :mod:`cli`. See the `tox documentation`_ for
+more information about how to run tests.
+
+.. _tox documentation:  http://codespeak.net/tox/index.html
+
+You can get a sense for how completely the unit tests exercise :mod:`cli` by
+running the unittests directly with `nose`_ and `coverage`_::
+
+    $ nosetests --with-coverage --cover-package=cli
+    $ coverage report --omit "lib/cli/*ext*,lib/cli/tests/*"
+
+.. _nose:        http://somethingaboutorange.com/mrl/projects/nose/
+.. _coverage:    http://nedbatchelder.com/code/coverage/
+
+All new code in :mod:`cli` should be accompanied by unit tests. Eventually,
+the unit tests should be complemented by a set of functional tests
+(especially to stress things like the daemon code).

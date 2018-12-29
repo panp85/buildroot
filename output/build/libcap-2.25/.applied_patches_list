@@ -1,0 +1,3 @@
+/media/panpan/tools/buildroot-2018.02.8/package/libcap/0001-build-system-fixes-for-cross-compilation.patch
+/media/panpan/tools/buildroot-2018.02.8/package/libcap/0002-libcap-split-install-into-install-shared-install-sta.patch
+/media/panpan/tools/buildroot-2018.02.8/package/libcap/0003-libcap-cap_file.c-fix-build-with-old-kernel-headers.patch

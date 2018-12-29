@@ -1,0 +1,555 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Enlightenment development team
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#: src/lib/elementary/elm_config.c:3748
+msgid ""
+msgstr ""
+"Project-Id-Version: elementary 1.8.2\n"
+"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"POT-Creation-Date: 2017-11-22 13:24+0100\n"
+"PO-Revision-Date: 2014-01-29 15:27+0100\n"
+"Last-Translator: rezso <rezso@rezso.net>\n"
+"Language-Team: General\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+
+#: src/lib/ecore/ecore_getopt.c:89
+msgid "Version:"
+msgstr "Verzió:"
+
+#: src/lib/ecore/ecore_getopt.c:98
+msgid "Usage:"
+msgstr "Használat:"
+
+#: src/lib/ecore/ecore_getopt.c:105
+#, fuzzy, c-format
+msgid "%s [options]"
+msgstr "%s [opciók]\n"
+
+#: src/lib/ecore/ecore_getopt.c:305
+msgid "Copyright:"
+msgstr "Copyright:"
+
+#: src/lib/ecore/ecore_getopt.c:317
+msgid "License:"
+msgstr "Licenc:"
+
+#: src/lib/ecore/ecore_getopt.c:503
+msgid "Type: "
+msgstr "Típus: "
+
+#: src/lib/ecore/ecore_getopt.c:579
+msgid "Default: "
+msgstr "Alapértelmezett: "
+
+#: src/lib/ecore/ecore_getopt.c:606
+msgid "Choices: "
+msgstr "Lehetőségek:"
+
+#: src/lib/ecore/ecore_getopt.c:644 src/lib/ecore/ecore_getopt.c:645
+msgid "No categories available."
+msgstr ""
+
+#: src/lib/ecore/ecore_getopt.c:649
+#, fuzzy
+msgid "Categories: "
+msgstr "Lehetőségek:"
+
+#: src/lib/ecore/ecore_getopt.c:771
+msgid "Options:\n"
+msgstr "Opciók:\n"
+
+#: src/lib/ecore/ecore_getopt.c:780
+msgid "Positional arguments:\n"
+msgstr ""
+
+#: src/lib/ecore/ecore_getopt.c:847
+#, fuzzy, c-format
+msgid "ERROR: unknown category '%s'.\n"
+msgstr "HIBA: ismeretlen opció --%s.\n"
+
+#: src/lib/ecore/ecore_getopt.c:951
+#, c-format
+msgid "ERROR: unknown option --%s.\n"
+msgstr "HIBA: ismeretlen opció --%s.\n"
+
+#: src/lib/ecore/ecore_getopt.c:953
+#, c-format
+msgid "ERROR: unknown option -%c.\n"
+msgstr "HIBA: ismeretlen opció -%c.\n"
+
+#: src/lib/ecore/ecore_getopt.c:1016
+msgid "ERROR: "
+msgstr "HIBA: "
+
+#: src/lib/ecore/ecore_getopt.c:1112 src/lib/ecore/ecore_getopt.c:1249
+#: src/lib/ecore/ecore_getopt.c:1265 src/lib/ecore/ecore_getopt.c:1280
+#: src/lib/ecore/ecore_getopt.c:1300 src/lib/ecore/ecore_getopt.c:1347
+#: src/lib/ecore/ecore_getopt.c:1467 src/lib/ecore/ecore_getopt.c:1508
+msgid "value has no pointer set.\n"
+msgstr "érték nem határoz meg mutatót.\n"
+
+#: src/lib/ecore/ecore_getopt.c:1144 src/lib/ecore/ecore_getopt.c:1367
+#, c-format
+msgid "unknown boolean value %s.\n"
+msgstr "ismeretlen logikai érték: %s\n"
+
+#: src/lib/ecore/ecore_getopt.c:1195 src/lib/ecore/ecore_getopt.c:1455
+#, c-format
+msgid "invalid number format %s\n"
+msgstr "érvénytelen számformátum: %s\n"
+
+#: src/lib/ecore/ecore_getopt.c:1313
+#, c-format
+msgid "invalid choice \"%s\". Valid values are: "
+msgstr "érvénytelen érték: \"%s\", az érvényes értékek:"
+
+#: src/lib/ecore/ecore_getopt.c:1341
+msgid "missing parameter to append.\n"
+msgstr "hiányzó hozzáadandó paraméter.\n"
+
+#: src/lib/ecore/ecore_getopt.c:1445
+msgid "could not parse value.\n"
+msgstr "nem sikerült feldolgozni az értéket.\n"
+
+#: src/lib/ecore/ecore_getopt.c:1502
+msgid "missing parameter.\n"
+msgstr "hiányzó paraméter.\n"
+
+#: src/lib/ecore/ecore_getopt.c:1515
+msgid "missing callback function!\n"
+msgstr "hiányzó callback funkció!\n"
+
+#: src/lib/ecore/ecore_getopt.c:1546
+msgid "no version was defined.\n"
+msgstr "Nincs definiált verzió.\n"
+
+#: src/lib/ecore/ecore_getopt.c:1563
+msgid "no copyright was defined.\n"
+msgstr "Nincs definiált copyright.\n"
+
+#: src/lib/ecore/ecore_getopt.c:1580
+msgid "no license was defined.\n"
+msgstr "Nincs definiált licenc.\n"
+
+#: src/lib/ecore/ecore_getopt.c:1670
+#, c-format
+msgid "ERROR: unknown option --%s, ignored.\n"
+msgstr "HIBA: ismeretlen opció: --%s, figyelmen kívül hagyva.\n"
+
+#: src/lib/ecore/ecore_getopt.c:1710
+#, c-format
+msgid "ERROR: option --%s requires an argument!\n"
+msgstr "HIBA: --%s opció argumentumot igényel.\n"
+
+#: src/lib/ecore/ecore_getopt.c:1752
+#, c-format
+msgid "ERROR: unknown option -%c, ignored.\n"
+msgstr "HIBA: ismeretlen opció: -%c, figyelmen kívül hagyva.\n"
+
+#: src/lib/ecore/ecore_getopt.c:1797
+#, c-format
+msgid "ERROR: option -%c requires an argument!\n"
+msgstr "HIBA: -%c opció argumentumot igényel.\n"
+
+#: src/lib/ecore/ecore_getopt.c:1892
+#, fuzzy, c-format
+msgid "ERROR: missing required positional argument %s.\n"
+msgstr "HIBA: -%c opció argumentumot igényel.\n"
+
+#: src/lib/ecore/ecore_getopt.c:1924
+#, c-format
+msgid "ERROR: unsupported action type %d for positional argument %s\n"
+msgstr ""
+
+#: src/lib/ecore/ecore_getopt.c:2045 src/lib/ecore/ecore_getopt.c:2111
+msgid "ERROR: no parser provided.\n"
+msgstr "HIBA: hiányzó parser.\n"
+
+#: src/lib/ecore/ecore_getopt.c:2050 src/lib/ecore/ecore_getopt.c:2116
+msgid "ERROR: no values provided.\n"
+msgstr "HIBA: hiányzó értékek.\n"
+
+#: src/lib/ecore/ecore_getopt.c:2059 src/lib/ecore/ecore_getopt.c:2125
+msgid "ERROR: no arguments provided.\n"
+msgstr "HIBA: hiányzó argumentumok.\n"
+
+#: src/lib/ecore/ecore_getopt.c:2085
+msgid "ERROR: invalid options found."
+msgstr "HIBA: érvénytelen opciók találhatók."
+
+#: src/lib/ecore/ecore_getopt.c:2091 src/lib/ecore/ecore_getopt.c:2157
+#, c-format
+msgid " See --%s.\n"
+msgstr " Lásd --%s.\n"
+
+#: src/lib/ecore/ecore_getopt.c:2093 src/lib/ecore/ecore_getopt.c:2159
+#, c-format
+msgid " See -%c.\n"
+msgstr " Lásd -%c.\n"
+
+#: src/lib/ecore/ecore_getopt.c:2151
+#, fuzzy
+msgid "ERROR: invalid positional arguments found."
+msgstr "HIBA: érvénytelen opciók találhatók."
+
+#: src/lib/ecore/ecore_getopt.c:2186
+#, c-format
+msgid "ERROR: incorrect geometry value '%s'\n"
+msgstr "HIBA: helytelen geometria érték: '%s'\n"
+
+#: src/lib/ecore/ecore_getopt.c:2204
+#, c-format
+msgid "ERROR: incorrect size value '%s'\n"
+msgstr "HIBA: helytelen méret érték: '%s'\n"
+
+#: src/lib/efreet/efreet_base.c:126
+msgid "Desktop"
+msgstr "Asztal"
+
+#: src/lib/efreet/efreet_base.c:134
+msgid "Downloads"
+msgstr "Letöltések"
+
+#: src/lib/efreet/efreet_base.c:143
+msgid "Templates"
+msgstr "Sablonok"
+
+#: src/lib/efreet/efreet_base.c:152
+msgid "Public"
+msgstr "Publikus"
+
+#: src/lib/efreet/efreet_base.c:161
+msgid "Documents"
+msgstr "Dokumentumok"
+
+#: src/lib/efreet/efreet_base.c:169
+msgid "Music"
+msgstr "Zene"
+
+#: src/lib/efreet/efreet_base.c:177
+msgid "Pictures"
+msgstr "Képek"
+
+#: src/lib/efreet/efreet_base.c:185
+msgid "Videos"
+msgstr "Videók"
+
+#: src/lib/elementary/elc_fileselector.c:1919
+msgid "Up"
+msgstr "Fel"
+
+#: src/lib/elementary/elc_fileselector.c:1933
+msgid "Home"
+msgstr "Kezdőlap"
+
+#: src/lib/elementary/elc_fileselector.c:1952
+msgid "Search"
+msgstr ""
+
+#: src/lib/elementary/elc_fileselector.c:2246
+msgid "OK"
+msgstr "OK"
+
+#: src/lib/elementary/elc_fileselector.c:2256
+#: src/lib/elementary/elm_entry.c:1732 src/lib/elementary/elm_entry.c:1757
+msgid "Cancel"
+msgstr "Mégsem"
+
+#: src/lib/elementary/elc_hoversel.c:438 src/lib/elementary/efl_ui_button.c:278
+#: src/lib/elementary/efl_ui_check.c:212 src/lib/elementary/elm_gengrid.c:1470
+#: src/lib/elementary/elm_genlist.c:1735 src/lib/elementary/elm_list.c:2176
+#: src/lib/elementary/efl_ui_radio.c:214
+#: src/lib/elementary/elm_segment_control.c:529
+#: src/lib/elementary/elm_spinner.c:1020 src/lib/elementary/elm_toolbar.c:2347
+msgid "State: Disabled"
+msgstr "Állapot: letiltva"
+
+#: src/lib/elementary/elc_hoversel.c:640
+msgid "Hoversel"
+msgstr ""
+
+#: src/lib/elementary/elc_multibuttonentry.c:711
+msgid "multi button entry label"
+msgstr ""
+
+#: src/lib/elementary/elc_multibuttonentry.c:733
+msgid "multi button entry item"
+msgstr ""
+
+#: src/lib/elementary/elc_multibuttonentry.c:1624
+msgid "multi button entry"
+msgstr ""
+
+#: src/lib/elementary/elc_naviframe.c:442
+msgid "Title"
+msgstr "Cím"
+
+#: src/lib/elementary/elc_naviframe.c:993
+#: src/lib/elementary/elc_naviframe.c:1211
+msgid "Back"
+msgstr "Vissza"
+
+#: src/lib/elementary/elc_naviframe.c:1309
+msgid "Next"
+msgstr "Következő"
+
+#: src/lib/elementary/elc_popup.c:310 src/lib/elementary/elc_popup.c:975
+msgid "Popup Title"
+msgstr "Popup címsora"
+
+#: src/lib/elementary/elc_popup.c:320 src/lib/elementary/elc_popup.c:1051
+msgid "Popup Body Text"
+msgstr "Popup szövege"
+
+#: src/lib/elementary/elm_bubble.c:199
+msgid "Bubble"
+msgstr "Buborék"
+
+#: src/lib/elementary/efl_ui_button.c:69
+msgid "Clicked"
+msgstr ""
+
+#: src/lib/elementary/efl_ui_button.c:303
+msgid "Button"
+msgstr "Gomb"
+
+#: src/lib/elementary/elm_calendar.c:272
+msgid "%B %Y"
+msgstr "%Y. %B"
+
+#: src/lib/elementary/elm_calendar.c:278
+msgid "%B"
+msgstr "%B"
+
+#: src/lib/elementary/elm_calendar.c:284
+msgid "%Y"
+msgstr "%Y"
+
+#: src/lib/elementary/elm_calendar.c:409
+msgid "calendar item"
+msgstr "naptárelem"
+
+#: src/lib/elementary/elm_calendar.c:436
+msgid "calendar decrement month button"
+msgstr "naptár: hónap csökkentése gomb"
+
+#: src/lib/elementary/elm_calendar.c:442
+msgid "calendar decrement year button"
+msgstr "naptár: év csökkentése gomb"
+
+#: src/lib/elementary/elm_calendar.c:448
+msgid "calendar increment month button"
+msgstr "naptár: hónap növelése gomb"
+
+#: src/lib/elementary/elm_calendar.c:454
+msgid "calendar increment year button"
+msgstr "naptár: év növelése gomb"
+
+#: src/lib/elementary/elm_calendar.c:459
+msgid "calendar month"
+msgstr "naptár hónapja"
+
+#: src/lib/elementary/elm_calendar.c:464
+msgid "calendar year"
+msgstr "naptár éve"
+
+#: src/lib/elementary/efl_ui_check.c:64 src/lib/elementary/efl_ui_check.c:225
+#: src/lib/elementary/efl_ui_radio.c:118 src/lib/elementary/efl_ui_radio.c:215
+msgid "State: On"
+msgstr "Állapot: be"
+
+#: src/lib/elementary/efl_ui_check.c:75 src/lib/elementary/efl_ui_check.c:237
+#: src/lib/elementary/efl_ui_radio.c:217
+msgid "State: Off"
+msgstr "Állapot: ki"
+
+#: src/lib/elementary/efl_ui_check.c:221 src/lib/elementary/efl_ui_check.c:234
+msgid "State"
+msgstr "Állapot"
+
+#: src/lib/elementary/efl_ui_check.c:315
+msgid "Check"
+msgstr "Ellenőrzés"
+
+#: src/lib/elementary/elm_clock.c:303
+msgid "clock increment button for am,pm"
+msgstr ""
+
+#: src/lib/elementary/elm_clock.c:311
+msgid "clock decrement button for am,pm"
+msgstr ""
+
+#: src/lib/elementary/elm_clock.c:647
+msgid "State: Editable"
+msgstr "Állapot: szerkeszthető"
+
+#: src/lib/elementary/elm_clock.c:682
+msgid "Clock"
+msgstr "Óra"
+
+#: src/lib/elementary/elm_colorselector.c:914
+msgid "Pick a color"
+msgstr ""
+
+#: src/lib/elementary/elm_colorselector.c:952
+msgid "R:"
+msgstr ""
+
+#: src/lib/elementary/elm_colorselector.c:954
+msgid "G:"
+msgstr ""
+
+#: src/lib/elementary/elm_colorselector.c:956
+msgid "B:"
+msgstr ""
+
+#: src/lib/elementary/elm_colorselector.c:958
+msgid "A:"
+msgstr ""
+
+#: src/lib/elementary/elm_colorselector.c:1681
+msgid "color selector palette item"
+msgstr ""
+
+#: src/lib/elementary/elm_config.c:3765
+msgid "default:LTR"
+msgstr "default:LTR"
+
+#: src/lib/elementary/elm_dayselector.c:403
+msgid "day selector item"
+msgstr ""
+
+#: src/lib/elementary/elm_diskselector.c:702
+msgid "diskselector item"
+msgstr ""
+
+#: src/lib/elementary/elm_entry.c:1722
+msgid "Cut"
+msgstr "Kivágás"
+
+#: src/lib/elementary/elm_entry.c:1725
+msgid "Copy"
+msgstr "Másolás"
+
+#: src/lib/elementary/elm_entry.c:1729 src/lib/elementary/elm_entry.c:1751
+msgid "Paste"
+msgstr "Beillesztés"
+
+#: src/lib/elementary/elm_entry.c:1744
+msgid "Select"
+msgstr "Kiválaszt"
+
+#: src/lib/elementary/elm_entry.c:3833
+msgid "Entry"
+msgstr "Bejegyzés"
+
+#: src/lib/elementary/elm_gengrid.c:1500
+msgid "Gengrid Item"
+msgstr ""
+
+#: src/lib/elementary/elm_index.c:102
+msgid "Index"
+msgstr ""
+
+#: src/lib/elementary/elm_index.c:130
+msgid "Index Item"
+msgstr ""
+
+#: src/lib/elementary/elm_label.c:405
+msgid "Label"
+msgstr "Címke"
+
+#: src/lib/elementary/elm_panel.c:85
+msgid "state: opened"
+msgstr "állapot: nyitott"
+
+#: src/lib/elementary/elm_panel.c:86
+msgid "state: closed"
+msgstr "állapot: zárt"
+
+#: src/lib/elementary/elm_panel.c:126
+msgid "A panel is open"
+msgstr ""
+
+#: src/lib/elementary/elm_panel.c:128
+msgid "Double tap to close panel menu"
+msgstr ""
+
+#: src/lib/elementary/elm_panel.c:180
+msgid "panel button"
+msgstr "panelgomb"
+
+#: src/lib/elementary/efl_ui_progressbar.c:313
+msgid "progressbar"
+msgstr "folyamatjelző"
+
+#: src/lib/elementary/efl_ui_radio.c:243
+msgid "Radio"
+msgstr "Rádió"
+
+#: src/lib/elementary/elm_segment_control.c:532
+#: src/lib/elementary/elm_toolbar.c:2349
+msgid "State: Selected"
+msgstr "Állapot: kijelölve"
+
+#: src/lib/elementary/elm_segment_control.c:534
+msgid "State: Unselected"
+msgstr "Állapot: nincs kijelölve"
+
+#: src/lib/elementary/elm_segment_control.c:548
+msgid "Segment Control Item"
+msgstr ""
+
+#: src/lib/elementary/efl_ui_slider.c:1198
+msgid "slider"
+msgstr "csúszka"
+
+#: src/lib/elementary/elm_spinner.c:1050
+msgid "incremented"
+msgstr ""
+
+#: src/lib/elementary/elm_spinner.c:1056
+msgid "decremented"
+msgstr ""
+
+#: src/lib/elementary/elm_spinner.c:1089 src/lib/elementary/elm_spinner.c:1156
+msgid "spinner"
+msgstr ""
+
+#: src/lib/elementary/elm_spinner.c:1098 src/lib/elementary/elm_spinner.c:1139
+msgid "spinner increment button"
+msgstr ""
+
+#: src/lib/elementary/elm_spinner.c:1101 src/lib/elementary/elm_spinner.c:1148
+msgid "spinner decrement button"
+msgstr ""
+
+#: src/lib/elementary/elm_spinner.c:1103
+msgid "spinner text"
+msgstr ""
+
+#: src/lib/elementary/elm_toolbar.c:1804 src/lib/elementary/elm_toolbar.c:2411
+msgid "Selected"
+msgstr "Kiválasztva"
+
+#: src/lib/elementary/elm_toolbar.c:2345
+msgid "Separator"
+msgstr "Elválasztó"
+
+#: src/lib/elementary/elm_toolbar.c:2351
+msgid "Has menu"
+msgstr ""
+
+#: src/lib/elementary/elm_toolbar.c:2406
+msgid "Unselected"
+msgstr "Nincs kijelölve"
+
+#: src/lib/elementary/elm_toolbar.c:2423
+msgid "Toolbar Item"
+msgstr "Eszköztár elem"

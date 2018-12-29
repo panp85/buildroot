@@ -1,0 +1,7 @@
+[Unit]
+Description=Enlightenment Thumbnailer
+
+[Service]
+Type=dbus
+BusName=org.enlightenment.Ethumb
+ExecStart=/media/panpan/tools/buildroot-2018.02.8/output/host/bin/ethumbd

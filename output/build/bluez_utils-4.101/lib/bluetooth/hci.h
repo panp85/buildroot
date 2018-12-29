@@ -1,0 +1,1 @@
+/media/panpan/tools/buildroot-2018.02.8/output/build/bluez_utils-4.101/lib/hci.h

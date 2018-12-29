@@ -1,0 +1,11 @@
+[console_scripts]
+crossbar = crossbar.controller.cli:run
+
+[crossbar.node]
+community = crossbar.controller.node:Node
+
+[crossbar.worker]
+container-worker = crossbar.worker.container:ContainerWorkerSession
+router-worker = crossbar.worker.router:RouterWorkerSession
+testee-worker = crossbar.worker.testee:WebSocketTesteeWorkerSession
+

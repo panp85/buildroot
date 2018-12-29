@@ -1,0 +1,15 @@
+prefix=/media/panpan/tools/buildroot-2018.02.8/output/host
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+target=none
+
+gtk_binary_version=2.10.0
+gtk_host=x86_64-pc-linux-gnu
+
+Name: GTK+
+Description: GTK+ Graphical UI Library (${target} target)
+Version: 2.24.31
+Requires: gdk-${target}-2.0 gdk-pixbuf-2.0
+Libs: -L${libdir} -lgtk-${target}-2.0 
+Cflags: -I${includedir}/gtk-2.0 

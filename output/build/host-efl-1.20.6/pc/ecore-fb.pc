@@ -1,0 +1,12 @@
+prefix=/media/panpan/tools/buildroot-2018.02.8/output/host
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: ecore-fb
+Description: E core library, FB module
+Requires.private: 
+Version: 1.20.6
+Libs: -L${libdir} -lecore_fb
+Libs.private: 
+Cflags: -I${includedir}/efl-1 -I${includedir}/ecore-fb-1

@@ -1,0 +1,3 @@
+/media/panpan/tools/buildroot-2018.02.8/package/cairo/0001-blackfin-build-fix.patch
+/media/panpan/tools/buildroot-2018.02.8/package/cairo/0003-fix-nofork-build.patch
+/media/panpan/tools/buildroot-2018.02.8/package/cairo/0005-fix-gcc-49-build.patch

@@ -1,0 +1,6 @@
+/media/panpan/tools/buildroot-2018.02.8/package/zip/0001-configure-Remove-Check-C-compiler-type-optimization-.patch
+/media/panpan/tools/buildroot-2018.02.8/package/zip/0002-configure-Don-t-use-host-CPP.patch
+/media/panpan/tools/buildroot-2018.02.8/package/zip/0003-Makefile-Use-CFLAGS-from-command-line.patch
+/media/panpan/tools/buildroot-2018.02.8/package/zip/0004-configure-use-LDFLAGS-from-command-line.patch
+/media/panpan/tools/buildroot-2018.02.8/package/zip/0005-unix-configure-remove-GID-UID-size-check.patch
+/media/panpan/tools/buildroot-2018.02.8/package/zip/0006-unix-configure-borrow-the-LFS-test-from-autotools.patch

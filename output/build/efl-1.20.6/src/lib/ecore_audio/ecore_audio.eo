@@ -1,0 +1,126 @@
+type @extern Ecore.Audio.Vio: __undefined_type; [[Ecore audio vio type]] /* FIXME: Had function pointer members. */
+type @extern efl_key_data_free_func: __undefined_type; [[Efl key data free function type]] /* FIXME: Function pointers not allowed. */
+
+enum Ecore.Audio.Format {
+    [[Ecore audio format type]]
+    auto, [[Automatically detect the format (for inputs)]]
+    raw, [[RAW samples (float)]]
+    wav, [[WAV format]]
+    ogg, [[OGG]]
+    flac, [[FLAC, the Free Lossless Audio Codec]]
+    mp3,  [[MP3 (not supported)]]
+    last [[Sentinel value to indicate last enum field during iteration]]
+}
+
+class Ecore.Audio (Efl.Object)
+{
+   [[Convenience audio class.]]
+
+   eo_prefix: ecore_audio_obj;
+   data: Ecore_Audio_Object;
+   methods {
+      @property name {
+         [[Name of the object
+
+           @since 1.8
+         ]]
+         set {
+         }
+         get {
+         }
+         values {
+            name: string; [[Name]]
+         }
+      }
+      @property paused {
+         [[Pauses state of the object
+
+           @since 1.8
+         ]]
+         set {
+         }
+         get {
+         }
+         values {
+            paused: bool; [[$true if object is paused, $false otherwise]]
+         }
+      }
+      @property volume {
+         [[Volume of the object
+
+           @since 1.8
+         ]]
+         set {
+         }
+         get {
+         }
+         values {
+            volume: double; [[The volume]]
+         }
+      }
+      @property source @pure_virtual {
+         [[Source of the object
+
+           What sources are supported depends on the actual object.
+           For example, the libsndfile class accepts WAV, OGG, FLAC
+           files as source.
+
+           @since 1.8
+         ]]
+         set {
+            return: bool; [[$true if the source was set correctly (i.e. the file
+                            was opened), $false otherwise]]
+         }
+         get {
+         }
+         values {
+            source: string; [[The source to set to (i.e. file, URL, device)]]
+         }
+      }
+      @property format @pure_virtual {
+         [[Format of the object.]]
+         set {
+            [[Sets the format of the object
+
+              What formats are supported depends on the actual object. Default
+              is ECORE_AUDIO_FORMAT_AUTO
+
+              @since 1.8
+            ]]
+            return: bool; [[$true if the format was supported, $false otherwise]]
+         }
+         get {
+            [[Gets the format of the object
+
+              After setting the source if the format was ECORE_AUDIO_FORMAT_AUTO
+              this function will now return the actual format.
+
+              @since 1.8
+            ]]
+         }
+         values {
+            format: Ecore.Audio.Format; [[The audio format of the object]]
+         }
+      }
+      vio_set @pure_virtual {
+         [[Sets the virtual IO functions
+
+           @since 1.8
+         ]]
+         params {
+              vio: ptr(Ecore.Audio.Vio); [[The @Ecore.Audio.Vio struct with
+                                        the function callbacks
+                                      ]]
+              data: void_ptr; [[User data to pass to the VIO functions]]
+              free_func: efl_key_data_free_func; [[This function takes care to
+                                                  clean up $data when he VIO is
+                                                  destroyed. NULL means do
+                                                  nothing.
+                                                ]]
+         }
+      }
+   }
+   implements {
+      Efl.Object.constructor;
+   }
+}

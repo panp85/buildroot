@@ -1,0 +1,2 @@
+#! /bin/sh
+exec '/media/panpan/tools/buildroot-2018.02.8/output/host/bin/bison' -y "$@"

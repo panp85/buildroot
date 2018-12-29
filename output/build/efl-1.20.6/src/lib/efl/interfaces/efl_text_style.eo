@@ -1,0 +1,270 @@
+enum Efl.Text.Style.Backing_Type
+{
+   [[Whether to apply backing style to the displayed text or not]]
+   disabled = 0, [[Do not use backing]]
+   enabled,      [[Use backing style]]
+}
+
+enum Efl.Text.Style.Strikethrough_Type
+{
+   [[Whether to apply strikethrough style to the displayed text or not]]
+   disabled = 0, [[Do not use strikethrough]]
+   enabled,      [[Use strikethrough style]]
+}
+
+enum Efl.Text.Style.Effect_Type
+{
+   [[Effect to apply to the displayed text]]
+   none = 0, [[No effect]]
+
+   // colored with shadow_color
+   shadow, [[Shadow effect]]
+   far_shadow, [[Far shadow effect]]
+   soft_shadow, [[Soft shadow effect]]
+   far_soft_shadow, [[Far and soft shadow effect]]
+   // colored with glow_color
+   glow, [[Glow effect]]
+   // colored with outline_color
+   outline, [[Outline effect]]
+   soft_outline, [[Soft outline effect]]
+   // colored with outline_color + shadow_color
+   outline_shadow, [[Outline shadow effect]]
+   outline_soft_shadow, [[Outline soft shadow effect]]
+}
+
+enum Efl.Text.Style.Shadow_Direction
+{
+   [[Direction of the shadow style, if used]]
+   bottom_right = 0, [[Shadow towards bottom right]]
+   bottom, [[Shadow towards botom]]
+   bottom_left, [[Shadow towards bottom left]]
+   left, [[Shadow towards left]]
+   top_left, [[Shadow towards top left]]
+   top, [[Shadow towards top]]
+   top_right, [[Shadow towards top right]]
+   right, [[Shadow towards right]]
+}
+
+enum Efl.Text.Style.Underline_Type
+{
+   [[Underline type of the displayed text]]
+   off = 0, [[Text without underline]]
+   on, [[Underline enabled]]
+   single, [[Underlined with a signle line]]
+   double, [[Underlined with a double line]]
+   dashed, [[Underlined with a dashed line]]
+}
+
+interface Efl.Text.Style {
+   [[Style to apply to the text
+
+     A style can be coloring, effects, underline, strikethrough etc.
+
+     @since 1.20
+   ]]
+   eo_prefix: efl_text;
+   methods {
+      @property normal_color {
+         [[Color of text, excluding style]]
+         values
+         {
+            r: ubyte;
+            g: ubyte;
+            b: ubyte;
+            a: ubyte;
+         }
+      }
+
+      @property backing_type {
+         values
+         {
+            type: Efl.Text.Style.Backing_Type;
+         }
+      }
+
+      @property backing_color {
+         values
+         {
+            r: ubyte;
+            g: ubyte;
+            b: ubyte;
+            a: ubyte;
+         }
+      }
+
+      @property underline_type {
+         [[Sets an underline style on the text]]
+         values
+         {
+            type: Efl.Text.Style.Underline_Type;
+         }
+      }
+
+      @property underline_color
+      {
+         [[Color of normal underline style]]
+         values
+         {
+            r: ubyte;
+            g: ubyte;
+            b: ubyte;
+            a: ubyte;
+         }
+      }
+
+      @property underline_height
+      {
+         [[Height of underline style]]
+         values
+         {
+            height: double;
+         }
+      }
+
+      @property underline_dashed_color
+      {
+         [[Color of dashed underline style]]
+         values
+         {
+            r: ubyte;
+            g: ubyte;
+            b: ubyte;
+            a: ubyte;
+         }
+      }
+
+      @property underline_dashed_width
+      {
+         [[Width of dashed underline style]]
+         values
+         {
+            width: int;
+         }
+      }
+
+      @property underline_dashed_gap
+      {
+         [[Gap of dashed underline style]]
+         values
+         {
+            gap: int;
+         }
+      }
+
+      @property underline2_type
+      {
+         [[Type of underline2 style]]
+         values
+         {
+            type: Efl.Text.Style.Underline_Type;
+         }
+      }
+
+      @property underline2_color
+      {
+         [[Color of underline2 style]]
+         values
+         {
+            r: ubyte;
+            g: ubyte;
+            b: ubyte;
+            a: ubyte;
+         }
+      }
+
+      @property strikethrough_type {
+         [[Type of strikethrough style]]
+         values
+         {
+            type: Efl.Text.Style.Strikethrough_Type;
+         }
+      }
+
+      @property strikethrough_color
+      {
+         [[Color of strikethrough_style]]
+         values
+         {
+            r: ubyte;
+            g: ubyte;
+            b: ubyte;
+            a: ubyte;
+         }
+      }
+
+      @property effect_type {
+         [[Type of effect used for the displayed text]]
+         values {
+            type: Efl.Text.Style.Effect_Type;
+         }
+      }
+      @property outline_color
+      {
+         [[Color of outline effect]]
+         values
+         {
+            r: ubyte;
+            g: ubyte;
+            b: ubyte;
+            a: ubyte;
+         }
+      }
+
+      @property shadow_direction
+      {
+         [[Direction of shadow effect]]
+         values
+         {
+            type: Efl.Text.Style.Shadow_Direction;
+         }
+      }
+
+      @property shadow_color
+      {
+         [[Color of shadow effect]]
+         values
+         {
+            r: ubyte;
+            g: ubyte;
+            b: ubyte;
+            a: ubyte;
+         }
+      }
+
+      @property glow_color
+      {
+         [[Color of glow effect]]
+         values
+         {
+            r: ubyte;
+            g: ubyte;
+            b: ubyte;
+            a: ubyte;
+         }
+      }
+
+      @property glow2_color
+      {
+         [[Second color of the glow effect]]
+         values
+         {
+            r: ubyte;
+            g: ubyte;
+            b: ubyte;
+            a: ubyte;
+         }
+      }
+
+      @property gfx_filter
+      {
+         [[Program that applies a special filter
+
+           See @Efl.Gfx.Filter.
+         ]]
+         values
+         {
+            code: string;
+         }
+      }
+   }
+}

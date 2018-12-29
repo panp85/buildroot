@@ -1,0 +1,11 @@
+prefix=/media/panpan/tools/buildroot-2018.02.8/output/host
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: escape
+Description: Library that ports on the PS3 some specific Unix functions.
+Version: 1.20.6
+Libs: -L${libdir} -lescape
+Libs.private: 
+Cflags: -I${includedir}/efl-1 -I${includedir}/escape-1

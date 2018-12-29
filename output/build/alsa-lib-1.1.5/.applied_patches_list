@@ -1,0 +1,3 @@
+/media/panpan/tools/buildroot-2018.02.8/package/alsa-lib/0001-no-mmu.patch
+/media/panpan/tools/buildroot-2018.02.8/package/alsa-lib/0002-dlmisc.patch
+/media/panpan/tools/buildroot-2018.02.8/package/alsa-lib/0003-conditional-enabling-of-libdl-in-m4.patch

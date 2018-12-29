@@ -1,0 +1,18 @@
+prefix=/usr
+exec_prefix=/usr
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+modules=${exec_prefix}/lib/ecore
+module_arch=v-1.20
+datarootdir=${prefix}/share
+datadir=${datarootdir}
+eoincludedir=${datarootdir}/eolian/include
+eolian_flags=-I${pc_sysrootdir}${eoincludedir}/ecore-1
+
+Name: ecore C++ API
+Description: Ecore event abstraction library C++ API
+Requires.private: glib-2.0 gthread-2.0 efl >= 1.20.6 eina >= 1.20.6 eo >= 1.20.6  
+Version: 1.20.6
+Libs: -L${libdir} -lecore
+Libs.private:  -lm 
+Cflags: -I${includedir}/efl-1 -I${includedir}/ecore-1 -I${includedir}/ecore-cxx-1

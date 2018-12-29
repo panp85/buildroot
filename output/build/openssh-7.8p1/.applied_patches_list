@@ -1,0 +1,2 @@
+/media/panpan/tools/buildroot-2018.02.8/package/openssh/0001-fix-pam-uclibc-pthreads-clash.patch
+/media/panpan/tools/buildroot-2018.02.8/package/openssh/0002-fix-howmany-include.patch

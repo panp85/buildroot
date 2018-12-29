@@ -1,0 +1,17 @@
+#ifndef _EFL_UI_IMAGE_FACTORY_EO_LEGACY_H_
+#define _EFL_UI_IMAGE_FACTORY_EO_LEGACY_H_
+
+#ifndef _EFL_UI_IMAGE_FACTORY_EO_CLASS_TYPE
+#define _EFL_UI_IMAGE_FACTORY_EO_CLASS_TYPE
+
+typedef Eo Efl_Ui_Image_Factory;
+
+#endif
+
+#ifndef _EFL_UI_IMAGE_FACTORY_EO_TYPES
+#define _EFL_UI_IMAGE_FACTORY_EO_TYPES
+
+
+#endif
+
+#endif

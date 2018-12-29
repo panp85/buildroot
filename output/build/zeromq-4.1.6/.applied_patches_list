@@ -1,0 +1,2 @@
+/media/panpan/tools/buildroot-2018.02.8/package/zeromq/0001-acinclude.m4-make-kernel-specific-flags-cacheable.patch
+/media/panpan/tools/buildroot-2018.02.8/package/zeromq/0002-libzmq-Fix-pkg-config-files-for-static-linking.patch

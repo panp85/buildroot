@@ -1,0 +1,26 @@
+interface Efl.Text
+{
+   [[Efl text interface]]
+   methods {
+      @property text {
+         set {
+            [[Sets the text string to be displayed by the given text object.
+
+              See also @.text.get.
+            ]]
+         }
+         get {
+            [[Retrieves the text string currently being displayed by the given
+              text object.
+
+              Do not free() the return value.
+
+              See also @.text.set.
+            ]]
+         }
+         values {
+            text: string; [[Text string to display on it.]]
+         }
+      }
+   }
+}

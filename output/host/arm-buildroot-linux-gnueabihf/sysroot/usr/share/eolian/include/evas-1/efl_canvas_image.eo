@@ -1,0 +1,38 @@
+class Efl.Canvas.Image (Efl.Canvas.Image.Internal, Efl.Gfx.Buffer,
+                        Efl.Image.Load, Efl.Image.Animated,
+                        Efl.File)
+{
+   [[Low-level Image object.
+
+     This replaces the legacy Evas Object Image, with only image-related
+     interfaces: file and data images only. This object does not implement
+     any special features such as proxy, snapshot or GL.
+   ]]
+   data: null;
+   implements {
+      Efl.Gfx.Buffer.buffer_managed_get;
+      Efl.Gfx.Buffer.buffer_managed_set;
+      Efl.Gfx.Buffer.buffer_copy_set;
+      Efl.Gfx.Buffer.buffer_size { get; }
+      Efl.Gfx.Buffer.buffer_map;
+      Efl.Gfx.Buffer.buffer_unmap;
+      Efl.File.file { get; set; }
+      Efl.File.mmap { get; set; }
+      Efl.Image.Animated.animated { get; }
+      Efl.Image.Animated.animated_frame { get; set; }
+      Efl.Image.Animated.animated_frame_count { get; }
+      Efl.Image.Animated.animated_loop_type { get; }
+      Efl.Image.Animated.animated_loop_count { get; }
+      Efl.Image.Animated.animated_frame_duration { get; }
+      Efl.Image.Load.load_error { get; }
+      Efl.Image.Load.load_async_start;
+      Efl.Image.Load.load_async_cancel;
+      Efl.Image.Load.load_dpi { get; set; }
+      Efl.Image.Load.load_size { get; set; }
+      Efl.Image.Load.load_orientation { get; set; }
+      Efl.Image.Load.load_scale_down { get; set; }
+      Efl.Image.Load.load_skip_header { get; set; }
+      Efl.Image.Load.load_region { get; set; }
+      Efl.Image.Load.load_region_support { get; }
+   }
+}

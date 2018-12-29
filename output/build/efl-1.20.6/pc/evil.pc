@@ -1,0 +1,13 @@
+prefix=/usr
+exec_prefix=/usr
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+winver=
+
+Name: evil
+Description: Library that ports on Windows some specific Unix functions.
+Version: 1.20.6
+Libs: -L${libdir} -levil
+Libs.private:
+Cflags: -I${includedir}/efl-1 -I${includedir}/evil-1  -mms-bitfields -D__USE_MINGW_ANSI_STDIO

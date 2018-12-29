@@ -1,0 +1,49 @@
+class Elm.Color.Item(Elm.Widget.Item, Elm.Interface.Atspi_Widget_Action)
+{
+   [[Elementary color item class]]
+   legacy_prefix: elm_color_item;
+   eo_prefix: elm_obj_color_item;
+   methods {
+      @property color {
+         get {
+            [[Get Palette item's color.]]
+         }
+         set {
+            [[Set Palette item's color.]]
+         }
+         values {
+            r: int; [[Red-value of color]]
+            g: int; [[Green-value of color]]
+            b: int; [[Blue-value of color]]
+            a: int; [[Alpha-value of color]]
+         }
+      }
+      @property selected {
+         get {
+            [[Get the selected state of color palette item
+
+              @since 1.9
+            ]]
+         }
+         set {
+            [[Set the selected state of color palette item
+
+              @since 1.9
+            ]]
+         }
+         values {
+                 selected: bool; [[$true if selected $false otherwise]]
+         }
+      }
+   }
+   implements {
+      Efl.Object.constructor;
+      Efl.Object.destructor;
+      Elm.Widget.Item.access_register;
+      Elm.Widget.Item.signal_emit;
+      Elm.Widget.Item.focus { get; set; }
+      Elm.Interface.Atspi_Accessible.state_set { get; }
+      Elm.Interface.Atspi_Accessible.name { get; }
+      Elm.Interface.Atspi_Widget_Action.elm_actions { get; }
+   }
+}

@@ -1,0 +1,22 @@
+Welcome to portend documentation!
+=================================
+
+.. toctree::
+   :maxdepth: 1
+
+   history
+
+
+.. automodule:: portend
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
+
